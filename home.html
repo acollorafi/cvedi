@@ -1,1 +1,65 @@
 <!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Eden Leaf</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+        <filter id="liquidFilter"> <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+    <header class="header-principale">
+        <div class="nav-container-esterno"> 
+            
+            <div class="nav-logo">
+                <img src="logo-eden-leaf.svg" alt="Eden Leaf Logo" class="logo">
+            </div>
+    
+            <nav class="glass-effect nav-menu-blocco"> 
+                <a href="#" class="nav-link">HOME</a>
+                <a href="#" class="nav-link">RISTORANTE</a>
+                <a href="#" class="nav-link">MENU</a>
+                <a href="#" class="nav-link">INFO</a>
+                <a href="#" class="nav-link">SOSTENIBILITÀ</a>
+            </nav>
+    
+            <div class="nav-actions">
+                <a href="#" class="bottone">PRENOTA</a>
+            </div>
+    
+        </div>
+
+        <h1>Eden Leaf</h1>
+    </header>
+
+    <main>
+        <section>
+            <button class="bottone bottone-primario">
+            button            
+            </button>
+        </section>
+        <div class="glass-effect card-layout">
+            <h2>Card Liquida</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget interdum magna. Curabitur tincidunt, orci vel tincidunt vehicula, turpis lacus scelerisque justo, nec maximus lectus ante quis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque varius diam massa, sit amet ullamcorper massa tempor eget. Curabitur sapien metus, tristique sed tincidunt ut, gravida eu libero. Fusce placerat nisl mi, quis rhoncus neque ultricies quis. Etiam dignissim maximus velit, non malesuada eros consequat ac.
+            </p>
+        </div>
+
+        <br><br>
+
+        <button class="glass-effect btn-layout">
+            Bottone
+        </button>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
