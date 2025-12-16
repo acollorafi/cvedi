@@ -1,4 +1,20 @@
-:root {
+:root 
+[data-bs-theme=dark] {
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-primary: #B85B3F;
+    --bs-secondary: #D2B48C;
+    --bs-tertiary-color:#2F4C38;
+    --bs-highlight-color: #44DEE0;
+
+    --bs-red: #B85B3F;
+    --bs-green: #2F4C38;
+    --bs-tan: #D2B48C;
+    --bs-black: #1D2824;
+    --bs-white: #F6F1E7;
+    --bs-cyan: #44DEE0;
+
     --colore-principale: #007bff;        /* Blu */
     --colore-secondario: #6c757d;         /* Grigio */
     --colore-sfondo: #1D2824;      /* Sfondo del body */
@@ -9,7 +25,7 @@
     --colore-button-hover: #b22222;       /* Rosso più chiaro per hover */
     --colore-testo-nav: white;             /* Testo bianco per la navigazione */
   }
-  
+
   /* 2. STILE GLOBALE E BASE */
   
   body {
