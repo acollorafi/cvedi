@@ -1,8 +1,5 @@
 :root 
 [data-bs-theme=dark] {
-    --bs-body-font-family: var(--bs-font-sans-serif);
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-primary: #B85B3F;
     --bs-secondary: #D2B48C;
     --bs-tertiary-color:#2F4C38;
@@ -28,6 +25,15 @@
     --bs-border-radius-xl: 1rem;
     --bs-border-radius-xxl: 2rem;
     --bs-navbar-color: var(--bs-white);
+
+    /*font testo*/
+    @font-face {
+    font-family: 'Neutraface Text';
+    src: url('/fonts/NeutrafaceText-Book.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
     
 }
 
@@ -38,8 +44,28 @@
     --bs-btn-hover-bg: var(--bs-tan);
     --bs-btn-border-width: 5px;
     --bs-btn-border-color: #44DEE0;
-    --bs-btn-border-color: linear-gradient(45deg,rgba(68, 222, 224, 1) 0%, rgba(246, 241, 231, 1) 100%);  
+    --bs-btn-border-color: linear-gradient(45deg,rgba(68, 222, 224, 1) 0%, rgba(246, 241, 231, 1) 100%); 
+    
+    --bs-btn-border-radius: 50px;
+    --bs-btn-padding: 12px 24px;
+    --bs-btn-font-weight: bold;
+  
+    --bs-btn-color: var(--bs-white);
+  
+
 }
+
+.btn-layout {
+   
+    color: white;
+
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s;
+    /* Rimuove stili default brutti dei button */
+    appearance: none; 
+    font-family: sans-serif;
+    background-color: var(--colore-button);
+  }
 
 
 .bg-body-tertiary {
@@ -50,7 +76,6 @@
 
 
 body {
-    font-family: 'Segoe UI', sans-serif;
     background-color: #0f1f1a;
     color: #e6f2ec;   
 
