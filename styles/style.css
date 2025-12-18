@@ -58,7 +58,7 @@
 .btn-layout {
    
     color: white;
-
+    font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease, background 0.2s;
     /* Rimuove stili default brutti dei button */
