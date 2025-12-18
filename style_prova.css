@@ -141,7 +141,7 @@
 .glass-effect {
     position: relative;
     /* Stile visivo base */
-    background: rgba(255, 255, 255, 0.091); /* Sfondo semitrasparente */
+    background: rgba(21, 21, 15, 0.269); /* Sfondo semitrasparente */
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 
       0 4px 30px rgba(0, 0, 0, 0.1),
