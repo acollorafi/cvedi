@@ -1,0 +1,130 @@
+:root {
+  --accent: #d6b98c;
+  --glass-bg: rgba(22, 34, 32, 0.55);
+  --glass-border: rgba(160, 200, 190, 0.35);
+  --text-main: #e9f1ee;
+  --text-muted: #c7d6d1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-main);
+
+  /* Placeholder background */
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+    url("https://placehold.co/1600x1000") center / cover no-repeat fixed;
+}
+
+/* --- Layout --- */
+
+.section-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 4rem 7rem;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 3.5rem;
+}
+
+.faq-title {
+  margin-top: 6rem;
+}
+
+/* --- Glass base --- */
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+
+/* --- Testimonials --- */
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  padding: 2.4rem 2rem 2.8rem;
+  text-align: center;
+}
+
+.testimonial-card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.6rem;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* --- FAQ --- */
+
+.faq {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.faq-item {
+  padding: 0;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.5rem 1.8rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "⌄";
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-content {
+  padding: 0 1.8rem 1.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
