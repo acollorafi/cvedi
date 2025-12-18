@@ -27,13 +27,83 @@
     --bs-border-radius-lg: 0.5rem;
     --bs-border-radius-xl: 1rem;
     --bs-border-radius-xxl: 2rem;
+    --bs-navbar-color: var(--bs-white);
+    
+}
+
+.btn-custom-primary{
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: var(--bs-tan);
+    --bs-btn-border-width: 5px;
+    --bs-btn-border-color: #44DEE0;
+    --bs-btn-border-color: linear-gradient(45deg,rgba(68, 222, 224, 1) 0%, rgba(246, 241, 231, 1) 100%);  
 }
 
 
-  body {
-    font-family: Arial, sans-serif; /* Un font di base */
-    background-image: url(/images/hero_home_bg.png);      
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+    background-color: none;
+    color: var(--bs-white);
+}
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f1f1a;
+    color: #e6f2ec;   
+
+    background-image: url(/images/hero_home_bg.png);   
     background-size: cover; 
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed;  
+}
+
+
+
+/* Navbar */
+.nav-item .nav-link {
+    color: var(--bs-white);
+}
+
+/* Hero */
+.hero-section {
+    height: 100vh;
+}
+
+#hero-home {
+    background: url('/images/hero_home_bg.png') center/cover no-repeat;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+
+  .header-principale {
+      /* Posizionamento Adesivo (Sticky) */
+      position: sticky;
+      top: 20px; /* Distanza dall'alto della finestra quando diventa sticky */
+      z-index: 1000; /* Assicura che la nav sia sopra tutti gli altri elementi */
+      
+      /* Centrare la nav nella pagina, dandole un limite di larghezza */
+      width: 90%; 
+      max-width: 1200px; /* Larghezza massima del container nav */
+      margin: 0 auto; /* Centra orizzontalmente */
+      padding: 10px 0; /* Padding verticale */
+  }
+  
+  /* Contenitore esterno che allinea Logo, Menu e Bottone */
+  .nav-container-esterno { 
+      display: flex;
+      justify-content: space-between; /* Spinge gli elementi ai lati */
+      align-items: center; /* Allinea verticalmente gli elementi al centro */
+      padding: 10px 0; 
   }
