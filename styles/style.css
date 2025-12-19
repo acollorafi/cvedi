@@ -1,5 +1,5 @@
 :root 
-[data-bs-theme=dark] {
+{
     --bs-primary: #B85B3F;
     --bs-secondary: #D2B48C;
     --bs-tertiary-color:#2F4C38;
@@ -15,7 +15,7 @@
     --bs-gradient: linear-gradient(45deg, var(--bs-cyan) 0%, var(--bs-white) 100%);
     --bs-body-bg: var(--bs-black);
 
-    --bs-border-width: 1px;
+    --bs-border-width: 0.5px;
     --bs-border-style: solid;
     --bs-border-color: var(--bs-gradient);
 
@@ -25,6 +25,32 @@
     --bs-border-radius-xl: 1rem;
     --bs-border-radius-xxl: 2rem;
     --bs-navbar-color: var(--bs-white);
+
+
+
+    /*navbar*/
+    --bs-navbar-color: var(--bs-white);
+    --bs-navbar-hover-color: var(--bs-tan);
+    --bs-navbar-active-color: var(--bs-tan);
+    --bs-navbar-toggler-border-color: var(--bs-cyan);
+    --bs-navbar-toggler-border-radius: 54%;
+
+
+    /* Navbar specific variables 
+    --bs-navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
+    --bs-navbar-padding-y: #{$navbar-padding-y};
+
+    --bs-navbar-brand-padding-y: #{$navbar-brand-padding-y};
+    --bs-navbar-brand-margin-end: #{$navbar-brand-margin-end};
+    --bs-navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
+    --bs-navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
+    --bs-navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
+    --bs-navbar-toggler-font-size: #{$navbar-toggler-font-size};
+    --bs-navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
+
+    --bs-navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
+    --bs-navbar-toggler-transition: #{$navbar-toggler-transition};
+    */
 
     /*font testo*/
     @font-face {
@@ -38,13 +64,13 @@
 }
 
 .btn-custom-primary{
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bs-primary);
+    color: var(--bs-white);
+    background-color: var(--bs-primary);
     --bs-btn-hover-color: var(--bs-white);
     --bs-btn-hover-bg: var(--bs-tan);
-    --bs-btn-border-width: 5px;
-    --bs-btn-border-color: #44DEE0;
-    --bs-btn-border-color: linear-gradient(45deg,rgba(68, 222, 224, 1) 0%, rgba(246, 241, 231, 1) 100%); 
+    border-width: 5px;
+    border-color: #44DEE0;
+    border-color: linear-gradient(45deg,rgba(68, 222, 224, 1) 0%, rgba(246, 241, 231, 1) 100%); 
     
     --bs-btn-border-radius: 50px;
     --bs-btn-padding: 12px 24px;
@@ -91,6 +117,32 @@ body {
 .nav-item .nav-link {
     color: var(--bs-white);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Hero */
 .hero-section {
