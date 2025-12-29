@@ -36,21 +36,6 @@
     --bs-navbar-toggler-border-radius: 54%;
 
 
-    /* Navbar specific variables 
-    --bs-navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
-    --bs-navbar-padding-y: #{$navbar-padding-y};
-
-    --bs-navbar-brand-padding-y: #{$navbar-brand-padding-y};
-    --bs-navbar-brand-margin-end: #{$navbar-brand-margin-end};
-    --bs-navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
-    --bs-navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
-    --bs-navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
-    --bs-navbar-toggler-font-size: #{$navbar-toggler-font-size};
-    --bs-navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
-
-    --bs-navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
-    --bs-navbar-toggler-transition: #{$navbar-toggler-transition};
-    */
 
     /*font testo*/
     @font-face {
@@ -93,6 +78,7 @@
     will-change: transform;
   }
 
+  
   /*personalizzazione button primary (e prenota)*/
 .btn-custom-primary{
 
@@ -137,20 +123,11 @@
 
 .bg-body-tertiary {
     --bs-bg-opacity: 0;
-    background-color: none;
+    background-color: --bs-black;
     color: var(--bs-white);
 }
 
 
-body {
-    background-color: #0f1f1a;
-    color: #e6f2ec;   
-
-    background-image: url(/images/hero_home_bg.png);   
-    background-size: cover; 
-    background-position: center;
-    background-attachment: fixed;  
-}
 
 
 
@@ -194,90 +171,31 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Hero */
 .hero-section {
     height: 100vh;
 }
 
-#hero-home {
-    background: url('/images/hero_home_bg.png') center/cover no-repeat;
-}
-
-.hero-title {
+h1 {
     font-size: 4rem;
     font-weight: bold;
+    color: var(--bs-white);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
-    opacity: 0.9;
+    font-weight: bold;
+    color: var(--bs-white);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+     
+#home-s1 {
+    background: url('/images/backgrounds/hero_home_bg.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
 
-.header-principale {
-      /* Posizionamento Adesivo (Sticky) */
-      position: sticky;
-      top: 20px; /* Distanza dall'alto della finestra quando diventa sticky */
-      z-index: 1000; /* Assicura che la nav sia sopra tutti gli altri elementi */
-      
-      /* Centrare la nav nella pagina, dandole un limite di larghezza */
-      width: 90%; 
-      max-width: 1200px; /* Larghezza massima del container nav */
-      margin: 0 auto; /* Centra orizzontalmente */
-      padding: 10px 0; /* Padding verticale */
-  }
-  
-
-
-
-
-
-
-  /* STILE SPECIFICO PER IL BLOCCO MENU ARROTONDATO E TRASPARENTE */
-  .nav-menu-blocco {
-      background-color: var(--colore-sfondo-nav); 
-      backdrop-filter: blur(5px); /* Effetto Liquid Glass */
-      border: 1px solid var(--colore-bordo-nav);
-      border-radius: 50px; /* Rende la barra tonda */
-      padding: 10px 20px; /* Aggiunge spazio interno al blocco menu */
-  
-      /* Centra il menu se ci fosse spazio extra */
-      display: flex;
-      gap: 15px; /* Spazio tra i link */
-  }
-  
-  .nav-menu-blocco .nav-link {
-      color: var(--colore-testo-nav);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: bold;
-      opacity: 0.8;
-      transition: opacity 0.3s;
-      /* Rimuoviamo margin: 0 15px che è ora gestito da gap nel blocco */
-  }
-  
-  .nav-menu-blocco .nav-link:hover {
-      opacity: 1; /* Testo più vivido all'hover */
-  }
-
-
- 
+}
