@@ -55,12 +55,9 @@
 .glass-effect {
     position: relative;
     /* Stile visivo base */
-    background: rgba(255, 255, 255, 0.091); /* Sfondo semitrasparente */
+    background:  rgba(0, 0, 0, 0.30); /* Sfondo semitrasparente */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 
-      0 4px 30px rgba(0, 0, 0, 0.1),
-      inset 1px 1px 0px rgba(255, 255, 255, 0.3),
-      inset -1px -1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
   
     /* QUI LA DIFFERENZA: */
     /* Partiamo con il blur standard. Safari leggerà questo e si fermerà qui. */
@@ -80,6 +77,16 @@
     will-change: transform;
   }
 
+    /* --- 2. UPGRADE PER CHROME (Solo Desktop) --- */
+  /* Usiamo @supports per rilevare una funzione specifica del motore di Chrome.
+     Safari NON supporta 'field-sizing', quindi ignorerà completamente questo blocco. */
+  @supports (field-sizing: content) {
+    .glass-effect {
+      /* Sovrascriviamo il blur con il filtro liquido */
+      -webkit-backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
+      backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
+    }
+  }
   
   /*personalizzazione button primary (e prenota)*/
 .btn-custom-primary{
