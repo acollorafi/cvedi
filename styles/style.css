@@ -63,23 +63,64 @@
     
 }
 
+ /*Liquid Glass Effect*/
+  /* --- 1. BASE SICURA (Safari, Firefox, Mobile) --- */
+.glass-effect {
+    position: relative;
+    /* Stile visivo base */
+    background: rgba(255, 255, 255, 0.091); /* Sfondo semitrasparente */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+      0 4px 30px rgba(0, 0, 0, 0.1),
+      inset 1px 1px 0px rgba(255, 255, 255, 0.3),
+      inset -1px -1px 0px rgba(0, 0, 0, 0.1);
+  
+    /* QUI LA DIFFERENZA: */
+    /* Partiamo con il blur standard. Safari leggerà questo e si fermerà qui. */
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    backdrop-filter: blur(12px) saturate(180%);
+  
+    /* Fix indispensabili per Safari iOS */
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    isolation: isolate; /* Fondamentale per non bucare lo sfondo */
+    
+    /* Altri stili */
+    overflow: hidden;
+    z-index: 1;
+    will-change: transform;
+  }
+
+  /*personalizzazione button primary (e prenota)*/
 .btn-custom-primary{
+
+    display: flex;
+    height: 64px;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%), rgba(207, 79, 40, 0.50);
+    box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.25) inset, 5px -5px 8.8px 0 rgba(0, 0, 0, 0.25) inset, 0 0 10px 0 rgba(0, 0, 0, 0.15);
+
     color: var(--bs-white);
-    background-color: var(--bs-primary);
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.40);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 20px; /* 75% */
+
     --bs-btn-hover-color: var(--bs-white);
     --bs-btn-hover-bg: var(--bs-tan);
-    border-width: 5px;
-    border-color: #44DEE0;
-    border-color: linear-gradient(45deg,rgba(68, 222, 224, 1) 0%, rgba(246, 241, 231, 1) 100%); 
     
-    --bs-btn-border-radius: 50px;
-    --bs-btn-padding: 12px 24px;
-    --bs-btn-font-weight: bold;
-  
-    --bs-btn-color: var(--bs-white);
-  
-
 }
+
+
 
 .btn-layout {
    
@@ -114,14 +155,42 @@ body {
 
 
 /* Navbar */
+
+/*colore testo navbar*/
 .nav-item .nav-link {
     color: var(--bs-white);
+    text-align: center;
 }
 
+/*colore testo pagina corrente navbar*/
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--bs-cyan);
+}
 
+/*id del div che contiene i link della navbar*/
+#navbarSupportedContent {
+    width: 675px;
+    padding: 30 43.569px 30 45.431px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 
+    border-radius: 54px;
+    border: 1px solid rgba(68, 222, 224, 0.56);
+    background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
 
+    color: #F5F5F5;
+    font-family: "Neutraface Text";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
 
+/*evita che il div sopra occupi tutto lo spazio orizzontale*/
+.navbar-collapse {
+    flex-grow: 0;
+}
 
 
 
@@ -211,32 +280,4 @@ body {
   }
 
 
-  /*Liquid Glass Effect*/
-  /* --- 1. BASE SICURA (Safari, Firefox, Mobile) --- */
-.glass-effect {
-    position: relative;
-    /* Stile visivo base */
-    background: rgba(255, 255, 255, 0.091); /* Sfondo semitrasparente */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 
-      0 4px 30px rgba(0, 0, 0, 0.1),
-      inset 1px 1px 0px rgba(255, 255, 255, 0.3),
-      inset -1px -1px 0px rgba(0, 0, 0, 0.1);
-  
-    /* QUI LA DIFFERENZA: */
-    /* Partiamo con il blur standard. Safari leggerà questo e si fermerà qui. */
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    backdrop-filter: blur(12px) saturate(180%);
-  
-    /* Fix indispensabili per Safari iOS */
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    isolation: isolate; /* Fondamentale per non bucare lo sfondo */
-    
-    /* Altri stili */
-    overflow: hidden;
-    z-index: 1;
-    will-change: transform;
-  }
+ 
