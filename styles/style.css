@@ -48,6 +48,8 @@
     
 }
 
+
+
  /*Liquid Glass Effect*/
   /* --- 1. BASE SICURA (Safari, Firefox, Mobile) --- */
 .glass-effect {
@@ -128,10 +130,52 @@
 }
 
 
+/*Elementi globali*/
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-white);
+    font-family: 'Neutraface Text', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--bs-white);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--bs-tan);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--bs-tan);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
 /* Navbar */
+
+/*rende nav sticky*/
+.navbar {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    z-index: 1000;
+}
 
 /*colore testo navbar*/
 .nav-item .nav-link {
@@ -176,15 +220,8 @@
     height: 100vh;
 }
 
-h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: var(--bs-white);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: var(--bs-white);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -199,3 +236,23 @@ h1 {
     align-self: stretch;
 
 }
+
+/*CARDS*/
+.card {
+    color: var(--bs-white);
+    border-radius: 30px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
