@@ -73,7 +73,7 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     isolation: isolate; /* Fondamentale per non bucare lo sfondo */
-    
+
     /* Altri stili */
     overflow: hidden;
     z-index: 1;
@@ -128,6 +128,7 @@
     background-color: --bs-black;
     color: var(--bs-white);
 }
+
 
 
 /*Elementi globali*/
