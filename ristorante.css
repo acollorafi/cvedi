@@ -1,0 +1,14 @@
+.hero-bg {
+    background-image: url('images/ristorante/hero_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.team-avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: var(--bs-glass-border);
+}

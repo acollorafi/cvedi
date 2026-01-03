@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ristorante</title>
+
+    <!-- Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="ristorante.css">
 </head>
 
 <body>
@@ -28,7 +32,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="glass-effect collapse navbar-collapse glass-border" id="navbarSupportedContent">
+            <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">HOME</a>
@@ -49,11 +53,69 @@
             </div>
             <div class="d-flex align-items-center" style="gap: 45px;">
                 <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
-                <img src="images/flags/Great Britain.png" class="navbar-img-languages glass-border" />
+                <img src="images/flags/Great Britain.png" class="navbar-img-languages" />
             </div>
-
         </div>
     </nav>
+
+    <div class="hero-bg">
+
+        <div style="height: 300px;"></div>
+
+        <div class="container-xxl d-flex flex-column">
+            <div class="card glass-effect align-self-end" style="width: 660px;">
+                <h3>Chi siamo</h3>
+                <p>Eden Leaf non è semplicemente un luogo dove mangiare, ma un laboratorio vivente di coesistenza. Siamo
+                    l'avanguardia della gastronomia rigenerativa: un rifugio di vetro e acciaio integrato nella biologia
+                    dell’Albero Maestro, dove dimostriamo ogni giorno che il lusso più elevato è quello che collabora
+                    con la natura, anziché dominarla.</p>
+                <button class="glass-effect btn btn-custom-primary" type="button">Maggiori informazioni</button>
+            </div>
+
+            <div style="height: 100px;"></div>
+
+            <div class="card glass-effect " style="width: 660px;">
+                <h3>La nostra storia</h3>
+                <p>Nato nel secolo scorso come progetto sperimentale di bio-architettura, Eden Leaf è cresciuto
+                    organicamente insieme alla sua struttura ospitante. Abbiamo progettato la nostra cupola per
+                    adattarsi gentilmente all'espansione della Foglia Madre, trasformando quella che era una visione
+                    utopica di sostenibilità urbana nella realtà gastronomica più esclusiva ed etica del panorama
+                    mondiale.</p>
+                <button class="glass-effect btn btn-custom-primary" type="button">Scopri di più</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-xxl padding-section">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="images/ristorante/img_chef.png" height="466px" width="618px" ; />
+            </div>
+            <div class="col-md-6">
+                <h3>Lo chef stellato</h3>
+                <p>Julio Vane è il nostro ingegnere del gusto. Con un background ibrido tra alta cucina molecolare e
+                    botanica applicata, Vane crea piatti che sono estensioni commestibili dell'ambiente circostante. La
+                    sua filosofia è intervenire il meno possibile sulla materia prima, usando tecnologie laser e a
+                    ultrasuoni per estrarre sapori puri senza alterare l'anima dell'ingrediente.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <h2>Il nostro team</h2>
+        <div class="row align-items-center">
+            <div class="col-md-2">
+                <div class="card glass-effect gap-2">
+                    <img src="images/ristorante/img_team_01.png" class="team-avatar" />
+                    <p style="font-size: 28px;">Kaelen Ross</p>
+                    <div class="label-custom">Bio-Sommelier</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
