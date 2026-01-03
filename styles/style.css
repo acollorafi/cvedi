@@ -1,0 +1,259 @@
+:root 
+{
+    --bs-primary: #B85B3F;
+    --bs-secondary: #D2B48C;
+    --bs-tertiary-color:#2F4C38;
+    --bs-highlight-color: #44DEE0;
+
+    --bs-red: #B85B3F;
+    --bs-green: #2F4C38;
+    --bs-tan: #D2B48C;
+    --bs-black: #1D2824;
+    --bs-white: #F6F1E7;
+    --bs-cyan: #44DEE0;
+
+    --bs-gradient: linear-gradient(45deg, var(--bs-cyan) 0%, var(--bs-white) 100%);
+    --bs-body-bg: var(--bs-black);
+
+    --bs-border-width: 0.5px;
+    --bs-border-style: solid;
+    --bs-border-color: var(--bs-gradient);
+
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-xxl: 2rem;
+    --bs-navbar-color: var(--bs-white);
+
+
+
+    /*navbar*/
+    --bs-navbar-color: var(--bs-white);
+    --bs-navbar-hover-color: var(--bs-tan);
+    --bs-navbar-active-color: var(--bs-tan);
+    --bs-navbar-toggler-border-color: var(--bs-cyan);
+    --bs-navbar-toggler-border-radius: 54%;
+
+
+
+    /*font testo*/
+    @font-face {
+    font-family: 'Neutraface Text';
+    src: url('/fonts/NeutrafaceText-Book.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+    
+}
+
+
+
+ /*Liquid Glass Effect*/
+  /* --- 1. BASE SICURA (Safari, Firefox, Mobile) --- */
+.glass-effect {
+    position: relative;
+    /* Stile visivo base */
+    background: rgba(255, 255, 255, 0.091); /* Sfondo semitrasparente */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+      0 4px 30px rgba(0, 0, 0, 0.1),
+      inset 1px 1px 0px rgba(255, 255, 255, 0.3),
+      inset -1px -1px 0px rgba(0, 0, 0, 0.1);
+  
+    /* QUI LA DIFFERENZA: */
+    /* Partiamo con il blur standard. Safari leggerà questo e si fermerà qui. */
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    backdrop-filter: blur(12px) saturate(180%);
+  
+    /* Fix indispensabili per Safari iOS */
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    isolation: isolate; /* Fondamentale per non bucare lo sfondo */
+
+    /* Altri stili */
+    overflow: hidden;
+    z-index: 1;
+    will-change: transform;
+  }
+
+  
+  /*personalizzazione button primary (e prenota)*/
+.btn-custom-primary{
+
+    display: flex;
+    height: 64px;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%), rgba(207, 79, 40, 0.50);
+    box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.25) inset, 5px -5px 8.8px 0 rgba(0, 0, 0, 0.25) inset, 0 0 10px 0 rgba(0, 0, 0, 0.15);
+
+    color: var(--bs-white);
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.40);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 20px; /* 75% */
+
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: var(--bs-tan);
+    
+}
+
+
+
+.btn-layout {
+   
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s;
+    /* Rimuove stili default brutti dei button */
+    appearance: none; 
+    font-family: sans-serif;
+    background-color: var(--colore-button);
+  }
+
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+    background-color: --bs-black;
+    color: var(--bs-white);
+}
+
+
+
+/*Elementi globali*/
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-white);
+    font-family: 'Neutraface Text', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--bs-white);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--bs-tan);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--bs-tan);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Navbar */
+
+/*rende nav sticky*/
+.navbar {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+/*colore testo navbar*/
+.nav-item .nav-link {
+    color: var(--bs-white);
+    text-align: center;
+}
+
+/*colore testo pagina corrente navbar*/
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--bs-cyan);
+}
+
+/*id del div che contiene i link della navbar*/
+#navbarSupportedContent {
+    width: 675px;
+    padding: 30 43.569px 30 45.431px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    border-radius: 54px;
+    border: 1px solid rgba(68, 222, 224, 0.56);
+    background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
+
+    color: #F5F5F5;
+    font-family: "Neutraface Text";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/*evita che il div sopra occupi tutto lo spazio orizzontale*/
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+
+
+/* Hero */
+.hero-section {
+    height: 100vh;
+}
+
+.hero-subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--bs-white);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+     
+#home-s1 {
+    background: url('/images/backgrounds/hero_home_bg.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+
+/*CARDS*/
+.card {
+    color: var(--bs-white);
+    border-radius: 30px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
