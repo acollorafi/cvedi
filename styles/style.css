@@ -79,9 +79,19 @@
     will-change: transform;
 }
 
-
-/*personalizzazione button primary (e prenota)*/
-.btn-custom-primary {
+    /* --- 2. UPGRADE PER CHROME (Solo Desktop) --- */
+  /* Usiamo @supports per rilevare una funzione specifica del motore di Chrome.
+     Safari NON supporta 'field-sizing', quindi ignorerà completamente questo blocco. */
+  @supports (field-sizing: content) {
+    .glass-effect {
+      /* Sovrascriviamo il blur con il filtro liquido */
+      -webkit-backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
+      backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
+    }
+  }
+  
+  /*personalizzazione button primary (e prenota)*/
+.btn-custom-primary{
 
     display: flex;
     height: 64px;
