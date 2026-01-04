@@ -1,8 +1,7 @@
-:root 
-{
+:root {
     --bs-primary: #B85B3F;
     --bs-secondary: #D2B48C;
-    --bs-tertiary-color:#2F4C38;
+    --bs-tertiary-color: #2F4C38;
     --bs-highlight-color: #44DEE0;
 
     --bs-red: #B85B3F;
@@ -25,6 +24,7 @@
     --bs-border-radius-xl: 1rem;
     --bs-border-radius-xxl: 2rem;
     --bs-navbar-color: var(--bs-white);
+    --bs-glass-border: 1px solid rgba(68, 222, 224, 0.56);
 
 
 
@@ -39,43 +39,48 @@
 
     /*font testo*/
     @font-face {
-    font-family: 'Neutraface Text';
-    src: url('/fonts/NeutrafaceText-Book.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-    
+        font-family: 'Neutraface Text';
+        src: url('/fonts/NeutrafaceText-Book.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
 }
 
 
 
- /*Liquid Glass Effect*/
-  /* --- 1. BASE SICURA (Safari, Firefox, Mobile) --- */
+/*Liquid Glass Effect*/
+/* --- 1. BASE SICURA (Safari, Firefox, Mobile) --- */
 .glass-effect {
     position: relative;
     /* Stile visivo base */
-    background:  rgba(0, 0, 0, 0.30); /* Sfondo semitrasparente */
+    background: rgba(255, 255, 255, 0.091);
+    /* Sfondo semitrasparente */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
-  
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.1),
+        inset 1px 1px 0px rgba(255, 255, 255, 0.3),
+        inset -1px -1px 0px rgba(0, 0, 0, 0.1);
+
     /* QUI LA DIFFERENZA: */
     /* Partiamo con il blur standard. Safari leggerà questo e si fermerà qui. */
     -webkit-backdrop-filter: blur(12px) saturate(180%);
     backdrop-filter: blur(12px) saturate(180%);
-  
+
     /* Fix indispensabili per Safari iOS */
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    isolation: isolate; /* Fondamentale per non bucare lo sfondo */
+    isolation: isolate;
+    /* Fondamentale per non bucare lo sfondo */
 
     /* Altri stili */
     overflow: hidden;
     z-index: 1;
     will-change: transform;
-  }
+}
 
     /* --- 2. UPGRADE PER CHROME (Solo Desktop) --- */
   /* Usiamo @supports per rilevare una funzione specifica del motore di Chrome.
@@ -108,26 +113,69 @@
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.40);
     font-size: 24px;
     font-weight: 700;
-    line-height: 20px; /* 75% */
+    line-height: 20px;
+    /* 75% */
 
     --bs-btn-hover-color: var(--bs-white);
     --bs-btn-hover-bg: var(--bs-tan);
-    
+}
+
+/*qui ci metto la nostra Label, poi vediamo se cambiare nome*/
+.label-custom {
+    display: flex;
+    height: 48px;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    /* Forma e Bordo */
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    /* Leggermente più visibile per l'effetto vetro */
+
+    /* Background: Grigio scuro trasparente con riflesso centrale */
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%),
+        rgba(60, 60, 60, 0.40);
+
+    /* Effetto Glass (Luci e Ombre interne) */
+    box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.15) inset,
+        5px -5px 8.8px 0 rgba(0, 0, 0, 0.30) inset,
+        0 0 15px 0 rgba(0, 0, 0, 0.20);
+
+    /* Testo */
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.50);
+    font-size: 24px;
+    font-weight: 500;
+    /* Leggermente meno bold per somigliare alla foto */
+    line-height: 20px;
+
+    /* Reset stili bottone */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse */
+.btn-glass-grey:hover {
+    background-color: rgba(80, 80, 80, 0.60);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.10);
+    color: white;
 }
 
 
-
 .btn-layout {
-   
+
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease, background 0.2s;
     /* Rimuove stili default brutti dei button */
-    appearance: none; 
+    appearance: none;
     font-family: sans-serif;
     background-color: var(--colore-button);
-  }
+}
 
 
 .bg-body-tertiary {
@@ -135,7 +183,6 @@
     background-color: --bs-black;
     color: var(--bs-white);
 }
-
 
 
 /*Elementi globali*/
@@ -192,12 +239,14 @@ h3 {
 }
 
 /*colore testo pagina corrente navbar*/
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
     color: var(--bs-cyan);
 }
 
 /*id del div che contiene i link della navbar*/
 #navbarSupportedContent {
+    height: 64px;
     width: 675px;
     padding: 30 43.569px 30 45.431px;
     justify-content: center;
@@ -205,7 +254,7 @@ h3 {
     flex-shrink: 0;
 
     border-radius: 54px;
-    border: 1px solid rgba(68, 222, 224, 0.56);
+    border: var(--bs-glass-border);
     background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
 
@@ -221,6 +270,13 @@ h3 {
     flex-grow: 0;
 }
 
+.navbar-img-languages {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: var(--bs-glass-border);
+}
 
 
 /* Hero */
@@ -235,7 +291,7 @@ h3 {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-     
+
 #home-s1 {
     background: url('/images/backgrounds/hero_home_bg.png') center/cover no-repeat;
     display: flex;
@@ -248,7 +304,8 @@ h3 {
 /*CARDS*/
 .card {
     color: var(--bs-white);
-    border-radius: 30px;
+    border-radius: 24px;
+    border: var(--bs-glass-border);
     padding: 30px;
 
     display: flex;
@@ -262,5 +319,7 @@ h3 {
     text-align: center;
 }
 
-
-
+.padding-section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
