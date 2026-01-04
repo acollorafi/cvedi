@@ -27,14 +27,12 @@
     --bs-glass-border: 1px solid rgba(68, 222, 224, 0.56);
 
 
-
     /*navbar*/
     --bs-navbar-color: var(--bs-white);
     --bs-navbar-hover-color: var(--bs-tan);
     --bs-navbar-active-color: var(--bs-tan);
     --bs-navbar-toggler-border-color: var(--bs-cyan);
     --bs-navbar-toggler-border-radius: 54%;
-
 
 
     /*font testo*/
@@ -45,7 +43,6 @@
         font-style: normal;
         font-display: swap;
     }
-
 }
 
 
@@ -156,14 +153,12 @@
 
 
 .btn-layout {
-
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease, background 0.2s;
     /* Rimuove stili default brutti dei button */
     appearance: none;
-    font-family: sans-serif;
     background-color: var(--colore-button);
 }
 
@@ -249,7 +244,6 @@ h3 {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
 
     color: #F5F5F5;
-    font-family: "Neutraface Text";
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -312,4 +306,9 @@ h3 {
 .padding-section {
     padding-top: 110px;
     padding-bottom: 110px;
+}
+
+.padding-footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }

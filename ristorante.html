@@ -18,6 +18,15 @@
 </head>
 
 <body>
+    <!-- Per effetto liquido -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+        <filter id="liquidFilter">
+            <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R"
+                yChannelSelector="G" />
+        </filter>
+    </svg>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
         <div class="container-xxl">
@@ -59,10 +68,10 @@
     </nav>
 
     <div class="hero-bg">
-
-        <div style="height: 300px;"></div>
-
-        <div class="container-xxl d-flex flex-column">
+        <div style="height: 459px;"></div>
+        <h1>RISTORANTE</h1>
+        <div style="height: 476px;"></div>
+        <div class="container-xxl d-flex flex-column padding-section">
             <div class="card glass-effect align-self-end" style="width: 660px;">
                 <h3>Chi siamo</h3>
                 <p>Eden Leaf non è semplicemente un luogo dove mangiare, ma un laboratorio vivente di coesistenza. Siamo
@@ -103,16 +112,76 @@
 
     </div>
 
-    <div>
-        <h2>Il nostro team</h2>
-        <div class="row align-items-center">
-            <div class="col-md-2">
-                <div class="card glass-effect gap-2">
-                    <img src="images/ristorante/img_team_01.png" class="team-avatar" />
-                    <p style="font-size: 28px;">Kaelen Ross</p>
-                    <div class="label-custom">Bio-Sommelier</div>
+    <div class="team-bg">
+        <div class="container-xxl padding-section text-center">
+            <h2>Il nostro team</h2>
+            <div class="row" style="padding-top: 584px;">
+                <div class="col">
+                    <div class="card glass-effect gap-2">
+                        <img src="images/ristorante/img_team_01.png" class="team-avatar" />
+                        <p style="font-size: 28px;">Kaelen Ross</p>
+                        <div class="label-custom">Bio-Sommelier</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card glass-effect gap-2">
+                        <img src="images/ristorante/img_team_01.png" class="team-avatar" />
+                        <p style="font-size: 28px;">Kaelen Ross</p>
+                        <div class="label-custom">Bio-Sommelier</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card glass-effect gap-2">
+                        <img src="images/ristorante/img_team_01.png" class="team-avatar" />
+                        <p style="font-size: 28px;">Kaelen Ross</p>
+                        <div class="label-custom">Bio-Sommelier</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card glass-effect gap-2">
+                        <img src="images/ristorante/img_team_01.png" class="team-avatar" />
+                        <p style="font-size: 28px;">Kaelen Ross</p>
+                        <div class="label-custom">Bio-Sommelier</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card glass-effect gap-2">
+                        <img src="images/ristorante/img_team_01.png" class="team-avatar" />
+                        <p style="font-size: 28px;">Kaelen Ross</p>
+                        <div class="label-custom">Bio-Sommelier</div>
+                    </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+
+    <div class="piatti-bg">
+        <div class="padding-section">
+            <div class="text-center">
+                <h2>Alcuni dei nostri piatti</h2>
+            </div>
+            <img src="images/ristorante/img_ramo_01.png" width="1043px" height="412px" style="margin-top:45px;" />
+            <div class="d-flex flex-column" style="margin-top:-120px">
+                <img src="images/ristorante/img_ramo_02.png" width="1043px" height="412px" class="align-self-end" />
+            </div>
+            <img src="images/ristorante/img_ramo_03.png" width="1043px" height="412px" style="margin-top:-90px" />
+            <div class="d-flex justify-content-center align-items-center">
+                <button class="glass-effect btn btn-custom-primary" type="button">Scopri di più</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center padding-footer">
+        <img src="images/logo/logo-footer.png" style="width: 190px; height: 190px;" />
+        <div style="margin-top: 20px;">
+            <p style="font-size: 32px; font-weight: bold;">Il primo ristorante Solarpunk.</p>
+            <p>Ogni giorno dalle 18:00 alle 24:00</p>
+        </div>
+        <div style="margin-top: 30px; line-height: 0.5;">
+            <p>© 2025 Eden Leaf Ecosystems.</p>
+            <p>Tutti i diritti riservati alla Natura.</p>
+            <p>P.IVA 000123SOLAR</p>
         </div>
     </div>
 
