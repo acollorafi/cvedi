@@ -35,16 +35,16 @@
     --bs-navbar-toggler-border-radius: 54%;
 
 
-    /*font testo*/
-    @font-face {
-        font-family: 'Neutraface Text';
-        src: url('/fonts/NeutrafaceText-Book') format('opentype');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-    }
-}
+   }
 
+   /*font testo*/
+@font-face {
+    font-family: "Neutraface Text";
+    src: url("/fonts/NeutrafaceText-Book.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 /*Liquid Glass Effect*/
