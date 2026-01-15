@@ -295,6 +295,24 @@ h3 {
 
 }
 
+#menu-s1 {
+    background: url('/images/menu/hero_menu_mask.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+
+#menu-s2 {
+    background: url('/images/menu/menu_bg2.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+
 /*CARDS*/
 .card {
     color: var(--bs-white);
