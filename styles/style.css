@@ -295,6 +295,19 @@ h3 {
 
 }
 
+#hero-info {
+    background: url('/images/backgrounds/hero-info.png') center bottom / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.hero-section-info {
+    min-height: 100vh;
+}
+
+
+
 /*CARDS*/
 .card {
     color: var(--bs-white);
@@ -321,4 +334,8 @@ h3 {
 .padding-footer {
     padding-top: 80px;
     padding-bottom: 80px;
+}
+
+.padding-text {
+    padding-bottom: 90px;
 }
