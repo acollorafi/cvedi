@@ -352,6 +352,7 @@ h3 {
 .footer {
     padding-top: 80px;
     padding-bottom: 80px;
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, var(--bs-green) 100%);
 }
 
 .padding-text {
@@ -381,3 +382,63 @@ h3 {
     margin-right: auto;
     margin-left: auto;
 }
+
+
+
+
+
+/* ***********************************
+Pagina RISTORANTE
+*********************************** */
+.hero-bg {
+    background-image: url('../images/ristorante/hero_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    /* aspect-ratio: 393 / 1711; */
+}
+
+@media (min-width: 768px) {
+    .hero-bg {
+        /* aspect-ratio: 800 / 1170; */
+    }
+}
+
+.team-bg {
+    background-image: url('../images/ristorante/img_team_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
+.piatti-bg {
+    background-image: url('../images/ristorante/img_piatti_bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 1442;
+}
+
+.team-avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: var(--bs-glass-border);
+}
+
+.img-piatto {
+    /* border: 2px solid var(--bs-cyan);  */
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ******************************** */
