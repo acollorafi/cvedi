@@ -294,9 +294,9 @@ h3 {
     align-self: stretch;
 
 }
-
+/*Sfondi pagina menù*/
 #menu-s1 {
-    background: url('/images/menu/hero_menu_mask.png') center/cover no-repeat;
+    background: url('/images/menu/hero_menu_mask.webp') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -305,7 +305,7 @@ h3 {
 }
 
 #menu-s2 {
-    background: url('/images/menu/menu_bg2.png') center/cover no-repeat;
+    background: url('/images/menu/menu_bg2.webp') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
