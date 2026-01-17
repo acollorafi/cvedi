@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+
 :root {
     --bs-primary: #B85B3F;
     --bs-secondary: #D2B48C;
@@ -45,6 +47,8 @@
     font-style: normal;
     font-display: swap;
 }
+
+
 
 
 /*Liquid Glass Effect*/
@@ -187,9 +191,13 @@ body {
     font-family: 'Neutraface Text', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 {
+    font-family: 'Syne', sans-serif !important;
+    font-weight: 800 !important;
+}
+
 h1 {
     font-size: 3rem;
-    font-weight: bold;
     color: var(--bs-white);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -202,7 +210,6 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    font-weight: bold;
     color: var(--bs-tan);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -215,7 +222,6 @@ h2 {
 
 h3 {
     font-size: 1.25rem;
-    font-weight: bold;
     color: var(--bs-tan);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -376,13 +382,41 @@ h3 {
     flex-shrink: 0;
 }
 
+.card-accessibility {
+    color: var(--bs-white);
+    border-radius: 24px;
+    border: var(--bs-glass-border);
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    height: 270px;
+    flex: 0 0 auto;    
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*
 .container-info {
-    max-width: 1260px;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
+*/
 
+.background-info {
+    background-image: url('../images/info/sfondo_sezioni.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 634;
+}
 
 
 
