@@ -120,11 +120,12 @@
 /*qui ci metto la nostra Label, poi vediamo se cambiare nome*/
 .label-custom {
     display: flex;
-    height: 48px;
+    height: fit-content; /* ho modificato da 48px a fit-content perché quando il testo wrappa usciva dalla label */
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    
 
     /* Forma e Bordo */
     border-radius: 100px;
