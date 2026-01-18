@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+
+    <!-- Bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- Per effetto liquido -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+        <filter id="liquidFilter">
+            <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R"
+                yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
+        <div class="container-xxl">
+            <!-- con container-fluid ha max-width 100%, con container e basta invece ha diversi breakpoint -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="100" height="100">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ristorante.html">RISTORANTE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="info.html">INFO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SOSTENIBILITA</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center" style="gap: 45px;">
+                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+                <img src="images/flags/Great Britain.png" class="navbar-img-languages" />
+            </div>
+        </div>
+    </nav>
+
+    <div id="hero-info">
+
+        <!-- Hero -->
+        <div class="hero-section-info container section">
+            <h1>INFO</h1>
+        </div>
+    </div>
+
+    <!-- dove trovarci -->
+<div class="container-xxl padding-section text text-center">
+    <h2 class="padding-text">Dove trovarci</h2>
+    <p class="padding-text">Ci trovate sospesi al Livello 5 dell’Albero Maestro, settore ovest della Foglia Madre (Canopia Alta 120).</p>
+    <img src="/images/info/dove-trovarci.png" alt="Mappa per raggiungerci">
+</div>
+
+<div class="container-info"> 
+    <div class="row g-5 justify-content-center align-items-stretch">
+        <div class="col-12 col-md-8">
+           <div class="card-info glass-effect h-100 p-4"> 
+            <h3 class="text-center mb-4">Come raggiungerci</h3>
+            <p>Il ristorante è facilmente raggiungibile tramite:</p>
+                <div class="d-flex mb-3 align-items-center">
+                    <div class="icon-info me-3"><img src="/images/icons/Elevator.png"></div>
+                    <div>
+                        <p class="mb-0" style="font-weight: 700;">Ascensore bio-climatico</p>
+                        <p class="mb-0">Partenza dall'Hub "Tronco Maestro - Liv. 12". Risalita panoramica in 6 minuti con arrivo diretto sulla nostra piattaforma.</p>
+                    </div>
+                </div>  
+                <div class="d-flex mb-3 align-items-center">
+                    <div class="icon-info me-3"><img src="/images/icons/Elevator.png"></div>
+                    <div>
+                        <p class="mb-0" style="font-weight: 700;">Ascensore bio-climatico</p>
+                        <p class="mb-0">Partenza dall'Hub "Tronco Maestro - Liv. 12". Risalita panoramica in 6 minuti con arrivo diretto sulla nostra piattaforma.</p>
+                    </div>
+                </div> 
+                <div class="d-flex align-items-center">
+                    <div class="icon-info me-3"><img src="/images/icons/Elevator.png"></div>
+                    <div>
+                        <p class="mb-0" style="font-weight: 700;">Ascensore bio-climatico</p>
+                        <p class="mb-0">Partenza dall'Hub "Tronco Maestro - Liv. 12". Risalita panoramica in 6 minuti con arrivo diretto sulla nostra piattaforma.</p>
+                    </div>
+                </div>
+             </div>
+        </div>    
+
+        <div class="col-12 col-md-4 ">
+            <div class="card-info glass-effect h-100 p-4"> 
+            <h3 class="text-center mb-4">Contatti</h3>
+            <p>Hai dubbi o domande particolari? Non esitare a contattarci!</p>
+            <div class="d-flex mb-3 align-items-center">
+                <div class="icon-info me-3"><img src="/images/icons/Elevator.png"></div>
+                <div>
+                    <p class="mb-0" style="font-weight: 700;">339 567 826 556</p>
+                </div>
+            </div>  
+            <div class="d-flex mb-3 align-items-center">
+                <div class="icon-info me-3"><img src="/images/icons/Elevator.png"></div>
+                <div>
+                    <p class="mb-0" style="font-weight: 700;">info@edenleaf.com</p>
+                </div>
+            </div> 
+            <div class="d-flex mb-3 align-items-center">
+                <div class="icon-info me-3"><img src="/images/icons/Elevator.png"></div>
+                <div>
+                    <p class="mb-0" style="font-weight: 700;">@edenleaf</p>
+                </div>
+            </div> 
+            </div>
+        </div>
+    </div>
+    <button class="glass-effect btn btn-custom-primary mx-auto mt-5" type="button">Prenota tavolo</button>
+</div>
+
+
+
+
+
+
+<div class="text-center padding-footer">
+    <img src="images/logo/logo-footer.png" style="width: 190px; height: 190px;" />
+    <div style="margin-top: 20px;">
+        <p style="font-size: 32px; font-weight: bold;">Il primo ristorante Solarpunk.</p>
+        <p>Ogni giorno dalle 18:00 alle 24:00</p>
+    </div>
+    <div style="margin-top: 30px; line-height: 0.5;">
+        <p>© 2025 Eden Leaf Ecosystems.</p>
+        <p>Tutti i diritti riservati alla Natura.</p>
+        <p>P.IVA 000123SOLAR</p>
+    </div>
+
+
+</body>
+
+</html>
