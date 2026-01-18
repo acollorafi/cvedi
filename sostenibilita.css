@@ -1,3 +1,29 @@
+@font-face {
+    font-family: 'Neutraface';
+    src: url('font/neutraface-text/Neutraface\ Text\ Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-family: 'Neutraface', sans-serif;
+}
+
+h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; 
+}
+
+h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+}
+
 .hero {
     height: 90vh;
     background-image: url("images/sostenibilità/sfondo-sostenibilità.png");
@@ -16,7 +42,7 @@
     text-align: center;
     letter-spacing: 0.1em;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    margin-top: 70px;;
+    margin-top: 70px;
 }
 
 .fullpage-bg {
