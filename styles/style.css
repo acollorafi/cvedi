@@ -122,11 +122,12 @@
 /*qui ci metto la nostra Label, poi vediamo se cambiare nome*/
 .label-custom {
     display: flex;
-    height: 48px;
+    height: fit-content; /* ho modificato da 48px a fit-content perché quando il testo wrappa usciva dalla label */
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    
 
     /* Forma e Bordo */
     border-radius: 100px;
@@ -309,6 +310,24 @@ h3 {
 
 #home-s1 {
     background: url('/images/backgrounds/hero_home_bg.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+/*Sfondi pagina menù*/
+#menu-s1 {
+    background: url('/images/menu/hero_menu_mask.webp') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+
+#menu-s2 {
+    background: url('/images/menu/menu_bg2.webp') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
