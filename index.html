@@ -134,7 +134,7 @@
 
     </div>
 
-
+                
     <!-- Sezione 2 - Gallery -->
     <div class="container section"> 
         <h2 class="section-title text-center mb-4">Uno sguardo nel nostro ecosistema</h2>
@@ -161,44 +161,124 @@
     
     <!-- Sezione 4 - Ristorante + FAQ -->
     <div class="container section">
+        
+        <!-- Cards Recensioni-->
         <h2 class="section-title text-center mb-4">Dicono di noi</h2>
 
-        <!-- Cards Recensioni-->
-        <div class="container-xxl">
         <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-            <div class="row row-cols-1 row-cols-md-3 g-5 mb-4">
+            <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
+
                 <div class="col">
-                    <div class="card-accessibility glass-effect">
-                        <img src="/images/home/recensioni/recensione1.png">
-                        <p>“Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente, un'esperienza che vale ogni centesimo.”</p>
-                    </div>
-                </div>
-        
-                <div class="col">
-                    <div class="card-accessibility glass-effect">
-                        <img src="/images/home/recensioni/recensione2.png">
-                        <p>"Finalmente l'alta cucina incontra l'etica vera. Qui sopra il caos della città è solo un brutto ricordo, esiste solo armonia."</p>
-                    </div>
-                </div>
-        
-                <div class="col">
-                    <div class="card-accessibility glass-effect">
-                        <img src="/images/home/recensioni/recensione3.png">
-                        <p>"Tecnologia invisibile e sapori antichi. Un lusso sostenibile che non credevo possibile. Il servizio è fluido ed elegante, proprio come la linfa."</p>
+                    <div class="card glass-effect">
+                        <img src="/images/home/recensioni/recensione1.png" class="foto-recensione">
+                        <p>Raccogliamo germogli, frutti e linfa direttamente dai rami che circondano i vostri
+                            tavoli: una freschezza che non conosce trasporto.</p>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card-accessibility glass-effect">
-                        <img src="/images/home/recensioni/recensione4.png">
-                        <p>"Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante il temporale era pura magia, indimenticabile."</p>
+                    <div class="card glass-effect">
+                        <img src="/images/home/recensioni/recensione2.png" class="foto-recensione">
+                        <p>Sensori bionici monitorano la salute delle piante in tempo reale, garantendo ingredienti puri senza mai forzare i ritmi della natura.</p>
                     </div>
                 </div>
-        
-            
+
+                <div class="col">
+                    <div class="card glass-effect">
+                        <img src="/images/home/recensioni/recensione3.png" class="foto-recensione">
+                        <p>La nostra cupola in vetro fotovoltaico cattura il sole per alimentare la cucina, rendendo ogni cottura un atto di energia pulita.</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card glass-effect">
+                        <img src="/images/home/recensioni/recensione4.png" class="foto-recensione">
+                        <p>Nulla si spreca: i nostri scarti organici vengono trasformati in nutrienti vitali per le radici del Grande Albero, in un ciclo armonioso.</p>
+                    </div>
+                </div>
+
             </div>
+ 
         </div>
+        
+        <!-- FAQ-->
+        <h2 class="section-title text-center mb-4">FAQ</h2>
+        
+        <div class="accordion" id="accordionExample">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        La struttura danneggia la Foglia Madre?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica parziale che
+                        azzerano il carico fisico sui rami, permettendo all'albero di crescere libero senza costrizioni.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Cosa succede se c'è maltempo?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        La cucina è adatta a tutti?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        La cucina è adatta a tutti?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        La cucina è adatta a tutti?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+
+       
+
+
+
 
     </div> 
 

@@ -316,6 +316,7 @@ h3 {
     align-self: stretch;
 
 }
+
 /*Sfondi pagina menù*/
 #menu-s1 {
     background: url('/images/menu/hero_menu_mask.webp') center/cover no-repeat;
@@ -435,6 +436,26 @@ h3 {
     aspect-ratio: 1440 / 634;
 }
 
+
+.foto-recensione {
+    width: 150px;
+    height: 150px;
+    border: none;
+}
+
+
+/*Accordion FAQ*/
+.accordion-body {
+    background-color: var(--bs-black);
+    color: var(--bs-white);
+    border: var(--bs-glass-border);
+}
+
+.accordion-button {
+    background-color: var(--bs-black);
+    color: var(--bs-white);
+    border: var(--bs-glass-border);
+}
 
 
 
