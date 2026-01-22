@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+
 :root {
     --bs-primary: #B85B3F;
     --bs-secondary: #D2B48C;
@@ -35,16 +37,16 @@
     --bs-navbar-toggler-border-radius: 54%;
 
 
-    /*font testo*/
-    @font-face {
-        font-family: 'Neutraface Text';
-        src: url('/fonts/NeutrafaceText-Book.otf') format('opentype');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-    }
 }
 
+/*font testo*/
+@font-face {
+    font-family: "Neutraface Text";
+    src: url("../font/neutraface-text/Neutraface-Text-Book.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 /*Liquid Glass Effect*/
@@ -79,19 +81,19 @@
     will-change: transform;
 }
 
-    /* --- 2. UPGRADE PER CHROME (Solo Desktop) --- */
-  /* Usiamo @supports per rilevare una funzione specifica del motore di Chrome.
+/* --- 2. UPGRADE PER CHROME (Solo Desktop) --- */
+/* Usiamo @supports per rilevare una funzione specifica del motore di Chrome.
      Safari NON supporta 'field-sizing', quindi ignorerà completamente questo blocco. */
-  @supports (field-sizing: content) {
+@supports (field-sizing: content) {
     .glass-effect {
-      /* Sovrascriviamo il blur con il filtro liquido */
-      -webkit-backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
-      backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
+        /* Sovrascriviamo il blur con il filtro liquido */
+        -webkit-backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
+        backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
     }
-  }
-  
-  /*personalizzazione button primary (e prenota)*/
-.btn-custom-primary{
+}
+
+/*personalizzazione button primary (e prenota)*/
+.btn-custom-primary {
 
     display: flex;
     height: 64px;
@@ -120,11 +122,12 @@
 /*qui ci metto la nostra Label, poi vediamo se cambiare nome*/
 .label-custom {
     display: flex;
-    height: 48px;
+    height: fit-content; /* ho modificato da 48px a fit-content perché quando il testo wrappa usciva dalla label */
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    
 
     /* Forma e Bordo */
     border-radius: 100px;
@@ -187,25 +190,45 @@ body {
     font-family: 'Neutraface Text', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 {
+    font-family: 'Syne', sans-serif !important;
+    font-weight: 800 !important;
+}
+
 h1 {
-    font-size: 6rem;
-    font-weight: bold;
+    font-size: 3rem;
     color: var(--bs-white);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+@media (min-width: 768px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
+
 h2 {
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 2rem;
     color: var(--bs-tan);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+@media (min-width: 768px) {
+    h2 {
+        font-size: 4rem;
+    }
+}
+
 h3 {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 1.25rem;
     color: var(--bs-tan);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    h3 {
+        font-size: 2.5rem;
+    }
 }
 
 .section {
@@ -214,7 +237,6 @@ h3 {
     align-items: center;
     justify-content: center;
 }
-
 
 
 /* Navbar */
@@ -294,6 +316,38 @@ h3 {
     align-self: stretch;
 
 }
+/*Sfondi pagina menù*/
+#menu-s1 {
+    background: url('/images/menu/hero_menu_mask.webp') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+
+#menu-s2 {
+    background: url('/images/menu/menu_bg2.webp') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+
+#hero-info {
+    background: url('/images/backgrounds/hero-info.png') center bottom / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.hero-section-info {
+    min-height: 100vh;
+}
+
+
 
 /*CARDS*/
 .card {
@@ -318,7 +372,124 @@ h3 {
     padding-bottom: 110px;
 }
 
-.padding-footer {
+.footer {
     padding-top: 80px;
     padding-bottom: 80px;
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, var(--bs-green) 100%);
 }
+
+.padding-text {
+    padding-bottom: 90px;
+}
+
+.card-info {
+    color: var(--bs-white);
+    border-radius: 24px;
+    border: var(--bs-glass-border);
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-info {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.card-accessibility {
+    color: var(--bs-white);
+    border-radius: 24px;
+    border: var(--bs-glass-border);
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    height: 270px;
+    flex: 0 0 auto;    
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*
+.container-info {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+*/
+
+.background-info {
+    background-image: url('../images/info/sfondo_sezioni.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 634;
+}
+
+
+
+
+/* ***********************************
+Pagina RISTORANTE
+*********************************** */
+.hero-bg {
+    background-image: url('../images/ristorante/hero_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    /* aspect-ratio: 393 / 1711; */
+}
+
+@media (min-width: 768px) {
+    .hero-bg {
+        /* aspect-ratio: 800 / 1170; */
+    }
+}
+
+.team-bg {
+    background-image: url('../images/ristorante/img_team_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
+.piatti-bg {
+    background-image: url('../images/ristorante/img_piatti_bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 1442;
+}
+
+.team-avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: var(--bs-glass-border);
+}
+
+.img-piatto {
+    /* border: 2px solid var(--bs-cyan);  */
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ******************************** */
