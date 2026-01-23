@@ -454,10 +454,25 @@ h3 {
 .accordion-button {
     background-color: var(--bs-black);
     color: var(--bs-white);
-    border: var(--bs-glass-border);
+    border: none;
 }
 
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-black);
+    color: var(--bs-white);
+    border: none;
+}
 
+.accordion-item {
+    border: var(--bs-glass-border);
+    border-radius: 100px;
+    margin: 10px;
+}
+
+.accordion-item:not(:first-of-type) {
+    border: var(--bs-glass-border);
+    border-radius: 100px;
+}
 
 /* ***********************************
 Pagina RISTORANTE
