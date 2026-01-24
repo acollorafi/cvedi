@@ -505,6 +505,8 @@ Pagina RISTORANTE
 
 /* ******************************** */
 
+
+/*prenota*/
 .iframe-crop iframe {
     transform: scale(1.15); /* ingrandisce leggermente */
 }
@@ -632,6 +634,38 @@ Pagina RISTORANTE
         margin-left: 0;
         margin-top: 10px;
     }
+}
+
+
+
+/* Posizionamento frecce fuori dalle card per non coprirle */
+.custom-ctrl {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev.custom-ctrl { left: -60px; }
+.carousel-control-next.custom-ctrl { right: -60px; }
+
+/* Stile icone basato sui tuoi colori */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: var(--bs-cyan);
+    box-shadow: 0 0 15px var(--bs-cyan);
+}
+
+/* Fix per mobile: su schermi piccoli le frecce tornano interne */
+@media (max-width: 1200px) {
+    .carousel-control-prev.custom-ctrl { left: 0; }
+    .carousel-control-next.custom-ctrl { right: 0; }
 }
 /* ******************************** */
 
