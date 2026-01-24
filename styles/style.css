@@ -119,6 +119,17 @@
     --bs-btn-hover-bg: var(--bs-tan);
 }
 
+/*bottone prenota*/
+.nav-prenota.is-current {
+    box-shadow: 0 0 25px color-mix(
+        in srgb,
+        var(--bs-highlight-color) 40%,
+        transparent
+    );
+
+    transform: translateY(-1px);
+}
+
 /*qui ci metto la nostra Label, poi vediamo se cambiare nome*/
 .label-custom {
     display: flex;
@@ -931,3 +942,169 @@ h3, h4, h5, h6 {
 }
 
 /* ******************************** */
+
+
+/*prenota*/
+.iframe-crop iframe {
+    transform: scale(1.15); /* ingrandisce leggermente */
+}
+
+
+/* Container per centrare la barra */
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* La barra principale che usa il tuo effetto Glass */
+.search-bar-custom {
+    display: flex;
+    align-items: center;
+    padding: 8px 8px 8px 32px;
+    border-radius: 100px; /* Arrotondata come i tuoi bottoni */
+    max-width: 850px;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover sulla barra intera */
+.search-bar-custom:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Singole sezioni interne */
+.search-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 16px;
+    border-radius: 100px;
+    transition: background 0.2s;
+}
+
+.search-section:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Etichette (Dove, Date, Chi) */
+.search-label {
+    font-family: 'Syne', sans-serif; /* Uso Syne per i titoli come nel tuo CSS */
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--bs-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Testo Placeholder */
+.search-input, .search-placeholder {
+    background: transparent;
+    border: none;
+    color: var(--bs-tan); /* Uso il tuo Tan per staccare dal bianco */
+    font-family: 'Neutraface Text', sans-serif;
+    font-size: 15px;
+    outline: none;
+    margin-top: 2px;
+}
+
+.search-input::placeholder {
+    color: var(--bs-tan);
+    opacity: 0.7;
+}
+
+/* Divisori verticali */
+.search-divider {
+    width: 1px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Bottone Lente */
+.search-btn-circle {
+    background-color: var(--bs-primary); /* Il tuo rosso #B85B3F */
+    color: var(--bs-white);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.search-btn-circle:hover {
+    background-color: var(--bs-cyan); /* Cambia in cyan al passaggio */
+    transform: scale(1.05);
+}
+
+.search-btn-circle svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+    .search-bar-custom {
+        flex-direction: column;
+        border-radius: 24px;
+        padding: 16px;
+    }
+    .search-divider {
+        display: none;
+    }
+    .search-section {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .search-btn-circle {
+        width: 100%;
+        border-radius: 12px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+
+
+/* Posizionamento frecce fuori dalle card per non coprirle */
+.custom-ctrl {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev.custom-ctrl { left: -60px; }
+.carousel-control-next.custom-ctrl { right: -60px; }
+
+/* Stile icone basato sui tuoi colori */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: var(--bs-cyan);
+    box-shadow: 0 0 15px var(--bs-cyan);
+}
+
+/* Fix per mobile: su schermi piccoli le frecce tornano interne */
+@media (max-width: 1200px) {
+    .carousel-control-prev.custom-ctrl { left: 0; }
+    .carousel-control-next.custom-ctrl { right: 0; }
+}
+/* ******************************** */
+
+
