@@ -441,6 +441,64 @@ h3 {
 /* ***********************************
 Pagina RISTORANTE
 *********************************** */
+.hero-bg {
+    background-image: url('../images/ristorante/hero_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    /* aspect-ratio: 393 / 1711; */
+}
+
+@media (min-width: 768px) {
+    .hero-bg {
+        /* aspect-ratio: 800 / 1170; */
+    }
+}
+
+.team-bg {
+    background-image: url('../images/ristorante/img_team_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
+.piatti-bg {
+    background-image: url('../images/ristorante/img_piatti_bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 1442;
+}
+
+.team-avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: var(--bs-glass-border);
+}
+
+.img-piatto {
+    /* border: 2px solid var(--bs-cyan);  */
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ******************************** */
+
+
+/* ***********************************
+Pagina SOSTENIBILITà
+*********************************** */
+
 @font-face {
     font-family: 'Neutraface';
     src: url('font/neutraface-text/Neutraface\ Text\ Book.otf') format('opentype');
@@ -489,12 +547,15 @@ h3, h4, h5, h6 {
 }
 
 .fullpage-bg {
-    background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.png"); 
+    background-size: cover;        
+    background-repeat: no-repeat;  
+    background-position: center;   
+    width: 100%;                  
+    min-height: 800px;             
+    position: relative;           
+    z-index: 0;                  
 }
-
 .image-right-container {
     position: relative; 
 }
@@ -929,5 +990,3 @@ h3, h4, h5, h6 {
         padding: 80px 0;
     }
 }
-
-/* ******************************** */
