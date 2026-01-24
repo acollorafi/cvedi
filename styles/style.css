@@ -37,6 +37,11 @@
     --bs-navbar-toggler-border-radius: 54%;
 
 
+    /*accordion*/
+    --bs-accordion-bg: none;
+    --bs-accordion-color: var(--bs-white); 
+    --bs-accordion-border: var(--bs-glass-border);
+    --bs-accordion-active-bg: rgba(68, 222, 224, 0);
 }
 
 /*font testo*/
@@ -236,6 +241,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 
@@ -445,33 +451,88 @@ h3 {
 
 
 /*Accordion FAQ*/
-.accordion-body {
-    background-color: var(--bs-black);
-    color: var(--bs-white);
+.accordion {
+    --bs-accordion-bg: none;
+    --bs-accordion-active-bg: none;
+    background-color: transparent;
+    border: none;
+
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-color: none;
+}
+
+
+.accordion-item {
+    margin: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+
+    border-radius: 40px;
+    border: var(--bs-glass-border) solid var(--bs-cyan, #44DEE0);
+    background: rgba(0, 0, 0, 0.60);
+    box-shadow: -5px 5px 6px 0 rgba(255, 255, 255, 0.40) inset, 5px -5px 8.6px 0 rgba(47, 76, 56, 0.60) inset;
+}
+
+
+.accordion-item:first-of-type {
+    border-radius: 40px;
     border: var(--bs-glass-border);
 }
 
+.accordion-item:not(:first-of-type) {
+    border: var(--bs-glass-border);
+    border-radius: 40px;
+}
+
+.accordion-collapse {
+    border-radius: 0px;
+}
+
 .accordion-button {
-    background-color: var(--bs-black);
+    color: var(--Linen, #F6F1E7);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px; /* 109.091% */
+    text-align: left;
+}
+
+.accordion-header {
+    align-items: left;
+}
+
+.accordion-body {
+    color: var(--bs-white);
+    border: none;
+}
+
+.accordion-button {
     color: var(--bs-white);
     border: none;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: var(--bs-black);
     color: var(--bs-white);
     border: none;
+    box-shadow: none;
 }
 
-.accordion-item {
-    border: var(--bs-glass-border);
-    border-radius: 100px;
-    margin: 10px;
+.accordion-button::after {
+    background-image: url('/images/icons/icon_chevron_down.svg');
+    transform: rotate(0deg);
 }
 
-.accordion-item:not(:first-of-type) {
-    border: var(--bs-glass-border);
-    border-radius: 100px;
+.accordion-button:not(.collapsed)::after {
+    background-image: url('/images/icons/icon_chevron_down.svg');
+    transform: rotate(180deg);
+}
+
+.accordion-button::after {
+    filter: none;
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 /* ***********************************
