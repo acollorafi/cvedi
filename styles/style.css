@@ -358,6 +358,17 @@ h3 {
     min-height: 100vh;
 }
 
+#hero-prenota {
+    background: url('/images/backgrounds/hero-prenota.png') center bottom / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.hero-section-prenota {
+    min-height: 100vh;
+}
 
 
 /*CARDS*/
@@ -1003,7 +1014,7 @@ aspect-ratio: 1440 / 634;
     font-family: 'Syne', sans-serif; /* Uso Syne per i titoli come nel tuo CSS */
     font-size: 12px;
     font-weight: 800;
-    color: var(--bs-white);
+    color: var(--bs-tan);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1012,7 +1023,7 @@ aspect-ratio: 1440 / 634;
 .search-input, .search-placeholder {
     background: transparent;
     border: none;
-    color: var(--bs-tan); /* Uso il tuo Tan per staccare dal bianco */
+    color: var(--bs-white); /* Uso il tuo Tan per staccare dal bianco */
     font-family: 'Neutraface', sans-serif;
     font-size: 15px;
     outline: none;
@@ -1020,7 +1031,7 @@ aspect-ratio: 1440 / 634;
 }
 
 .search-input::placeholder {
-    color: var(--bs-tan);
+    color: var(--bs-white);
     opacity: 0.7;
 }
 
@@ -1059,6 +1070,27 @@ aspect-ratio: 1440 / 634;
     height: 18px;
 }
 
+/* Nasconde l'input nativo ma lo mantiene cliccabile */
+.search-input-hidden {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* Stile per le icone del calendario/orologio nei browser che le supportano */
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Rende l'icona bianca se necessario */
+    cursor: pointer;
+}
+
+/* Assicurati che la sezione sia relativa per posizionare l'input */
+.search-section {
+    position: relative;
+    cursor: pointer;
+}
+
 /* Responsive per mobile */
 @media (max-width: 768px) {
     .search-bar-custom {
@@ -1082,6 +1114,21 @@ aspect-ratio: 1440 / 634;
     }
 }
 
+
+#mappa-tavoli {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 /* Posizionamento frecce fuori dalle card per non coprirle */

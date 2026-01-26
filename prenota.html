@@ -14,6 +14,7 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles/style.css">
+    <script src="javascript/script.js"></script>
 </head>
 
 <body>
@@ -67,13 +68,14 @@
         </div>
     </nav>
 
-    <div id="hero-info">
+    <div id="hero-prenota">
 
         <!-- Hero -->
-        <div class="hero-section-info container section">
+        <div class="hero-section-prenota container section">
             <h1>PRENOTA</h1>
         </div>
     </div>
+    
 <div class="background-prenota">
 
     <!--barra prenotazione-->
@@ -86,19 +88,21 @@
             
             <div class="search-divider"></div>
     
-            <div class="search-section">
+            <div class="search-section" onclick="document.getElementById('dateInput').showPicker()">
                 <span class="search-label">Data</span>
-                <span class="search-placeholder">Scegli la data</span>
+                <span id="date-text" class="search-placeholder">Scegli la data</span>
+                <input type="date" id="dateInput" class="search-input-hidden" onchange="updateLabel(this, 'date-text')">
             </div>
     
             <div class="search-divider"></div>
     
-            <div class="search-section">
+            <div class="search-section" onclick="document.getElementById('timeInput').showPicker()">
                 <span class="search-label">Orario</span>
-                <span class="search-placeholder">Indica l'orario di prenotazione</span>
+                <span id="time-text" class="search-placeholder">Indica l'orario</span>
+                <input type="time" id="timeInput" class="search-input-hidden" onchange="updateLabel(this, 'time-text')">
             </div>
     
-            <button class="search-btn-circle glass-effect">
+            <button class="search-btn-circle glass-effect" onclick="mostraTavoli()">
                 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false">
                     <path d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9" fill="none" stroke="currentColor" stroke-width="4"></path>
                 </svg>
@@ -106,7 +110,7 @@
         </div>
     </div>
 
-    <div class="container-xxl padding-section text-center">
+    <div id="mappa-tavoli" class="container-xxl padding-section text-center d-none">
         <h2 class="mb-5">Tavoli disponibili</h2>
         <p class="mb-5">Scegli il tuo tavolo sulla mappa!</p>
         <!--mappa-->
