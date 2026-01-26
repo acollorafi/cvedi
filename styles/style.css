@@ -41,7 +41,7 @@
 
 /*font testo*/
 @font-face {
-    font-family: "Neutraface Text";
+    font-family: "Neutraface";
     src: url("../font/neutraface-text/Neutraface-Text-Book.woff") format("woff");
     font-weight: 400;
     font-style: normal;
@@ -198,7 +198,7 @@
 body {
     background-color: var(--bs-body-bg);
     color: var(--bs-white);
-    font-family: 'Neutraface Text', sans-serif;
+    font-family: 'Neutraface', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 {
@@ -1013,7 +1013,7 @@ aspect-ratio: 1440 / 634;
     background: transparent;
     border: none;
     color: var(--bs-tan); /* Uso il tuo Tan per staccare dal bianco */
-    font-family: 'Neutraface Text', sans-serif;
+    font-family: 'Neutraface', sans-serif;
     font-size: 15px;
     outline: none;
     margin-top: 2px;
@@ -1112,6 +1112,29 @@ aspect-ratio: 1440 / 634;
 @media (max-width: 1200px) {
     .carousel-control-prev.custom-ctrl { left: 0; }
     .carousel-control-next.custom-ctrl { right: 0; }
+}
+
+/* Posiziona i pallini un po' più in basso rispetto alle card */
+.carousel-indicators {
+    bottom: -50px; 
+}
+
+/* Stile dei pallini */
+.carousel-indicators [button] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Li rende tondi invece che rettangolari */
+    background-color: var(--bs-tan); /* Il tuo colore Tan */
+    border: none;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+/* Pallino attivo */
+.carousel-indicators .active {
+    background-color: var(--bs-cyan); /* Il tuo Cyan per l'evidenza */
+    opacity: 1;
+    transform: scale(1.2);
 }
 /* ******************************** */
 
