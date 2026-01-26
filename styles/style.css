@@ -949,6 +949,15 @@ h3, h4, h5, h6 {
     transform: scale(1.15); /* ingrandisce leggermente */
 }
 
+.background-prenota {
+background-image: url('../images/backgrounds/sfondo-prenota.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+width: 100%;
+height: auto;
+aspect-ratio: 1440 / 634;
+}
 
 /* Container per centrare la barra */
 .search-container {
@@ -962,9 +971,8 @@ h3, h4, h5, h6 {
 .search-bar-custom {
     display: flex;
     align-items: center;
-    padding: 8px 8px 8px 32px;
     border-radius: 100px; /* Arrotondata come i tuoi bottoni */
-    max-width: 850px;
+    max-width: 1320px;
     width: 100%;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -981,7 +989,7 @@ h3, h4, h5, h6 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 10px 16px;
+    padding: 18px 25px;
     border-radius: 100px;
     transition: background 0.2s;
 }
@@ -1028,8 +1036,8 @@ h3, h4, h5, h6 {
     background-color: var(--bs-primary); /* Il tuo rosso #B85B3F */
     color: var(--bs-white);
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
