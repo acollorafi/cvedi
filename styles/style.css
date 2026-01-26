@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+
 :root {
     --bs-primary: #B85B3F;
     --bs-secondary: #D2B48C;
@@ -39,7 +41,7 @@
 
 /*font testo*/
 @font-face {
-    font-family: "Neutraface Text";
+    font-family: "Neutraface";
     src: url("../font/neutraface-text/Neutraface-Text-Book.woff") format("woff");
     font-weight: 400;
     font-style: normal;
@@ -117,14 +119,26 @@
     --bs-btn-hover-bg: var(--bs-tan);
 }
 
+/*bottone prenota*/
+.nav-prenota.is-current {
+    box-shadow: 0 0 25px color-mix(
+        in srgb,
+        var(--bs-highlight-color) 40%,
+        transparent
+    );
+
+    transform: translateY(-1px);
+}
+
 /*qui ci metto la nostra Label, poi vediamo se cambiare nome*/
 .label-custom {
     display: flex;
-    height: 48px;
+    height: fit-content; /* ho modificato da 48px a fit-content perché quando il testo wrappa usciva dalla label */
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    
 
     /* Forma e Bordo */
     border-radius: 100px;
@@ -184,12 +198,16 @@
 body {
     background-color: var(--bs-body-bg);
     color: var(--bs-white);
-    font-family: 'Neutraface Text', sans-serif;
+    font-family: 'Neutraface', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3 {
+    font-family: 'Syne', sans-serif !important;
+    font-weight: 800 !important;
 }
 
 h1 {
     font-size: 3rem;
-    font-weight: bold;
     color: var(--bs-white);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -202,7 +220,6 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    font-weight: bold;
     color: var(--bs-tan);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -215,7 +232,6 @@ h2 {
 
 h3 {
     font-size: 1.25rem;
-    font-weight: bold;
     color: var(--bs-tan);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -311,6 +327,24 @@ h3 {
     align-self: stretch;
 
 }
+/*Sfondi pagina menù*/
+#menu-s1 {
+    background: url('/images/menu/hero_menu_mask.webp') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+
+#menu-s2 {
+    background: url('/images/menu/menu_bg2.webp') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
 
 #hero-info {
     background: url('/images/backgrounds/hero-info.png') center bottom / cover no-repeat;
@@ -324,6 +358,17 @@ h3 {
     min-height: 100vh;
 }
 
+#hero-prenota {
+    background: url('/images/backgrounds/hero-prenota.png') center bottom / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.hero-section-prenota {
+    min-height: 100vh;
+}
 
 
 /*CARDS*/
@@ -376,13 +421,41 @@ h3 {
     flex-shrink: 0;
 }
 
+.card-accessibility {
+    color: var(--bs-white);
+    border-radius: 24px;
+    border: var(--bs-glass-border);
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    height: 270px;
+    flex: 0 0 auto;    
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*
 .container-info {
-    max-width: 1260px;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
+*/
 
+.background-info {
+    background-image: url('../images/info/sfondo_sezioni.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 634;
+}
 
 
 
@@ -390,55 +463,726 @@ h3 {
 /* ***********************************
 Pagina RISTORANTE
 *********************************** */
-.hero-bg {
-    background-image: url('../images/ristorante/hero_bg.png');
+@font-face {
+    font-family: 'Neutraface';
+    src: url('font/neutraface-text/Neutraface\ Text\ Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-family: 'Neutraface', sans-serif;
+}
+
+h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; 
+}
+
+h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+}
+
+.hero {
+    height: 90vh;
+    background-image: url("../images/sostenibilità/sfondo-sostenibilità.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.hero-title {
+    color: white;
+    font-size: 5.5rem !important;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.fullpage-bg {
+    background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-right-container {
+    position: relative; 
+}
+
+.image-right {
+    position: absolute;
+    right: 0px; 
+    top: -200px; 
+    z-index: 10; 
+    pointer-events: none;
+    width: 480px; 
+    height: auto;
+    opacity: 1;
+}
+
+.section-image-wrapper {
+    padding: 20px;
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.hero-line {
+    position: absolute;
+    left: 0;
+    bottom: 350px;
+    width: calc(100% - [spazio rimanente]); 
+    width: 800px; 
+    max-width: 100%;
+}
+
+.vision-section {
+    position: relative;
+    margin-top: -10px;
+  }
+  
+  .vision-section::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px; 
+    height: 400px;
+    background-image: url('percorso/pianta-destra.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 0.8; 
+  }
+
+.image-left-container {
+    position: absolute;
+    left: -370px; 
+    top: 160px; 
+    z-index: 10; 
+    pointer-events: none;
+    transform: rotate(27deg)
+}
+
+.image-left {
+    width: 800px; 
+    height: auto;
+}
+
+.section-content {
+    padding: 30px 20px;
+    min-height: 300px;
+}
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: white;
+}
+
+.vision-section,
+.sustainability-section,
+.fasi-section {
+    padding: 40px 0;
+}
+
+.economia-circolare {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.economia-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.economia-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #D2B48C;
+    margin-bottom: px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.economia-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f5f5f5;
+}
+
+#foglia-top {
+    top: -250px;
+    right: -10px;
+}
+
+.fase-wrapper {
+    position: relative;
+}
+
+.fase-nav {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.439);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.99);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.fase-nav:hover {
+    background: rgba(26, 77, 46, 0);
+    border-color: #44DEE0;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.fase-nav {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    border: none;
+    background-color: #5a9b8a00; 
+    color: #44DEE0;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+    transform-origin: center center;
+  }
+  
+  .fase-nav:hover {
+    background-color: #4a8b7a;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(90, 155, 138, 0.4);
+  }
+  
+  .fase-nav:active {
+    transform: scale(0.95);
+  }
+
+.prev-fase {
+    left: 10px;
+}
+
+.next-fase {
+    right: 10px;
+}
+
+.label-custom {
+    color: #FFFFFF;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.fase-wrapper .row.g-0 {
+    display: none;
+}
+
+.fase-wrapper .row.g-0.active {
+    display: flex;
+}
+
+.experts-section,
+.partnership-section {
+    padding: 60px 0;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #D2B48C;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    margin-bottom: 100px;
+}
+
+.expert-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.expert-card:hover {
+    transform: translateY(-5px);
+}
+
+.expert-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid F6F1E7(212, 175, 55, 0.5);
+}
+
+.expert-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+#foglia5 {
+    top: -150px;
+    right: -30px;
+}
+
+#foglia6 {
+    top: 1990px;
+    left: -270px;
+    transform: scale(0.4)
+}
+
+.label-custom {
+    font-size: 1.1rem ; 
+    font-weight: 500;  
+    color: #FFFFFF;    
+    background: rgba(26, 77, 46, 0.2); 
+    padding: 12px 12px; 
+    border-radius: 15px; 
+    display: inline-block; 
+    margin-top: 5px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    height: 100%;            
+    text-align: center;  
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.partner-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+}
+
+.partner-logo {
+    max-width: 100%;
+    max-height: 120px;
+    height: auto;
+}
+
+.footer-section {
+    padding: 80px 20px 40px;
+}
+
+.footer-section {
+    margin-top: 200px;
+  }
+
+.footer-logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.footer-main {
+    margin-bottom: 40px;
+}
+
+.footer-tagline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-hours {
+    font-size: 1rem;
+    color: white;
+}
+
+.footer-legal {
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.footer-legal p {
+    margin: 3px 0;
+}
+
+/* Tablet & Desktop */
 @media (min-width: 768px) {
-    .hero-bg {
-        /* aspect-ratio: 800 / 1170; */
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .section-content {
+        padding: 50px 40px;
+    }
+
+    .section-heading {
+        font-size: 2.5rem;
+    }
+
+    .section-text {
+        font-size: 1.1rem;
+    }
+
+    .economia-title {
+        font-size: 3rem;
+    }
+
+    .economia-text {
+        font-size: 1.2rem;
+    }
+
+    .experts-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .expert-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .expert-name {
+        font-size: 1.5rem;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .partner-logo {
+        max-height: 100px;
+    }
+
+    .footer-logo {
+        width: 190px;
+        height: 190px;
+    }
+
+    .footer-tagline {
+        font-size: 2rem;
+    }
+
+    .footer-hours {
+        font-size: 1.2rem;
     }
 }
 
-.team-bg {
-    background-image: url('../images/ristorante/img_team_bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-}
+@media (min-width: 992px) {
+    .fase-nav {
+        display: block;
+    }
 
-.piatti-bg {
-    background-image: url('../images/ristorante/img_piatti_bg.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1440 / 1442;
-}
+    .prev-fase {
+        left: -25px;
+    }
 
-.team-avatar {
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: var(--bs-glass-border);
-}
+    .next-fase {
+        right: -25px;
+    }
 
-.img-piatto {
-    /* border: 2px solid var(--bs-cyan);  */
-    border-radius: 20px;
-    overflow: hidden;
-    max-width: 100%;
-    height: auto;
+    .vision-section,
+    .sustainability-section,
+    .fasi-section {
+        padding: 80px 0;
+    }
 }
 
 /* ******************************** */
+
+
+/*prenota*/
+.iframe-crop iframe {
+    transform: scale(1.15); /* ingrandisce leggermente */
+}
+
+.background-prenota {
+background-image: url('../images/backgrounds/sfondo-prenota.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+width: 100%;
+height: auto;
+aspect-ratio: 1440 / 634;
+}
+
+/* Container per centrare la barra */
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* La barra principale che usa il tuo effetto Glass */
+.search-bar-custom {
+    display: flex;
+    align-items: center;
+    border-radius: 100px; /* Arrotondata come i tuoi bottoni */
+    max-width: 1320px;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover sulla barra intera */
+.search-bar-custom:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Singole sezioni interne */
+.search-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 25px;
+    border-radius: 100px;
+    transition: background 0.2s;
+}
+
+.search-section:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Etichette (Dove, Date, Chi) */
+.search-label {
+    font-family: 'Syne', sans-serif; /* Uso Syne per i titoli come nel tuo CSS */
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--bs-tan);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Testo Placeholder */
+.search-input, .search-placeholder {
+    background: transparent;
+    border: none;
+    color: var(--bs-white); /* Uso il tuo Tan per staccare dal bianco */
+    font-family: 'Neutraface', sans-serif;
+    font-size: 15px;
+    outline: none;
+    margin-top: 2px;
+}
+
+.search-input::placeholder {
+    color: var(--bs-white);
+    opacity: 0.7;
+}
+
+/* Divisori verticali */
+.search-divider {
+    width: 1px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Bottone Lente */
+.search-btn-circle {
+    background-color: var(--bs-primary); /* Il tuo rosso #B85B3F */
+    color: var(--bs-white);
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.search-btn-circle:hover {
+    background-color: var(--bs-cyan); /* Cambia in cyan al passaggio */
+    transform: scale(1.05);
+}
+
+.search-btn-circle svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Nasconde l'input nativo ma lo mantiene cliccabile */
+.search-input-hidden {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* Stile per le icone del calendario/orologio nei browser che le supportano */
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Rende l'icona bianca se necessario */
+    cursor: pointer;
+}
+
+/* Assicurati che la sezione sia relativa per posizionare l'input */
+.search-section {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+    .search-bar-custom {
+        flex-direction: column;
+        border-radius: 24px;
+        padding: 16px;
+    }
+    .search-divider {
+        display: none;
+    }
+    .search-section {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .search-btn-circle {
+        width: 100%;
+        border-radius: 12px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+
+#mappa-tavoli {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Posizionamento frecce fuori dalle card per non coprirle */
+.custom-ctrl {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev.custom-ctrl { left: -60px; }
+.carousel-control-next.custom-ctrl { right: -60px; }
+
+/* Stile icone basato sui tuoi colori */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: var(--bs-cyan);
+    box-shadow: 0 0 15px var(--bs-cyan);
+}
+
+/* Fix per mobile: su schermi piccoli le frecce tornano interne */
+@media (max-width: 1200px) {
+    .carousel-control-prev.custom-ctrl { left: 0; }
+    .carousel-control-next.custom-ctrl { right: 0; }
+}
+
+/* Posiziona i pallini un po' più in basso rispetto alle card */
+.carousel-indicators {
+    bottom: -50px; 
+}
+
+/* Stile dei pallini */
+.carousel-indicators [button] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Li rende tondi invece che rettangolari */
+    background-color: var(--bs-tan); /* Il tuo colore Tan */
+    border: none;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+/* Pallino attivo */
+.carousel-indicators .active {
+    background-color: var(--bs-cyan); /* Il tuo Cyan per l'evidenza */
+    opacity: 1;
+    transform: scale(1.2);
+}
+/* ******************************** */
+
+
