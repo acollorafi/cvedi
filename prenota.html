@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenota</title>
+
+    <!-- Bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- Per effetto liquido -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+        <filter id="liquidFilter">
+            <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R"
+                yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
+        <div class="container-xxl">
+            <!-- con container-fluid ha max-width 100%, con container e basta invece ha diversi breakpoint -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="100" height="100">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ristorante.html">RISTORANTE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="info.html">INFO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sostenibilita.html">SOSTENIBILITA</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center" style="gap: 45px;">
+                <a href="prenota.html" class="glass-effect btn btn-custom-primary nav-prenota is-current"
+                aria-current="page">PRENOTA</a>
+                <img src="images/flags/Great Britain.png" class="navbar-img-languages" />
+            </div>
+        </div>
+    </nav>
+
+    <div id="hero-info">
+
+        <!-- Hero -->
+        <div class="hero-section-info container section">
+            <h1>PRENOTA</h1>
+        </div>
+    </div>
+
+    <!--barra prenotazione-->
+    <div class="search-container">
+        <div class="search-bar-custom glass-effect">
+            <div class="search-section">
+                <span class="search-label">Dove</span>
+                <input type="text" class="search-input" placeholder="Cerca destinazioni">
+            </div>
+            
+            <div class="search-divider"></div>
+    
+            <div class="search-section">
+                <span class="search-label">Date</span>
+                <span class="search-placeholder">Aggiungi date</span>
+            </div>
+    
+            <div class="search-divider"></div>
+    
+            <div class="search-section">
+                <span class="search-label">Chi</span>
+                <span class="search-placeholder">Aggiungi ospiti</span>
+            </div>
+    
+            <button class="search-btn-circle">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false">
+                    <path d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9" fill="none" stroke="currentColor" stroke-width="4"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="container-xxl padding-section text-center">
+        <h2 class="mb-5">Tavoli disponibili</h2>
+        <p class="mb-5">Scegli il tuo tavolo sulla mappa!</p>
+        <!--mappa-->
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden iframe-crop">
+            <iframe
+                title="Akihabara Map"
+                src="https://view.genially.com/6973a50f9e4f170457936cb5"
+                allowfullscreen
+                scrolling="yes">
+            </iframe>
+        </div>
+        <button class="glass-effect btn btn-custom-primary mx-auto mt-5" type="button">Prenota tavolo</button>
+    </div>
+
+    <!--recensioni-->
+    <div class="container-xxl padding-section text-center">
+        <h2 class="mb-5">Recensioni</h2>
+    <div id="infiniteCarousel" class="carousel slide container-xxl padding-section" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card glass-effect"><p>Card 1</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card glass-effect"><p>Card 2</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card glass-effect"><p>Card 3</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card glass-effect"><p>Card 4</p></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="carousel-item">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card glass-effect"><p>Card 5</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card glass-effect"><p>Card 6</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card glass-effect"><p>Card 7</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card glass-effect"><p>Card 8</p></div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <button class="carousel-control-prev custom-ctrl" type="button" data-bs-target="#infiniteCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next custom-ctrl" type="button" data-bs-target="#infiniteCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+    </div>
+
+    <div class="container-xxl padding-section text-center">
+        <h2 class="mb-5">FAQ</h2>
+
+    </div>    
+
+    <div class="text-center footer">
+        <div class="d-md-none" style="height: 200px;"></div>
+        <img src="images/logo/logo-footer.png" style="width: 190px; height: 190px;" />
+        <div style="margin-top: 20px;">
+            <p style="font-size: 32px; font-weight: bold;">Il primo ristorante Solarpunk.</p>
+            <p>Ogni giorno dalle 18:00 alle 24:00</p>
+        </div>
+        <div style="margin-top: 30px; line-height: 0.5;">
+            <p>© 2025 Eden Leaf Ecosystems.</p>
+            <p>Tutti i diritti riservati alla Natura.</p>
+            <p>P.IVA 000123SOLAR</p>
+        </div>
+    </div>
+    
+    </body>
+    
+    </html>
