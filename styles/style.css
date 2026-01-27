@@ -287,6 +287,10 @@ h3 {
     color: var(--bs-cyan);
 }
 
+.nav-prenota.is-current {
+    box-shadow: 0 0 25px rgba(var(--bs-highlight-color), 0.4);
+}
+
 /*id del div che contiene i link della navbar*/
 #navbarSupportedContent {
     height: 64px;
@@ -1275,11 +1279,6 @@ input::-webkit-calendar-picker-indicator {
         margin-left: 0;
         margin-top: 10px;
     }
-}
-
-
-.nav-prenota.is-current {
-    box-shadow: 0 0 25px rgba(var(--primary-rgb), 0.4);
 }
 
 .custom-ctrl {
