@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piatti</title>
+
+    <!-- Bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- Per effetto liquido -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+        <filter id="liquidFilter">
+            <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R"
+                yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
+        <div class="container-xxl">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="100" height="100">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">RISTORANTE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">INFO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SOSTENIBILITA</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center" style="gap: 45px;">
+                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+                <img src="images/flags/Great Britain.png" class="navbar-img-languages" />
+            </div>
+        </div>
+    </nav>
+
+    <!-- TODO: fix bottom gradient (don't use image gradient, use css)-->
+    <div class="piatti-hero-bg">
+        <div style="height: 40vh;"></div>
+        <div class="text-center">
+            <h2>Gemme di Zenith di Lumina</h2>
+        </div>
+        <div style="height: 100vh;"></div>
+        <!-- <img src="images/piatto01/piatti_hero_.jpeg" class="img-fluid" /> -->
+    </div>
+
+    <div style="height: 20vh;"></div>
+
+    <div class="piatti-ingredienti-bg">
+
+        <div style="height: 10vh;"></div>
+        <div class="text-center">
+            <h2>Scopri gli ingredienti</h2>
+            <div>
+                <img src="images/piatto01/ingredienti.png">
+            </div>
+        </div>
+        <div style="height: 40vh;"></div>
+
+
+        <div class="container-xxl padding-section text-center">
+            <h2>Ingredienti</h2>
+            <!-- Mobile -->
+            <div class="d-block d-md-none">
+                <div style="height: 20vh"></div>
+                <div id="ingredientsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center p-4">
+                                <div class="card glass-effect gap-2 text-center" style="width: 80%; max-width: 16rem;">
+                                    <img src="images/piatto01/ingrediente_1.png" class="ingredient-picture mx-auto" />
+                                    <div class="label-custom mx-auto">Alghe eoliche</div>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Voluptatibus dolores doloremque eveniet exercitationem deserunt.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center p-4">
+                                <div class="card glass-effect gap-2 text-center" style="width: 80%; max-width: 16rem;">
+                                    <img src="images/piatto01/ingrediente_2.png" class="ingredient-picture mx-auto" />
+                                    <div class="label-custom mx-auto">Petali di Floricanto</div>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Voluptatibus dolores doloremque eveniet exercitationem deserunt.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center p-4">
+                                <div class="card glass-effect gap-2 text-center" style="width: 80%; max-width: 16rem;">
+                                    <img src="images/piatto01/ingrediente_3.png" class="ingredient-picture mx-auto" />
+                                    <div class="label-custom mx-auto">Perle di Solargemma</div>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Voluptatibus dolores doloremque eveniet exercitationem deserunt.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center p-4">
+                                <div class="card glass-effect gap-2 text-center" style="width: 80%; max-width: 16rem;">
+                                    <img src="images/piatto01/ingrediente_4.png" class="ingredient-picture mx-auto" />
+                                    <div class="label-custom mx-auto">Bacche Limonene</div>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Voluptatibus dolores doloremque eveniet exercitationem deserunt.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#ingredientsCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#ingredientsCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="d-none d-md-block">
+                <div class="row" style="padding-top: 200px;">
+                    <div class="col">
+                        <div class="card glass-effect gap-2 text-center" style="width: 80%; max-width: 16rem;">
+                            <img src="images/piatto01/ingrediente_1.png" class="ingredient-picture mx-auto" />
+                            <div class="label-custom mx-auto">Alghe eoliche</div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                dolores doloremque eveniet exercitationem deserunt.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card glass-effect gap-2 text-center" style="width: 80%; max-width: 16rem;">
+                            <img src="images/piatto01/ingrediente_2.png" class="ingredient-picture mx-auto" />
+                            <div class="label-custom mx-auto">Petali di Floricanto</div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                dolores doloremque eveniet exercitationem deserunt.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card glass-effect gap-2 text-center" style="width: 80%; max-width: 16rem;">
+                            <img src="images/piatto01/ingrediente_3.png" class="ingredient-picture mx-auto" />
+                            <div class="label-custom mx-auto">Perle di Solargemma</div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                dolores doloremque eveniet exercitationem deserunt.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card glass-effect gap-2 text-center" style="width: 80%; max-width: 16rem;">
+                            <img src="images/piatto01/ingrediente_4.png" class="ingredient-picture mx-auto" />
+                            <div class="label-custom mx-auto">Bacche Limonene</div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+                                dolores doloremque eveniet exercitationem deserunt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-xxl padding-section text-center">
+            <h2>Allergeni</h2>
+            <div style="height: 40vh"></div>
+        </div>
+    </div>
+
+    <div class="text-center footer">
+        <!-- Add more vertical space on mobile -->
+        <div class="d-md-none" style="height: 200px;"></div>
+        <img src="images/logo/logo-footer.png" style="width: 190px; height: 190px;" />
+        <div style="margin-top: 20px;">
+            <p style="font-size: 32px; font-weight: bold;">Il primo ristorante Solarpunk.</p>
+            <p>Ogni giorno dalle 18:00 alle 24:00</p>
+        </div>
+        <div style="margin-top: 30px; line-height: 0.5;">
+            <p>© 2025 Eden Leaf Ecosystems.</p>
+            <p>Tutti i diritti riservati alla Natura.</p>
+            <p>P.IVA 000123SOLAR</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
