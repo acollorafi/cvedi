@@ -1247,7 +1247,18 @@ input::-webkit-calendar-picker-indicator {
     }
 }
 
-
+.background-prenota {
+    background-image: url('../images/prenota/sfondo_prenota.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 634;
+}
+.nav-prenota is-current {
+    color: var(--bs-cyan);
+}
 
 .custom-ctrl {
     width: 5%;
@@ -1275,9 +1286,6 @@ background-image:
         url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"), 
         radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
 }
-
-
-
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
