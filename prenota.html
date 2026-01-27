@@ -14,6 +14,7 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles/style.css">
+    <script src="javascript/script.js"></script>
 </head>
 
 <body>
@@ -67,37 +68,41 @@
         </div>
     </nav>
 
-    <div id="hero-info">
+    <div id="hero-prenota">
 
         <!-- Hero -->
-        <div class="hero-section-info container section">
+        <div class="hero-section-prenota container section">
             <h1>PRENOTA</h1>
         </div>
     </div>
+    
+<div class="background-prenota">
 
     <!--barra prenotazione-->
     <div class="search-container">
         <div class="search-bar-custom glass-effect">
             <div class="search-section">
-                <span class="search-label">Dove</span>
-                <input type="text" class="search-input" placeholder="Cerca destinazioni">
+                <span class="search-label">Persone</span>
+                <input type="text" class="search-input" placeholder="Inserisci il numero di persone">
             </div>
             
             <div class="search-divider"></div>
     
-            <div class="search-section">
-                <span class="search-label">Date</span>
-                <span class="search-placeholder">Aggiungi date</span>
+            <div class="search-section" onclick="document.getElementById('dateInput').showPicker()">
+                <span class="search-label">Data</span>
+                <span id="date-text" class="search-placeholder">Scegli la data</span>
+                <input type="date" id="dateInput" class="search-input-hidden" onchange="updateLabel(this, 'date-text')">
             </div>
     
             <div class="search-divider"></div>
     
-            <div class="search-section">
-                <span class="search-label">Chi</span>
-                <span class="search-placeholder">Aggiungi ospiti</span>
+            <div class="search-section" onclick="document.getElementById('timeInput').showPicker()">
+                <span class="search-label">Orario</span>
+                <span id="time-text" class="search-placeholder">Indica l'orario</span>
+                <input type="time" id="timeInput" class="search-input-hidden" onchange="updateLabel(this, 'time-text')">
             </div>
     
-            <button class="search-btn-circle">
+            <button class="search-btn-circle glass-effect" onclick="mostraTavoli()">
                 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false">
                     <path d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9" fill="none" stroke="currentColor" stroke-width="4"></path>
                 </svg>
@@ -105,7 +110,7 @@
         </div>
     </div>
 
-    <div class="container-xxl padding-section text-center">
+    <div id="mappa-tavoli" class="container-xxl padding-section text-center d-none">
         <h2 class="mb-5">Tavoli disponibili</h2>
         <p class="mb-5">Scegli il tuo tavolo sulla mappa!</p>
         <!--mappa-->
@@ -124,21 +129,36 @@
     <div class="container-xxl padding-section text-center">
         <h2 class="mb-5">Recensioni</h2>
     <div id="infiniteCarousel" class="carousel slide container-xxl padding-section" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#infiniteCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#infiniteCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
         <div class="carousel-inner">
             
             <div class="carousel-item active">
                 <div class="row g-4">
                     <div class="col-md-3">
-                        <div class="card glass-effect"><p>Card 1</p></div>
+                        <div class="card-accessibility glass-effect">
+                            <img class="mb-3" src="/images/icons/tipo-1.png">
+                            <p>"Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante il temporale era pura magia, indimenticabile."</p></div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card glass-effect"><p>Card 2</p></div>
+                        <div class="card-accessibility glass-effect">
+                            <img class="mb-3" src="/images/icons/tipo-2.png">
+                            <p>"Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente, un'esperienza che vale ogni centesimo."</p>
+                        </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card glass-effect"><p>Card 3</p></div>
+                        <div class="card-accessibility glass-effect">
+                            <img class="mb-3" src="/images/icons/tipo-3.png">
+                            <p>"Finalmente l'alta cucina incontra l'etica vera. Qui sopra il caos della città è solo un brutto ricordo, esiste solo armonia."</p>
+                        </div>                    
                     </div>
                     <div class="col-md-3">
-                        <div class="card glass-effect"><p>Card 4</p></div>
+                        <div class="card-accessibility glass-effect">
+                            <img class="mb-3" src="/images/icons/tipo-2.png">
+                            <p>"Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente, un'esperienza che vale ogni centesimo."</p>
+                        </div>                   
                     </div>
                 </div>
             </div>
@@ -146,16 +166,28 @@
             <div class="carousel-item">
                 <div class="row g-4">
                     <div class="col-md-3">
-                        <div class="card glass-effect"><p>Card 5</p></div>
+                        <div class="card-accessibility glass-effect">
+                            <img class="mb-3" src="/images/icons/tipo-2.png">
+                            <p>"Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente, un'esperienza che vale ogni centesimo."</p>
+                        </div>                    
                     </div>
                     <div class="col-md-3">
-                        <div class="card glass-effect"><p>Card 6</p></div>
+                        <div class="card-accessibility glass-effect">
+                            <img class="mb-3" src="/images/icons/tipo-2.png">
+                            <p>"Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente, un'esperienza che vale ogni centesimo."</p>
+                        </div>                    
                     </div>
                     <div class="col-md-3">
-                        <div class="card glass-effect"><p>Card 7</p></div>
+                        <div class="card-accessibility glass-effect">
+                            <img class="mb-3" src="/images/icons/tipo-2.png">
+                            <p>"Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente, un'esperienza che vale ogni centesimo."</p>
+                        </div>                   
                     </div>
                     <div class="col-md-3">
-                        <div class="card glass-effect"><p>Card 8</p></div>
+                        <div class="card-accessibility glass-effect">
+                            <img class="mb-3" src="/images/icons/tipo-2.png">
+                            <p>"Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente, un'esperienza che vale ogni centesimo."</p>
+                        </div>                    
                     </div>
                 </div>
             </div>
@@ -175,6 +207,9 @@
         <h2 class="mb-5">FAQ</h2>
 
     </div>    
+
+
+</div>
 
     <div class="text-center footer">
         <div class="d-md-none" style="height: 200px;"></div>
