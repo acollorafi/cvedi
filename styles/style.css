@@ -1256,8 +1256,9 @@ input::-webkit-calendar-picker-indicator {
     height: auto;
     aspect-ratio: 1440 / 634;
 }
-.nav-prenota is-current {
-    color: var(--bs-cyan);
+
+.nav-prenota.is-current {
+    box-shadow: 0 0 25px rgba(var(--primary-rgb), 0.4);
 }
 
 .custom-ctrl {
