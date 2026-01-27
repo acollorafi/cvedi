@@ -957,7 +957,12 @@ h3, h4, h5, h6 {
 
 /*prenota*/
 .iframe-crop iframe {
-    transform: scale(1.15); /* ingrandisce leggermente */
+    transform: scale(1.15);
+}
+
+.mmap-container
+{    
+    border: var(--bs-glass-border);
 }
 
 .background-prenota {
@@ -970,7 +975,7 @@ height: auto;
 aspect-ratio: 1440 / 634;
 }
 
-/* Container per centrare la barra */
+/* barra di ricerca */
 .search-container {
     display: flex;
     justify-content: center;
@@ -978,11 +983,11 @@ aspect-ratio: 1440 / 634;
     width: 100%;
 }
 
-/* La barra principale che usa il tuo effetto Glass */
 .search-bar-custom {
+    border: var(--bs-glass-border);
     display: flex;
     align-items: center;
-    border-radius: 100px; /* Arrotondata come i tuoi bottoni */
+    border-radius: 100px;
     max-width: 1320px;
     width: 100%;
     transition: all 0.3s ease;
