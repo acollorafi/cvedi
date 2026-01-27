@@ -453,7 +453,13 @@ h3 {
 }
 
 .padding-text {
-    padding-bottom: 90px;
+    padding-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+    .padding-text {
+        padding-bottom: 90px;
+    }
 }
 
 .card-info {
@@ -1410,6 +1416,11 @@ Pagina PIATTI
     height: 92px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.allergeni {
+    width: 100%;
+    height: auto;
 }
 
 /* ************ */
