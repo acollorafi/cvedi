@@ -68,9 +68,8 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <div id="hero-prenota">
-
-        <!-- Hero -->
         <div class="hero-section-prenota container section">
             <h1>PRENOTA</h1>
         </div>
@@ -102,7 +101,7 @@
                 <input type="time" id="timeInput" class="search-input-hidden" onchange="updateLabel(this, 'time-text')">
             </div>
     
-            <button class="search-btn-circle glass-effect" onclick="mostraTavoli()">
+            <button class="glass-effect search-btn-circle btn-search" onclick="mostraTavoli()">
                 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false">
                     <path d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9" fill="none" stroke="currentColor" stroke-width="4"></path>
                 </svg>
@@ -114,6 +113,7 @@
         <h2 class="mb-5">Tavoli disponibili</h2>
         <p class="mb-5">Scegli il tuo tavolo sulla mappa!</p>
         <!--mappa-->
+        <div class="mmap-container">
         <div class="ratio ratio-16x9 rounded-4 overflow-hidden iframe-crop">
             <iframe
                 title="Akihabara Map"
@@ -122,6 +122,7 @@
                 scrolling="yes">
             </iframe>
         </div>
+    </div>
         <button class="glass-effect btn btn-custom-primary mx-auto mt-5" type="button">Prenota tavolo</button>
     </div>
 
@@ -195,10 +196,10 @@
         </div>
     
         <button class="carousel-control-prev custom-ctrl" type="button" data-bs-target="#infiniteCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="glass-effect carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
         <button class="carousel-control-next custom-ctrl" type="button" data-bs-target="#infiniteCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="glass-effect carousel-control-next-icon" aria-hidden="true"></span>
         </button>
     </div>
     </div>

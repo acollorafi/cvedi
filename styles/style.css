@@ -1097,25 +1097,28 @@ Pagina SOSTENIBILITà
 
 /*prenota*/
 .iframe-crop iframe {
-    transform: scale(1.15); /* ingrandisce leggermente */
+    transform: scale(1.15);
+}
+
+.map-container
+{    
+    border: var(--bs-glass-border);
 }
 
 
-/* Container per centrare la barra */
 .search-container {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 25px;
     width: 100%;
 }
 
-/* La barra principale che usa il tuo effetto Glass */
 .search-bar-custom {
+    border: var(--bs-glass-border);
     display: flex;
     align-items: center;
-    padding: 8px 8px 8px 32px;
-    border-radius: 100px; /* Arrotondata come i tuoi bottoni */
-    max-width: 850px;
+    border-radius: 100px;
+    max-width: 1320px;
     width: 100%;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -1127,12 +1130,11 @@ Pagina SOSTENIBILITà
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-/* Singole sezioni interne */
 .search-section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 10px 16px;
+    padding: 18px 40px;
     border-radius: 100px;
     transition: background 0.2s;
 }
@@ -1141,10 +1143,9 @@ Pagina SOSTENIBILITà
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Etichette (Dove, Date, Chi) */
 .search-label {
-    font-family: 'Syne', sans-serif; /* Uso Syne per i titoli come nel tuo CSS */
-    font-size: 12px;
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
     font-weight: 800;
     color: var(--bs-white);
     text-transform: uppercase;
@@ -1176,11 +1177,10 @@ Pagina SOSTENIBILITà
 
 /* Bottone Lente */
 .search-btn-circle {
-    background-color: var(--bs-primary); /* Il tuo rosso #B85B3F */
     color: var(--bs-white);
-    border: none;
-    width: 50px;
-    height: 50px;
+    width: 92px;
+    height: 92px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1189,17 +1189,39 @@ Pagina SOSTENIBILITà
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s;
     flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%), rgba(207, 79, 40, 0.50);
+    box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.25) inset, 5px -5px 8.8px 0 rgba(0, 0, 0, 0.25) inset, 0 0 10px 0 rgba(0, 0, 0, 0.15);
+
+    /*--bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: var(--bs-tan);*/
 }
 
 .search-btn-circle:hover {
-    background-color: var(--bs-cyan); /* Cambia in cyan al passaggio */
+    background-color: var(--bs-cyan); /*vediamo se lasciare questo o il tan*/
     transform: scale(1.05);
 }
 
 .search-btn-circle svg {
     width: 18px;
     height: 18px;
+}
+
+.search-input-hidden {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.search-section {
+    position: relative;
+    cursor: pointer;
 }
 
 /* Responsive per mobile */
@@ -1227,23 +1249,35 @@ Pagina SOSTENIBILITà
 
 
 
-/* Posizionamento frecce fuori dalle card per non coprirle */
 .custom-ctrl {
     width: 5%;
     opacity: 0.8;
 }
 
-.carousel-control-prev.custom-ctrl { left: -60px; }
+.carousel-control-prev.custom-ctrl { left: -60px;  }
 .carousel-control-next.custom-ctrl { right: -60px; }
 
-/* Stile icone basato sui tuoi colori */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e"), 
+    radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);    
     background-color: var(--bs-primary);
+    box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.25) inset, 5px -5px 8.8px 0 rgba(0, 0, 0, 0.25) inset, 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.30);
     border-radius: 50%;
-    padding: 20px;
-    background-size: 50%;
+    padding: 25px;
+    background-size: 30%, 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+.carousel-control-next-icon {
+background-image:
+        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"), 
+        radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+
+
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
@@ -1251,10 +1285,29 @@ Pagina SOSTENIBILITà
     box-shadow: 0 0 15px var(--bs-cyan);
 }
 
-/* Fix per mobile: su schermi piccoli le frecce tornano interne */
 @media (max-width: 1200px) {
     .carousel-control-prev.custom-ctrl { left: 0; }
     .carousel-control-next.custom-ctrl { right: 0; }
+}
+
+.carousel-indicators {
+    bottom: -50px; 
+}
+
+.carousel-indicators [button] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--bs-tan);
+    border: none;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: var(--bs-cyan);
+    opacity: 1;
+    transform: scale(1.2);
 }
 /* ******************************** */
 
