@@ -975,7 +975,7 @@ Pagina SOSTENIBILITà
     transform: scale(1.15);
 }
 
-.mmap-container
+.map-container
 {    
     border: var(--bs-glass-border);
 }
