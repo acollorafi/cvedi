@@ -1111,6 +1111,16 @@ Pagina SOSTENIBILITà
 
 
 /*prenota*/
+.background-prenota {
+    background-image: url('/images/backgrounds/sfondo-prenota.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 634;
+}
+
 .iframe-crop iframe {
     transform: scale(1.15);
 }
@@ -1267,15 +1277,6 @@ input::-webkit-calendar-picker-indicator {
     }
 }
 
-.background-prenota {
-    background-image: url('../images/prenota/sfondo_prenota.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1440 / 634;
-}
 
 .nav-prenota.is-current {
     box-shadow: 0 0 25px rgba(var(--primary-rgb), 0.4);
