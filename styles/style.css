@@ -287,10 +287,6 @@ h3 {
     color: var(--bs-cyan);
 }
 
-.nav-prenota.is-current {
-    box-shadow: 0 0 25px rgba(var(--bs-highlight-color), 0.4);
-}
-
 /*id del div che contiene i link della navbar*/
 #navbarSupportedContent {
     height: 64px;
@@ -1175,7 +1171,7 @@ Pagina SOSTENIBILITà
     font-family: 'Syne', sans-serif;
     font-size: 20px;
     font-weight: 800;
-    color: var(--bs-white);
+    color: var(--bs-tan);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1185,7 +1181,7 @@ Pagina SOSTENIBILITà
 .search-placeholder {
     background: transparent;
     border: none;
-    color: var(--bs-tan);
+    color: var(--bs-white);
     /* Uso il tuo Tan per staccare dal bianco */
     font-family: 'Neutraface Text', sans-serif;
     font-size: 15px;
@@ -1194,7 +1190,7 @@ Pagina SOSTENIBILITà
 }
 
 .search-input::placeholder {
-    color: var(--bs-tan);
+    color: var(--bs-white);
     opacity: 0.7;
 }
 
