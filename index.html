@@ -30,7 +30,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
         <div class="container-xxl">  <!-- con container-fluid ha max-width 100%, con container e basta invece ha diversi breakpoint -->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="100" height="100">
             </a>
 
@@ -43,24 +43,24 @@
             <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">HOME</a>
+                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">RISTORANTE</a>
+                        <a class="nav-link active" href="ristorante.html">RISTORANTE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">MENU</a>
+                        <a class="nav-link" href="menu.html">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">INFO</a>
+                        <a class="nav-link" href="info.html">INFO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SOSTENIBILITA</a>
+                        <a class="nav-link" href="sostenibilita.html">SOSTENIBILITA</a>
                     </li>
                 </ul>
             </div>
             <div class="d-flex align-items-center" style="gap: 45px;">
-                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+                <button class="glass-effect btn btn-custom-primary" type="button" href="prenota.html">PRENOTA</button>
                 <img src="images/flags/Great Britain.png" class="navbar-img-languages" />
             </div>
         </div>
@@ -68,7 +68,7 @@
 
 
     <!-- Sezione 1: Hero + Cards -->
-    <div id="home-s1">
+    <div id="home-s1" class="img-bg">
 
         <!-- Hero -->
         <div class="hero-section container section">
@@ -77,7 +77,7 @@
         </div>
 
         <!-- Cards ristorante + punti di forza -->
-        <div class="container section section-padding">
+        <div class="container section padding-section">
 
             <!-- Card Ristorante -->
             <div class="row row-cols-1 row-cols-md-4 g-4 mb-4 justify-content-center align-items-center">
@@ -136,7 +136,7 @@
 
                 
     <!-- Sezione 2 - Gallery -->
-    <div class="container section section-padding">
+    <div class="container section padding-section">
         
         <h2 class="section-title text-center mb-4">Uno sguardo nel nostro ecosistema</h2>
         <p class="text-center mb-5">
@@ -172,11 +172,11 @@
     
 
     <!-- Sezione 3+4 sfondo - I  nostri piatti + Dicono di noi + FAQ --> 
-    <div id="home-s3" class="section">
+    <div id="home-s3" class="section img-bg">
 
         <!-- Sezione 3 - I  nostri piatti - Mobile Version -->
 
-        <div class="d-flex d-md-none flex-column align-items-center content-align-center text-center mt-5 section-padding">
+        <div class="d-flex d-md-none flex-column align-items-center content-align-center text-center mt-5 padding-section">
             <h2>Alcuni dei nostri piatti</h2>
 
                 <img src="images/ristorante/img_piatto_1.png" class="img-piatto"/>
@@ -188,7 +188,7 @@
         </div>
 
         <!-- Sezione 3 - I  nostri piatti - Desktop Version -->
-        <div class="container-fluid section justify-content-between px-0 d-none d-md-flex section-padding"> <!-- Per lasciarli centrati togli fluid e m-0-->
+        <div class="container-fluid section justify-content-between px-0 d-none d-md-flex padding-section"> <!-- Per lasciarli centrati togli fluid e m-0-->
 
             <h2>Alcuni dei nostri piatti</h2>
             <div class="container-fluid p-0">
@@ -207,7 +207,7 @@
         
         
         <!-- Sezione 4 - Recensioni + FAQ -->
-        <div class="container section section-padding">
+        <div class="container section padding-section">
             
             <!-- Cards Recensioni-->
             <h2 class="section-title text-center mb-4">Dicono di noi</h2>
@@ -331,7 +331,7 @@
     </div> 
 
     <!-- Sezione 5 - Banner prenota -->
-    <div class="container section section-padding text-center">
+    <div class="container section padding-section text-center">
         <h2 class="section-title text-center mb-4">Prenota il tuo tavolo</h2>
         <p>I tavoli sulla Foglia Madre sono limitati per rispettare l'equilibrio della struttura. 
             <br>Assicuratevi ora il vostro angolo in paradiso.</p>
