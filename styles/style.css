@@ -58,17 +58,16 @@
 /* --- 1. BASE SICURA (Safari, Firefox, Mobile) --- */
 .glass-effect {
     position: relative;
+
     /* Stile visivo base */
-    background: rgba(255, 255, 255, 0.091);
-    /* Sfondo semitrasparente */
+    background: rgba(255, 255, 255, 0.091); /* Colore di sfondo bianco semitrasparente */
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow:
         0 4px 30px rgba(0, 0, 0, 0.1),
         inset 1px 1px 0px rgba(255, 255, 255, 0.3),
         inset -1px -1px 0px rgba(0, 0, 0, 0.1);
 
-    /* QUI LA DIFFERENZA: */
-    /* Partiamo con il blur standard. Safari leggerà questo e si fermerà qui. */
+    /* Effetto blur per Safari*/
     -webkit-backdrop-filter: blur(12px) saturate(180%);
     backdrop-filter: blur(12px) saturate(180%);
 
@@ -78,7 +77,6 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     isolation: isolate;
-    /* Fondamentale per non bucare lo sfondo */
 
     /* Altri stili */
     overflow: hidden;
@@ -87,9 +85,7 @@
 }
 
 /* --- 2. UPGRADE PER CHROME (Solo Desktop) --- */
-/* Usiamo @supports per rilevare una funzione specifica del motore di Chrome.
-     Safari NON supporta 'field-sizing', quindi ignorerà completamente questo blocco. */
-@supports (field-sizing: content) {
+@supports (field-sizing: content) {   /* Usiamo @supports per rilevare una funzione specifica del motore di Chrome. Safari NON supporta 'field-sizing', quindi ignorerà completamente questo blocco. */
     .glass-effect {
         /* Sovrascriviamo il blur con il filtro liquido */
         -webkit-backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
@@ -215,22 +211,10 @@ h1 {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 768px) {
-    h1 {
-        font-size: 6rem;
-    }
-}
-
 h2 {
     font-size: 2rem;
     color: var(--bs-tan);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-@media (min-width: 768px) {
-    h2 {
-        font-size: 4rem;
-    }
 }
 
 h3 {
@@ -239,7 +223,16 @@ h3 {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+
 @media (min-width: 768px) {
+    h1 {
+        font-size: 6rem;
+    }
+    
+    h2 {
+        font-size: 4rem;
+    }
+
     h3 {
         font-size: 2.5rem;
     }
