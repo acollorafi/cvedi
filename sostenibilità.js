@@ -27,3 +27,4 @@ prevButton.addEventListener('click', () => {
         showFase(currentIndex);
     }
 });
+
