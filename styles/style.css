@@ -74,7 +74,8 @@ h6,
 .h1,
 .h2,
 .h3 {
-    font-family: 'Syne', sans-serif; /*ho tolto gli important perché non riuscivo a sovrascrivere nelle label però mi sembra che funzionino comunque... al massimo li rimettiamo*/
+    font-family: 'Syne', sans-serif;
+    /*ho tolto gli important perché non riuscivo a sovrascrivere nelle label però mi sembra che funzionino comunque... al massimo li rimettiamo*/
     font-weight: 800;
 }
 
@@ -100,7 +101,7 @@ h3 {
     h1 {
         font-size: 6rem;
     }
-    
+
     h2 {
         font-size: 4rem;
     }
@@ -145,10 +146,14 @@ p {
 }
 
 .hero-section {
-    height: 100vh;
+    height: 50vh;
 }
 
-
+@media (min-width: 768px) {
+    .hero-section {
+        height: 100vh;
+    }
+}
 
 /********************************************
            LIQUID GLASS EFFECT
@@ -160,7 +165,8 @@ p {
     position: relative;
 
     /* Stile visivo base */
-    background: rgba(255, 255, 255, 0.091); /* Colore di sfondo bianco semitrasparente */
+    background: rgba(255, 255, 255, 0.091);
+    /* Colore di sfondo bianco semitrasparente */
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow:
         0 4px 30px rgba(0, 0, 0, 0.1),
@@ -185,7 +191,9 @@ p {
 }
 
 /* --- 2. UPGRADE LIQUID PER CHROME (Solo Desktop) --- */
-@supports (field-sizing: content) {   /* Usiamo @supports per rilevare una funzione specifica del motore di Chrome. Safari NON supporta 'field-sizing', quindi ignorerà completamente questo blocco. */
+@supports (field-sizing: content) {
+
+    /* Usiamo @supports per rilevare una funzione specifica del motore di Chrome. Safari NON supporta 'field-sizing', quindi ignorerà completamente questo blocco. */
     .glass-effect {
         /* Sovrascriviamo il blur con il filtro liquido */
         -webkit-backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
@@ -301,7 +309,8 @@ p {
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
-    line-height: 26px; /* 72.222% */
+    line-height: 26px;
+    /* 72.222% */
 }
 
 
@@ -331,7 +340,8 @@ p {
     text-align: center;
 }
 
-.card-team { /*questa è uguale alla card base, quindi metterei quella, al limite creiamo una classe per il font diverso tipo p-02*/
+.card-team {
+    /*questa è uguale alla card base, quindi metterei quella, al limite creiamo una classe per il font diverso tipo p-02*/
     color: var(--bs-white);
     border-radius: 24px;
     border: var(--bs-glass-border);
@@ -344,7 +354,8 @@ p {
     font-size: 24px;
 }
 
-.card-info { /*anche questa mi sembra uguale alla card base, quindi metterei quella, al limite mettiamo solo le differenze*/ 
+.card-info {
+    /*anche questa mi sembra uguale alla card base, quindi metterei quella, al limite mettiamo solo le differenze*/
     color: var(--bs-white);
     border-radius: 24px;
     border: var(--bs-glass-border);
@@ -354,7 +365,8 @@ p {
     flex-direction: column;
 }
 
-.card-accessibility { /*idem, segnerei solo le differenze*/
+.card-accessibility {
+    /*idem, segnerei solo le differenze*/
     color: var(--bs-white);
     border-radius: 24px;
     border: var(--bs-glass-border);
@@ -376,46 +388,46 @@ p {
 
 /* CARD BASE */
 .menu-card {
-  position: relative;
-  overflow: visible;
-  margin-top: 60px;
+    position: relative;
+    overflow: visible;
+    margin-top: 60px;
 }
 
 /* WRAPPER PIATTO */
 .menu-card-img {
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  max-width: 320px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    max-width: 320px;
 }
 
 /* IMMAGINE */
 .menu-card-img img {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* LABEL SUL PIATTO */
 .menu-card-label {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 /* TESTO */
 .menu-card-text {
-  padding-top: 30%;
+    padding-top: 30%;
 }
 
 .menu-card-text p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 
@@ -501,7 +513,8 @@ p {
            SFONDI
 ********************************************/
 
-.img-bg {                   /*classe da mettere ai div che contengono gli sfondi*/
+.img-bg {
+    /*classe da mettere ai div che contengono gli sfondi*/
     display: flex;
     flex-direction: column;
     /*align-items: flex-start;*/
@@ -1480,11 +1493,13 @@ body:has(.sostenibility-container) {
     border: var(--bs-glass-border);
     display: flex;
     align-items: center;
+    /* Centra verticalmente tutto, inclusi i divisori */
     border-radius: 100px;
     max-width: 1320px;
     width: 100%;
     transition: all 0.3s ease;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Hover sulla barra intera */
@@ -1497,13 +1512,18 @@ body:has(.sostenibility-container) {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 18px 40px;
-    border-radius: 100px;
-    transition: background 0.2s;
+    justify-content: center;
+    padding: 10px 35px;
+    border-radius: 80px;
+    /* Crea l'effetto "pillola" interno al passaggio del mouse */
+    transition: background 0.2s ease;
+    position: relative;
+    height: 100%;
+    /* Occupa l'altezza disponibile definita dal padding del padre */
 }
 
 .search-section:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .search-label {
@@ -1521,7 +1541,6 @@ body:has(.sostenibility-container) {
     background: transparent;
     border: none;
     color: var(--bs-white);
-    /* Uso il tuo Tan per staccare dal bianco */
     font-family: 'Neutraface Text', sans-serif;
     font-size: 15px;
     outline: none;
@@ -1536,26 +1555,32 @@ body:has(.sostenibility-container) {
 /* Divisori verticali */
 .search-divider {
     width: 1px;
-    height: 35px;
+    height: 30px;
+    /* Altezza fissa e ridotta per stare in mezzo */
     background: rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+    /* Impedisce che il divisore si schiacci */
+    margin: 0 10px;
+    /* Spazio orizzontale per non toccare le sezioni */
+}
+
+.search-section:hover+.search-divider,
+.search-divider:has(+ .search-section:hover) {
+    opacity: 0;
 }
 
 /* Bottone Lente */
 .search-btn-circle {
     color: var(--bs-white);
-    width: 92px;
-    height: 92px;
     border: 1px solid rgba(255, 255, 255, 0.30);
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s;
+    margin-left: auto;
     flex-shrink: 0;
     background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%), rgba(207, 79, 40, 0.50);
     box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.25) inset, 5px -5px 8.8px 0 rgba(0, 0, 0, 0.25) inset, 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s;
 
     /*--bs-btn-hover-color: var(--bs-white);
     --bs-btn-hover-bg: var(--bs-tan);*/
@@ -1683,6 +1708,96 @@ input::-webkit-calendar-picker-indicator {
     background-color: var(--bs-cyan);
     opacity: 1;
     transform: scale(1.2);
+}
+
+
+
+
+/* Rimuove le freccette standard dell'input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    width: 30px;
+}
+
+.btn-qty {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--bs-white);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.btn-qty:hover {
+    background: var(--bs-cyan);
+    border-color: var(--bs-cyan);
+    color: var(--bs-black);
+}
+
+
+.search-input-hidden {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.8) sepia(100%) saturate(200%) hue-rotate(140deg);
+}
+
+.modal-custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+/* Box del messaggio */
+.modal-custom-content {
+    max-width: 500px;
+    width: 90%;
+    padding: 40px;
+    text-align: center;
+    border-radius: 40px !important;
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
