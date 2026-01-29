@@ -1313,12 +1313,13 @@ p {
 .search-bar-custom {
     border: var(--bs-glass-border);
     display: flex;
-    align-items: center;
+    align-items: center; /* Centra verticalmente tutto, inclusi i divisori */
     border-radius: 100px;
     max-width: 1320px;
     width: 100%;
     transition: all 0.3s ease;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Hover sulla barra intera */
@@ -1331,13 +1332,16 @@ p {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 18px 40px;
-    border-radius: 100px;
-    transition: background 0.2s;
+    justify-content: center;
+    padding: 10px 35px;
+    border-radius: 80px; /* Crea l'effetto "pillola" interno al passaggio del mouse */
+    transition: background 0.2s ease;
+    position: relative;
+    height: 100%; /* Occupa l'altezza disponibile definita dal padding del padre */
 }
 
 .search-section:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .search-label {
@@ -1355,7 +1359,6 @@ p {
     background: transparent;
     border: none;
     color: var(--bs-white);
-    /* Uso il tuo Tan per staccare dal bianco */
     font-family: 'Neutraface Text', sans-serif;
     font-size: 15px;
     outline: none;
@@ -1370,26 +1373,29 @@ p {
 /* Divisori verticali */
 .search-divider {
     width: 1px;
-    height: 35px;
+    height: 30px; /* Altezza fissa e ridotta per stare in mezzo */
     background: rgba(255, 255, 255, 0.2);
+    flex-shrink: 0; /* Impedisce che il divisore si schiacci */
+    margin: 0 10px; /* Spazio orizzontale per non toccare le sezioni */
+}
+
+.search-section:hover + .search-divider,
+.search-divider:has(+ .search-section:hover) {
+    opacity: 0;
 }
 
 /* Bottone Lente */
 .search-btn-circle {
     color: var(--bs-white);
-    width: 92px;
-    height: 92px;
     border: 1px solid rgba(255, 255, 255, 0.30);
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s;
+    margin-left: auto; 
     flex-shrink: 0;
     background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%), rgba(207, 79, 40, 0.50);
     box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.25) inset, 5px -5px 8.8px 0 rgba(0, 0, 0, 0.25) inset, 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s;
 
     /*--bs-btn-hover-color: var(--bs-white);
     --bs-btn-hover-bg: var(--bs-tan);*/
@@ -1521,6 +1527,85 @@ input::-webkit-calendar-picker-indicator {
 
 
 
+
+/* Rimuove le freccette standard dell'input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+    width: 30px; 
+}
+
+.btn-qty {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--bs-white);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.btn-qty:hover {
+    background: var(--bs-cyan);
+    border-color: var(--bs-cyan);
+    color: var(--bs-black);
+}
+
+   
+.search-input-hidden {
+    display: block;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.8) sepia(100%) saturate(200%) hue-rotate(140deg);
+}
+
+.modal-custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+    backdrop-filter: blur(5px); 
+}
+
+/* Box del messaggio */
+.modal-custom-content {
+    max-width: 500px;
+    width: 90%;
+    padding: 40px;
+    text-align: center;
+    border-radius: 40px !important; 
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+
 /********************************************
            PAGINA PIATTO
 ********************************************/
@@ -1554,3 +1639,5 @@ input::-webkit-calendar-picker-indicator {
     width: 100%;
     height: auto;
 }
+
+

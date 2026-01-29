@@ -122,11 +122,11 @@
         <div class="search-bar-custom glass-effect">
           <div class="search-section">
             <span class="search-label">Persone</span>
-            <input
-              type="number"
-              class="search-input"
-              placeholder="Inserisci il numero di persone"
-            />
+    <div class="d-flex align-items-center justify-content-center mt-1">
+        <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepDown()">-</button>
+        <input type="number" class="search-input text-center p-0 m-0" value="2" min="1" max="10" readonly>
+        <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
+    </div>
           </div>
 
           <div class="search-divider"></div>
@@ -154,15 +154,15 @@
             onclick="document.getElementById('timeInput').showPicker()"
           >
             <span class="search-label">Orario</span>
-            <span id="time-text" class="search-placeholder"
-              >Indica l'orario</span
-            >
-            <input
-              type="time"
-              id="timeInput"
-              class="search-input-hidden"
-              onchange="updateLabel(this, 'time-text')"
-            />
+    <select class="search-input glass-effect-select" style="background: transparent; color: var(--bs-white); border: none;">
+        <option value="18:00">18:30</option>
+        <option value="18:30">19:00</option>
+        <option value="19:00">19:30</option>
+        <option value="19:00">20:00</option>
+        <option value="19:00">20:30</option>
+        <option value="19:00">21:00</option>
+
+        </select>
           </div>
 
           <button
@@ -205,12 +205,9 @@
             </iframe>
           </div>
         </div>
-        <button
-          class="glass-effect btn btn-custom-primary mx-auto mt-5"
-          type="button"
-        >
+        <button id="btnConfermaPrenotazione" class="glass-effect btn btn-custom-primary mx-auto mt-5" type="button">
           Prenota tavolo
-        </button>
+      </button>
       </div>
 
       <!--recensioni-->
@@ -241,7 +238,7 @@
             <div class="carousel-item active">
               <div class="row g-4">
                 <div class="col-md-3">
-                  <div class="card-accessibility glass-effect">
+                  <div class="card glass-effect">
                     <img class="mb-3" src="/images/icons/tipo-1.png" />
                     <p>
                       "Non è solo una cena, è il mondo che vogliamo. L'atmosfera
@@ -251,7 +248,7 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card-accessibility glass-effect">
+                  <div class="card glass-effect">
                     <img class="mb-3" src="/images/icons/tipo-2.png" />
                     <p>
                       "Cenare a 50 metri d'altezza cambia la prospettiva. Il
@@ -261,7 +258,7 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card-accessibility glass-effect">
+                  <div class="card glass-effect">
                     <img class="mb-3" src="/images/icons/tipo-3.png" />
                     <p>
                       "Finalmente l'alta cucina incontra l'etica vera. Qui sopra
@@ -271,7 +268,7 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card-accessibility glass-effect">
+                  <div class="card glass-effect">
                     <img class="mb-3" src="/images/icons/tipo-2.png" />
                     <p>
                       "Cenare a 50 metri d'altezza cambia la prospettiva. Il
@@ -286,7 +283,7 @@
             <div class="carousel-item">
               <div class="row g-4">
                 <div class="col-md-3">
-                  <div class="card-accessibility glass-effect">
+                  <div class="card glass-effect">
                     <img class="mb-3" src="/images/icons/tipo-2.png" />
                     <p>
                       "Cenare a 50 metri d'altezza cambia la prospettiva. Il
@@ -296,7 +293,7 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card-accessibility glass-effect">
+                  <div class="card glass-effect">
                     <img class="mb-3" src="/images/icons/tipo-2.png" />
                     <p>
                       "Cenare a 50 metri d'altezza cambia la prospettiva. Il
@@ -306,7 +303,7 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card-accessibility glass-effect">
+                  <div class="card glass-effect">
                     <img class="mb-3" src="/images/icons/tipo-2.png" />
                     <p>
                       "Cenare a 50 metri d'altezza cambia la prospettiva. Il
@@ -316,7 +313,7 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card-accessibility glass-effect">
+                  <div class="card glass-effect">
                     <img class="mb-3" src="/images/icons/tipo-2.png" />
                     <p>
                       "Cenare a 50 metri d'altezza cambia la prospettiva. Il
@@ -353,6 +350,8 @@
           </button>
         </div>
       </div>
+
+      
       <!-- FAQ-->
       <div class="container section section-padding">
         <h2 class="section-title text-center mb-4">FAQ</h2>
@@ -494,5 +493,13 @@
         <p>P.IVA 000123SOLAR</p>
       </div>
     </div>
+
+    <div id="modalOverlay" class="modal-custom-overlay">
+      <div class="glass-effect modal-custom-content">
+          <h3 class="label-h3 mb-4">Prenotazione effettuata</h3>
+          <p>Il tuo tavolo presso <strong>Eden Leaf</strong> è stato riservato con successo. Riceverai a breve una conferma via email.</p>
+          <button class="glass-effect btn btn-custom-primary mx-auto mt-5" onclick="chiudiPopUp()">Ottimo!</button>
+      </div>
+  </div>
   </body>
 </html>

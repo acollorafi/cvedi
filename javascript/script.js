@@ -1,40 +1,79 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // La tua funzione originale migliorata
+
+    // 1. Funzione per mostrare la mappa dei tavoli
+    window.mostraTavoli = function() {
+        // Recupero numero persone (l'unico input number nella barra)
+        const persone = document.querySelector('.search-bar-custom input[type="number"]').value;
+        
+        // Recupero data tramite ID
+        const data = document.getElementById('dateInput').value;
+        
+        // Recupero orario tramite la classe della SELECT
+        const orario = document.querySelector('.glass-effect-select').value;
+        
+        const sezioneMappa = document.getElementById('mappa-tavoli');
+
+        // Debug per controllare i valori in console
+        console.log("Tentativo di ricerca:", { persone, data, orario });
+
+        // Controllo validità: persone è sempre valorizzato (default 2), controlliamo data
+        if (!data) {
+            alert("Per favore, seleziona una data per la tua prenotazione.");
+            return;
+        }
+
+        // Se la data c'è, mostriamo la sezione mappa
+        if (sezioneMappa) {
+            sezioneMappa.classList.remove('d-none');
+            
+            // Scroll fluido verso la sezione mappa
+            setTimeout(() => {
+                sezioneMappa.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+    };
+
+    // 2. Funzione per aggiornare il testo della data (perché l'input è nascosto)
     window.updateLabel = function(input, textId) {
         const displaySpan = document.getElementById(textId);
-        
-        if (input.value) {
-            let val = input.value;
-
-            // Se è una data (AAAA-MM-GG), la formattiamo in GG/MM/AAAA
-            if (input.type === 'date') {
-                const dateParts = val.split('-');
-                val = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
-            }
-
-            displaySpan.innerText = val;
+        if (input.value && displaySpan) {
+            // Formattiamo la data in formato italiano GG/MM/AAAA
+            const dateObj = new Date(input.value);
+            const formattedDate = dateObj.toLocaleDateString('it-IT');
+            
+            displaySpan.innerText = formattedDate;
             displaySpan.style.color = "var(--bs-white)";
             displaySpan.style.fontWeight = "bold";
         }
     };
+
+    // 3. Gestione del Pop-up di conferma finale
+    const btnConferma = document.getElementById('btnConfermaPrenotazione');
+    if (btnConferma) {
+        btnConferma.addEventListener('click', () => {
+            const overlay = document.getElementById('modalOverlay');
+            if (overlay) {
+                overlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Blocca lo scroll
+            }
+        });
+    }
 });
 
-function mostraTavoli() {
-    // 1. Recuperiamo i valori degli input
-    const persone = document.querySelector('.search-input').value; // Input persone
-    const data = document.getElementById('dateInput').value;      // Input data
-    const orario = document.getElementById('timeInput').value;    // Input orario
-    const sezioneMappa = document.getElementById('mappa-tavoli');
-
-    // 2. Controllo validità: se uno dei campi è vuoto, avvisiamo l'utente
-    if (!persone || !data || !orario) {
-        alert("Per favore, compila tutti i campi (Persone, Data e Orario) prima di cercare.");
-        return; // Interrompe la funzione
+// Funzione globale per chiudere il pop-up (richiamata dal tasto "Ottimo!" della modale)
+window.chiudiPopUp = function() {
+    const overlay = document.getElementById('modalOverlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Riabilita lo scroll
     }
+};
 
-    // 3. Rimuoviamo la classe 'd-none' di Bootstrap per mostrare la sezione
-    sezioneMappa.classList.remove('d-none');
-
-    // 4. (Opzionale) Scroll automatico verso la mappa
-    sezioneMappa.scrollIntoView({ behavior: 'smooth' });
+function chiudiPopUp() {
+    const overlay = document.getElementById('modalOverlay');
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Riabilita lo scroll
+    
+    // Opzionale: ricarica la pagina o torna in cima
+    // window.location.reload(); 
 }
