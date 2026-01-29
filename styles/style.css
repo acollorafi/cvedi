@@ -382,7 +382,7 @@ p {
 }
 
 /* WRAPPER PIATTO */
-.menu-card__media {
+.menu-card-img {
   position: absolute;
   top: -60px;
   left: 50%;
@@ -392,14 +392,14 @@ p {
 }
 
 /* IMMAGINE */
-.menu-card__media img {
+.menu-card-img img {
   width: 100%;
   height: auto;
   display: block;
 }
 
 /* LABEL SUL PIATTO */
-.menu-card__label {
+.menu-card-label {
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -408,12 +408,11 @@ p {
 }
 
 /* TESTO */
-.menu-card__body {
+.menu-card-text {
   padding-top: 30%;
 }
 
-
-.menu-card__body p {
+.menu-card-text p {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -505,7 +504,7 @@ p {
 .img-bg {                   /*classe da mettere ai div che contengono gli sfondi*/
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /*align-items: flex-start;*/
     align-self: stretch;
 }
 
@@ -526,7 +525,11 @@ p {
 }
 
 #menu-s2 {
-    background: url('/images/menu/menu_bg2.webp') center/cover no-repeat;
+    background: url('/images/backgrounds/menu-s3.png') center/cover no-repeat;
+}
+
+#menu-s3 {
+    background: url('/images/backgrounds/menu-s3.png') center/cover no-repeat;
 }
 
 
@@ -752,31 +755,6 @@ p {
            PAGINA MENU
 ********************************************/
 
-.piatti-menu {
-    width: 319px;
-    height: 137px;
-    aspect-ratio: 319/137;
-}
-
-.piatto-con-label{
-    width: 319px;
-    height: 152px;
-    aspect-ratio: 86/41;
-
-    position: absolute;
-    left: -12px;
-    top: -62px;
-}
-
-.text-piatto {
-    display: flex;
-    width: 278px;
-    padding: 110px 30px 30px 30px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
 
 
 
