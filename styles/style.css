@@ -791,143 +791,241 @@ p {
 */
 
 
+/********************************************
+     REGOLE ANTI-OVERFLOW - PAGINA SOSTENIBILITÀ
+********************************************/
+
+/* Prevenzione overflow orizzontale - SOLO per pagina sostenibilità (Valutare se aggiungerla come regola globale) */
+html:has(.sostenibility-container),
+body:has(.sostenibility-container) {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+/* Box-sizing uniforme */
+.sostenibility-container *,
+.sostenibility-container *::before,
+.sostenibility-container *::after {
+    box-sizing: border-box;
+}
 
 /********************************************
            PAGINA SOSTENIBILITÀ
 ********************************************/
 
 .sostenibility-container {
+    overflow-x: hidden;
+    width: 100%;
+    
+    /* Typography */
     p {
         font-family: 'Neutraface', sans-serif;
     }
 
-    h1 {
+    h1, h2 {
         font-family: 'Syne', sans-serif;
         font-weight: 800;
     }
 
-    h2 {
-        font-family: 'Syne', sans-serif;
-        font-weight: 800;
-    }
-
-    h3,
-    h4,
-    h5,
-    h6 {
+    h3, h4, h5, h6 {
         font-family: 'Syne', sans-serif;
         font-weight: 600;
     }
 
+    /* ===== NAVBAR STYLES ===== */
+    .navbar {
+        padding: 0.5rem 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar .container-xxl {
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .navbar-brand {
+        padding: 0;
+        margin: 0;
+    }
+
+    .logo-img {
+        width: 60px;
+        height: 60px;
+        transition: all 0.3s ease;
+    }
+
+    /* Mobile/Tablet Actions */
+    .navbar-mobile-actions {
+        gap: 0.75rem;
+    }
+
+    .navbar-toggler {
+        border: 2px solid white;
+        padding: 0.4rem 0.6rem;
+        border-radius: 8px;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+        border-color: white;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* Menu collapse */
+    .navbar-collapse {
+        transition: none !important;
+    }
+
+    .navbar-collapse.collapsing {
+        transition: none !important;
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        margin-top: 1rem;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #44DEE0 !important;
+        background: rgba(26, 77, 46, 0.1);
+        border-radius: 10px;
+    }
+
+    /* Pulsanti */
+    .btn-custom-primary {
+        padding: 0.5rem 1.25rem;
+        font-weight: 600;
+        font-size: 0.85rem;
+        border-radius: 25px;
+        border: none;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .btn-language {
+        background: transparent;
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        width: 45px;
+        height: 45px;
+    }
+
+    .btn-language:hover {
+        transform: scale(1.1);
+    }
+
+    .btn-language img {
+        display: block;
+    }
+    /* ===== FINE NAVBAR STYLES ===== */
+
+    /* Hero Section */
     .hero {
-        height: 90vh;
+        min-height: 90vh;
         background-image: url("../images/sostenibilità/sfondo-sostenibilità.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         display: flex;
         align-items: center;
-        justify-content: center;
     }
 
     .hero-title {
         color: white;
-        font-size: 5.5rem !important;
-        font-weight: 900;
-        text-align: center;
-        letter-spacing: 0;
+        font-size: clamp(1.5rem, 6vw, 5.5rem);
         text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        margin-top: 20px;
+        margin: 0;
     }
 
+    .hero-line {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    /* Background principale */
     .fullpage-bg {
         background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
-        min-height: 800px;
-        position: relative;
-        z-index: 0;
-    }
-
-    .image-right-container {
         position: relative;
     }
 
-    .image-right {
+    /* Immagini decorative - Foglie */
+    .foglie-container-1,
+    .foglie-container-2,
+    .foglie-container-3,
+    .foglie-container-4,
+    .foglie-container-5 {
         position: absolute;
-        right: 0px;
-        top: -200px;
-        z-index: 10;
         pointer-events: none;
-        width: 480px;
-        height: auto;
-        opacity: 1;
+        z-index: 1;
+        display: none; /* Nascoste su mobile */
     }
 
+    .foglia-decorativa {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contenuto sezioni sopra le foglie */
+    .section-content-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Sezioni generiche */
     .section-image-wrapper {
-        padding: 20px;
+        padding: 1rem;
     }
 
     .section-image {
         width: 100%;
         height: auto;
-        border-radius: 30px;
-    }
-
-    .hero-line {
-        position: absolute;
-        left: 0;
-        bottom: 350px;
-        width: calc(100% - [spazio rimanente]);
-        width: 800px;
-        max-width: 100%;
-    }
-
-    .vision-section {
-        position: relative;
-        margin-top: -10px;
-    }
-
-    .vision-section::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 300px;
-        height: 400px;
-        background-image: url('percorso/pianta-destra.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom right;
-        opacity: 0.8;
-    }
-
-    .image-left-container {
-        position: absolute;
-        left: -370px;
-        top: 160px;
-        z-index: 10;
-        pointer-events: none;
-        transform: rotate(27deg)
-    }
-
-    .image-left {
-        width: 800px;
-        height: auto;
+        border-radius: 20px;
     }
 
     .section-content {
-        padding: 30px 20px;
-        min-height: 300px;
+        padding: 2rem 1rem;
     }
 
     .section-heading {
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
         color: white;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
     }
 
     .section-text {
@@ -939,25 +1037,26 @@ p {
     .vision-section,
     .sustainability-section,
     .fasi-section {
-        padding: 40px 0;
+        padding: 2rem 0;
     }
 
+    /* Economia Circolare */
     .economia-circolare {
-        padding: 60px 0;
+        padding: 3rem 0;
         text-align: center;
     }
 
     .economia-content {
         max-width: 900px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 1rem;
     }
 
     .economia-title {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 5vw, 3rem);
         font-weight: 700;
         color: #D2B48C;
-        margin-bottom: px;
+        margin-bottom: 1rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
@@ -968,25 +1067,40 @@ p {
         color: #f5f5f5;
     }
 
-    #foglia-top {
-        top: -250px;
-        right: -10px;
-    }
-
+    /* Fasi Section */
     .fase-wrapper {
         position: relative;
     }
 
-    .fase-wrapper .section-content .label-custom {
-        width: fit-content;
+    .fase-item {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .fase-item.active {
+        display: flex;
+        opacity: 1;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 
     .fase-nav {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         background-color: transparent;
         background-repeat: no-repeat;
         background-position: center;
@@ -995,54 +1109,55 @@ p {
         cursor: pointer;
         padding: 0;
         z-index: 100;
+        display: none; /* Nascosti su mobile */
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .fase-nav:hover {
+        transform: translateY(-50%) scale(1.1);
+        opacity: 0.8;
+    }
+
+    .fase-nav:active {
+        transform: translateY(-50%) scale(0.95);
     }
 
     .prev-fase {
-        left: 10px;
+        left: -10px;
         background-image: url("/images/sostenibilità/arrow-left.svg");
     }
 
     .next-fase {
-        right: 10px;
+        right: -10px;
         background-image: url("/images/sostenibilità/arrow-right.svg");
     }
 
+    /* Label Custom */
     .label-custom {
         color: #FFFFFF;
-        font-size: 1.7rem;
-        font-weight: 600;
-        margin-bottom: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        background: rgba(26, 77, 46, 0.2);
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
+        display: inline-block;
+        margin-bottom: 0.5rem;
     }
 
-    .fase-wrapper .row.g-0 {
-        display: none;
-    }
-
-    .fase-wrapper .row.g-0.active {
-        display: flex;
-    }
-
+    /* Experts Section */
     .experts-section,
     .partnership-section {
-        padding: 60px 0;
+        padding: 3rem 0;
     }
 
     .main-title {
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 5vw, 3rem);
         font-weight: 700;
         color: #D2B48C;
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 2rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-    }
-
-    .experts-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 0 20px;
-        margin-bottom: 100px;
     }
 
     .expert-card {
@@ -1050,112 +1165,66 @@ p {
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 20px;
-        padding: 30px 15px;
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-
-    .expert-card:hover {
-        transform: translateY(-5px);
+        padding: 1.5rem;
+        height: 100%;
     }
 
     .expert-photo {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         object-fit: cover;
-        margin-bottom: 15px;
-        border: 3px solid F6F1E7(212, 175, 55, 0.5);
+        margin-bottom: 1rem;
+        border: 3px solid rgba(212, 175, 55, 0.5);
     }
 
     .expert-name {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: 600;
         color: #FFFFFF;
-        margin: 10px 0;
+        margin: 0.5rem 0;
     }
 
-    #foglia5 {
-        top: -150px;
-        right: -30px;
-    }
-
-    #foglia6 {
-        top: 1990px;
-        left: -270px;
-        transform: scale(0.4)
-    }
-
-    .label-custom {
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: #FFFFFF;
-        background: rgba(26, 77, 46, 0.2);
-        padding: 12px 12px;
-        border-radius: 15px;
-        display: inline-block;
-        margin-top: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        text-align: center;
-    }
-
-    .partners-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 0 20px;
-    }
-
+    /* Partnership Section */
     .partner-card {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 20px;
-        padding: 40px 20px;
+        padding: 2rem 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 150px;
-        transition: transform 0.3s ease;
-    }
-
-    .partner-card:hover {
-        transform: translateY(-5px);
+        min-height: 120px;
     }
 
     .partner-logo {
         max-width: 100%;
-        max-height: 120px;
+        max-height: 80px;
         height: auto;
     }
 
+    /* Footer */
     .footer-section {
-        padding: 80px 20px 40px;
-    }
-
-    .footer-section {
-        margin-top: 200px;
+        padding: 3rem 1rem 2rem;
+        margin-top: 4rem;
     }
 
     .footer-logo {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 30px;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1.5rem;
     }
 
     .footer-main {
-        margin-bottom: 40px;
+        margin-bottom: 2rem;
     }
 
     .footer-tagline {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         font-weight: 700;
         color: white;
-        margin-bottom: 10px;
+        margin-bottom: 0.5rem;
     }
 
     .footer-hours {
@@ -1170,52 +1239,44 @@ p {
     }
 
     .footer-legal p {
-        margin: 3px 0;
+        margin: 0.25rem 0;
     }
 
-    /* Tablet & Desktop */
+    /* TABLET - min 768px */
     @media (min-width: 768px) {
-        .hero-title {
-            font-size: 4rem;
+        .navbar {
+            padding: 0.75rem 0;
+        }
+
+        .logo-img {
+            width: 70px;
+            height: 70px;
+        }
+
+        .btn-custom-primary {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
         }
 
         .section-content {
-            padding: 50px 40px;
+            padding: 3rem 2rem;
         }
 
-        .section-heading {
-            font-size: 2.5rem;
+        .section-image-wrapper {
+            padding: 1.25rem;
         }
 
-        .section-text {
-            font-size: 1.1rem;
-        }
-
-        .economia-title {
-            font-size: 3rem;
-        }
-
-        .economia-text {
-            font-size: 1.2rem;
-        }
-
-        .experts-grid {
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+        .section-image {
+            border-radius: 30px;
         }
 
         .expert-photo {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
         }
 
         .expert-name {
-            font-size: 1.5rem;
-        }
-
-        .partners-grid {
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            font-size: 1.3rem;
         }
 
         .partner-logo {
@@ -1223,22 +1284,75 @@ p {
         }
 
         .footer-logo {
-            width: 190px;
-            height: 190px;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 2rem;
         }
 
         .footer-tagline {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
-        .footer-hours {
-            font-size: 1.2rem;
+        .footer-section {
+            padding: 4rem 1rem 2.5rem;
+            margin-top: 6rem;
         }
     }
 
+    /* DESKTOP - min 992px */
     @media (min-width: 992px) {
+        /* Mostra foglie decorative */
+        .foglie-container-1,
+        .foglie-container-2,
+        .foglie-container-3,
+        .foglie-container-4,
+        .foglie-container-5 {
+            display: block;
+        }
+
+        /* Foglia 1 - Dopo hero */
+        .foglie-container-1 {
+            position: absolute;
+            right: 0;
+            top: -200px;
+            max-width: 480px;
+        }
+
+        /* Foglia 2 - Nella sustainability section */
+        .foglie-container-2 {
+            left: -370px;
+            top: 160px;
+            transform: rotate(27deg);
+            max-width: 800px;
+        }
+
+        /* Foglia 3 - Nella economia section */
+        .foglie-container-3 {
+            top: -250px;
+            right: -10px;
+            max-width: 480px;
+        }
+
+        /* Foglia 4 - Nella experts section */
+        .foglie-container-4 {
+            top: -150px;
+            right: -30px;
+            max-width: 480px;
+        }
+
+        /* Foglia 5 - Nella partnership section */
+        .foglie-container-5 {
+            top: 100px;
+            left: -270px;
+            transform: scale(0.4) rotate(27deg);
+            max-width: 800px;
+        }
+
+        /* Mostra pulsanti navigazione fasi */
         .fase-nav {
             display: block;
+            width: 50px;
+            height: 50px;
         }
 
         .prev-fase {
@@ -1252,7 +1366,81 @@ p {
         .vision-section,
         .sustainability-section,
         .fasi-section {
-            padding: 80px 0;
+            padding: 5rem 0;
+        }
+
+        .economia-circolare {
+            padding: 4rem 0;
+        }
+
+        .section-content {
+            padding: 3rem 2.5rem;
+        }
+
+        .expert-photo {
+            width: 120px;
+            height: 120px;
+        }
+
+        .expert-name {
+            font-size: 1.5rem;
+        }
+
+        .footer-logo {
+            width: 190px;
+            height: 190px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-tagline {
+            font-size: 2rem;
+        }
+
+        .footer-hours {
+            font-size: 1.2rem;
+        }
+
+        .footer-section {
+            padding: 5rem 1rem 2.5rem;
+            margin-top: 12.5rem;
+        }
+    }
+
+    /* DESKTOP XL - min 1200px */
+    @media (min-width: 1200px) {
+        .logo-img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .navbar-collapse {
+            display: flex !important;
+            margin-top: 0;
+            max-height: none;
+            overflow-y: visible;
+        }
+
+        .navbar-nav {
+            text-align: center;
+            gap: 1.5rem;
+            width: auto;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+
+        .btn-custom-primary {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+        }
+
+        .btn-language {
+            width: 50px;
+            height: 50px;
         }
     }
 }
