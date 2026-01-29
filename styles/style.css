@@ -504,7 +504,7 @@ p {
 .img-bg {                   /*classe da mettere ai div che contengono gli sfondi*/
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /*align-items: flex-start;*/
     align-self: stretch;
 }
 
@@ -525,7 +525,11 @@ p {
 }
 
 #menu-s2 {
-    background: url('/images/menu/menu_bg2.webp') center/cover no-repeat;
+    background: url('/images/backgrounds/menu-s3.png') center/cover no-repeat;
+}
+
+#menu-s3 {
+    background: url('/images/backgrounds/menu-s3.png') center/cover no-repeat;
 }
 
 
