@@ -70,6 +70,31 @@
              alt="Immagine a destra" 
              class="image-right">
     </div>
+
+    <script>
+        window.addEventListener("load", () => {
+          const foglia = document.querySelector(".image-right");
+          if (!foglia) return;
+        
+          let start = null;
+        
+          function ventoLeggero(ts) {
+            if (!start) start = ts;
+            const t = (ts - start) / 1000; // tempo in secondi
+        
+            // movimento leggerissimo
+            const x = Math.sin(t * 0.5) * 2;   // spostamento orizzontale max 5px
+            const y = Math.sin(t * 0.3) * 3;   // spostamento verticale max 3px
+            const r = Math.sin(t * 0.6) * 1;   // rotazione max 3°
+        
+            foglia.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+        
+            requestAnimationFrame(ventoLeggero);
+          }
+        
+          requestAnimationFrame(ventoLeggero);
+        });
+        </script>
     
     <div class="fullpage-bg">
         <section class="vision-section">

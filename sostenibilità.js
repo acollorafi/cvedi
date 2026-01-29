@@ -28,3 +28,28 @@ prevButton.addEventListener('click', () => {
     }
 });
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const foglia = document.querySelector(".image-right");
+  if (!foglia) return;
+
+  let start = null;
+
+  function ventoLeggero(ts) {
+    if (!start) start = ts;
+    const t = (ts - start) / 1000;
+
+    // movimento MINIMO
+    const x = Math.sin(t * 0.5) * 10;
+    const y = Math.sin(t * 0.3) * 10;
+    const r = Math.sin(t * 0.6) * 10;
+
+    foglia.style.transform =
+      `translate(${x}px, ${y}px) rotate(${r}deg)`;
+
+    requestAnimationFrame(ventoLeggero);
+  }
+
+  requestAnimationFrame(ventoLeggero);
+});
+</script>
