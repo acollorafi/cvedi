@@ -68,12 +68,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3 {
+h4 {
     font-family: 'Syne', sans-serif;
     /*ho tolto gli important perché non riuscivo a sovrascrivere nelle label però mi sembra che funzionino comunque... al massimo li rimettiamo*/
     font-weight: 800;
@@ -89,12 +84,25 @@ h2 {
     font-size: 2rem;
     color: var(--bs-tan);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 30px;
 }
 
 h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--bs-tan);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px;
+}
+
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: var(--bs-white);
+}
+
+.p-02 {
+    font-size: 28px;
 }
 
 @media (min-width: 768px) {
@@ -104,22 +112,20 @@ h3 {
 
     h2 {
         font-size: 4rem;
+        padding-bottom: 60px;
     }
 
     h3 {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
+        padding-bottom: 40px;
     }
-}
 
-p {
+    p {
     font-size: 1.2rem;
-    line-height: 1.6;
-    color: var(--bs-white);
+    line-height: 1.2;
+}
 }
 
-.p-02 {
-    font-size: 28px;
-}
 
 
 /********************************************
@@ -137,11 +143,19 @@ p {
     padding-bottom: 60px;
 }
 
+.padding-intra-section { /*da mettere tipo tra testo ed elemento di una stessa sezione*/
+    padding-bottom: 30px;
+}
+
 @media (min-width: 768px) {
     .padding-section {
         padding-top: 110px;
         padding-bottom: 110px;
     }
+
+    .padding-intra-section {
+    padding-bottom: 60px;
+}
 }
 
 .hero-section {
@@ -153,6 +167,10 @@ p {
         height: 100vh;
     }
 }
+
+
+
+
 
 /********************************************
            LIQUID GLASS EFFECT
@@ -940,16 +958,6 @@ color: #F5F5F5;
            PAGINA INFO
 ********************************************/
 
-/* padding accessibility */
-.padding-text {
-    padding-bottom: 45px;
-}
-
-@media (min-width: 768px) {
-    .padding-text {
-        padding-bottom: 90px;
-    }
-}
 
 
 .icon-info {
