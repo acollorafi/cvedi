@@ -609,7 +609,7 @@ p {
 
 /*Sfondi pagina home*/
 #home-s1 {
-    background: url('/images/backgrounds/hero_home_bg.png') center/cover no-repeat;
+    background: url('/images/backgrounds/hero_home_bg.webp') center/cover no-repeat;
 }
 
 #home-s3 { /*chiedi a chat*/
@@ -625,17 +625,17 @@ p {
 }
 
 #menu-s2 {
-    background: url('/images/backgrounds/menu-s3.png') center/cover no-repeat;
+    background: url('/images/backgrounds/menu-s3.webp') center/cover no-repeat;
 }
 
 #menu-s3 {
-    background: url('/images/backgrounds/menu-s3.png') center/cover no-repeat;
+    background: url('/images/backgrounds/menu-s3.webp') center/cover no-repeat;
 }
 
 
 /*Sfondi sezioni hero info e prenota*/
 #hero-info {
-    background: url('/images/backgrounds/hero-info.png') center bottom / cover no-repeat;
+    background: url('/images/backgrounds/hero-info_NONVABENE.webp') center bottom / cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -648,7 +648,7 @@ p {
 }
 
 #hero-prenota {
-    background: url('/images/backgrounds/hero-prenota.png') center bottom / cover no-repeat;
+    background: url('/images/backgrounds/hero-prenota.webp') center bottom / cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -661,7 +661,7 @@ p {
 
 /*Sfondi pagina info*/
 .background-info {
-    background-image: url('../images/info/sfondo_sezioni.png');
+    background-image: url('../images/info/sfondo_sezioni.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -791,7 +791,7 @@ p {
            PAGINA RISTORANTE
 ********************************************/
 .hero-bg {
-    background-image: url('../images/ristorante/hero_bg.png');
+    background-image: url('../images/ristorante/hero_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -807,7 +807,7 @@ p {
 }
 
 .team-bg {
-    background-image: url('../images/ristorante/img_team_bg.png');
+    background-image: url('../images/ristorante/img_team_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -824,7 +824,7 @@ p {
 }
 
 .piatti-bg {
-    background-image: url('../images/ristorante/img_piatti_bg.png');
+    background-image: url('../images/ristorante/img_piatti_bg.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -971,7 +971,7 @@ body:has(.sostenibility-container) {
     /* Hero Section */
     .hero {
         min-height: 90vh;
-        background-image: url("../images/sostenibilità/sfondo-sostenibilità.png");
+        background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -995,7 +995,7 @@ body:has(.sostenibility-container) {
 
     /* Background principale */
     .fullpage-bg {
-        background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.png");
+        background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -1610,7 +1610,7 @@ body:has(.sostenibility-container) {
            PAGINA PRENOTA
 ********************************************/
 .background-prenota {
-    background-image: url('/images/backgrounds/sfondo-prenota.png');
+    background-image: url('/images/backgrounds/sfondo-prenota.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1952,7 +1952,7 @@ input::-webkit-calendar-picker-indicator {
            PAGINA PIATTO
 ********************************************/
 .piatti-hero-bg {
-    background-image: url('../images/piatto01/piatti_hero_bg.jpeg');
+    background-image: url('../images/piatto01/piatti_hero_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1962,7 +1962,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .piatti-ingredienti-bg {
-    background-image: url('../images/piatto01/ingredienti_bg.jpg');
+    background-image: url('../images/piatto01/ingredienti_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
