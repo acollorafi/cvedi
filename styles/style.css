@@ -122,7 +122,6 @@ p {
 }
 
 
-
 /********************************************
            SEZIONI E PADDING
 ********************************************/
@@ -423,6 +422,9 @@ p {
 
     display: flex;
     flex-direction: column;
+    background: rgba(0, 0, 0, 0.30);
+    box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
+
 }
 
 .card-accessibility {
@@ -437,12 +439,21 @@ p {
     align-items: center;
     justify-content: center;
     max-width: 300px;
-    height: 270px;
+    height: 350px;
     flex: 0 0 auto;
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
+    background: rgba(0, 0, 0, 0.30);
+    box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
+
 }
+
+.card-accessibility p {
+    margin-bottom: 0;
+}
+
+
 
 /* CARD PIATTI (menu e ingredienti) - da sistemare */
 
@@ -556,6 +567,98 @@ p {
     border: var(--bs-glass-border);
 }
 
+/********************************************
+          NAVBAR
+********************************************/
+ /* ===== NAVBAR STYLES ===== */
+ .navbar {
+    padding: 0.5rem 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.navbar .container-xxl {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.logo-img { 
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile/Tablet Actions */
+.navbar-mobile-actions {
+    gap: 0.75rem;
+}
+
+.navbar-toggler {
+    border: 2px solid white;
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+    border-radius: 54px;
+border: var(--bs-glass-border);
+background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
+color: #F5F5F5;
+}
+
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Menu collapse */
+.navbar-collapse {
+    transition: none !important;
+}
+
+.navbar-collapse.collapsing {
+    transition: none !important;
+    display: none;
+}
+
+.navbar-collapse.show {
+    margin-top: 1rem;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.navbar-nav {
+    text-align: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #44DEE0 !important;
+    background: rgba(26, 77, 46, 0.1);
+    border-radius: 10px;
+}
+
+
 
 
 /********************************************
@@ -584,7 +687,7 @@ p {
 
 /*Sfondi pagina home*/
 #home-s1 {
-    background: url('/images/backgrounds/hero_home_bg.png') center/cover no-repeat;
+    background: url('/images/backgrounds/hero_home_bg.webp') center/cover no-repeat;
 }
 
 #home-s3 { /*chiedi a chat*/
@@ -600,17 +703,17 @@ p {
 }
 
 #menu-s2 {
-    background: url('/images/backgrounds/menu-s3.png') center/cover no-repeat;
+    background: url('/images/backgrounds/menu-s3.webp') center/cover no-repeat;
 }
 
 #menu-s3 {
-    background: url('/images/backgrounds/menu-s3.png') center/cover no-repeat;
+    background: url('/images/backgrounds/menu-s3.webp') center/cover no-repeat;
 }
 
 
 /*Sfondi sezioni hero info e prenota*/
 #hero-info {
-    background: url('/images/backgrounds/hero-info.png') center bottom / cover no-repeat;
+    background: url('/images/backgrounds/hero-info_NONVABENE.webp') center bottom / cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -623,7 +726,7 @@ p {
 }
 
 #hero-prenota {
-    background: url('/images/backgrounds/hero-prenota.png') center bottom / cover no-repeat;
+    background: url('/images/backgrounds/hero-prenota.webp') center bottom / cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -636,7 +739,7 @@ p {
 
 /*Sfondi pagina info*/
 .background-info {
-    background-image: url('../images/info/sfondo_sezioni.png');
+    background-image: url('../images/info/sfondo_sezioni.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -766,7 +869,7 @@ p {
            PAGINA RISTORANTE
 ********************************************/
 .hero-bg {
-    background-image: url('../images/ristorante/hero_bg.png');
+    background-image: url('../images/ristorante/hero_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -777,12 +880,12 @@ p {
 
 @media (min-width: 768px) {
     .hero-bg {
-        /* aspect-ratio: 800 / 1170; */
+        aspect-ratio: 800 / 1170; 
     }
 }
 
 .team-bg {
-    background-image: url('../images/ristorante/img_team_bg.png');
+    background-image: url('../images/ristorante/img_team_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -799,7 +902,7 @@ p {
 }
 
 .piatti-bg {
-    background-image: url('../images/ristorante/img_piatti_bg.png');
+    background-image: url('../images/ristorante/img_piatti_bg.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -892,142 +995,11 @@ body:has(.sostenibility-container) {
 .sostenibility-container {
     overflow-x: hidden;
     width: 100%;
-    
-    /* Typography */
-    p {
-        font-family: 'Neutraface', sans-serif;
-    }
-
-    h1, h2 {
-        font-family: 'Syne', sans-serif;
-        font-weight: 800;
-    }
-
-    h3, h4, h5, h6 {
-        font-family: 'Syne', sans-serif;
-        font-weight: 600;
-    }
-
-    /* ===== NAVBAR STYLES ===== */
-    .navbar {
-        padding: 0.5rem 0;
-        width: 100%;
-        left: 0;
-        right: 0;
-    }
-
-    .navbar .container-xxl {
-        max-width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .navbar-brand {
-        padding: 0;
-        margin: 0;
-    }
-
-    .logo-img {
-        width: 60px;
-        height: 60px;
-        transition: all 0.3s ease;
-    }
-
-    /* Mobile/Tablet Actions */
-    .navbar-mobile-actions {
-        gap: 0.75rem;
-    }
-
-    .navbar-toggler {
-        border: 2px solid white;
-        padding: 0.4rem 0.6rem;
-        border-radius: 8px;
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: none;
-        border-color: white;
-    }
-
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-
-    /* Menu collapse */
-    .navbar-collapse {
-        transition: none !important;
-    }
-
-    .navbar-collapse.collapsing {
-        transition: none !important;
-        display: none;
-    }
-
-    .navbar-collapse.show {
-        margin-top: 1rem;
-        max-height: 70vh;
-        overflow-y: auto;
-    }
-
-    .navbar-nav {
-        text-align: center;
-        gap: 0.5rem;
-        width: 100%;
-        padding: 1rem 0;
-    }
-
-    .nav-link {
-        padding: 0.75rem 1rem;
-        font-weight: 500;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-        color: #44DEE0 !important;
-        background: rgba(26, 77, 46, 0.1);
-        border-radius: 10px;
-    }
-
-    /* Pulsanti */
-    .btn-custom-primary {
-        padding: 0.5rem 1.25rem;
-        font-weight: 600;
-        font-size: 0.85rem;
-        border-radius: 25px;
-        border: none;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-    }
-
-    .btn-language {
-        background: transparent;
-        padding: 0.5rem;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        width: 45px;
-        height: 45px;
-    }
-
-    .btn-language:hover {
-        transform: scale(1.1);
-    }
-
-    .btn-language img {
-        display: block;
-    }
-    /* ===== FINE NAVBAR STYLES ===== */
 
     /* Hero Section */
     .hero {
         min-height: 90vh;
-        background-image: url("../images/sostenibilità/sfondo-sostenibilità.png");
+        background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -1051,7 +1023,7 @@ body:has(.sostenibility-container) {
 
     /* Background principale */
     .fullpage-bg {
-        background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.png");
+        background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -1666,7 +1638,7 @@ body:has(.sostenibility-container) {
            PAGINA PRENOTA
 ********************************************/
 .background-prenota {
-    background-image: url('/images/backgrounds/sfondo-prenota.png');
+    background-image: url('/images/backgrounds/sfondo-prenota.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1695,7 +1667,6 @@ body:has(.sostenibility-container) {
     border: var(--bs-glass-border);
     display: flex;
     align-items: center;
-    /* Centra verticalmente tutto, inclusi i divisori */
     border-radius: 100px;
     max-width: 1320px;
     width: 100%;
@@ -1717,11 +1688,9 @@ body:has(.sostenibility-container) {
     justify-content: center;
     padding: 10px 35px;
     border-radius: 80px;
-    /* Crea l'effetto "pillola" interno al passaggio del mouse */
     transition: background 0.2s ease;
     position: relative;
     height: 100%;
-    /* Occupa l'altezza disponibile definita dal padding del padre */
 }
 
 .search-section:hover {
@@ -1758,12 +1727,9 @@ body:has(.sostenibility-container) {
 .search-divider {
     width: 1px;
     height: 30px;
-    /* Altezza fissa e ridotta per stare in mezzo */
     background: rgba(255, 255, 255, 0.2);
     flex-shrink: 0;
-    /* Impedisce che il divisore si schiacci */
     margin: 0 10px;
-    /* Spazio orizzontale per non toccare le sezioni */
 }
 
 .search-section:hover+.search-divider,
@@ -1789,8 +1755,7 @@ body:has(.sostenibility-container) {
 }
 
 .search-btn-circle:hover {
-    background-color: var(--bs-cyan);
-    /*vediamo se lasciare questo o il tan*/
+    background-color: rgba(68, 221, 224, 0.9);
     transform: scale(1.05);
 }
 
@@ -1913,9 +1878,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 
-
-
-/* Rimuove le freccette standard dell'input number */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -1923,7 +1885,7 @@ input::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-    -moz-appearance: textfield;
+    /*-moz-appearance: textfield;*/
     width: 30px;
 }
 
@@ -2008,7 +1970,7 @@ input::-webkit-calendar-picker-indicator {
            PAGINA PIATTO
 ********************************************/
 .piatti-hero-bg {
-    background-image: url('../images/piatto01/piatti_hero_bg.jpeg');
+    background-image: url('../images/piatto01/piatti_hero_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -2018,7 +1980,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .piatti-ingredienti-bg {
-    background-image: url('../images/piatto01/ingredienti_bg.jpg');
+    background-image: url('../images/piatto01/ingredienti_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -2037,6 +1999,7 @@ input::-webkit-calendar-picker-indicator {
     width: 100%;
     height: auto;
 }
+
 
 
 /*prova foglia*/
@@ -2060,7 +2023,7 @@ input::-webkit-calendar-picker-indicator {
   }
   
 
-  .leaves-left .leaf:nth-child(1) { top: 10%; left: -40px; }
+.leaves-left .leaf:nth-child(1) { top: 10%; left: -40px; }
 .leaves-left .leaf:nth-child(2) { top: 55%; left: -60px; }
 
 .leaves-right .leaf:nth-child(1) { top: 20%; right: -50px; }
