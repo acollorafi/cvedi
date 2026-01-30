@@ -362,6 +362,9 @@ p {
 
     display: flex;
     flex-direction: column;
+    background: rgba(0, 0, 0, 0.30);
+    box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
+
 }
 
 .card-accessibility {
@@ -376,12 +379,21 @@ p {
     align-items: center;
     justify-content: center;
     max-width: 300px;
-    height: 270px;
+    height: 350px;
     flex: 0 0 auto;
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
+    background: rgba(0, 0, 0, 0.30);
+    box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
+
 }
+
+.card-accessibility p {
+    margin-bottom: 0;
+}
+
+
 
 /* CARD PIATTI (menu e ingredienti) - da sistemare */
 
@@ -1936,6 +1948,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 
+
 /*prova foglia*/
 .leaves {
     position: fixed;
@@ -1957,7 +1970,7 @@ input::-webkit-calendar-picker-indicator {
   }
   
 
-  .leaves-left .leaf:nth-child(1) { top: 10%; left: -40px; }
+.leaves-left .leaf:nth-child(1) { top: 10%; left: -40px; }
 .leaves-left .leaf:nth-child(2) { top: 55%; left: -60px; }
 
 .leaves-right .leaf:nth-child(1) { top: 20%; right: -50px; }
