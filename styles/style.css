@@ -1837,3 +1837,31 @@ input::-webkit-calendar-picker-indicator {
     width: 100%;
     height: auto;
 }
+
+
+/*prova foglia*/
+.leaves {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .leaves-left { left: 0; }
+  .leaves-right { right: 0; }
+  
+  .leaf {
+    position: absolute;
+    width: 240px;
+    opacity: 0.9;
+    will-change: transform;
+  }
+  
+
+  .leaves-left .leaf:nth-child(1) { top: 10%; left: -40px; }
+.leaves-left .leaf:nth-child(2) { top: 55%; left: -60px; }
+
+.leaves-right .leaf:nth-child(1) { top: 20%; right: -50px; }
+.leaves-right .leaf:nth-child(2) { top: 65%; right: -30px; }
