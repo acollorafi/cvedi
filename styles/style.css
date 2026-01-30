@@ -532,7 +532,13 @@ p {
     border: 2px solid white;
     padding: 0.4rem 0.6rem;
     border-radius: 8px;
+    border-radius: 54px;
+border: var(--bs-glass-border);
+background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
+color: #F5F5F5;
 }
+
 
 .navbar-toggler:focus {
     box-shadow: none;
@@ -917,56 +923,6 @@ body:has(.sostenibility-container) {
 .sostenibility-container {
     overflow-x: hidden;
     width: 100%;
-    
-    /* Typography */
-    p {
-        font-family: 'Neutraface', sans-serif;
-    }
-
-    h1, h2 {
-        font-family: 'Syne', sans-serif;
-        font-weight: 800;
-    }
-
-    h3, h4, h5, h6 {
-        font-family: 'Syne', sans-serif;
-        font-weight: 600;
-    }
-
-   
-    /* Pulsanti */
-    .btn-custom-primary {
-        padding: 0.5rem 1.25rem;
-        font-weight: 600;
-        font-size: 0.85rem;
-        border-radius: 25px;
-        border: none;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-    }
-
-    .btn-language {
-        background: transparent;
-        padding: 0.5rem;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        width: 45px;
-        height: 45px;
-    }
-
-    .btn-language:hover {
-        transform: scale(1.1);
-    }
-
-    .btn-language img {
-        display: block;
-    }
-    /* ===== FINE NAVBAR STYLES ===== */
 
     /* Hero Section */
     .hero {
