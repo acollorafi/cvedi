@@ -55,3 +55,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     requestAnimationFrame(ventoLeggero);
 });
+
+// Carosello Esperti (solo mobile)
+document.addEventListener('DOMContentLoaded', function() {
+    const expertItems = document.querySelectorAll('.expert-item');
+    const prevBtn = document.querySelector('.prev-expert');
+    const nextBtn = document.querySelector('.next-expert');
+    let currentExpertIndex = 0;
+
+    function isMobile() {
+        return window.innerWidth < 768;
+    }
+
+    function showExpert(index) {
+        if (!isMobile()) return;
+        
+        expertItems.forEach(item => item.classList.remove('active'));
+        expertItems[index].classList.add('active');
+    }
+
+    function initExpertsCarousel() {
+        if (isMobile()) {
+            showExpert(0);
+        } else {
+            expertItems.forEach(item => item.classList.remove('active'));
+        }
+    }
+
+    if (prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            if (!isMobile()) return;
+            currentExpertIndex = (currentExpertIndex + 1) % expertItems.length;
+            showExpert(currentExpertIndex);
+        });
+
+        prevBtn.addEventListener('click', function() {
+            if (!isMobile()) return;
+            currentExpertIndex = (currentExpertIndex - 1 + expertItems.length) % expertItems.length;
+            showExpert(currentExpertIndex);
+        });
+    }
+
+    // Inizializza al caricamento
+    initExpertsCarousel();
+
+    // Reinizializza al resize
+    window.addEventListener('resize', initExpertsCarousel);
+});

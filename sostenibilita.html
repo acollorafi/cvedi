@@ -21,6 +21,7 @@
         <div class="container-xxl">
             <a class="navbar-brand" href="#">
                 <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img">
+
             </a>
     
             <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
@@ -30,7 +31,6 @@
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                    <img src="images/flags/Great Britain.png" class="navbar-img-languages" alt="English" width="30" height="20" />
                 </button>
             </div>
     
@@ -51,6 +51,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">SOSTENIBILITA</a>
+                        <img src="images/flags/Great Britain.png" class="navbar-img-languages" alt="English" width="30" height="20" />
                     </li>
                 </ul>
             </div>
@@ -199,35 +200,43 @@
             <div class="section-content-wrapper">
                 <div class="container-xxl">
                     <h2 class="main-title">Consigliato da esperti</h2>
-                    <div class="row g-3 g-md-4">
-                        <div class="col-6 col-md-3">
-                            <article class="expert-card text-center">
-                                <img src="images/sostenibilità/esperto1.png" class="expert-photo" alt="Zara Kael" />
-                                <h3 class="expert-name">Zara Kael</h3>
-                                <span class="label-custom">Critico bio-sensoriale</span>
-                            </article>
+                    
+                    <!-- Wrapper del carosello per mobile -->
+                    <div class="experts-carousel-wrapper">
+                        <button class="expert-nav prev-expert" aria-label="Esperto precedente"></button>
+                        
+                        <div class="row g-3 g-md-4 experts-row">
+                            <div class="col-6 col-md-3 expert-item active">
+                                <article class="expert-card text-center">
+                                    <img src="images/sostenibilità/esperto1.png" class="expert-photo" alt="Zara Kael" />
+                                    <h3 class="expert-name">Zara Kael</h3>
+                                    <span class="label-custom">Critico bio-sensoriale</span>
+                                </article>
+                            </div>
+                            <div class="col-6 col-md-3 expert-item">
+                                <article class="expert-card text-center">
+                                    <img src="images/sostenibilità/esperto2.png" class="expert-photo" alt="Elias Thorne" />
+                                    <h3 class="expert-name">Elias Thorne</h3>
+                                    <span class="label-custom">Bio-eticista</span>
+                                </article>
+                            </div>
+                            <div class="col-6 col-md-3 expert-item">
+                                <article class="expert-card text-center">
+                                    <img src="images/sostenibilità/esperto3.png" class="expert-photo" alt="Chef Leona Tree" />
+                                    <h3 class="expert-name">Chef Leona Tree</h3>
+                                    <span class="label-custom">Agri-Chef Sostenibile</span>
+                                </article>
+                            </div>
+                            <div class="col-6 col-md-3 expert-item">
+                                <article class="expert-card text-center">
+                                    <img src="images/sostenibilità/esperto4.png" class="expert-photo" alt="Soraya Li" />
+                                    <h3 class="expert-name">Soraya Li</h3>
+                                    <span class="label-custom">Botanical Alchemist</span>
+                                </article>
+                            </div>
                         </div>
-                        <div class="col-6 col-md-3">
-                            <article class="expert-card text-center">
-                                <img src="images/sostenibilità/esperto2.png" class="expert-photo" alt="Elias Thorne" />
-                                <h3 class="expert-name">Elias Thorne</h3>
-                                <span class="label-custom">Bio-eticista</span>
-                            </article>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <article class="expert-card text-center">
-                                <img src="images/sostenibilità/esperto3.png" class="expert-photo" alt="Chef Leona Tree" />
-                                <h3 class="expert-name">Chef Leona Tree</h3>
-                                <span class="label-custom">Agri-Chef Sostenibile</span>
-                            </article>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <article class="expert-card text-center">
-                                <img src="images/sostenibilità/esperto4.png" class="expert-photo" alt="Soraya Li" />
-                                <h3 class="expert-name">Soraya Li</h3>
-                                <span class="label-custom">Botanical Alchemist</span>
-                            </article>
-                        </div>
+                        
+                        <button class="expert-nav next-expert" aria-label="Esperto successivo"></button>
                     </div>
                 </div>
             </div>

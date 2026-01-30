@@ -1145,6 +1145,27 @@ body:has(.sostenibility-container) {
         background-image: url("/images/sostenibilità/arrow-right.svg");
     }
 
+    @media (max-width: 991px) {
+        .section-image-wrapper {
+            display: none;
+        }
+        
+        .fase-item {
+            padding: 2rem 1rem;
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .fase-nav {
+            display: block; 
+            width: 50px;
+            height: 50px;
+        }
+    }
+
     /* Label Custom */
     .label-custom {
         color: #FFFFFF;
@@ -1188,7 +1209,6 @@ body:has(.sostenibility-container) {
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 1rem;
-        border: 3px solid rgba(212, 175, 55, 0.5);
     }
 
     .expert-name {
@@ -1197,25 +1217,145 @@ body:has(.sostenibility-container) {
         color: #FFFFFF;
         margin: 0.5rem 0;
     }
+    .experts-carousel-wrapper {
+    position: relative;
+}
 
-    /* Partnership Section */
-    .partner-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        padding: 2rem 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 120px;
+.expert-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+    display: none; /* Nascosti di default */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.expert-nav:hover {
+    transform: translateY(-50%) scale(1.1);
+    opacity: 0.8;
+}
+
+.expert-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev-expert {
+    left: -10px;
+    background-image: url("/images/sostenibilità/arrow-left.svg");
+}
+
+.next-expert {
+    right: -10px;
+    background-image: url("/images/sostenibilità/arrow-right.svg");
+}
+
+/* Mobile: mostra carosello */
+@media (max-width: 767px) {
+    .experts-carousel-wrapper {
+        padding: 0 50px;
     }
-
-    .partner-logo {
+    
+    .expert-nav {
+        display: block;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .prev-expert {
+        left: 0;
+    }
+    
+    .next-expert {
+        right: 0;
+    }
+    
+    .experts-row {
+        overflow: hidden;
+    }
+    
+    .expert-item {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    .expert-item.active {
+        display: block;
+        width: 100%;
         max-width: 100%;
-        max-height: 80px;
-        height: auto;
+        flex: 0 0 100%;
     }
+}
+
+/* Desktop: mostra tutti gli esperti */
+@media (min-width: 768px) {
+    .expert-item {
+        display: block;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Partnership Section */
+.partner-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.partner-logo {
+    max-width: 100%;
+    max-height: 80px;
+    height: auto;
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    .partnership-section .col-6 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .partner-card {
+        max-width: 100%;
+        margin: 0 auto; 
+        padding: 3rem 2rem;
+        min-height: 200px;
+        overflow: visible; /* Assicura che il contenuto sia visibile */
+    }
+    
+    .partner-logo {
+        max-width: 90% !important;
+        max-height: 120px !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain;
+    }
+}
 
     /* Footer */
     .footer-section {
