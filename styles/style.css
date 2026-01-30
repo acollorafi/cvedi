@@ -1607,7 +1607,6 @@ body:has(.sostenibility-container) {
     border: var(--bs-glass-border);
     display: flex;
     align-items: center;
-    /* Centra verticalmente tutto, inclusi i divisori */
     border-radius: 100px;
     max-width: 1320px;
     width: 100%;
@@ -1629,11 +1628,9 @@ body:has(.sostenibility-container) {
     justify-content: center;
     padding: 10px 35px;
     border-radius: 80px;
-    /* Crea l'effetto "pillola" interno al passaggio del mouse */
     transition: background 0.2s ease;
     position: relative;
     height: 100%;
-    /* Occupa l'altezza disponibile definita dal padding del padre */
 }
 
 .search-section:hover {
@@ -1670,12 +1667,9 @@ body:has(.sostenibility-container) {
 .search-divider {
     width: 1px;
     height: 30px;
-    /* Altezza fissa e ridotta per stare in mezzo */
     background: rgba(255, 255, 255, 0.2);
     flex-shrink: 0;
-    /* Impedisce che il divisore si schiacci */
     margin: 0 10px;
-    /* Spazio orizzontale per non toccare le sezioni */
 }
 
 .search-section:hover+.search-divider,
@@ -1701,8 +1695,7 @@ body:has(.sostenibility-container) {
 }
 
 .search-btn-circle:hover {
-    background-color: var(--bs-cyan);
-    /*vediamo se lasciare questo o il tan*/
+    background-color: rgba(68, 221, 224, 0.9);
     transform: scale(1.05);
 }
 
