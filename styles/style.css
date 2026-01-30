@@ -802,7 +802,7 @@ p {
 
 @media (min-width: 768px) {
     .hero-bg {
-        /* aspect-ratio: 800 / 1170; */
+        aspect-ratio: 800 / 1170; 
     }
 }
 
@@ -1867,7 +1867,7 @@ input::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-    -moz-appearance: textfield;
+    /*-moz-appearance: textfield;*/
     width: 30px;
 }
 
