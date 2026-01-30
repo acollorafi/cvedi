@@ -77,3 +77,32 @@ function chiudiPopUp() {
     // Opzionale: ricarica la pagina o torna in cima
     // window.location.reload(); 
 }
+
+//prova foglie
+document.addEventListener("DOMContentLoaded", () => {
+    const leaves = document.querySelectorAll(".leaf");
+  
+    if (!leaves.length) return;
+  
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+      
+        leaves.forEach((leaf, i) => {
+          const speed = 0.08 + i * 0.02;
+      
+          const y = -scrollY * speed;
+      
+          const swayX =
+            Math.sin(scrollY * 0.003 + i) * 6;
+      
+          const swayRot =
+            Math.sin(scrollY * 0.002 + i) * 6;
+      
+          leaf.style.transform = `
+            translate(${swayX}px, ${y}px)
+            rotate(${swayRot}deg)
+          `;
+        });
+      });      
+  });
+  
