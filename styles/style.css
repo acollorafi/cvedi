@@ -1713,9 +1713,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 
-
-
-/* Rimuove le freccette standard dell'input number */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
