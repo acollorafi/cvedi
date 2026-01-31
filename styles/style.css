@@ -641,7 +641,7 @@ color: #F5F5F5;
 
 /*Sfondi sezioni hero info e prenota*/
 #hero-info {
-    background: url('/images/backgrounds/hero-info_NONVABENE.webp') center bottom / cover no-repeat;
+    background: url('/images/backgrounds/hero_info_bg.webp') center bottom / cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -806,11 +806,11 @@ color: #F5F5F5;
     /* aspect-ratio: 393 / 1711; */
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .hero-bg {
         aspect-ratio: 800 / 1170; 
     }
-}
+}*/
 
 .team-bg {
     background-image: url('../images/ristorante/img_team_bg.webp');
