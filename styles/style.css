@@ -1942,7 +1942,7 @@ input::-webkit-calendar-picker-indicator {
 
 
 
-/*prova foglia*/
+/*prova foglia
 .leaves {
     position: fixed;
     top: 0;
@@ -1967,4 +1967,4 @@ input::-webkit-calendar-picker-indicator {
 .leaves-left .leaf:nth-child(2) { top: 55%; left: -60px; }
 
 .leaves-right .leaf:nth-child(1) { top: 20%; right: -50px; }
-.leaves-right .leaf:nth-child(2) { top: 65%; right: -30px; }
+.leaves-right .leaf:nth-child(2) { top: 65%; right: -30px; } */
