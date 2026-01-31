@@ -808,6 +808,13 @@ p {
     background-position: center 70%;
 }
 
+#sostenibilità-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilità/sfondo-sostenibilità.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /*Sfondi pagina piatto 01*/
 #piatto01-s1 {
     position: relative;
@@ -823,17 +830,6 @@ p {
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/ingredienti_bg.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 70%;
-}
-
-.piatti-ingredienti-bg {
-    background-image: url('../images/piatto01/ingredienti_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
 }
 
 
