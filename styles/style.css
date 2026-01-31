@@ -767,7 +767,7 @@ p {
 }
 
 
-/*Sfondi sezioni hero info e prenota*/
+/*Sfondi sezioni hero info*/
 #info-s1 {
     position: relative;
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero_info_bg.webp) no-repeat;
@@ -783,20 +783,58 @@ p {
     background-size: cover;
 }
 
-
-#hero-prenota {
-    background: url('/images/backgrounds/hero-prenota.webp') center bottom / cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
+/*Sfondi sezioni hero info*/
+#prenota-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero-prenota.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
 }
 
-.hero-section-prenota {
-    min-height: 100vh;
+#prenota-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/sfondo-prenota.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/*Sfondi pagina sostenibilità*/
+#sostenibilità-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilità/sfondo-sostenibilità.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+}
 
+/*Sfondi pagina piatto 01*/
+#piatto01-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/piatti_hero_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+
+}
+
+#piatto01-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/ingredienti_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+}
+
+.piatti-ingredienti-bg {
+    background-image: url('../images/piatto01/ingredienti_bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    /* aspect-ratio: 393 / 1711; */
+}
 
 
 /********************************************
@@ -1404,16 +1442,6 @@ body:has(.sostenibility-container) {
 /********************************************
            PAGINA PRENOTA
 ********************************************/
-.background-prenota {
-    background-image: url('/images/backgrounds/sfondo-prenota.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1440 / 634;
-}
-
 .iframe-crop iframe {
     transform: scale(1.15);
 }
@@ -1736,26 +1764,6 @@ input::-webkit-calendar-picker-indicator {
 /********************************************
            PAGINA PIATTO
 ********************************************/
-.piatti-hero-bg {
-    background-image: url('../images/piatto01/piatti_hero_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
-}
-
-.piatti-ingredienti-bg {
-    background-image: url('../images/piatto01/ingredienti_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
-}
-
 .ingredient-picture {
     height: 92px;
     border-radius: 50%;
