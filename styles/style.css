@@ -679,6 +679,45 @@ p {
     border-radius: 10px;
 }
 
+/* DESKTOP XL - min 1200px */
+@media (min-width: 1200px) {
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+        margin-top: 0;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        gap: 1.5rem;
+        width: auto;
+        margin: 0 auto;
+        padding: 0.7rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;   
+    }
+
+    .btn-custom-primary {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
+
+    .btn-language {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
 
 
 
@@ -1286,17 +1325,6 @@ body:has(.sostenibility-container) {
     }
 }
 /* Partnership Cards */
-.partner-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 3rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100px;
-}
 
 @media (max-width: 767px) {
     .partner-card {
@@ -1408,44 +1436,7 @@ body:has(.sostenibility-container) {
         }
 
 
-    /* DESKTOP XL - min 1200px */
-    @media (min-width: 1200px) {
-        .logo-img {
-            width: 100px;
-            height: 100px;
-        }
-
-        .navbar-collapse {
-            display: flex !important;
-            margin-top: 0;
-            max-height: none;
-            overflow-y: visible;
-        }
-
-        .navbar-nav {
-            text-align: center;
-            gap: 1.5rem;
-            width: auto;
-            margin: 0 auto;
-            padding: 0;
-        }
-
-        .nav-link {
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-        }
-
-        .btn-custom-primary {
-            padding: 0.75rem 2rem;
-            font-size: 1rem;
-        }
-
-        .btn-language {
-            width: 50px;
-            height: 50px;
-        }
-    }
-
+    
 
 
 /********************************************
