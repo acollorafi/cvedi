@@ -75,16 +75,16 @@
   </section>    
   
   <!-- Sezione 2: menu intolleranze -->
-  <section id="menu-s2" class="section img-bg">
+  <section id="menu-s2" class="section img-bg padding-section">
     <div>
-        <h2 class="section-title text-center mb-4">I nostri menù</h2>
+        <h2 class="text-center">I nostri menù</h2>
             <p class="text-center mb-5">
                 Hai esigenze particolari? Scopri i nostri menù dedicati!<br>
                 Clicca sul menù che ti interessa per visualizzare i piatti che contiene.
             </p>                             
     </div>
 
-    <div class="tab-menu-bg glass-effect mx-auto my-5">
+    <div class="tab-menu-bg glass-effect mx-auto">
       <button class="btn-menu glass-effect active" data-menu-btn="sintetico">Sintetico</button>
       <button class="btn-menu glass-effect" data-menu-btn="neon-free">Neon-free</button>
       <button class="btn-menu glass-effect" data-menu-btn="bioai">BioAI</button>
@@ -338,7 +338,7 @@
     <h2 class="section-title text-center mb-4">Tutti i piatti</h2>
     
     <!-- ANTIPASTI -->    
-    <h3 class="label-h3 glass-effect mb-4">Antipasti</h3>
+    <h3 class="label-h3 glass-effect my-5">Antipasti</h3>
   
     <div class="container">
       <div class="row justify-content-center g-5 mb-4">
@@ -408,7 +408,7 @@
 
  
     <!-- PRIMI -->
-    <h3 class="label-h3 glass-effect mb-4">Primi</h3>
+    <h3 class="label-h3 glass-effect my-5">Primi</h3>
 
     <div class="container">
       <div class="row justify-content-center g-5 mb-4">
@@ -475,7 +475,7 @@
 
 
     <!-- SECONDI -->
-    <h3 class="label-h3 glass-effect mb-4">Secondi</h3>
+    <h3 class="label-h3 glass-effect my-5">Secondi</h3>
 
     <div class="container">
       <div class="row justify-content-center g-5 mb-4">
@@ -544,7 +544,7 @@
 
 
     <!-- DOLCI -->
-    <h3 class="label-h3 glass-effect mb-4">Dolci</h3>
+    <h3 class="label-h3 glass-effect my-5">Dolci</h3>
 
     <div class="container">
       <div class="row justify-content-center g-5 mb-4">
@@ -612,55 +612,22 @@
 
   </section>
 
-  <footer class="text-center padding-footer">
-    <img src="images/logo/logo-footer.webp" style="width: 190px; height: 190px;" />
-    <div style="margin-top: 20px;">
-        <p style="font-size: 32px; font-weight: bold;">Il primo ristorante Solarpunk.</p>
-        <p>Ogni giorno dalle 18:00 alle 24:00</p>
-    </div>
-    <div style="margin-top: 30px; line-height: 0.5;">
-        <p>© 2025 Eden Leaf Ecosystems.</p>
-        <p>Tutti i diritti riservati alla Natura.</p>
-        <p>P.IVA 000123SOLAR</p>
-    </div>
+
+  <footer>
+      <div class="container-xxl text-center">
+          <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" />
+          <div>
+              <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
+              <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
+              <p>© 2025 Eden Leaf Ecosystems.</br>
+              Tutti i diritti riservati alla Natura.</br>
+              P.IVA 000123SOLAR</p>
+          </div>
+      </div>
   </footer>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+  
 
-    const buttons = document.querySelectorAll(".btn-menu");
-    const cards = document.querySelectorAll("[data-menu]");
 
-    // stato iniziale (menu attivo)
-    const activeMenu = document.querySelector(".btn-menu.active").dataset.menuBtn;
-
-    cards.forEach(card => {
-        if (card.dataset.menu !== activeMenu) {
-            card.classList.add("menu-hidden");
-        }
-    });
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-
-            // bottone attivo
-            buttons.forEach(btn => btn.classList.remove("active"));
-            this.classList.add("active");
-
-            const selectedMenu = this.dataset.menuBtn;
-
-            // filtra card
-            cards.forEach(card => {
-                if (card.dataset.menu === selectedMenu) {
-                    card.classList.remove("menu-hidden");
-                } else {
-                    card.classList.add("menu-hidden");
-                }
-            });
-        });
-    });
-
-});
-</script>
 
 
 </body>

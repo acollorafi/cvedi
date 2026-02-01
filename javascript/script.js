@@ -132,3 +132,45 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
 //prova foglie home
+
+
+
+
+// PAGINA MENU.HTML
+// tab menu intolleranze
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const buttons = document.querySelectorAll(".btn-menu");
+    const cards = document.querySelectorAll("[data-menu]");
+
+    // stato iniziale (menu attivo)
+    const activeMenu = document.querySelector(".btn-menu.active").dataset.menuBtn;
+
+    cards.forEach(card => {
+        if (card.dataset.menu !== activeMenu) {
+            card.classList.add("menu-hidden");
+        }
+    });
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            // bottone attivo
+            buttons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            const selectedMenu = this.dataset.menuBtn;
+
+            // filtra card
+            cards.forEach(card => {
+                if (card.dataset.menu === selectedMenu) {
+                    card.classList.remove("menu-hidden");
+                } else {
+                    card.classList.add("menu-hidden");
+                }
+            });
+        });
+    });
+
+});
