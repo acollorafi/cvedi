@@ -1378,6 +1378,7 @@ body:has(.sostenibility-container) {
 
 /* Partnership Cards */
 
+
 @media (max-width: 767px) {
     .partner-card {
         padding: 3rem 2rem;
