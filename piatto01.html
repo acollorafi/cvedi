@@ -27,40 +27,49 @@
     </svg>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
+    <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary">
         <div class="container-xxl">
-            <!-- con container-fluid ha max-width 100%, con container e basta invece ha diversi breakpoint -->
             <a class="navbar-brand" href="#">
-                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="60" height="60">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
+            <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
-            <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
+            <!-- Menu collapse -->
+            <div class="glass-effect collapse navbar-collapse h-100" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        <a class="nav-link" href="#index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">RISTORANTE</a>
+                        <a class="nav-link" href="#ristorante.html">RISTORANTE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">MENU</a>
+                        <a class="nav-link" href="#menu.html">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">INFO</a>
+                        <a class="nav-link" href="#info.html">INFO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SOSTENIBILITA</a>
+                        <a class="nav-link active" aria-current="page" href="#">SOSTENIBILITA</a>
                     </li>
                 </ul>
             </div>
 
-            <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+            <!-- Desktop: PRENOTA + Bandiera (visibili solo >= 1200px) -->
+            <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
+                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+            </div>
         </div>
     </nav>
 
@@ -83,7 +92,8 @@
         <div class="text-center padding-section">
             <h2 class="padding-text discover-ingredients-heading">Scopri gli ingredienti</h2>
             <div class="container px-3 px-sm-0">
-                <img src="images/piatto01/ingredienti_piatto1.webp" class="img-fluid mx-auto d-block ingredienti-piatto-img">
+                <img src="images/piatto01/ingredienti_piatto1.webp"
+                    class="img-fluid mx-auto d-block ingredienti-piatto-img">
             </div>
         </div>
 
