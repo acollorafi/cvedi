@@ -68,13 +68,10 @@
 
 
   <!-- Sezione 1: Hero -->
-  <section id="menu-s1" class="img-bg">
-
-      
+  <section id="menu-s1" class="img-bg">    
       <div class="hero-section container section">
           <h1>MENÙ</h1>
       </div>
-
   </section>    
   
   <!-- Sezione 2: menu intolleranze -->
@@ -88,17 +85,18 @@
     </div>
 
     <div class="tab-menu-bg glass-effect mx-auto my-5">
-      <button class="btn-menu glass-effect active">Sintetico</button>
-      <button class="btn-menu glass-effect">Neon-free</button>
-      <button class="btn-menu glass-effect">BioAI</button>
+      <button class="btn-menu glass-effect active" data-menu-btn="sintetico">Sintetico</button>
+      <button class="btn-menu glass-effect" data-menu-btn="neon-free">Neon-free</button>
+      <button class="btn-menu glass-effect" data-menu-btn="bioai">BioAI</button>
     </div>  
 
-    <!-- Cards menu 1 buone -->
-    <div class="container padding-section">
+    <!-- Cards menu intolleranze -->
+    <div class="container padding-section menu-cards-wrapper">
       <div class="row g-4">
 
+        <!-- Cards menu sintetico -->
         <!--CARD 1-->
-        <div class="col-12 col-sm-6 col-lg-3 ">
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="sintetico">
           <div class="card menu-card glass-effect text-center">
 
             <!-- PIATTO -->
@@ -118,7 +116,7 @@
 
 
         <!--CARD 2 -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="sintetico">
           <div class="card menu-card glass-effect text-center">
 
             <!-- PIATTO -->
@@ -137,7 +135,7 @@
 
 
         <!--CARD 3 -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="sintetico">
           <div class="card menu-card glass-effect text-center">
 
             <!-- PIATTO -->
@@ -156,7 +154,7 @@
 
 
         <!--CARD 4 -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="sintetico">
           <div class="card menu-card glass-effect text-center">
 
             <!-- PIATTO -->
@@ -168,6 +166,159 @@
             <!-- TESTO -->
             <div class="menu-card-text">
               <p>Una sfera di gelato vegano alla vaniglia rivestita con uno strato di cioccolato bianco vegano. Adagiata su nebulosa di salse ai frutti esotici e polvere di frutti di bosco.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Cards menu neon-free -->
+        <!--CARD 1-->
+         <div class="col-12 col-sm-6 col-lg-3" data-menu="neon-free">
+          <div class="card menu-card glass-effect text-center">
+
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/antipasto3.webp" alt="" />
+              <span class="menu-card-label label-custom">Ravioli Micro-Orti</span>
+            </div>
+
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Ravioli trasparenti con utilizzo di legumi e tofu come fonte proteica a basso impatto, germogli freschi (Micro-Orti), zero sprechi con il brodo di radici.</p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!--CARD 2 -->
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="neon-free">
+          <div class="card menu-card glass-effect text-center">
+
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/primo2_HIGH.webp" alt="" />
+              <span class="menu-card-label label-custom">Gnocchi Dolci con Terra Rossa</span>
+            </div>
+
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di patata dolce.</p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!--CARD 3 -->
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="neon-free">
+          <div class="card menu-card glass-effect text-center">
+
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/secondo1.webp" alt="" />
+              <span class="menu-card-label label-custom">Polpetta Gemma di Giada</span>
+            </div>
+
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Una polpetta artigianale al tè Matcha biologico dalla consistenza vellutata e dal colore verde intenso, che ricorda una gemma di giada. Su letto di crumble  con cristalli edibili.</p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!--CARD 4 -->
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="neon-free">
+          <div class="card menu-card glass-effect text-center">
+
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/dolce1.webp" alt="" />
+              <span class="menu-card-label label-custom">Sfera di Luna</span>
+            </div>
+
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Una sfera di gelato vegano alla vaniglia rivestita con uno strato di cioccolato bianco vegano. Adagiata su nebulosa di salse ai frutti esotici e polvere di frutti di bosco.</p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Cards menu bioai-->
+        <!--CARD 1-->
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="bioai">
+          <div class="card menu-card glass-effect text-center">
+
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/antipasto2.webp" alt="" />
+              <span class="menu-card-label label-custom">Gemme di Zenith</span>
+            </div>
+
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Verdure di stagione e a km zero, riduzione degli sprechi grazie all'uso di parti meno nobili per la terra edibile, presentazione che minimizza l'impatto sul piatto.</p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!--CARD 2 -->
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="bioai">
+          <div class="card menu-card glass-effect text-center">
+
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/primo1.webp" alt="" />
+              <span class="menu-card-label label-custom">Risotto Cosmic</span>
+            </div>
+
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Risotto cremoso con pistacchio e stracciatella artigianale. La base vellutata è sormontata dagli esotici fichi viola "Cosmic Fig" per un contrasto dolce-acidulo che esalta il sapore.</p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!--CARD 3 -->
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="bioai">
+          <div class="card menu-card glass-effect text-center">
+
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/secondo2.webp" alt="" />
+              <span class="menu-card-label label-custom">Sfera di Mare su Corallo Crispy</span>
+            </div>
+
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Una sfera vegetale a base di alghe, proteine di legumi e spezie marine, su "corallo" commestibile. Accompagnato da perle di limone e una schiuma di acqua.</p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!--CARD 4 -->
+        <div class="col-12 col-sm-6 col-lg-3" data-menu="bioai">
+          <div class="card menu-card glass-effect text-center">
+
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/dolce3.webp" alt="" />
+              <span class="menu-card-label label-custom">Giardino di Cristallo</span>
+            </div>
+
+            <!-- TESTO -->
+              <div class="menu-card-text">
+                <p>Tartelletta e crema vegane, uso di frutta fresca e di stagione per ridurre l'impronta carbonica, gelatina naturale senza derivati animali, presentazione elegante e zero sprechi.</p>
             </div>
 
           </div>
@@ -473,6 +624,44 @@
         <p>P.IVA 000123SOLAR</p>
     </div>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const buttons = document.querySelectorAll(".btn-menu");
+    const cards = document.querySelectorAll("[data-menu]");
+
+    // stato iniziale (menu attivo)
+    const activeMenu = document.querySelector(".btn-menu.active").dataset.menuBtn;
+
+    cards.forEach(card => {
+        if (card.dataset.menu !== activeMenu) {
+            card.classList.add("menu-hidden");
+        }
+    });
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            // bottone attivo
+            buttons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            const selectedMenu = this.dataset.menuBtn;
+
+            // filtra card
+            cards.forEach(card => {
+                if (card.dataset.menu === selectedMenu) {
+                    card.classList.remove("menu-hidden");
+                } else {
+                    card.classList.add("menu-hidden");
+                }
+            });
+        });
+    });
+
+});
+</script>
+
 
 </body>
 

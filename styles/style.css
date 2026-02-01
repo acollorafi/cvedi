@@ -998,7 +998,34 @@ p {
 /********************************************
            PAGINA MENU
 ********************************************/
+[data-menu] {
+    position: relative;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
 
+.menu-hidden {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.menu-cards-wrapper {
+    position: relative;
+}
+
+.menu-hidden {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    pointer-events: none;
+
+    position: absolute;
+    inset: 0;
+}
 
 
 
