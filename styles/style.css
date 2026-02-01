@@ -112,7 +112,7 @@ p {
 
 @media (min-width: 768px) {
     h1 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 
     h2 {
@@ -164,12 +164,15 @@ p {
 }
 
 .hero-section {
-    height: 50vh;
+    height: 50dvh;
+    text-align: center;
+    align-items: center;
+    padding-top: 40px;
 }
 
 @media (min-width: 768px) {
     .hero-section {
-        height: 100vh;
+        height: 70dvh;
     }
 }
 
@@ -628,10 +631,10 @@ p {
     padding: 0.4rem 0.6rem;
     border-radius: 8px;
     border-radius: 54px;
-border: var(--bs-glass-border);
-background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
-color: #F5F5F5;
+    border: var(--bs-glass-border);
+    background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
+    color: #F5F5F5;
 }
 
 
@@ -699,78 +702,140 @@ color: #F5F5F5;
            SFONDI
 ********************************************/
 
+/*classe da mettere ai div che contengono gli sfondi*/
 .img-bg {
-    /*classe da mettere ai div che contengono gli sfondi*/
     display: flex;
     flex-direction: column;
-    /*align-items: flex-start;*/
     align-self: stretch;
 }
 
-
 /*Sfondi pagina home*/
 #home-s1 {
-    background: url('/images/backgrounds/hero_home_bg.webp') center/cover no-repeat;
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero_home_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10dvh
 }
 
-#home-s3 { /*chiedi a chat*/
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 10%, rgba(29, 40, 36, 0.00) 90%, #1D2824 99.52%), url(/images/backgrounds/home_piatti_bg.png) no-repeat;
-    /*background: url('/images/backgrounds/home_piatti_bg.png') center/cover no-repeat;*/
-    
+#home-s3 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/home_piatti_bg.png) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Sfondi pagina ristorante*/
+#ristorante-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/ristorante/hero_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#ristorante-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/ristorante/img_team_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#ristorante-s3 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 70%, #1D2824 100%), url(/images/ristorante/img_piatti_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
 /*Sfondi pagina menù*/
 #menu-s1 {
-    background: url('/images/menu/hero_menu_mask.webp') center/cover no-repeat;
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/menu/hero_menu_mask.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 80%;
 }
 
 #menu-s2 {
-    background: url('/images/backgrounds/menu-s3.webp') center/cover no-repeat;
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 70%, #1D2824 100%), url(/images/menu/menu_bg2.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #menu-s3 {
-    background: url('/images/backgrounds/menu-s3.webp') center/cover no-repeat;
-}
-
-
-/*Sfondi sezioni hero info e prenota*/
-#hero-info {
-    background: url('/images/backgrounds/hero-info_NONVABENE.webp') center bottom / cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-}
-
-/*sopra c'è class hero-section con height 100vh -> magari userei la stessa e piuttosto modificherei quella (idem per prenota)*/
-.hero-section-info {
-    min-height: 100vh;
-}
-
-#hero-prenota {
-    background: url('/images/backgrounds/hero-prenota.webp') center bottom / cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-}
-
-.hero-section-prenota {
-    min-height: 100vh;
-}
-
-/*Sfondi pagina info*/
-.background-info {
-    background-image: url('../images/info/sfondo_sezioni.webp');
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/menu/menu_bg3.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1440 / 634;
 }
 
+
+/*Sfondi sezioni hero info*/
+#info-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero_info_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+}
+
+#info-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/info/sfondo_sezioni.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Sfondi sezioni hero info*/
+#prenota-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero-prenota.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+}
+
+#prenota-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/sfondo-prenota.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Sfondi pagina sostenibilità*/
+#sostenibilità-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilità/sfondo-sostenibilità.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+}
+
+#sostenibilità-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilità/sfondo-sostenibilità.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Sfondi pagina piatto 01*/
+#piatto01-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/piatti_hero_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+
+}
+
+#piatto01-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/ingredienti_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 /********************************************
@@ -868,11 +933,18 @@ color: #F5F5F5;
            PAGINA HOME
 ********************************************/
 .hero-subtitle {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--bs-white);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+@media (min-width: 768px) {
+    .hero-subtitle {
+    font-size: 3rem;
+    }
+}
+
 
 .foto-recensione {
     width: 150px;
@@ -891,21 +963,6 @@ color: #F5F5F5;
 /********************************************
            PAGINA RISTORANTE
 ********************************************/
-.hero-bg {
-    background-image: url('../images/ristorante/hero_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
-}
-
-@media (min-width: 768px) {
-    .hero-bg {
-        aspect-ratio: 800 / 1170; 
-    }
-}
 
 .team-bg {
     background-image: url('../images/ristorante/img_team_bg.webp');
@@ -924,15 +981,6 @@ color: #F5F5F5;
     padding-top: 235px;
 }
 
-.piatti-bg {
-    background-image: url('../images/ristorante/img_piatti_bg.webp');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1440 / 1442;
-}
 
 .team-avatar {
     width: 92px;
@@ -955,7 +1003,34 @@ color: #F5F5F5;
 /********************************************
            PAGINA MENU
 ********************************************/
+[data-menu] {
+    position: relative;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
 
+.menu-hidden {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.menu-cards-wrapper {
+    position: relative;
+}
+
+.menu-hidden {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    pointer-events: none;
+
+    position: absolute;
+    inset: 0;
+}
 
 
 
@@ -1005,12 +1080,9 @@ body:has(.sostenibility-container) {
            PAGINA SOSTENIBILITÀ
 ********************************************/
 
-.sostenibility-container {
-    overflow-x: hidden;
-    width: 100%;
-
     /* Hero Section */
-    .hero {
+    
+    .hero-sostenibilità {
         min-height: 90vh;
         background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
         background-repeat: no-repeat;
@@ -1018,22 +1090,21 @@ body:has(.sostenibility-container) {
         background-position: center;
         display: flex;
         align-items: center;
+        overflow: hidden;
     }
-
-    .hero-title {
-        color: white;
-        font-size: clamp(1.5rem, 6vw, 5.5rem);
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        margin: 0;
-    }
-
+    
     .hero-line {
-        width: 100%;
-        max-width: 800px;
-        height: auto;
         margin-top: 2rem;
     }
-
+    
+    @media (max-width: 767px) {
+        .hero-sostenibilità .hero-title {
+            font-size: 2.5rem;
+        }
+        .hero-line {
+            max-width: 90%;
+        }
+    }
     /* Background principale */
     .fullpage-bg {
         background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
@@ -1044,88 +1115,14 @@ body:has(.sostenibility-container) {
         position: relative;
     }
 
-    /* Immagini decorative - Foglie */
-    .foglie-container-1,
-    .foglie-container-2,
-    .foglie-container-3,
-    .foglie-container-4,
-    .foglie-container-5 {
-        position: absolute;
-        pointer-events: none;
-        z-index: 1;
-        display: none; /* Nascoste su mobile */
-    }
-
-    .foglia-decorativa {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Contenuto sezioni sopra le foglie */
-    .section-content-wrapper {
-        position: relative;
-        z-index: 2;
-    }
 
     /* Sezioni generiche */
-    .section-image-wrapper {
-        padding: 1rem;
-    }
-
     .section-image {
         width: 100%;
         height: auto;
         border-radius: 20px;
     }
 
-    .section-content {
-        padding: 2rem 1rem;
-    }
-
-    .section-heading {
-        font-size: clamp(1.75rem, 4vw, 2.5rem);
-        color: white;
-        margin-bottom: 1rem;
-    }
-
-    .section-text {
-        font-size: 1rem;
-        line-height: 1.7;
-        color: white;
-    }
-
-    .vision-section,
-    .sustainability-section,
-    .fasi-section {
-        padding: 2rem 0;
-    }
-
-    /* Economia Circolare */
-    .economia-circolare {
-        padding: 3rem 0;
-        text-align: center;
-    }
-
-    .economia-content {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
-
-    .economia-title {
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 700;
-        color: #D2B48C;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    .economia-text {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: #f5f5f5;
-    }
 
     /* Fasi Section */
     .fase-wrapper {
@@ -1213,59 +1210,21 @@ body:has(.sostenibility-container) {
         }
     }
 
-    /* Label Custom */
-    .label-custom {
-        color: #FFFFFF;
-        font-size: 1rem;
-        font-weight: 500;
-        background: rgba(26, 77, 46, 0.2);
-        padding: 0.5rem 1rem;
-        border-radius: 15px;
-        display: inline-block;
-        margin-bottom: 0.5rem;
-    }
+   /* Experts Section */
+.experts-section h3 {
+    margin-bottom: 2rem;
+}
 
-    /* Experts Section */
-    .experts-section,
-    .partnership-section {
-        padding: 3rem 0;
-    }
+.experts-section .team {
+    margin-top: 0;
+}
 
-    .main-title {
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 700;
-        color: #D2B48C;
-        text-align: center;
-        margin-bottom: 2rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    .expert-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        padding: 1.5rem;
-        height: 100%;
-    }
-
-    .expert-photo {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 1rem;
-    }
-
-    .expert-name {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #FFFFFF;
-        margin: 0.5rem 0;
-    }
-    .experts-carousel-wrapper {
+.experts-carousel-wrapper {
     position: relative;
+}
+
+.experts-row {
+    overflow: hidden;
 }
 
 .expert-nav {
@@ -1274,16 +1233,13 @@ body:has(.sostenibility-container) {
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background: transparent no-repeat center/contain;
     border: none;
     cursor: pointer;
     padding: 0;
     z-index: 100;
-    display: none; /* Nascosti di default */
     transition: transform 0.2s ease, opacity 0.2s ease;
+    display: none;
 }
 
 .expert-nav:hover {
@@ -1291,24 +1247,30 @@ body:has(.sostenibility-container) {
     opacity: 0.8;
 }
 
-.expert-nav:active {
-    transform: translateY(-50%) scale(0.95);
-}
-
 .prev-expert {
-    left: -10px;
+    left: 0;
     background-image: url("/images/sostenibilità/arrow-left.svg");
 }
 
 .next-expert {
-    right: -10px;
+    right: 0;
     background-image: url("/images/sostenibilità/arrow-right.svg");
 }
 
-/* Mobile: mostra carosello */
+.expert-item {
+    display: none;
+    opacity: 0;
+}
+
+.expert-item.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
 @media (max-width: 767px) {
     .experts-carousel-wrapper {
-        padding: 0 50px;
+        padding: 0 40px;
     }
     
     .expert-nav {
@@ -1316,131 +1278,38 @@ body:has(.sostenibility-container) {
         width: 35px;
         height: 35px;
     }
-    
-    .prev-expert {
-        left: 0;
-    }
-    
-    .next-expert {
-        right: 0;
-    }
-    
-    .experts-row {
-        overflow: hidden;
-    }
-    
-    .expert-item {
-        display: none;
-        animation: fadeIn 0.5s ease-in-out;
-    }
-    
-    .expert-item.active {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        flex: 0 0 100%;
-    }
 }
 
-/* Desktop: mostra tutti gli esperti */
 @media (min-width: 768px) {
+    .experts-section h3 {
+        margin-bottom: 1.5rem;
+    }
+    
     .expert-item {
         display: block;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    to {
         opacity: 1;
-        transform: translateX(0);
     }
 }
-
-/* Partnership Section */
+/* Partnership Cards */
 .partner-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 120px;
-}
-
-.partner-logo {
-    max-width: 100%;
-    max-height: 80px;
-    height: auto;
-    width: auto;
+    min-height: 100px;
 }
 
 @media (max-width: 767px) {
-    .partnership-section .col-6 {
-        width: 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    
     .partner-card {
-        max-width: 100%;
-        margin: 0 auto; 
         padding: 3rem 2rem;
-        min-height: 200px;
-        overflow: visible; /* Assicura che il contenuto sia visibile */
-    }
-    
-    .partner-logo {
-        max-width: 90% !important;
-        max-height: 120px !important;
-        width: auto !important;
-        height: auto !important;
-        object-fit: contain;
+        min-height: 100px;
     }
 }
 
-    /* Footer */
-    .footer-section {
-        padding: 3rem 1rem 2rem;
-        margin-top: 4rem;
-    }
-
-    .footer-logo {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 1.5rem;
-    }
-
-    .footer-main {
-        margin-bottom: 2rem;
-    }
-
-    .footer-tagline {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: white;
-        margin-bottom: 0.5rem;
-    }
-
-    .footer-hours {
-        font-size: 1rem;
-        color: white;
-    }
-
-    .footer-legal {
-        font-size: 0.9rem;
-        color: white;
-        line-height: 1.6;
-    }
-
-    .footer-legal p {
-        margin: 0.25rem 0;
-    }
 
     /* TABLET - min 768px */
     @media (min-width: 768px) {
@@ -1499,54 +1368,6 @@ body:has(.sostenibility-container) {
         }
     }
 
-    /* DESKTOP - min 992px */
-    @media (min-width: 992px) {
-        /* Mostra foglie decorative */
-        .foglie-container-1,
-        .foglie-container-2,
-        .foglie-container-3,
-        .foglie-container-4,
-        .foglie-container-5 {
-            display: block;
-        }
-
-        /* Foglia 1 - Dopo hero */
-        .foglie-container-1 {
-            position: absolute;
-            right: 0;
-            top: -200px;
-            max-width: 480px;
-        }
-
-        /* Foglia 2 - Nella sustainability section */
-        .foglie-container-2 {
-            left: -370px;
-            top: 160px;
-            transform: rotate(27deg);
-            max-width: 800px;
-        }
-
-        /* Foglia 3 - Nella economia section */
-        .foglie-container-3 {
-            top: -250px;
-            right: -10px;
-            max-width: 480px;
-        }
-
-        /* Foglia 4 - Nella experts section */
-        .foglie-container-4 {
-            top: -150px;
-            right: -30px;
-            max-width: 480px;
-        }
-
-        /* Foglia 5 - Nella partnership section */
-        .foglie-container-5 {
-            top: 100px;
-            left: -270px;
-            transform: scale(0.4) rotate(27deg);
-            max-width: 800px;
-        }
 
         /* Mostra pulsanti navigazione fasi */
         .fase-nav {
@@ -1604,7 +1425,7 @@ body:has(.sostenibility-container) {
             padding: 5rem 1rem 2.5rem;
             margin-top: 12.5rem;
         }
-    }
+
 
     /* DESKTOP XL - min 1200px */
     @media (min-width: 1200px) {
@@ -1643,23 +1464,12 @@ body:has(.sostenibility-container) {
             height: 50px;
         }
     }
-}
 
 
 
 /********************************************
            PAGINA PRENOTA
 ********************************************/
-.background-prenota {
-    background-image: url('/images/backgrounds/sfondo-prenota.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1440 / 634;
-}
-
 .iframe-crop iframe {
     transform: scale(1.15);
 }
@@ -1982,26 +1792,6 @@ input::-webkit-calendar-picker-indicator {
 /********************************************
            PAGINA PIATTO
 ********************************************/
-.piatti-hero-bg {
-    background-image: url('../images/piatto01/piatti_hero_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
-}
-
-.piatti-ingredienti-bg {
-    background-image: url('../images/piatto01/ingredienti_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
-}
-
 .ingredient-picture {
     height: 92px;
     border-radius: 50%;

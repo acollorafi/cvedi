@@ -110,23 +110,24 @@
     </nav>
 
     <!-- Hero -->
-    <div id="hero-prenota">
-      <div class="hero-section-prenota container section">
+    <section id="prenota-s1" class="img-bg">
+      <div class="hero-section container section">
         <h1>PRENOTA</h1>
       </div>
-    </div>
+    </section>
 
-    <div class="background-prenota">
+    <section id="prenota-s2" class="img-bg">
       <!--barra prenotazione-->
+  
       <div class="search-container">
         <div class="search-bar-custom glass-effect">
           <div class="search-section">
             <span class="search-label">Persone</span>
-    <div class="d-flex align-items-center justify-content-center mt-1">
-        <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepDown()">-</button>
-        <input type="number" class="search-input text-center p-0 m-0" value="2" min="1" max="10" readonly>
-        <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
-    </div>
+            <div class="d-flex align-items-center justify-content-center mt-1">
+                <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepDown()">-</button>
+                <input type="number" class="search-input text-center p-0 m-0" value="2" min="1" max="10" readonly>
+                <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
+            </div>
           </div>
 
           <div class="search-divider"></div>
@@ -154,15 +155,15 @@
             onclick="document.getElementById('timeInput').showPicker()"
           >
             <span class="search-label">Orario</span>
-    <select class="search-input glass-effect-select" style="background: transparent; color: var(--bs-white); border: none;">
-        <option value="18:00">18:30</option>
-        <option value="18:30">19:00</option>
-        <option value="19:00">19:30</option>
-        <option value="19:00">20:00</option>
-        <option value="19:00">20:30</option>
-        <option value="19:00">21:00</option>
+            <select class="search-input glass-effect-select" style="background: transparent; color: var(--bs-white); border: none;">
+              <option value="18:00">18:30</option>
+              <option value="18:30">19:00</option>
+              <option value="19:00">19:30</option>
+              <option value="19:00">20:00</option>
+              <option value="19:00">20:30</option>
+              <option value="19:00">21:00</option>
 
-        </select>
+            </select>
           </div>
 
           <button
@@ -208,7 +209,7 @@
         <button id="btnConfermaPrenotazione" class="glass-effect btn btn-custom-primary mx-auto mt-5" type="button">
           Prenota tavolo
       </button>
-      </div>
+    </div>
 
       <!--recensioni-->
       <div class="container-xxl padding-section text-center">
@@ -459,6 +460,7 @@
         </div>
       </div>
     </div>
+    </section>
 
     <div class="text-center footer">
       <div class="d-md-none" style="height: 200px"></div>
