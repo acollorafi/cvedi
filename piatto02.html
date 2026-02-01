@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piatto1</title>
+    <title>Piatto2</title>
 
     <!-- Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,9 +29,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
         <div class="container-xxl">
-            <!-- con container-fluid ha max-width 100%, con container e basta invece ha diversi breakpoint -->
             <a class="navbar-brand" href="#">
-                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="60" height="60">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="100" height="100">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -43,10 +42,10 @@
             <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        <a class="nav-link" aria-current="page" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">RISTORANTE</a>
+                        <a class="nav-link active" href="#">RISTORANTE</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">MENU</a>
@@ -59,31 +58,34 @@
                     </li>
                 </ul>
             </div>
-
-            <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+            <div class="d-flex align-items-center" style="gap: 45px;">
+                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+                <img src="images/flags/world.webp" class="navbar-img-languages" />
+            </div>
         </div>
     </nav>
 
     <!-- TODO: fix bottom gradient (don't use image gradient, use css)-->
-    <div class="piatti-hero-bg">
-        <div class="piatti-hero-section section align-self-center">
-            <h1>Gemme di Zenith</h1>
+    <div class="piatti-hero-bg" id="piatto01-s1">
+        <div class="hero-section section align-self-center">
+            <h1>Petali di Floricanto</h1>
             <p class="hero-text">
-                Un piatto etereo che cattura l'essenza della luce solare attraverso ingredienti
-                coltivati
-                in simbiosi con l'ambiente, offrendo un'esperienza culinaria luminosa e rigenerante.
+                Petali viola dalla naturale bioluminescenza, coltivati in ambienti aeroponici per preservarne la
+                purezza.
+                Questi scrigni edibili e croccanti sprigionano una delicata fragranza erbacea, offrendo un contenitore
+                biodegradabile unico che ridefinisce il concetto di alta cucina d'avanguardia.
             </p>
         </div>
-        <img src="images/piatto01/piatti_hero_fg.webp" class="img-fluid" />
+        <img src="images/piatto02/hero_piatto02.webp" class="img-fluid" />
     </div>
 
 
-    <div class="ingredienti-piatto-bg" id="piatto01-s2">
+    <div class="piatti-ingredienti-bg" id="piatto01-s2">
 
         <div class="text-center padding-section">
-            <h2 class="padding-text discover-ingredients-heading">Scopri gli ingredienti</h2>
+            <h2 class="padding-text" style="padding-top: 90px;">Scopri gli ingredienti</h2>
             <div class="container px-3 px-sm-0">
-                <img src="images/piatto01/ingredienti_piatto1.webp" class="img-fluid mx-auto d-block ingredienti-piatto-img">
+                <img src="images/piatto02/ingredienti_piatto2.webp" class="img-fluid mx-auto d-block">
             </div>
         </div>
 
@@ -99,16 +101,15 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto01/ingrediente_1.webp" alt="" />
-                                <span class="menu-card-label label-custom">Alghe eoliche</span>
+                                <img src="images/piatto02/ingrediente1.webp" alt="" />
+                                <span class="menu-card-label label-custom">Ozono Edibile</span>
                             </div>
 
                             <!-- TESTO -->
                             <div class="menu-card-text">
                                 <p>
-                                    Coltivate sospese nelle correnti d'aria della cupola, vantano una consistenza eterea
-                                    e
-                                    un retrogusto sapido di sale atmosferico.
+                                    Nebulizzazione di essenza di pino mugo e ozono alimentare per richiamare l'aria
+                                    post-temporale.
                                 </p>
                             </div>
 
@@ -121,16 +122,15 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto01/ingrediente_4.webp" alt="" />
-                                <span class="menu-card-label label-custom">Bacche Limonene</span>
+                                <img src="images/piatto02/ingrediente2.webp" alt="" />
+                                <span class="menu-card-label label-custom">Muschio rigenerato</span>
                             </div>
 
                             <!-- TESTO -->
                             <div class="menu-card-text">
                                 <p>
-                                    Strutture idroponiche commestibili ad altissima idratazione, al morso
-                                    rilasciano
-                                    un'esplosione di freschezza minerale pura.
+                                    Spugna di clorofilla estratta da spirulina fresca e polvere di tè Matcha
+                                    cerimoniale.
                                 </p>
                             </div>
 
@@ -143,17 +143,14 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto01/ingrediente_2.webp" alt="" />
-                                <span class="menu-card-label label-custom">Petali Zenith</span>
+                                <img src="images/piatto02/ingrediente3.webp" alt="" />
+                                <span class="menu-card-label label-custom">Gocce di Luce</span>
                             </div>
 
                             <!-- TESTO -->
                             <div class="menu-card-text">
                                 <p>
-                                    Raccolti all'alba sulla chioma alta, al contatto con il palato rilasciano
-                                    note
-                                    cangianti
-                                    di zafferano viola e miele selvatico.
+                                    Coulis di mango fermentato e zafferano coltivato in ambiente bio-controllato.
                                 </p>
                             </div>
 
@@ -166,16 +163,15 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto01/ingrediente_3.webp" alt="" />
-                                <span class="menu-card-label label-custom">Perle di Solargemma</span>
+                                <img src="images/piatto02/ingrediente4.webp" alt="" />
+                                <span class="menu-card-label label-custom">Rugiada centrale</span>
                             </div>
 
                             <!-- TESTO -->
                             <div class="menu-card-text">
                                 <p>
-                                    Sferificazione naturale di frutti eliofili, queste gemme commestibili
-                                    brillano nel
-                                    piatto e offrono un'acidità elettrica e vibrante.
+                                    Sfera di kombucha ai frutti di bosco e ribes nero (tecnica di sferificazione
+                                    inversa).
                                 </p>
                             </div>
 
@@ -190,32 +186,34 @@
             <div class="row justify-content-center">
                 <div class="col-4 col-md-2">
                     <img src="images/piatto01/allergeno1.webp" class="allergeni">
-                    <p>Grano lunare</p>
+                    <p>Amido Purpureo</p>
                 </div>
                 <div class="col-4 col-md-2">
                     <img src="images/piatto01/allergeno2.webp" class="allergeni">
-                    <p>Fagioli di Balzar</p>
+                    <p>Semi di mango </p>
                 </div>
                 <div class="col-4 col-md-2">
                     <img src="images/piatto01/allergeno3.webp" class="allergeni">
-                    <p>Rapa Venere</p>
+                    <p>Clorofilla Spirulina</p>
                 </div>
             </div>
         </div>
     </div>
 
-  <footer>
-      <div class="container-xxl text-center">
-          <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" />
-          <div>
-              <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
-              <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
-              <p>© 2025 Eden Leaf Ecosystems.</br>
-              Tutti i diritti riservati alla Natura.</br>
-              P.IVA 000123SOLAR</p>
-          </div>
-      </div>
-  </footer>
+    <div class="text-center footer">
+        <!-- Add more vertical space on mobile -->
+        <div class="d-md-none" style="height: 200px;"></div>
+        <img src="images/logo/logo-footer.webp" style="width: 190px; height: 190px;" />
+        <div style="margin-top: 20px;">
+            <p style="font-size: 32px; font-weight: bold;">Il primo ristorante Solarpunk.</p>
+            <p>Ogni giorno dalle 18:00 alle 24:00</p>
+        </div>
+        <div style="margin-top: 30px; line-height: 0.5;">
+            <p>© 2025 Eden Leaf Ecosystems.</p>
+            <p>Tutti i diritti riservati alla Natura.</p>
+            <p>P.IVA 000123SOLAR</p>
+        </div>
+    </div>
 
 </body>
 
