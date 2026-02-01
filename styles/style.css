@@ -1308,20 +1308,6 @@ body:has(.sostenibility-container) {
 
     /* TABLET - min 768px */
     @media (min-width: 768px) {
-        .navbar {
-            padding: 0.75rem 0;
-        }
-
-        .logo-img {
-            width: 70px;
-            height: 70px;
-        }
-
-        .btn-custom-primary {
-            padding: 0.6rem 1.5rem;
-            font-size: 0.9rem;
-        }
-
         .section-content {
             padding: 3rem 2rem;
         }
