@@ -1113,6 +1113,9 @@ body:has(.sostenibility-container) {
 /********************************************
            PAGINA SOSTENIBILITÀ
 ********************************************/
+.sostenibility-container {
+    overflow-x: hidden;
+}
 
     /* Hero Section */
     
@@ -1133,7 +1136,7 @@ body:has(.sostenibility-container) {
     
     @media (max-width: 767px) {
         .hero-sostenibilità .hero-title {
-            font-size: 2.5rem;
+            font-size: 1.75rem;
         }
         .hero-line {
             max-width: 90%;
@@ -1223,8 +1226,17 @@ body:has(.sostenibility-container) {
         background-image: url("/images/sostenibilità/arrow-right.svg");
     }
 
+    .section-content .label-custom {
+        width: fit-content;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        text-shadow: none;
+        font-size: 22px!important;
+        font-family: 'Syne', sans-serif;
+    }
+
     @media (max-width: 991px) {
-        .section-image-wrapper {
+        .fasi-section .section-image-wrapper {
             display: none;
         }
         
@@ -1358,7 +1370,7 @@ body:has(.sostenibility-container) {
         }
 
         .partner-logo {
-            max-height: 100px;
+            max-height: 160px;
         }
 
         .footer-logo {
