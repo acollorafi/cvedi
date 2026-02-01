@@ -79,32 +79,56 @@ function chiudiPopUp() {
 }
 
 // //prova foglie
-// document.addEventListener("DOMContentLoaded", () => {
-//     const leaves = document.querySelectorAll(".leaf");
+document.addEventListener("DOMContentLoaded", () => {
+    const leaves = document.querySelectorAll(".leaf");
+    if (!leaves.length) return;
   
-//     if (!leaves.length) return;
+    let wind = 0;
+    let lastScrollY = window.scrollY;
   
-//     window.addEventListener("scroll", () => {
-//         const scrollY = window.scrollY;
-      
-//         leaves.forEach((leaf, i) => {
-//           const speed = 0.08 + i * 0.02;
-      
-//           const y = -scrollY * speed;
-      
-//           const swayX =
-//             Math.sin(scrollY * 0.003 + i) * 6;
-      
-//           const swayRot =
-//             Math.sin(scrollY * 0.002 + i) * 6;
-      
-//           leaf.style.transform = `
-//             translate(${swayX}px, ${y}px)
-//             rotate(${swayRot}deg)
-//           `;
-//         });
-//       });      
-//   });
+    window.addEventListener("scroll", () => {
+      const delta = window.scrollY - lastScrollY;
+      lastScrollY = window.scrollY;
   
+      // accumula vento (questa è la chiave)
+      wind += delta * 0.3;
+  
+      // limite massimo
+      wind = Math.max(Math.min(wind, 20), -20);
+    });
+  
+    function animate() {
+      // inerzia / smorzamento
+      wind *= 0.95;
+  
+      leaves.forEach((leaf, i) => {
+        const direction = leaf.closest(".leaves-right") ? -1 : 1;
+  
+        const swayX =
+          Math.sin(Date.now() * 0.002 + i) *
+          wind *
+          0.4 *
+          direction;
+  
+        const swayRot =
+          Math.sin(Date.now() * 0.0015 + i) *
+          wind *
+          0.3 *
+          direction;
+  
+        leaf.style.transform = `
+          translateX(${swayX}px)
+          rotate(${swayRot}deg)
+        `;
+      });
+  
+      requestAnimationFrame(animate);
+    }
+  
+    animate();
+  });
+  
+  
+    
 
 //prova foglie home
