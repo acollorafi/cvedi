@@ -65,6 +65,11 @@ body {
     font-display: swap;
 }
 
+html, body {
+    overflow-x: hidden;
+  }
+
+
 h1,
 h2,
 h3,
@@ -2010,17 +2015,24 @@ input::-webkit-calendar-picker-indicator {
 
 
 
-/*prova foglia
-.leaves {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 300px;
+/*prova foglia*/
+.leaves-wrapper {
+    position: relative;
+    height: 0;
+  }
+  
+  .leaves {
+    position: absolute;
+    top: -20vh;        /* 👈 CHIAVE */
     pointer-events: none;
     z-index: 2;
   }
   
-  .leaves-left { left: 0; }
+  .leaves-left { 
+    left: 0;
+    transform: scale(4);
+}
+
   .leaves-right { right: 0; }
   
   .leaf {
@@ -2031,11 +2043,10 @@ input::-webkit-calendar-picker-indicator {
   }
   
 
-.leaves-left .leaf:nth-child(1) { top: 10%; left: -40px; }
-.leaves-left .leaf:nth-child(2) { top: 55%; left: -60px; }
+.leaves-left .leaf:nth-child(1) { top: -120px; left: -130px; }
 
 .leaves-right .leaf:nth-child(1) { top: 20%; right: -50px; }
-.leaves-right .leaf:nth-child(2) { top: 65%; right: -30px; } */
+.leaves-right .leaf:nth-child(2) { top: 65%; right: -30px; } 
 
 
 /*prova foglie home*/
