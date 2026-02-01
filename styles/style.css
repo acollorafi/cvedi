@@ -691,14 +691,16 @@ p {
         width: 60px;
         height: 60px;
     }
+
     .navbar-img-languages {
         width: 64px;
         height: 64px;
     }
+
     .btn-custom-primary {
         height: 64px;
         font-size: 24px;
-    }    
+    }
 }
 
 /* DESKTOP XL - min 1200px */
@@ -725,7 +727,7 @@ p {
 
     .nav-link {
         padding: 0.5rem 1rem;
-        font-size: 1.1rem;   
+        font-size: 1.1rem;
     }
 
     .btn-custom-primary {
@@ -1154,40 +1156,42 @@ body:has(.sostenibility-container) {
     overflow-x: hidden;
 }
 
-    /* Hero Section */
-    
-    .hero-sostenibilità {
-        min-height: 90vh;
-        background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
+/* Hero Section */
+
+.hero-sostenibilità {
+    min-height: 90vh;
+    background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-line {
+    margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+    .hero-sostenibilità .hero-title {
+        font-size: 1.75rem;
     }
-    
+
     .hero-line {
-        margin-top: 2rem;
+        max-width: 90%;
     }
-    
-    @media (max-width: 767px) {
-        .hero-sostenibilità .hero-title {
-            font-size: 1.75rem;
-        }
-        .hero-line {
-            max-width: 90%;
-        }
-    }
-    /* Background principale */
-    .fullpage-bg {
-        background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100%;
-        position: relative;
-    }
+}
+
+/* Background principale */
+.fullpage-bg {
+    background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    position: relative;
+}
 
 
 /* Sezioni generiche */
@@ -1260,40 +1264,40 @@ body:has(.sostenibility-container) {
     background-image: url("/images/sostenibilità/arrow-left.svg");
 }
 
-    .next-fase {
-        right: -10px;
-        background-image: url("/images/sostenibilità/arrow-right.svg");
+.next-fase {
+    right: -10px;
+    background-image: url("/images/sostenibilità/arrow-right.svg");
+}
+
+.section-content .label-custom {
+    width: fit-content;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: none;
+    font-size: 22px !important;
+    font-family: 'Syne', sans-serif;
+}
+
+@media (max-width: 991px) {
+    .fasi-section .section-image-wrapper {
+        display: none;
     }
 
-    .section-content .label-custom {
-        width: fit-content;
-        margin-bottom: 1rem;
-        font-weight: 600;
-        text-shadow: none;
-        font-size: 22px!important;
-        font-family: 'Syne', sans-serif;
+    .fase-item {
+        padding: 2rem 1rem;
     }
 
-    @media (max-width: 991px) {
-        .fasi-section .section-image-wrapper {
-            display: none;
-        }
-        
-        .fase-item {
-            padding: 2rem 1rem;
-        }
-        
-        .section-content {
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        .fase-nav {
-            display: block; 
-            width: 50px;
-            height: 50px;
-        }
+    .section-content {
+        padding: 1.5rem;
+        text-align: center;
     }
+
+    .fase-nav {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+}
 
 /* Experts Section */
 .experts-section h3 {
@@ -1387,11 +1391,11 @@ body:has(.sostenibility-container) {
 }
 
 
-    /* TABLET - min 768px */
-    @media (min-width: 768px) {
-        .section-content {
-            padding: 3rem 2rem;
-        }
+/* TABLET - min 768px */
+@media (min-width: 768px) {
+    .section-content {
+        padding: 3rem 2rem;
+    }
 
     .section-image-wrapper {
         padding: 1.25rem;
@@ -1410,9 +1414,9 @@ body:has(.sostenibility-container) {
         font-size: 1.3rem;
     }
 
-        .partner-logo {
-            max-height: 160px;
-        }
+    .partner-logo {
+        max-height: 160px;
+    }
 
     .footer-logo {
         width: 150px;
@@ -1489,7 +1493,7 @@ body:has(.sostenibility-container) {
 }
 
 
-    
+
 
 
 /********************************************
@@ -1814,58 +1818,65 @@ input::-webkit-calendar-picker-indicator {
 /********************************************
            PAGINA PIATTO
 ********************************************/
+/********************************************
+           PAGINA PIATTO
+********************************************/
 .piatti-hero-bg {
-    background-image: url('../images/piatto01/piatti_hero_bg_mobile.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image:
+        linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        url(/images/piatto01/piatti_hero_bg.webp);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center 70%;
     width: 100%;
     height: 100vh;
-    /* Important: creates a coordinate system for the child image */
     position: relative;
-    /* Optional: hides the overlap if you don't want it bleeding into the next section, 
-       but you mentioned you want it "falling below", so keep this visible. */
 }
 
 .piatti-hero-bg img {
     position: absolute;
     bottom: -50px;
-    /* This "pushes" the image 50px past the bottom of the container */
     left: 50%;
     transform: translateX(-50%);
-    /* This perfectly centers the absolute image */
     z-index: 10;
-    /* Ensures it stays in front of the background */
-    max-width: 90%;
-    /* Adjust based on how large you want the foreground element */
+    width: 80%;
 }
 
-/* Adjust the overlap for larger screens */
-@media (min-width: 768px) {
-    .piatti-hero-bg {
-        background-image: url('../images/piatto01/piatti_hero_bg.png');
-    }
-
-    .piatti-hero-bg img {
-        bottom: -100px;
-        /* Larger overlap for desktop */
-    }
+.piatti-hero-section {
+    text-align: center;
+    align-items: center;
+    padding: 20dvh 5dvw 0 5dvw;
 }
 
-.piatti-ingredienti-bg {
+.ingredienti-piatto-bg {
     background-image: url('../images/piatto01/ingredienti_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: auto;
-    /* aspect-ratio: 393 / 1711; */
 }
 
-.ingredient-picture {
-    height: 92px;
-    border-radius: 50%;
-    object-fit: cover;
+.discover-ingredients-heading {
+    padding-top: 20vh;
+}
+
+@media (min-width: 768px) {
+    .piatti-hero-section {
+        padding: 20dvh 5dvw 0 5dvw;
+    }
+
+    .piatti-hero-bg img {
+        bottom: -30vh;
+    }
+
+    .ingredienti-piatto-img {
+        width: 60%;
+    }
+
+    .discover-ingredients-heading {
+        padding-top: 40vh;
+    }
 }
 
 .allergeni {
