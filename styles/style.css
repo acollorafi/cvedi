@@ -424,6 +424,7 @@ p {
 .card p {
     font-size: 18px;
     text-align: center;
+    text-shadow: 0 0 15px #000, 0 0 100px #000;
 }
 
 .card-team {
@@ -482,7 +483,7 @@ p {
 
 
 
-/* CARD PIATTI (menu e ingredienti) - da sistemare */
+/* CARD PIATTI (menu e ingredienti) /
 
 /* CARD BASE */
 .menu-card {
@@ -1092,10 +1093,6 @@ footer {
     transform: translateY(12px) scale(0.96);
     visibility: hidden;
     pointer-events: none;
-}
-
-.menu-cards-wrapper {
-    position: relative;
 }
 
 .menu-hidden {
