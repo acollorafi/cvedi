@@ -65,6 +65,11 @@ body {
     font-display: swap;
 }
 
+html, body {
+    overflow-x: hidden;
+  }
+
+
 h1,
 h2,
 h3,
@@ -107,7 +112,7 @@ p {
 
 @media (min-width: 768px) {
     h1 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 
     h2 {
@@ -159,12 +164,15 @@ p {
 }
 
 .hero-section {
-    height: 50vh;
+    height: 50dvh;
+    text-align: center;
+    align-items: center;
+    padding-top: 40px;
 }
 
 @media (min-width: 768px) {
     .hero-section {
-        height: 100vh;
+        height: 70dvh;
     }
 }
 
@@ -623,10 +631,10 @@ p {
     padding: 0.4rem 0.6rem;
     border-radius: 8px;
     border-radius: 54px;
-border: var(--bs-glass-border);
-background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
-color: #F5F5F5;
+    border: var(--bs-glass-border);
+    background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
+    color: #F5F5F5;
 }
 
 
@@ -694,78 +702,140 @@ color: #F5F5F5;
            SFONDI
 ********************************************/
 
+/*classe da mettere ai div che contengono gli sfondi*/
 .img-bg {
-    /*classe da mettere ai div che contengono gli sfondi*/
     display: flex;
     flex-direction: column;
-    /*align-items: flex-start;*/
     align-self: stretch;
 }
 
-
 /*Sfondi pagina home*/
 #home-s1 {
-    background: url('/images/backgrounds/hero_home_bg.webp') center/cover no-repeat;
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero_home_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10dvh
 }
 
-#home-s3 { /*chiedi a chat*/
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 10%, rgba(29, 40, 36, 0.00) 90%, #1D2824 99.52%), url(/images/backgrounds/home_piatti_bg.png) no-repeat;
-    /*background: url('/images/backgrounds/home_piatti_bg.png') center/cover no-repeat;*/
-    
+#home-s3 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/home_piatti_bg.png) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Sfondi pagina ristorante*/
+#ristorante-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/ristorante/hero_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#ristorante-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/ristorante/img_team_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#ristorante-s3 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 70%, #1D2824 100%), url(/images/ristorante/img_piatti_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
 /*Sfondi pagina menù*/
 #menu-s1 {
-    background: url('/images/menu/hero_menu_mask.webp') center/cover no-repeat;
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/menu/hero_menu_mask.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 80%;
 }
 
 #menu-s2 {
-    background: url('/images/backgrounds/menu-s3.webp') center/cover no-repeat;
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 70%, #1D2824 100%), url(/images/menu/menu_bg2.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #menu-s3 {
-    background: url('/images/backgrounds/menu-s3.webp') center/cover no-repeat;
-}
-
-
-/*Sfondi sezioni hero info e prenota*/
-#hero-info {
-    background: url('/images/backgrounds/hero_info_bg.webp') center bottom / cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-}
-
-/*sopra c'è class hero-section con height 100vh -> magari userei la stessa e piuttosto modificherei quella (idem per prenota)*/
-.hero-section-info {
-    min-height: 100vh;
-}
-
-#hero-prenota {
-    background: url('/images/backgrounds/hero-prenota.webp') center bottom / cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-}
-
-.hero-section-prenota {
-    min-height: 100vh;
-}
-
-/*Sfondi pagina info*/
-.background-info {
-    background-image: url('../images/info/sfondo_sezioni.webp');
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/menu/menu_bg3.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1440 / 634;
 }
 
+
+/*Sfondi sezioni hero info*/
+#info-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero_info_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+}
+
+#info-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/info/sfondo_sezioni.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Sfondi sezioni hero info*/
+#prenota-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero-prenota.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+}
+
+#prenota-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/sfondo-prenota.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Sfondi pagina sostenibilità*/
+#sostenibilità-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilità/sfondo-sostenibilità.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+}
+
+#sostenibilità-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilità/sfondo-sostenibilità.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Sfondi pagina piatto 01*/
+#piatto01-s1 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/piatti_hero_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+
+}
+
+#piatto01-s2 {
+    position: relative;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/ingredienti_bg.webp) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 /********************************************
@@ -863,11 +933,18 @@ color: #F5F5F5;
            PAGINA HOME
 ********************************************/
 .hero-subtitle {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--bs-white);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+@media (min-width: 768px) {
+    .hero-subtitle {
+    font-size: 3rem;
+    }
+}
+
 
 .foto-recensione {
     width: 150px;
@@ -886,21 +963,6 @@ color: #F5F5F5;
 /********************************************
            PAGINA RISTORANTE
 ********************************************/
-.hero-bg {
-    background-image: url('../images/ristorante/hero_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
-}
-
-/*@media (min-width: 768px) {
-    .hero-bg {
-        aspect-ratio: 800 / 1170; 
-    }
-}*/
 
 .team-bg {
     background-image: url('../images/ristorante/img_team_bg.webp');
@@ -919,15 +981,6 @@ color: #F5F5F5;
     padding-top: 235px;
 }
 
-.piatti-bg {
-    background-image: url('../images/ristorante/img_piatti_bg.webp');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1440 / 1442;
-}
 
 .team-avatar {
     width: 92px;
@@ -950,7 +1003,34 @@ color: #F5F5F5;
 /********************************************
            PAGINA MENU
 ********************************************/
+[data-menu] {
+    position: relative;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
 
+.menu-hidden {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.menu-cards-wrapper {
+    position: relative;
+}
+
+.menu-hidden {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    pointer-events: none;
+
+    position: absolute;
+    inset: 0;
+}
 
 
 
@@ -1390,16 +1470,6 @@ body:has(.sostenibility-container) {
 /********************************************
            PAGINA PRENOTA
 ********************************************/
-.background-prenota {
-    background-image: url('/images/backgrounds/sfondo-prenota.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1440 / 634;
-}
-
 .iframe-crop iframe {
     transform: scale(1.15);
 }
@@ -1412,7 +1482,7 @@ body:has(.sostenibility-container) {
 .search-container {
     display: flex;
     justify-content: center;
-    padding: 25px;
+    padding: 110px 0px 25px;
     width: 100%;
 }
 
@@ -1502,13 +1572,10 @@ body:has(.sostenibility-container) {
     background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%), rgba(207, 79, 40, 0.50);
     box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.25) inset, 5px -5px 8.8px 0 rgba(0, 0, 0, 0.25) inset, 0 0 10px 0 rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease, background-color 0.2s;
-
-    /*--bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: var(--bs-tan);*/
 }
 
 .search-btn-circle:hover {
-    background-color: rgba(68, 221, 224, 0.9);
+    background-color: #44dde099;;
     transform: scale(1.05);
 }
 
@@ -1596,7 +1663,7 @@ input::-webkit-calendar-picker-indicator {
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
-    background-color: var(--bs-cyan);
+    background-color: #44dde099;
     box-shadow: 0 0 15px var(--bs-cyan);
 }
 
@@ -1611,7 +1678,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .carousel-indicators {
-    bottom: -50px;
+    bottom: -80px;
 }
 
 .carousel-indicators [button] {
@@ -1638,7 +1705,6 @@ input::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-    /*-moz-appearance: textfield;*/
     width: 30px;
 }
 
@@ -1722,26 +1788,6 @@ input::-webkit-calendar-picker-indicator {
 /********************************************
            PAGINA PIATTO
 ********************************************/
-.piatti-hero-bg {
-    background-image: url('../images/piatto01/piatti_hero_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
-}
-
-.piatti-ingredienti-bg {
-    background-image: url('../images/piatto01/ingredienti_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    /* aspect-ratio: 393 / 1711; */
-}
-
 .ingredient-picture {
     height: 92px;
     border-radius: 50%;
@@ -1755,17 +1801,24 @@ input::-webkit-calendar-picker-indicator {
 
 
 
-/*prova foglia
-.leaves {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 300px;
+/*prova foglia*/
+.leaves-wrapper {
+    position: relative;
+    height: 0;
+  }
+  
+  .leaves {
+    position: absolute;
+    top: -20vh;        /* 👈 CHIAVE */
     pointer-events: none;
     z-index: 2;
   }
   
-  .leaves-left { left: 0; }
+  .leaves-left { 
+    left: 0;
+    transform: scale(4);
+}
+
   .leaves-right { right: 0; }
   
   .leaf {
@@ -1776,11 +1829,10 @@ input::-webkit-calendar-picker-indicator {
   }
   
 
-.leaves-left .leaf:nth-child(1) { top: 10%; left: -40px; }
-.leaves-left .leaf:nth-child(2) { top: 55%; left: -60px; }
+.leaves-left .leaf:nth-child(1) { top: -120px; left: -130px; }
 
 .leaves-right .leaf:nth-child(1) { top: 20%; right: -50px; }
-.leaves-right .leaf:nth-child(2) { top: 65%; right: -30px; } */
+.leaves-right .leaf:nth-child(2) { top: 65%; right: -30px; } 
 
 
 /*prova foglie home*/
