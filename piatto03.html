@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piatti</title>
+    <title>Gemme di Zenith</title>
 
     <!-- Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -27,47 +27,55 @@
     </svg>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
+    <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary">
         <div class="container-xxl">
             <a class="navbar-brand" href="#">
-                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="100" height="100">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
+            <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
-            <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
+            <!-- Menu collapse -->
+            <div class="glass-effect collapse navbar-collapse h-100" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">HOME</a>
+                        <a class="nav-link" href="#index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">RISTORANTE</a>
+                        <a class="nav-link" href="#ristorante.html">RISTORANTE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">MENU</a>
+                        <a class="nav-link" href="#menu.html">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">INFO</a>
+                        <a class="nav-link" href="#info.html">INFO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SOSTENIBILITA</a>
+                        <a class="nav-link active" aria-current="page" href="#">SOSTENIBILITA</a>
                     </li>
                 </ul>
             </div>
-            <div class="d-flex align-items-center" style="gap: 45px;">
+
+            <!-- Desktop: PRENOTA + Bandiera (visibili solo >= 1200px) -->
+            <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
                 <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
-                <img src="images/flags/world.webp" class="navbar-img-languages" />
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
             </div>
         </div>
     </nav>
 
     <!-- TODO: fix bottom gradient (don't use image gradient, use css)-->
-    <section id="piatto01-s1" class="img-bg">
-        <div class="hero-section section align-self-center">
+    <section class="piatti-hero-bg">
+        <div class="piatti-hero-section section align-self-center">
             <h1>Gemme di Zenith</h1>
             <p class="hero-text">
                 Un piatto etereo che cattura l'essenza della luce solare attraverso ingredienti
@@ -75,15 +83,17 @@
                 in simbiosi con l'ambiente, offrendo un'esperienza culinaria luminosa e rigenerante.
             </p>
         </div>
-        <!-- <img src="images/piatto01/piatti_hero_.jpeg" class="img-fluid" /> -->
+        <img src="images/piatto01/piatti_hero_fg.webp" class="img-fluid" />
     </section>
 
-    <div class="img-bg" id="piatto01-s2">
+
+    <section class="ingredienti-piatto-bg">
 
         <div class="text-center padding-section">
-            <h2 class="padding-text">Scopri gli ingredienti</h2>
+            <h2 class="padding-text discover-ingredients-heading">Scopri gli ingredienti</h2>
             <div class="container px-3 px-sm-0">
-                <img src="images/piatto01/ingredienti.webp" class="img-fluid mx-auto d-block">
+                <img src="images/piatto01/ingredienti_piatto1.webp"
+                    class="img-fluid mx-auto d-block ingredienti-piatto-img">
             </div>
         </div>
 
@@ -99,7 +109,7 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto01/ingrediente_1.png" alt="" />
+                                <img src="images/piatto01/ingrediente_1.webp" alt="" />
                                 <span class="menu-card-label label-custom">Alghe eoliche</span>
                             </div>
 
@@ -121,7 +131,7 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto01/ingrediente_2.png" alt="" />
+                                <img src="images/piatto01/ingrediente_4.webp" alt="" />
                                 <span class="menu-card-label label-custom">Bacche Limonene</span>
                             </div>
 
@@ -143,8 +153,8 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto01/ingrediente_3.png" alt="" />
-                                <span class="menu-card-label label-custom">Petali di Floricanto</span>
+                                <img src="images/piatto01/ingrediente_2.webp" alt="" />
+                                <span class="menu-card-label label-custom">Petali Zenith</span>
                             </div>
 
                             <!-- TESTO -->
@@ -166,7 +176,7 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto01/ingrediente_4.png" alt="" />
+                                <img src="images/piatto01/ingrediente_3.webp" alt="" />
                                 <span class="menu-card-label label-custom">Perle di Solargemma</span>
                             </div>
 
@@ -189,22 +199,22 @@
             <h2 class="padding-text">Allergeni</h2>
             <div class="row justify-content-center">
                 <div class="col-4 col-md-2">
-                    <img src="images/piatto01/allergeno01.webp" class="allergeni">
+                    <img src="images/piatto01/allergeno1.webp" class="allergeni">
                     <p>Grano lunare</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <img src="images/piatto01/allergeno02.webp" class="allergeni">
+                    <img src="images/piatto01/allergeno2.webp" class="allergeni">
                     <p>Fagioli di Balzar</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <img src="images/piatto01/allergeno03.webp" class="allergeni">
+                    <img src="images/piatto01/allergeno3.webp" class="allergeni">
                     <p>Rapa Venere</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="text-center footer">
+    <footer class="text-center footer">
         <!-- Add more vertical space on mobile -->
         <div class="d-md-none" style="height: 200px;"></div>
         <img src="images/logo/logo-footer.webp" style="width: 190px; height: 190px;" />
@@ -217,7 +227,7 @@
             <p>Tutti i diritti riservati alla Natura.</p>
             <p>P.IVA 000123SOLAR</p>
         </div>
-    </div>
+    </footer>
 
 </body>
 
