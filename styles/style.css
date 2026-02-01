@@ -685,6 +685,45 @@ p {
     border-radius: 10px;
 }
 
+/* DESKTOP XL - min 1200px */
+@media (min-width: 1200px) {
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+        margin-top: 0;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        gap: 1.5rem;
+        width: auto;
+        margin: 0 auto;
+        padding: 0.7rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;   
+    }
+
+    .btn-custom-primary {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
+
+    .btn-language {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
 
 
 
@@ -1095,43 +1134,44 @@ body:has(.sostenibility-container) {
 /********************************************
            PAGINA SOSTENIBILITÀ
 ********************************************/
-
-/* Hero Section */
-
-.hero-sostenibilità {
-    min-height: 90vh;
-    background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+.sostenibility-container {
+    overflow-x: hidden;
 }
 
-.hero-line {
-    margin-top: 2rem;
-}
-
-@media (max-width: 767px) {
-    .hero-sostenibilità .hero-title {
-        font-size: 2.5rem;
+    /* Hero Section */
+    
+    .hero-sostenibilità {
+        min-height: 90vh;
+        background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
     }
-
+    
     .hero-line {
-        max-width: 90%;
+        margin-top: 2rem;
     }
-}
-
-/* Background principale */
-.fullpage-bg {
-    background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    position: relative;
-}
+    
+    @media (max-width: 767px) {
+        .hero-sostenibilità .hero-title {
+            font-size: 1.75rem;
+        }
+        .hero-line {
+            max-width: 90%;
+        }
+    }
+    /* Background principale */
+    .fullpage-bg {
+        background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        position: relative;
+    }
 
 
 /* Sezioni generiche */
@@ -1204,31 +1244,40 @@ body:has(.sostenibility-container) {
     background-image: url("/images/sostenibilità/arrow-left.svg");
 }
 
-.next-fase {
-    right: -10px;
-    background-image: url("/images/sostenibilità/arrow-right.svg");
-}
-
-@media (max-width: 991px) {
-    .section-image-wrapper {
-        display: none;
+    .next-fase {
+        right: -10px;
+        background-image: url("/images/sostenibilità/arrow-right.svg");
     }
 
-    .fase-item {
-        padding: 2rem 1rem;
+    .section-content .label-custom {
+        width: fit-content;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        text-shadow: none;
+        font-size: 22px!important;
+        font-family: 'Syne', sans-serif;
     }
 
-    .section-content {
-        padding: 1.5rem;
-        text-align: center;
+    @media (max-width: 991px) {
+        .fasi-section .section-image-wrapper {
+            display: none;
+        }
+        
+        .fase-item {
+            padding: 2rem 1rem;
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .fase-nav {
+            display: block; 
+            width: 50px;
+            height: 50px;
+        }
     }
-
-    .fase-nav {
-        display: block;
-        width: 50px;
-        height: 50px;
-    }
-}
 
 /* Experts Section */
 .experts-section h3 {
@@ -1312,17 +1361,6 @@ body:has(.sostenibility-container) {
 }
 
 /* Partnership Cards */
-.partner-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 3rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100px;
-}
 
 @media (max-width: 767px) {
     .partner-card {
@@ -1332,25 +1370,11 @@ body:has(.sostenibility-container) {
 }
 
 
-/* TABLET - min 768px */
-@media (min-width: 768px) {
-    .navbar {
-        padding: 0.75rem 0;
-    }
-
-    .logo-img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .btn-custom-primary {
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .section-content {
-        padding: 3rem 2rem;
-    }
+    /* TABLET - min 768px */
+    @media (min-width: 768px) {
+        .section-content {
+            padding: 3rem 2rem;
+        }
 
     .section-image-wrapper {
         padding: 1.25rem;
@@ -1369,9 +1393,9 @@ body:has(.sostenibility-container) {
         font-size: 1.3rem;
     }
 
-    .partner-logo {
-        max-height: 100px;
-    }
+        .partner-logo {
+            max-height: 160px;
+        }
 
     .footer-logo {
         width: 150px;
@@ -1448,44 +1472,7 @@ body:has(.sostenibility-container) {
 }
 
 
-/* DESKTOP XL - min 1200px */
-@media (min-width: 1200px) {
-    .logo-img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .navbar-collapse {
-        display: flex !important;
-        margin-top: 0;
-        max-height: none;
-        overflow-y: visible;
-    }
-
-    .navbar-nav {
-        text-align: center;
-        gap: 1.5rem;
-        width: auto;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .nav-link {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-    }
-
-    .btn-custom-primary {
-        padding: 0.75rem 2rem;
-        font-size: 1rem;
-    }
-
-    .btn-language {
-        width: 50px;
-        height: 50px;
-    }
-}
-
+    
 
 
 /********************************************
