@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/style.css">
-    <script src="/javascript/script.js"></script>
 
 </head>
 
@@ -21,11 +20,12 @@
     <!-- Per effetto liquido -->
     <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
         <filter id="liquidFilter">
-        <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
-        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R" yChannelSelector="G" />
+            <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R"
+                yChannelSelector="G" />
         </filter>
     </svg>
-    
+
     <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
             <a class="navbar-brand glass-blur-only" href="index.html">
@@ -79,7 +79,7 @@
 
     <section id="sostenibilita-s1" class="img-bg">
         <div class="hero-section container section">
-            <h1>SOSTENIBILITÀ</h1>
+            <h1 class="h1-big">SOSTENIBILITÀ</h1>
         </div>
         <img src="images/sostenibilita/techline.webp" alt="" class="techline">
     </section>
@@ -96,9 +96,7 @@
         <section class="vision-section position-relative padding-section">
             <div class="section-content-wrapper">
                 <div class="container-xxl">
-                    <div class="text-center">
-                        <h3 class="section-heading">La nostra Vision</h3>
-                    </div>
+
                     <div class="row g-0">
                         <div class="col-12 col-lg-6">
                             <div class="section-image-wrapper">
@@ -108,7 +106,11 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-6 d-flex align-items-center">
+                            
                             <div class="section-content">
+
+                                <h3 class="section-heading">La nostra Vision</h3>
+
                                 <p class="section-text">Ci poniamo come parte attiva in un mondo in cui l'ingegno umano
                                     non domina la natura, ma la custodisce per mezzo della tecnologia. Siamo da sempre
                                     il primo sistema gastronomico al mondo a impatto positivo, dove ogni servizio non si
@@ -120,20 +122,17 @@
                 </div>
             </div>
             <!--foglie-->
-        <div class="leaves-wrapper">
-            <div class="leaves leaves-left leaf-piatto-left">
-                <img src="images/foglie/foglia-piatto-sinistra.png" class="leaf" />
+            <div class="leaves-wrapper">
+                <div class="leaves leaves-left leaf-piatto-left">
+                    <img src="images/foglie/foglia-piatto-sinistra.png" class="leaf" />
+                </div>
             </div>
-        </div>
         </section>
-        
+
 
         <section class="sustainability-section position-relative padding-section">
             <div class="section-content-wrapper">
                 <div class="container-xxl">
-                    <div class="text-center">
-                        <h3 class="section-heading">Sostenibilità</h3>
-                    </div>
                     <div class="row g-0">
                         <div class="col-12 col-lg-6 order-1 order-lg-2">
                             <div class="section-image-wrapper">
@@ -143,6 +142,7 @@
                         </div>
                         <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex align-items-center">
                             <div class="section-content">
+                                <h3 class="section-heading">Sostenibilità</h3>
                                 <p class="section-text">Non ci accontentiamo del "carbon neutral": puntiamo
                                     all'autosufficienza rigenerativa. Dalla cupola in vetro fotovoltaico che alimenta
                                     interamente le nostre cucine a induzione, ai sistemi di raccolta della condensa
@@ -167,7 +167,7 @@
                 <div class="container-xxl">
                     <div class="economia-content text-center">
                         <h2 class="economia-title">Economia circolare</h2>
-                        <p class="economia-text">Il nostro impegno nell'economia circolare si fonda sull'armonia con
+                        <p class="economia-text mx-4">Il nostro impegno nell'economia circolare si fonda sull'armonia con
                             l'Albero Maestro, garantendo un impatto ambientale nullo. Ogni fase, dalla semina alla
                             rigenerazione, è pensata per restituire, non sottrarre.</p>
                     </div>
@@ -370,13 +370,13 @@
             </div>
         </section>
 
-    <!--prova foglie-->
-    <div class="leaves-wrapper">
-        <div class="leaves leaves-right">
-            <img src="images/foglie/foglia-destra.webp" class="leaf" />
-            <img src="images/foglie/foglia-destra1.webp" class="leaf" />
+        <!--prova foglie-->
+        <div class="leaves-wrapper">
+            <div class="leaves leaves-right">
+                <img src="images/foglie/foglia-destra.webp" class="leaf" />
+                <img src="images/foglie/foglia-destra1.webp" class="leaf" />
+            </div>
         </div>
-    </div>
 
         <section class="partnership-section position-relative padding-section" style="padding-top: 5rem;">
             <div class="section-content-wrapper">
