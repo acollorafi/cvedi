@@ -186,9 +186,31 @@ p {
     }
 }
 
+.techline {
+    position: absolute;
+    margin-left: 0;
+    margin-top: 30dvh;
+    max-width: 50%;
+}
 
+@media (min-width: 768px) {
+    .techline {
+        margin-top: 42dvh;
+    }
+}
 
+.techline-home {
+    position: absolute;
+    margin-left: 0;
+    margin-top: 40dvh;
+    max-width: 50%;
+}
 
+@media (min-width: 768px) {
+    .techline-home {
+        margin-top: 50dvh;
+    }
+}
 
 /********************************************
            LIQUID GLASS EFFECT
@@ -1329,12 +1351,12 @@ body:has(.sostenibility-container) {
 }
 
 .prev-fase {
-    left: -10px;
+    left: -5px;
     background-image: url("/images/sostenibilita/arrow-left.svg");
 }
 
 .next-fase {
-    right: -10px;
+    right: -5px;
     background-image: url("/images/sostenibilita/arrow-right.svg");
 }
 
@@ -1501,14 +1523,6 @@ body:has(.sostenibility-container) {
     height: 50px;
 }
 
-.prev-fase {
-    left: -25px;
-}
-
-.next-fase {
-    right: -25px;
-}
-
 .vision-section,
 .sustainability-section,
 .fasi-section {
@@ -1516,7 +1530,7 @@ body:has(.sostenibility-container) {
 }
 
 .economia-circolare {
-    padding: 4rem 0;
+    padding-top: 4rem;
 }
 
 .section-content {
@@ -1614,6 +1628,11 @@ body:has(.sostenibility-container) {
 .search-input::placeholder {
     color: var(--bs-white);
     opacity: 0.7;
+}
+
+/* Testo orario */
+.search-input option {
+    color: var(--bs-black);
 }
 
 /* Divisori verticali */
@@ -2066,7 +2085,6 @@ input::-webkit-calendar-picker-indicator {
     left: 130px;
 }
 
-/*non mi ricrodo se da qua o da più su di sistemare mobile*/
 .left-leaf-rami .leaf {
     width: 500px;
 }
@@ -2112,6 +2130,51 @@ input::-webkit-calendar-picker-indicator {
 
 .custom-leaves-allergen-left .leaf {
     width: 400px;
+}
+
+.leaf-menu-left {
+    position: absolute;
+    z-index: 11;
+    top: 15vh;
+    left: 120px;
+}
+
+.leaf-menu-right {
+    position: absolute;
+    z-index: 11;
+    top: -25vh;
+    right: -150px;
+}
+
+.leaf-menu-right .leaf {
+    width: 800px;
+}
+
+.leaves-menu-food {
+    top: -10vh;
+    right: -500px;
+}
+
+.leaves-menu-food .leaf {
+    width: 1000px;
+}
+
+.leaves-menu-dessert {
+    top: -60vh;
+    right: -1050px;
+}
+
+.leaves-menu-dessert .leaf {
+    width: 700px;
+}
+
+.leaves-menu-plates {
+    top: -10vh;
+    left: -700px;
+}
+
+.leaves-menu-plates .leaf {
+    width: 500px;
 }
 
 .leaf {
@@ -2238,6 +2301,44 @@ input::-webkit-calendar-picker-indicator {
     .custom-leaves-allergen-left .leaf {
         width: 300px;
     }
+
+    .leaf-menu-left {
+        left: 60px;
+    }
+
+    .leaf-menu-right {
+        top: -20vh;
+        right: -100px;
+    }
+
+    .leaf-menu-right .leaf {
+        width: 600px;
+    }
+
+    .leaves-menu-food {
+        right: -320px;
+    }
+
+    .leaves-menu-food .leaf {
+        width: 750px;
+    }
+
+    .leaves-menu-dessert {
+        top: -50vh;
+        right: -700px;
+    }
+
+    .leaves-menu-dessert .leaf {
+        width: 520px;
+    }
+
+    .leaves-menu-plates {
+        left: -450px;
+    }
+
+    .leaves-menu-plates .leaf {
+        width: 380px;
+    }
 }
 
 
@@ -2357,6 +2458,40 @@ input::-webkit-calendar-picker-indicator {
 
     .custom-leaves-allergen-left .leaf {
         width: 220px;
+    }
+
+    .leaf-menu-left {
+        top: 10vh;
+        left: 30px;
+    }
+
+    .leaf-menu-right .leaf {
+        width: 420px;
+    }
+
+    .leaves-menu-food {
+        right: -200px;
+    }
+
+    .leaves-menu-food .leaf {
+        width: 500px;
+    }
+
+    .leaves-menu-dessert {
+        top: -40vh;
+        right: -450px;
+    }
+
+    .leaves-menu-dessert .leaf {
+        width: 380px;
+    }
+
+    .leaves-menu-plates {
+        left: -300px;
+    }
+
+    .leaves-menu-plates .leaf {
+        width: 280px;
     }
 
 }
