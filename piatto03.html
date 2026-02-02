@@ -9,9 +9,6 @@
     <!-- Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -20,8 +17,9 @@
     <!-- Per effetto liquido -->
     <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
         <filter id="liquidFilter">
-        <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
-        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R" yChannelSelector="G" />
+            <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R"
+                yChannelSelector="G" />
         </filter>
     </svg>
 
@@ -78,196 +76,191 @@
     </nav>
 
     <main>
-    <!-- TODO: fix bottom gradient (don't use image gradient, use css)-->
-    <section class="piatti-hero-bg">
-        <div class="custom-hero-section section align-self-center">
-            <h1>Sfera Corallo</h1>
-            <p class="hero-text">
-                Scopri un'opera d'arte culinaria dove nettare di frutti antichi incontra la croccantezza del corallo d'alga e la freschezza dell'aria distillata. 
-        </div>
-        <img src="images/piatto03/hero_piatto3.webp" 
-     class="img-fluid" 
-     alt="Gemme di Zenith - Piatto signature Eden Leaf"
-     title="Gemme di Zenith - Verdure di stagione a km zero con ingredienti rigenerativi" />
-    </section>
+        <!-- TODO: fix bottom gradient (don't use image gradient, use css)-->
+        <section class="piatti-hero-bg">
+            <div class="custom-hero-section section align-self-center">
+                <h1>Sfera Corallo</h1>
+                <p class="hero-text">
+                    Scopri un'opera d'arte culinaria dove nettare di frutti antichi incontra la croccantezza del corallo
+                    d'alga e la freschezza dell'aria distillata.
+            </div>
+            <img src="images/piatto03/hero_piatto3.webp" class="img-fluid"
+                alt="Gemme di Zenith - Piatto signature Eden Leaf"
+                title="Gemme di Zenith - Verdure di stagione a km zero con ingredienti rigenerativi" />
+        </section>
 
-    <div class="leaves-wrapper">
-        <div class="leaves leaves-left leaf-piatto-left">
-            <img src="images/foglie/foglia-piatto-sinistra.png" class="leaf" />
-        </div>
-    </div>
-    
-    <div class="leaves-wrapper">
-        <div class="leaves leaves-right leaf-piatto-right">
-            <img src="images/foglie/foglia-piatto-destra.png" class="leaf" />
-        </div>
-    </div>
-
-    <section class="ingredienti-piatto-bg">
-
-        <div class="text-center padding-section">
-            <h2 class="padding-text discover-ingredients-heading">Scopri gli ingredienti</h2>
-            <div class="container px-3 px-sm-0">
-                <img 
-                    src="images/piatto03/ingredienti3-medium.webp" 
-                    class="img-fluid mx-auto d-block ingredienti-piatto-img"
-                    srcset="images/piatto03/ingredienti3-small.webp 480w,
-                            images/piatto03/ingredienti3-medium.webp 800w,
-                            images/piatto03/ingredienti3-large.webp 1200w"
-                    sizes="(min-width: 1200px) 1200px,
-                            (min-width: 768px) 800px,
-                            100vw"
-                    alt="Composizione ingredienti del piatto Sfera Corallo"
-                    loading="lazy"
-                    title="Panoramica ingredienti del piatto Sfera Corallo"
-                />
+        <div class="leaves-wrapper">
+            <div class="leaves leaves-left leaf-piatto-left">
+                <img src="images/foglie/foglia-piatto-sinistra.png" class="leaf" />
             </div>
         </div>
 
         <div class="leaves-wrapper">
-            <div class="leaves leaves-right leaf-ingredients">
-                <img src="images/foglie/foglia-destra.webp" class="leaf" />
+            <div class="leaves leaves-right leaf-piatto-right">
+                <img src="images/foglie/foglia-piatto-destra.png" class="leaf" />
             </div>
         </div>
 
-        <!-- Cards ingrediente buona -->
-        <section class="container-xxl padding-section text-center">
-            <h2 class="padding-text">Ingredienti</h2>
-            <div class="container">
-                <div class="row g-4">
+        <section class="ingredienti-piatto-bg">
 
-                    <!--CARD 1-->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card menu-card glass-effect text-center">
+            <div class="text-center padding-section">
+                <h2 class="padding-text discover-ingredients-heading">Scopri gli ingredienti</h2>
+                <div class="container px-3 px-sm-0">
+                    <img src="images/piatto03/ingredienti3-medium.webp"
+                        class="img-fluid mx-auto d-block ingredienti-piatto-img" srcset="images/piatto03/ingredienti3-small.webp 480w,
+                            images/piatto03/ingredienti3-medium.webp 800w,
+                            images/piatto03/ingredienti3-large.webp 1200w" sizes="(min-width: 1200px) 1200px,
+                            (min-width: 768px) 800px,
+                            100vw" alt="Composizione ingredienti del piatto Sfera Corallo" loading="lazy"
+                        title="Panoramica ingredienti del piatto Sfera Corallo" />
+                </div>
+            </div>
 
-                            <!-- PIATTO -->
-                            <div class="menu-card-img">
-                                <img src="images/piatto03/gocce-luce.webp" 
-                                alt="Nettare Cristallizzato"
-                                title="Nettare Cristallizzato - Sfera di frutti antichi recuperati" />                           
-                                <span class="menu-card-label label-custom">Gocce di Luce</span>
+            <div class="leaves-wrapper">
+                <div class="leaves leaves-right leaf-ingredients">
+                    <img src="images/foglie/foglia-destra.webp" class="leaf" />
+                </div>
+            </div>
+
+            <!-- Cards ingrediente buona -->
+            <section class="container-xxl padding-section text-center">
+                <h2 class="padding-text">Ingredienti</h2>
+                <div class="container">
+                    <div class="row g-4">
+
+                        <!--CARD 1-->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="card menu-card glass-effect text-center">
+
+                                <!-- PIATTO -->
+                                <div class="menu-card-img">
+                                    <img src="images/piatto03/gocce-luce.webp" alt="Nettare Cristallizzato"
+                                        title="Nettare Cristallizzato - Sfera di frutti antichi recuperati" />
+                                    <span class="menu-card-label label-custom">Gocce di Luce</span>
+                                </div>
+
+                                <!-- TESTO -->
+                                <div class="menu-card-text">
+                                    <p>
+                                        Raccolti alle prime luci dell’alba, quando la rugiada ancora imperla la chioma
+                                        alta, questi frutti svelano la loro essenza solo al primo assaggio. Al contatto
+                                        con il palato, liberano un bouquet complesso e avvolgente.</p>
+                                </div>
+
                             </div>
+                        </div>
 
-                            <!-- TESTO -->
-                            <div class="menu-card-text">
-                                <p>
-                                    Raccolti alle prime luci dell’alba, quando la rugiada ancora imperla la chioma alta, questi frutti svelano la loro essenza solo al primo assaggio. Al contatto con il palato, liberano un bouquet complesso e avvolgente.</p>
+                        <!--CARD 2-->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="card menu-card glass-effect text-center">
+
+                                <!-- PIATTO -->
+                                <div class="menu-card-img">
+                                    <img src="images/piatto03/cialda-corallo1.webp" alt="Cialda di Corallo"
+                                        title="Cialda di Corallo - Struttura croccante con farina di alghe e zafferano" />
+                                    <span class="menu-card-label label-custom">Cialda di Corallo</span>
+                                </div>
+
+                                <!-- TESTO -->
+                                <div class="menu-card-text">
+                                    <p>
+                                        Una struttura croccante a nido d'ape, stampata con nutrienti a base di farina di
+                                        alghe e zafferano idroponico. Rappresenta la resilienza della vita che si adatta
+                                        e
+                                        cresce su basi tecnologiche sostenibili.
+                                    </p>
+                                </div>
+
                             </div>
+                        </div>
 
+                        <!--CARD 3-->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="card menu-card glass-effect text-center">
+
+                                <!-- PIATTO -->
+                                <div class="menu-card-img">
+                                    <img src="images/piatto03/clorofilla1.webp" alt="Clorofilla Viva"
+                                        title="Clorofilla Viva - Germogli di brassica e petali bioluminescenti" />
+                                    <span class="menu-card-label label-custom">Clorofilla Viva</span>
+                                </div>
+
+                                <!-- TESTO -->
+                                <div class="menu-card-text">
+                                    <p>
+                                        Un insieme di germogli di brassica e petali bioluminescenti coltivati in camere
+                                        a
+                                        luce solare filtrata. Portano nel piatto la forza vitale e il colore pulsante di
+                                        una
+                                        natura che ha ripreso i suoi spazi.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--CARD 4-->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="card menu-card glass-effect text-center">
+
+                                <!-- PIATTO -->
+                                <div class="menu-card-img">
+                                    <img src="images/piatto03/ingrediente4_piatto3.webp" alt="Spuma di aria"
+                                        title="Spuma di aria - Spuma eterea con menta selvatica" />
+                                    <span class="menu-card-label label-custom">Spuma di aria</span>
+                                </div>
+
+                                <!-- TESTO -->
+                                <div class="menu-card-text">
+                                    <p>
+                                        Una spuma eterea e leggerissima ottenuta dal recupero dell'umidità atmosferica e
+                                        infusa con menta selvatica. Serve a pulire il palato tra un morso e l'altro,
+                                        portando una freschezza ancestrale.
+                                    </p>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <!--CARD 2-->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card menu-card glass-effect text-center">
+            <!--foglie-->
+            <div class="leaves-wrapper">
+                <div class="leaves leaves-right custom-leaves-allergen">
+                    <img src="images/foglie/right-leaf-1.png" class="leaf" />
+                </div>
+            </div>
 
-                            <!-- PIATTO -->
-                            <div class="menu-card-img">
-                                <img src="images/piatto03/cialda-corallo1.webp" 
-                                alt="Cialda di Corallo"
-                                title="Cialda di Corallo - Struttura croccante con farina di alghe e zafferano" />                           
-                                <span class="menu-card-label label-custom">Cialda di Corallo</span>
-                            </div>
+            <div class="leaves-wrapper">
+                <div class="leaves leaves-left custom-leaves-allergen-left">
+                    <img src="images/foglie/foglia-allergeni-left.png" class="leaf" />
+                </div>
+            </div>
 
-                            <!-- TESTO -->
-                            <div class="menu-card-text">
-                                <p>
-                                    Una struttura croccante a nido d'ape, stampata con nutrienti a base di farina di
-                                    alghe e zafferano idroponico. Rappresenta la resilienza della vita che si adatta e
-                                    cresce su basi tecnologiche sostenibili.
-                                </p>
-                            </div>
-
-                        </div>
+            <div class="container-xxl padding-section text-center">
+                <h2 class="padding-text">Allergeni</h2>
+                <div class="row justify-content-center">
+                    <div class="col-4 col-md-2">
+                        <img src="images/piatto01/allergeno1.webp" class="allergeni" alt="Icona allergene glutine"
+                            title="Allergene: Glutine corallino">
+                        <p>Glutine corallino</p>
                     </div>
-
-                    <!--CARD 3-->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card menu-card glass-effect text-center">
-
-                            <!-- PIATTO -->
-                            <div class="menu-card-img">
-                                <img src="images/piatto03/clorofilla1.webp" 
-     alt="Clorofilla Viva"
-     title="Clorofilla Viva - Germogli di brassica e petali bioluminescenti" />
-                                <span class="menu-card-label label-custom">Clorofilla Viva</span>
-                            </div>
-
-                            <!-- TESTO -->
-                            <div class="menu-card-text">
-                                <p>
-                                    Un insieme di germogli di brassica e petali bioluminescenti coltivati in camere a
-                                    luce solare filtrata. Portano nel piatto la forza vitale e il colore pulsante di una
-                                    natura che ha ripreso i suoi spazi.
-                                </p>
-                            </div>
-
-                        </div>
+                    <div class="col-4 col-md-2">
+                        <img src="images/piatto01/allergeno2.webp" class="allergeni" alt="Icona allergene legumi"
+                            title="Allergene: Fave clorofilline">
+                        <p>Fave clorofilline</p>
                     </div>
-
-                    <!--CARD 4-->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="card menu-card glass-effect text-center">
-
-                            <!-- PIATTO -->
-                            <div class="menu-card-img">
-                                <img src="images/piatto03/ingrediente4_piatto3.webp" 
-                                 alt="Spuma di aria"
-                                  title="Spuma di aria - Spuma eterea con menta selvatica" />
-                                <span class="menu-card-label label-custom">Spuma di aria</span>
-                            </div>
-
-                            <!-- TESTO -->
-                            <div class="menu-card-text">
-                                <p>
-                                    Una spuma eterea e leggerissima ottenuta dal recupero dell'umidità atmosferica e
-                                    infusa con menta selvatica. Serve a pulire il palato tra un morso e l'altro,
-                                    portando una freschezza ancestrale.
-                                </p>
-                            </div>
-
-                        </div>
+                    <div class="col-4 col-md-2">
+                        <img src="images/piatto01/allergeno3.webp" class="allergeni" alt="Icona allergene brassica"
+                            title="Allergene: Germogli Brassica">
+                        <p>Germogli Brassica</p>
                     </div>
                 </div>
             </div>
         </section>
 
-         <!--foglie-->
-         <div class="leaves-wrapper">
-            <div class="leaves leaves-right custom-leaves-allergen">
-                <img src="images/foglie/right-leaf-1.png" class="leaf" />
-            </div>
-        </div>
-        
-        <div class="leaves-wrapper">
-            <div class="leaves leaves-left custom-leaves-allergen-left">
-                <img src="images/foglie/foglia-allergeni-left.png" class="leaf" />
-            </div>
-        </div>
-
-        <div class="container-xxl padding-section text-center">
-            <h2 class="padding-text">Allergeni</h2>
-            <div class="row justify-content-center">
-                <div class="col-4 col-md-2">
-                    <img src="images/piatto01/allergeno1.webp" class="allergeni"alt="Icona allergene glutine"
-                    title="Allergene: Glutine corallino">
-                    <p>Glutine corallino</p>
-                </div>
-                <div class="col-4 col-md-2">
-                    <img src="images/piatto01/allergeno2.webp" class="allergeni" alt="Icona allergene legumi"
-                    title="Allergene: Fave clorofilline">
-                    <p>Fave clorofilline</p>
-                </div>
-                <div class="col-4 col-md-2">
-                    <img src="images/piatto01/allergeno3.webp" class="allergeni" alt="Icona allergene brassica"
-                    title="Allergene: Germogli Brassica">
-                    <p>Germogli Brassica</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</main>
+    </main>
 
     <footer>
         <div class="container-xxl text-center">
@@ -287,7 +280,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="javascript/script.js"></script>
+
+    <script src="/javascript/script.js"></script>
 </body>
 
 </html>
