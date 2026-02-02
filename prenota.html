@@ -22,7 +22,7 @@
   <svg style="position: absolute; width: 0; height: 0; pointer-events: none" aria-hidden="true">
     <filter id="liquidFilter">
       <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
-      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R" yChannelSelector="G" />
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R" yChannelSelector="G" />
     </filter>
   </svg>
 
@@ -79,266 +79,286 @@
   </nav>
 
   <main>
-  <!-- Sezione 1 - Hero -->
-  <section id="prenota-s1" class="img-bg">
-    <div class="hero-section container section">
-      <h1>PRENOTA</h1>
-    </div>
-    <img src="images/sostenibilita/techline.webp" class="techline">
-  </section>
-
-  <!--prova foglie-->
-  <div class="leaves-wrapper">
-    <div class="leaves leaves-left">
-      <img src="images/foglie/left-leaf.png" class="leaf" />
-    </div>
-
-    <div class="leaves leaves-right leaf-right-prenota">
-      <img src="images/foglie/leaf-right-prenota.png" class="leaf" />
-    </div>
-  </div>
-
-  <!--Sezione 2 - prenotazione, recensioni e faq-->
-  <section id="prenota-s2" class="img-bg">
-    <!--barra prenotazione-->
-    <div class="search-container">
-      <div class="search-bar-custom glass-effect">
-        <div class="search-section">
-          <span class="search-label">Persone</span>
-          <div class="d-flex align-items-center justify-content-center mt-1">
-            <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepDown()">-</button>
-            <input type="number" class="search-input text-center p-0 m-0" value="2" min="1" max="10" readonly>
-            <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
-          </div>
-        </div>
-
-        <div class="search-divider"></div>
-
-        <div class="search-section" onclick="document.getElementById('dateInput').showPicker()">
-          <span class="search-label">Data</span>
-          <span id="date-text" class="search-placeholder">Scegli la data</span>
-          <input type="date" id="dateInput" class="search-input-hidden" onchange="updateLabel(this, 'date-text')" />
-        </div>
-
-        <div class="search-divider"></div>
-
-        <div class="search-section" onclick="document.getElementById('timeInput').showPicker()">
-          <span class="search-label">Orario</span>
-          <select class="search-input glass-effect-select">
-            <option value="18:00">18:30</option>
-            <option value="18:30">19:00</option>
-            <option value="19:00">19:30</option>
-            <option value="19:00">20:00</option>
-            <option value="19:00">20:30</option>
-            <option value="19:00">21:00</option>
-          </select>
-        </div>
-
-        <button class="glass-effect search-btn-circle btn-custom-primary" onclick="mostraTavoli()">
-          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
-            focusable="false">
-            <path d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9" fill="none" stroke="currentColor"
-              stroke-width="4"></path>
-          </svg>
-        </button>
+    <!-- Sezione 1 - Hero -->
+    <section id="prenota-s1" class="img-bg">
+      <div class="hero-section container section">
+        <h1>PRENOTA</h1>
       </div>
-    </div>
+      <img src="images/sostenibilita/techline.webp" class="techline">
+    </section>
 
-    <div id="mappa-tavoli" class="container-xxl padding-section text-center d-none">
-      <h2>Tavoli disponibili</h2>
-      <p class="padding-intra-section">Scegli il tuo tavolo sulla mappa!</p>
-      <!--mappa-->
-      <div class="mmap-container">
-        <div class="ratio ratio-16x9 rounded-4 overflow-hidden iframe-crop">
-          <iframe title="Akihabara Map" src="https://view.genially.com/6973a50f9e4f170457936cb5" allowfullscreen
-            scrolling="yes">
-          </iframe>
-        </div>
-      </div>
-      <button id="btnConfermaPrenotazione" class="glass-effect btn btn-custom-primary mx-auto mt-5" type="button">
-        Prenota tavolo
-      </button>
-    </div>
-
-    <!--recensioni-->
-    <div class="container-xxl padding-section text-center">
-      <h2>Recensioni</h2>
-      <div id="infiniteCarousel" class="carousel slide container-xxl" data-bs-ride="carousel">
-        <div class="carousel-indicators"> <button type="button" data-bs-target="#infiniteCarousel" data-bs-slide-to="0"
-            class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button"
-            data-bs-target="#infiniteCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button> </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row g-4">
-              <div class="col-md-3">
-                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-1.webp" alt="Avatar recensore"
-                    title="Recensione cliente Eden Leaf" />
-                  <p> "Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante il
-                    temporale
-                    era pura magia, indimenticabile." </p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" alt="Avatar recensore"
-                    title="Recensione cliente Eden Leaf" />
-                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
-                    un'esperienza che vale ogni centesimo." </p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-3.webp" alt="Avatar recensore"
-                    title="Recensione cliente Eden Leaf" />
-                  <p> "Finalmente l'alta cucina incontra l'etica vera. Qui sopra il caos della città è solo un brutto
-                    ricordo, esiste solo armonia." </p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user1-prenota.webp" alt="Avatar recensore"
-                    title="Recensione cliente Eden Leaf" />
-                  <p> "Atmosfera futuristica ma incredibilmente accogliente. Ogni dettaglio, dal design ai piatti, 
-                    comunica attenzione per la natura e innovazione. Tornerò sicuramente." </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row g-4">
-              <div class="col-md-3">
-                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user2-prenota.webp" alt="Avatar recensore"
-                    title="Recensione cliente Eden Leaf" />
-                  <p> "Un luogo che unisce design, tecnologia e rispetto per l’ambiente. 
-                    Il menù è chiaro e inclusivo, perfetto anche per chi ha intolleranze." </p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user3-prenota.webp" alt="Avatar recensore"
-                    title="Recensione cliente Eden Leaf" />
-                  <p> "L’ambiente è curato e immersivo, il cibo originale e ben presentato. 
-                    Un’esperienza diversa dal solito, in senso molto positivo." </p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user4-prenota.webp" alt="Avatar recensore"
-                    title="Recensione cliente Eden Leaf" />
-                  <p> "Tecnologia, sostenibilità e accoglienza convivono perfettamente. 
-                    Un progetto curato in ogni dettaglio." </p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user5-prenota.png" alt="Avatar recensore"
-                    title="Recensione cliente Eden Leaf" />
-                  <p> "Dall’ingresso al dessert tutto è coerente. 
-                    Si mangia bene e si esce con la sensazione di aver vissuto qualcosa di unico." </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> <button class="carousel-control-prev custom-ctrl" type="button" data-bs-target="#infiniteCarousel"
-          data-bs-slide="prev"> <span class="glass-effect carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next custom-ctrl" type="button" data-bs-target="#infiniteCarousel"
-          data-bs-slide="next"> <span class="glass-effect carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-
-    <!--foglie-->
+    <!--prova foglie-->
     <div class="leaves-wrapper">
-      <div class="leaves leaves-right custom-leaves-prenota">
-        <img src="images/foglie/right-leaf-1.png" class="leaf" />
+      <div class="leaves leaves-left">
+        <img src="images/foglie/left-leaf.png" class="leaf" />
+      </div>
+
+      <div class="leaves leaves-right leaf-right-prenota">
+        <img src="images/foglie/leaf-right-prenota.png" class="leaf" />
       </div>
     </div>
 
-    <!-- FAQ-->
-    <div class="container section padding-section">
-      <h2 class="section-title text-center">FAQ</h2>
+    <!--Sezione 2 - prenotazione, recensioni e faq-->
+    <section id="prenota-s2" class="img-bg">
+      <!--barra prenotazione-->
+      <div class="search-container">
+        <div class="search-bar-custom glass-effect">
+          <div class="search-section">
+            <span class="search-label">Persone</span>
+            <div class="d-flex align-items-center justify-content-center mt-1">
+              <button type="button" class="btn-qty"
+                onclick="this.parentNode.querySelector('input').stepDown()">-</button>
+              <input type="number" class="search-input text-center p-0 m-0" value="2" min="1" max="10" readonly>
+              <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
+            </div>
+          </div>
 
-      <div class="accordion col-md-6">
-        <div class="glass-effect accordion-item">
-          <p class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              Come posso raggiungere il ristorante una volta arrivato all'Hub?
+          <div class="search-divider"></div>
+
+          <div class="search-section" onclick="document.getElementById('dateInput').showPicker()">
+            <span class="search-label">Data</span>
+            <span id="date-text" class="search-placeholder">Scegli la data</span>
+            <input type="date" id="dateInput" class="search-input-hidden" onchange="updateLabel(this, 'date-text')" />
+          </div>
+
+          <div class="search-divider"></div>
+
+          <div class="search-section" onclick="document.getElementById('timeInput').showPicker()">
+            <span class="search-label">Orario</span>
+            <select class="search-input glass-effect-select">
+              <option value="18:00">18:30</option>
+              <option value="18:30">19:00</option>
+              <option value="19:00">19:30</option>
+              <option value="19:00">20:00</option>
+              <option value="19:00">20:30</option>
+              <option value="19:00">21:00</option>
+            </select>
+          </div>
+
+          <button class="glass-effect search-btn-circle btn-custom-primary mt-5" onclick="mostraTavoli()">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+              focusable="false">
+              <path d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9" fill="none" stroke="currentColor"
+                stroke-width="4"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mappa-tavoli" class="container-xxl padding-section text-center d-none">
+        <h2>Tavoli disponibili</h2>
+        <p class="padding-intra-section">Scegli il tuo tavolo sulla mappa!</p>
+        <!--mappa-->
+        <div class="mmap-container">
+          <div class="ratio ratio-16x9 rounded-4 overflow-hidden iframe-crop">
+            <iframe title="Akihabara Map" src="https://view.genially.com/6973a50f9e4f170457936cb5" allowfullscreen
+              scrolling="yes">
+            </iframe>
+          </div>
+        </div>
+        <button id="btnConfermaPrenotazione" class="glass-effect btn btn-custom-primary mx-auto mt-5" type="button">
+          Prenota tavolo
+        </button>
+      </div>
+
+      <!-- Dicono di Noi -->
+      <div class="container-xxl padding-section text-center">
+        <h2>Dicono di noi</h2>
+
+
+        <!-- Mobile -->
+        <div class="d-block d-md-none">
+          <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-center p-4">
+                  <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-1.webp"
+                      alt="Avatar recensore" title="Recensione cliente Eden Leaf" />
+                    <p> "Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante il
+                      temporale
+                      era pura magia, indimenticabile." </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center p-4">
+                  <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user3-prenota.webp"
+                      alt="Avatar recensore" title="Recensione cliente Eden Leaf" />
+                    <p> "L’ambiente è curato e immersivo, il cibo originale e ben presentato.
+                      Un’esperienza diversa dal solito, in senso molto positivo." </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center p-4">
+                  <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user4-prenota.webp"
+                      alt="Avatar recensore" title="Recensione cliente Eden Leaf" />
+                    <p> "Tecnologia, sostenibilità e accoglienza convivono perfettamente.
+                      Un progetto curato in ogni dettaglio." </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center p-4">
+                  <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user5-prenota.png"
+                      alt="Avatar recensore" title="Recensione cliente Eden Leaf" />
+                    <p> "Dall’ingresso al dessert tutto è coerente.
+                      Si mangia bene e si esce con la sensazione di aver vissuto qualcosa di unico." </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </button>
-          </p>
-          <div id="collapseOne" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Il viaggio verso la Foglia Madre è parte dell'esperienza. Una volta arrivato al Livello 12 del "Tronco
-              Maestro", potrai scegliere se utilizzare l'ascensore bio-climatico (6 minuti di ascesa panoramica) o
-              percorrere la Greenway aerea, una passeggiata sospesa tra la vegetazione di circa 15 minuti.
+            <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Desktop -->
+        <div class="d-none d-md-block">
+          <div class="row">
+            <div class="col">
+              <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-1.webp" alt="Avatar recensore"
+                  title="Recensione cliente Eden Leaf" />
+                <p> "Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante il
+                  temporale
+                  era pura magia, indimenticabile." </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user3-prenota.webp"
+                  alt="Avatar recensore" title="Recensione cliente Eden Leaf" />
+                <p> "L’ambiente è curato e immersivo, il cibo originale e ben presentato.
+                  Un’esperienza diversa dal solito, in senso molto positivo." </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user4-prenota.webp"
+                  alt="Avatar recensore" title="Recensione cliente Eden Leaf" />
+                <p> "Tecnologia, sostenibilità e accoglienza convivono perfettamente.
+                  Un progetto curato in ogni dettaglio." </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card glass-effect"> <img class="mb-3" src="/images/icons/user5-prenota.png"
+                  alt="Avatar recensore" title="Recensione cliente Eden Leaf" />
+                <p> "Dall’ingresso al dessert tutto è coerente.
+                  Si mangia bene e si esce con la sensazione di aver vissuto qualcosa di unico." </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="glass-effect accordion-item">
-          <p class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              È possibile scegliere un tavolo specifico sulla mappa?
-            </button>
-          </p>
-          <div id="collapseTwo" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Assolutamente sì. Durante la fase di prenotazione digitale, potrai visualizzare la disponibilità in tempo
-              reale sulla mappa della cupola. Ogni tavolo offre un'esperienza unica.
+      </div>
+
+      <!--foglie-->
+      <div class="leaves-wrapper">
+        <div class="leaves leaves-right custom-leaves-prenota">
+          <img src="images/foglie/right-leaf-1.png" class="leaf" />
+        </div>
+      </div>
+
+      <!-- FAQ-->
+      <div class="container section padding-section">
+        <h2 class="section-title text-center">FAQ</h2>
+
+        <div class="accordion col-md-6">
+          <div class="glass-effect accordion-item">
+            <p class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Come posso raggiungere il ristorante una volta arrivato all'Hub?
+              </button>
+            </p>
+            <div id="collapseOne" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Il viaggio verso la Foglia Madre è parte dell'esperienza. Una volta arrivato al Livello 12 del "Tronco
+                Maestro", potrai scegliere se utilizzare l'ascensore bio-climatico (6 minuti di ascesa panoramica) o
+                percorrere la Greenway aerea, una passeggiata sospesa tra la vegetazione di circa 15 minuti.
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="glass-effect accordion-item">
-          <p class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Cosa succede se sono in ritardo?
-            </button>
-          </p>
-          <div id="collapseThree" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              La natura insegna la pazienza, ma l'equilibrio della Foglia Madre è delicato. Garantiamo la disponibilità
-              del tavolo per 20 minuti oltre l'orario prenotato. Se prevedi un ritardo maggiore, ti preghiamo di
-              avvisare il nostro Concierge Digitale tramite l'interfaccia dell'app o la rete standard.
+          <div class="glass-effect accordion-item">
+            <p class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                È possibile scegliere un tavolo specifico sulla mappa?
+              </button>
+            </p>
+            <div id="collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Assolutamente sì. Durante la fase di prenotazione digitale, potrai visualizzare la disponibilità in
+                tempo
+                reale sulla mappa della cupola. Ogni tavolo offre un'esperienza unica.
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="glass-effect accordion-item">
-          <p class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Esiste un codice di abbigliamento per cenare a Eden Leaf??
-            </button>
-          </p>
-          <div id="collapseFour" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Non imponiamo rigidi protocolli, ma suggeriamo un abbigliamento "Ecosostenibile-Elegante". Considera che
-              la temperatura all'interno della cupola è regolata sui 22°C costanti, simulando un'eterna primavera
-              boreale.
+          <div class="glass-effect accordion-item">
+            <p class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Cosa succede se sono in ritardo?
+              </button>
+            </p>
+            <div id="collapseThree" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                La natura insegna la pazienza, ma l'equilibrio della Foglia Madre è delicato. Garantiamo la
+                disponibilità
+                del tavolo per 20 minuti oltre l'orario prenotato. Se prevedi un ritardo maggiore, ti preghiamo di
+                avvisare il nostro Concierge Digitale tramite l'interfaccia dell'app o la rete standard.
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="glass-effect accordion-item">
-          <p class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              Come garantite la freschezza degli ingredienti se il ristorante è sospeso?
-            </button>
-          </p>
-          <div id="collapseFive" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Il concetto di "trasporto" per noi è obsoleto. Molti dei germogli e dei fiori eduli che troverai nel
-              piatto vengono raccolti dai rami della Foglia Madre pochi minuti prima del servizio. Per tutto il resto,
-              utilizziamo un sistema di micro-logistica a levitazione magnetica che collega i laboratori di coltivazione
-              direttamente alla cucina dello Chef Julio Vane.
+          <div class="glass-effect accordion-item">
+            <p class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Esiste un codice di abbigliamento per cenare a Eden Leaf??
+              </button>
+            </p>
+            <div id="collapseFour" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Non imponiamo rigidi protocolli, ma suggeriamo un abbigliamento "Ecosostenibile-Elegante". Considera che
+                la temperatura all'interno della cupola è regolata sui 22°C costanti, simulando un'eterna primavera
+                boreale.
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-effect accordion-item">
+            <p class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Come garantite la freschezza degli ingredienti se il ristorante è sospeso?
+              </button>
+            </p>
+            <div id="collapseFive" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Il concetto di "trasporto" per noi è obsoleto. Molti dei germogli e dei fiori eduli che troverai nel
+                piatto vengono raccolti dai rami della Foglia Madre pochi minuti prima del servizio. Per tutto il resto,
+                utilizziamo un sistema di micro-logistica a levitazione magnetica che collega i laboratori di
+                coltivazione
+                direttamente alla cucina dello Chef Julio Vane.
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
-  </section>
-  
-</main>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
     <div class="container-xxl text-center">

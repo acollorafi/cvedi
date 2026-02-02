@@ -125,12 +125,12 @@ p {
     }
 
     h2 {
-        font-size: 4rem;
+        font-size: 3rem;
         padding-bottom: 60px;
     }
 
     h3 {
-        font-size: 2.7rem;
+        font-size: 2rem;
         padding-bottom: 40px;
     }
 
@@ -202,7 +202,7 @@ p {
 .techline-home {
     position: absolute;
     margin-left: 0;
-    margin-top: 40dvh;
+    margin-top: 38dvh;
     max-width: 50%;
 }
 
@@ -594,6 +594,9 @@ p {
     top: 20px;
     width: 100%;
     z-index: 1000;
+    padding: 0.5rem 0;
+    left: 0;
+    right: 0;
 }
 
 .bg-body-tertiary {
@@ -647,16 +650,6 @@ p {
     border: var(--bs-glass-border);
 }
 
-/********************************************
-          NAVBAR
-********************************************/
-/* ===== NAVBAR STYLES ===== */
-.navbar {
-    padding: 0.5rem 0;
-    width: 100%;
-    left: 0;
-    right: 0;
-}
 
 .navbar .container-xxl {
     max-width: 100%;
@@ -746,14 +739,20 @@ p {
     border-color: #44DEE0;
     color: #ffffff;
 
-    box-shadow:
-        0 0 10px rgba(68, 222, 224, 0.5),
-        0 0 20px rgba(68, 222, 224, 0.3),
-        inset 0 0 8px rgba(68, 222, 224, 0.4);
+
     transition: all 0.3s ease-in-out;
     transform: translateY(-2px);
     /* Si alza leggermente */
 }
+
+a.nav-link.active {
+    background-color: transparent;
+}
+
+a.nav-link:hover {
+    background-color: transparent;
+}
+
 
 .btn-custom-primary {
     transition: all 0.3s ease-in-out;
@@ -868,7 +867,7 @@ footer {
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero_home_bg.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 10dvh
+    background-position: center 35%;
 }
 
 #home-s3 {
@@ -1085,6 +1084,7 @@ footer {
     object-fit: cover;
     width: 100%;
     height: auto;
+    
 }
 
 
@@ -1121,7 +1121,8 @@ footer {
 }
 
 .carousel-padding {
-    padding-top: 235px;
+    padding-top: 45px;
+    padding-bottom: 30px;
 }
 
 
@@ -1339,7 +1340,7 @@ body:has(.sostenibility-container) {
 .fase-nav {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     width: 40px;
     height: 40px;
     background-color: transparent;
@@ -1356,12 +1357,12 @@ body:has(.sostenibility-container) {
 }
 
 .fase-nav:hover {
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
     opacity: 0.8;
 }
 
 .fase-nav:active {
-    transform: translateY(-50%) scale(0.95);
+    transform: scale(0.95);
 }
 
 .prev-fase {
@@ -1424,7 +1425,7 @@ body:has(.sostenibility-container) {
 .expert-nav {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     width: 40px;
     height: 40px;
     background: transparent no-repeat center/contain;
@@ -2199,7 +2200,8 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .leaf-home-right .leaf {
-    width: 500px;}
+    width: 500px;
+}
 
 
 .leaf-home-left {
@@ -2383,23 +2385,25 @@ input::-webkit-calendar-picker-indicator {
     .leaf-home-right {
         top: -35vh;
         right: -800px;
-      }
-      .leaf-home-right .leaf {
+    }
+
+    .leaf-home-right .leaf {
         width: 380px;
-      }
-    
-      .leaf-home-left {
+    }
+
+    .leaf-home-left {
         left: -600px;
-      }
-    
-      .leaf-home-left-1 {
+    }
+
+    .leaf-home-left-1 {
         top: 35vh;
         left: -520px;
-      }
-      .leaf-home-left-1 .leaf {
+    }
+
+    .leaf-home-left-1 .leaf {
         width: 520px;
-      }
-    
+    }
+
 }
 
 
@@ -2420,7 +2424,7 @@ input::-webkit-calendar-picker-indicator {
         left: -200px;
         top: -200px;
     }
-    
+
     .custom-leaves {
         right: -260px;
     }
@@ -2556,25 +2560,27 @@ input::-webkit-calendar-picker-indicator {
     }
 
 
-  .leaf-home-right {
-    top: -30vh;
-    right: -520px;
-  }
-  .leaf-home-right .leaf {
-    width: 300px;
-  }
+    .leaf-home-right {
+        top: -30vh;
+        right: -520px;
+    }
 
-  .leaf-home-left {
-    left: -400px;
-  }
+    .leaf-home-right .leaf {
+        width: 300px;
+    }
 
-  .leaf-home-left-1 {
-    top: 30vh;
-    left: -450px;
-  }
-  .leaf-home-left-1 .leaf {
-    width: 380px;
-  }
+    .leaf-home-left {
+        left: -400px;
+    }
+
+    .leaf-home-left-1 {
+        top: 30vh;
+        left: -450px;
+    }
+
+    .leaf-home-left-1 .leaf {
+        width: 380px;
+    }
 
 }
 
