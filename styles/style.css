@@ -327,7 +327,7 @@ p {
 }*/
 
 
-/*Label h3 per sezioni menù e fasi sostenibilità*/
+/*Label h3 per sezioni menù e fasi sostenibilita*/
 .label-h3 {
     display: flex;
     padding: 20px 60px;
@@ -917,18 +917,18 @@ footer {
 
 }
 
-/*Sfondi pagina sostenibilità*/
-#sostenibilità-s1 {
+/*Sfondi pagina sostenibilita*/
+#sostenibilita-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilità/sfondo-sostenibilità.webp) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilita/sfondo-sostenibilita.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 70%;
 }
 
-#sostenibilità-s2 {
+#sostenibilita-s2 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilità/sfondo-sostenibilità.webp) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilita/sfondo-sostenibilita.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -1203,7 +1203,7 @@ footer {
      REGOLE ANTI-OVERFLOW - PAGINA SOSTENIBILITÀ
 ********************************************/
 
-/* Prevenzione overflow orizzontale - SOLO per pagina sostenibilità (Valutare se aggiungerla come regola globale) */
+/* Prevenzione overflow orizzontale - SOLO per pagina sostenibilita (Valutare se aggiungerla come regola globale) */
 html:has(.sostenibility-container),
 body:has(.sostenibility-container) {
     overflow-x: hidden;
@@ -1227,9 +1227,9 @@ body:has(.sostenibility-container) {
 
 /* Hero Section */
 
-.hero-sostenibilità {
+.hero-sostenibilita {
     min-height: 90vh;
-    background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
+    background-image: url("../images/sostenibilita/sfondo-sostenibilita.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1243,7 +1243,7 @@ body:has(.sostenibility-container) {
 }
 
 @media (max-width: 767px) {
-    .hero-sostenibilità .hero-title {
+    .hero-sostenibilita .hero-title {
         font-size: 1.75rem;
     }
 
@@ -1254,7 +1254,7 @@ body:has(.sostenibility-container) {
 
 /* Background principale */
 .fullpage-bg {
-    background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
+    background-image: url("../images/sostenibilita/sfondo-albero-sostenibilita.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1330,12 +1330,12 @@ body:has(.sostenibility-container) {
 
 .prev-fase {
     left: -10px;
-    background-image: url("/images/sostenibilità/arrow-left.svg");
+    background-image: url("/images/sostenibilita/arrow-left.svg");
 }
 
 .next-fase {
     right: -10px;
-    background-image: url("/images/sostenibilità/arrow-right.svg");
+    background-image: url("/images/sostenibilita/arrow-right.svg");
 }
 
 .section-content .label-custom {
@@ -1407,12 +1407,12 @@ body:has(.sostenibility-container) {
 
 .prev-expert {
     left: 0;
-    background-image: url("/images/sostenibilità/arrow-left.svg");
+    background-image: url("/images/sostenibilita/arrow-left.svg");
 }
 
 .next-expert {
     right: 0;
-    background-image: url("/images/sostenibilità/arrow-right.svg");
+    background-image: url("/images/sostenibilita/arrow-right.svg");
 }
 
 .expert-item {
@@ -1971,10 +1971,10 @@ input::-webkit-calendar-picker-indicator {
 /* foglia singola */
 .leaf {
     position: absolute;
-    width: 240px;       
+    width: 240px;
     opacity: 0.9;
     will-change: transform;
-  }
+}
 
 .leaves-left .leaf {
     width: 800px;
@@ -1985,9 +1985,9 @@ input::-webkit-calendar-picker-indicator {
 .leaves-right .leaf:nth-child(1) {
     top: 20%;
     right: -50px;
-  }
-  
-  .leaves-right .leaf:nth-child(2) {
+}
+
+.leaves-right .leaf:nth-child(2) {
     top: 65%;
     right: -30px;
 }
@@ -2076,40 +2076,43 @@ input::-webkit-calendar-picker-indicator {
     z-index: 11;
     top: -15vh;
     left: 60px;
-  }
+}
 
-  .leaf-piatto-right {
+.leaf-piatto-right {
     position: absolute;
     z-index: 11;
     top: -50vh;
-  }
-  .leaf-piatto-right .leaf {
+}
+
+.leaf-piatto-right .leaf {
     width: 600px;
-  }
+}
 
-  .leaf-ingredients {
+.leaf-ingredients {
     top: -38vh;
-  }
-  .leaf-ingredients .leaf {
-    width: 420px;
-  }
-  
-  .custom-leaves-allergen {
-    top: -20vh; 
-    right: -300px;
-  }
-  
-  .custom-leaves-allergen .leaf {
-    width: 800px;  
-  }
+}
 
-  .custom-leaves-allergen-left{
+.leaf-ingredients .leaf {
+    width: 420px;
+}
+
+.custom-leaves-allergen {
+    top: -20vh;
+    right: -300px;
+}
+
+.custom-leaves-allergen .leaf {
+    width: 800px;
+}
+
+.custom-leaves-allergen-left {
     top: 20vh;
     left: 300px;
-  }
-  .custom-leaves-allergen-left .leaf {
+}
+
+.custom-leaves-allergen-left .leaf {
     width: 400px;
-  }
+}
 
 .leaf {
     will-change: transform;
@@ -2198,40 +2201,45 @@ input::-webkit-calendar-picker-indicator {
 
     .left-leaf-rami .leaf {
         width: 420px;
-      }
-      .leaf-piatto-left {
-        left: 20px;
-      }
-    
-      .leaf-piatto-right {
-        top: -40vh;
-      }
-      .leaf-piatto-right .leaf {
-        width: 450px;
-      }
-    
-      .leaf-ingredients {
-        top: -30vh;
-      }
-      .leaf-ingredients .leaf {
-        width: 320px;
-      }
-    
-      .custom-leaves-allergen {
-        right: -180px;
-      }
-      .custom-leaves-allergen .leaf {
-        width: 550px;
-      }
-    
-      .custom-leaves-allergen-left {
-        left: 180px;
-      }
-      .custom-leaves-allergen-left .leaf {
-        width: 300px;
-      }
     }
-    
+
+    .leaf-piatto-left {
+        left: 20px;
+    }
+
+    .leaf-piatto-right {
+        top: -40vh;
+    }
+
+    .leaf-piatto-right .leaf {
+        width: 450px;
+    }
+
+    .leaf-ingredients {
+        top: -30vh;
+    }
+
+    .leaf-ingredients .leaf {
+        width: 320px;
+    }
+
+    .custom-leaves-allergen {
+        right: -180px;
+    }
+
+    .custom-leaves-allergen .leaf {
+        width: 550px;
+    }
+
+    .custom-leaves-allergen-left {
+        left: 180px;
+    }
+
+    .custom-leaves-allergen-left .leaf {
+        width: 300px;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .leaf {
@@ -2321,35 +2329,38 @@ input::-webkit-calendar-picker-indicator {
 
     .left-leaf-rami .leaf {
         width: 320px;
-      }
-      .leaf-piatto-left {
-        top: -10vh;
-      }
-    
-      .leaf-piatto-right .leaf {
-        width: 320px;
-      }
-    
-      .leaf-ingredients .leaf {
-        width: 240px;
-      }
-    
-      .custom-leaves-allergen {
-        right: -120px;
-      }
-      .custom-leaves-allergen .leaf {
-        width: 380px;
-      }
-    
-      .custom-leaves-allergen-left {
-        left: 120px;
-      }
-      .custom-leaves-allergen-left .leaf {
-        width: 220px;
-      }
+    }
 
-  }
-  
+    .leaf-piatto-left {
+        top: -10vh;
+    }
+
+    .leaf-piatto-right .leaf {
+        width: 320px;
+    }
+
+    .leaf-ingredients .leaf {
+        width: 240px;
+    }
+
+    .custom-leaves-allergen {
+        right: -120px;
+    }
+
+    .custom-leaves-allergen .leaf {
+        width: 380px;
+    }
+
+    .custom-leaves-allergen-left {
+        left: 120px;
+    }
+
+    .custom-leaves-allergen-left .leaf {
+        width: 220px;
+    }
+
+}
+
 
 @media (max-width: 768px) {
     .leaves-wrapper {
