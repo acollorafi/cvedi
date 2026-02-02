@@ -1339,7 +1339,7 @@ body:has(.sostenibility-container) {
 .fase-nav {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     width: 40px;
     height: 40px;
     background-color: transparent;
@@ -1356,12 +1356,12 @@ body:has(.sostenibility-container) {
 }
 
 .fase-nav:hover {
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
     opacity: 0.8;
 }
 
 .fase-nav:active {
-    transform: translateY(-50%) scale(0.95);
+    transform: scale(0.95);
 }
 
 .prev-fase {
@@ -1424,7 +1424,7 @@ body:has(.sostenibility-container) {
 .expert-nav {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     width: 40px;
     height: 40px;
     background: transparent no-repeat center/contain;
@@ -2199,7 +2199,8 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .leaf-home-right .leaf {
-    width: 500px;}
+    width: 500px;
+}
 
 
 .leaf-home-left {
@@ -2383,23 +2384,25 @@ input::-webkit-calendar-picker-indicator {
     .leaf-home-right {
         top: -35vh;
         right: -800px;
-      }
-      .leaf-home-right .leaf {
+    }
+
+    .leaf-home-right .leaf {
         width: 380px;
-      }
-    
-      .leaf-home-left {
+    }
+
+    .leaf-home-left {
         left: -600px;
-      }
-    
-      .leaf-home-left-1 {
+    }
+
+    .leaf-home-left-1 {
         top: 35vh;
         left: -520px;
-      }
-      .leaf-home-left-1 .leaf {
+    }
+
+    .leaf-home-left-1 .leaf {
         width: 520px;
-      }
-    
+    }
+
 }
 
 
@@ -2420,7 +2423,7 @@ input::-webkit-calendar-picker-indicator {
         left: -200px;
         top: -200px;
     }
-    
+
     .custom-leaves {
         right: -260px;
     }
@@ -2556,25 +2559,27 @@ input::-webkit-calendar-picker-indicator {
     }
 
 
-  .leaf-home-right {
-    top: -30vh;
-    right: -520px;
-  }
-  .leaf-home-right .leaf {
-    width: 300px;
-  }
+    .leaf-home-right {
+        top: -30vh;
+        right: -520px;
+    }
 
-  .leaf-home-left {
-    left: -400px;
-  }
+    .leaf-home-right .leaf {
+        width: 300px;
+    }
 
-  .leaf-home-left-1 {
-    top: 30vh;
-    left: -450px;
-  }
-  .leaf-home-left-1 .leaf {
-    width: 380px;
-  }
+    .leaf-home-left {
+        left: -400px;
+    }
+
+    .leaf-home-left-1 {
+        top: 30vh;
+        left: -450px;
+    }
+
+    .leaf-home-left-1 .leaf {
+        width: 380px;
+    }
 
 }
 
