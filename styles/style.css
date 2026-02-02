@@ -331,7 +331,13 @@ p {
 }
 
 .label-piatti {
-    
+    border: 1px solid #44DEE0;
+    background: linear-gradient(0deg, rgba(68, 222, 224, 0.20) 0%, rgba(68, 222, 224, 0.20) 100%), rgba(246, 241, 231, 0.19);
+    box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
+}
+
+.label-piatti:hover {
+    box-shadow: 0 0 10px rgba(68, 222, 224, 0.6);
 }
 
 /*Label h3 per sezioni menù e fasi sostenibilita*/
