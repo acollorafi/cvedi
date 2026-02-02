@@ -29,20 +29,20 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary">
     <div class="container-xxl">
-        <a class="navbar-brand glass-blur-only" href="index.html">
-            <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img">
-        </a>
+      <a class="navbar-brand glass-blur-only" href="index.html">
+        <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img">
+      </a>
 
-        <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
-        <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
-            <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
-            <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
-            <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+      <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
+      <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
+        <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+        <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+        <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
       <!-- Menu collapse -->
       <div class="glass-effect collapse navbar-collapse h-100" id="navbarSupportedContent">
@@ -67,43 +67,44 @@
 
       <!-- Desktop: PRENOTA + Bandiera (visibili solo >= 1200px) -->
       <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
-        <button class="glass-effect btn btn-custom-primary btn-prenota active" type="button" onclick="window.location.href='prenota.html'">PRENOTA</button>
+        <button class="glass-effect btn btn-custom-primary btn-prenota active" type="button"
+          onclick="window.location.href='prenota.html'">PRENOTA</button>
         <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
       </div>
     </div>
   </nav>
 
-    <!-- Sezione 1 - Hero -->
-    <section id="prenota-s1" class="img-bg">
-      <div class="hero-section container section">
-        <h1>PRENOTA</h1>
-      </div>
-    </section>
+  <!-- Sezione 1 - Hero -->
+  <section id="prenota-s1" class="img-bg">
+    <div class="hero-section container section">
+      <h1>PRENOTA</h1>
+    </div>
+  </section>
 
-         <!--prova foglie-->
-         <div class="leaves-wrapper">
-          <div class="leaves leaves-left">
-              <img src="images/foglie/left-leaf.png" class="leaf" />
-          </div>
-          
-          <div class="leaves leaves-right leaf-right-prenota">
-              <img src="images/foglie/leaf-right-prenota.png" class="leaf" />
-          </div>
-      </div>
+  <!--prova foglie-->
+  <div class="leaves-wrapper">
+    <div class="leaves leaves-left">
+      <img src="images/foglie/left-leaf.png" class="leaf" />
+    </div>
 
-    <!--Sezione 2 - prenotazione, recensioni e faq-->
-    <section id="prenota-s2" class="img-bg">
-      <!--barra prenotazione-->
-      <div class="search-container">
-        <div class="search-bar-custom glass-effect">
-          <div class="search-section">
-            <span class="search-label">Persone</span>
-            <div class="d-flex align-items-center justify-content-center mt-1">
-                <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepDown()">-</button>
-                <input type="number" class="search-input text-center p-0 m-0" value="2" min="1" max="10" readonly>
-                <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
-            </div>
+    <div class="leaves leaves-right leaf-right-prenota">
+      <img src="images/foglie/leaf-right-prenota.png" class="leaf" />
+    </div>
+  </div>
+
+  <!--Sezione 2 - prenotazione, recensioni e faq-->
+  <section id="prenota-s2" class="img-bg">
+    <!--barra prenotazione-->
+    <div class="search-container">
+      <div class="search-bar-custom glass-effect">
+        <div class="search-section">
+          <span class="search-label">Persone</span>
+          <div class="d-flex align-items-center justify-content-center mt-1">
+            <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepDown()">-</button>
+            <input type="number" class="search-input text-center p-0 m-0" value="2" min="1" max="10" readonly>
+            <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
           </div>
+        </div>
 
         <div class="search-divider"></div>
 
@@ -128,7 +129,7 @@
           </select>
         </div>
 
-        <button class="glass-effect search-btn-circle btn-search" onclick="mostraTavoli()">
+        <button class="glass-effect search-btn-circle btn-custom-primary" onclick="mostraTavoli()">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
             focusable="false">
             <path d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9" fill="none" stroke="currentColor"
@@ -155,86 +156,89 @@
     </div>
 
     <!--recensioni-->
-<div class="container-xxl padding-section text-center">
-  <h2>Recensioni</h2>
-  <div id="infiniteCarousel" class="carousel slide container-xxl" data-bs-ride="carousel">
-    <div class="carousel-indicators"> <button type="button" data-bs-target="#infiniteCarousel" data-bs-slide-to="0"
-        class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button"
-        data-bs-target="#infiniteCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button> </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row g-4">
-          <div class="col-md-3">
-            <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-1.webp" />
-              <p> "Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante il temporale
-                era pura magia, indimenticabile." </p>
+    <div class="container-xxl padding-section text-center">
+      <h2>Recensioni</h2>
+      <div id="infiniteCarousel" class="carousel slide container-xxl" data-bs-ride="carousel">
+        <div class="carousel-indicators"> <button type="button" data-bs-target="#infiniteCarousel" data-bs-slide-to="0"
+            class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button"
+            data-bs-target="#infiniteCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button> </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-1.webp" />
+                  <p> "Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante il
+                    temporale
+                    era pura magia, indimenticabile." </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-3.webp" />
+                  <p> "Finalmente l'alta cucina incontra l'etica vera. Qui sopra il caos della città è solo un brutto
+                    ricordo, esiste solo armonia." </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
-              <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
-                un'esperienza che vale ogni centesimo." </p>
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-3.webp" />
-              <p> "Finalmente l'alta cucina incontra l'etica vera. Qui sopra il caos della città è solo un brutto
-                ricordo, esiste solo armonia." </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
-              <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
-                un'esperienza che vale ogni centesimo." </p>
-            </div>
-          </div>
-        </div>
+        </div> <button class="carousel-control-prev custom-ctrl" type="button" data-bs-target="#infiniteCarousel"
+          data-bs-slide="prev"> <span class="glass-effect carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next custom-ctrl" type="button" data-bs-target="#infiniteCarousel"
+          data-bs-slide="next"> <span class="glass-effect carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
-      <div class="carousel-item">
-        <div class="row g-4">
-          <div class="col-md-3">
-            <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
-              <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
-                un'esperienza che vale ogni centesimo." </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
-              <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
-                un'esperienza che vale ogni centesimo." </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
-              <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
-                un'esperienza che vale ogni centesimo." </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
-              <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
-                un'esperienza che vale ogni centesimo." </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <button class="carousel-control-prev custom-ctrl" type="button" data-bs-target="#infiniteCarousel"
-      data-bs-slide="prev"> <span class="glass-effect carousel-control-prev-icon" aria-hidden="true"></span> </button>
-    <button class="carousel-control-next custom-ctrl" type="button" data-bs-target="#infiniteCarousel"
-      data-bs-slide="next"> <span class="glass-effect carousel-control-next-icon" aria-hidden="true"></span> </button>
-  </div>
-</div>
-    
+    </div>
+
     <!--foglie-->
- <div class="leaves-wrapper">
-  <div class="leaves leaves-right custom-leaves-prenota">
-    <img src="images/foglie/right-leaf-1.png" class="leaf" />
-  </div>
-</div>
-     
-      <!-- FAQ-->
-      <div class="container section padding-section">
-        <h2 class="section-title text-center">FAQ</h2>
+    <div class="leaves-wrapper">
+      <div class="leaves leaves-right custom-leaves-prenota">
+        <img src="images/foglie/right-leaf-1.png" class="leaf" />
+      </div>
+    </div>
+
+    <!-- FAQ-->
+    <div class="container section padding-section">
+      <h2 class="section-title text-center">FAQ</h2>
 
       <div class="accordion col-md-6">
         <div class="glass-effect accordion-item">
@@ -319,19 +323,19 @@
       </div>
     </div>
     </div>
-    </section>
+  </section>
 
   <footer>
-      <div class="container-xxl text-center">
-          <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" />
-          <div>
-              <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
-              <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
-              <p>© 2025 Eden Leaf Ecosystems.</br>
-              Tutti i diritti riservati alla Natura.</br>
-              P.IVA 000123SOLAR</p>
-          </div>
+    <div class="container-xxl text-center">
+      <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" />
+      <div>
+        <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
+        <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
+        <p>© 2025 Eden Leaf Ecosystems.</br>
+          Tutti i diritti riservati alla Natura.</br>
+          P.IVA 000123SOLAR</p>
       </div>
+    </div>
   </footer>
 
   <div id="modalOverlay" class="modal-custom-overlay">

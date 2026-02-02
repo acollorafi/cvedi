@@ -707,7 +707,7 @@ p {
 /* button prenota hover */
 .btn-custom-primary:hover,
 .btn-custom-primary.active {
-    background-color: rgba(68, 222, 224, 0.2);
+    background-color: rgba(68, 222, 224, 0.2) !important;
     /* Sfondo leggermente colorato */
     border-color: #44DEE0;
     color: #ffffff;
@@ -1734,8 +1734,17 @@ input::-webkit-calendar-picker-indicator {
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
-    background-color: #44dde099;
-    box-shadow: 0 0 15px var(--bs-cyan);
+    background-color: rgba(68, 222, 224, 0.2) !important;
+    /* Sfondo leggermente colorato */
+    border-color: #44DEE0;
+    color: #ffffff;
+
+    box-shadow:
+        0 0 10px rgba(68, 222, 224, 0.5),
+        0 0 20px rgba(68, 222, 224, 0.3),
+        inset 0 0 8px rgba(68, 222, 224, 0.4);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 1200px) {
