@@ -2054,10 +2054,50 @@ input::-webkit-calendar-picker-indicator {
     left: 130px;
 }
 
+/*non mi ricrodo se da qua o da più su di sistemare mobile*/
 .left-leaf-rami .leaf {
     width: 500px;
 }
 
+.leaf-piatto-left {
+    position: absolute;
+    z-index: 11;
+    top: -15vh;
+    left: 60px;
+  }
+
+  .leaf-piatto-right {
+    position: absolute;
+    z-index: 11;
+    top: -50vh;
+  }
+  .leaf-piatto-right .leaf {
+    width: 600px;
+  }
+
+  .leaf-ingredients {
+    top: -38vh;
+  }
+  .leaf-ingredients .leaf {
+    width: 420px;
+  }
+  
+  .custom-leaves-allergen {
+    top: -20vh; 
+    right: -300px;
+  }
+  
+  .custom-leaves-allergen .leaf {
+    width: 800px;  
+  }
+
+  .custom-leaves-allergen-left{
+    top: 20vh;
+    left: 300px;
+  }
+  .custom-leaves-allergen-left .leaf {
+    width: 400px;
+  }
 
 .leaf {
     will-change: transform;
@@ -2146,9 +2186,40 @@ input::-webkit-calendar-picker-indicator {
 
     .left-leaf-rami .leaf {
         width: 420px;
+      }
+      .leaf-piatto-left {
+        left: 20px;
+      }
+    
+      .leaf-piatto-right {
+        top: -40vh;
+      }
+      .leaf-piatto-right .leaf {
+        width: 450px;
+      }
+    
+      .leaf-ingredients {
+        top: -30vh;
+      }
+      .leaf-ingredients .leaf {
+        width: 320px;
+      }
+    
+      .custom-leaves-allergen {
+        right: -180px;
+      }
+      .custom-leaves-allergen .leaf {
+        width: 550px;
+      }
+    
+      .custom-leaves-allergen-left {
+        left: 180px;
+      }
+      .custom-leaves-allergen-left .leaf {
+        width: 300px;
+      }
     }
-}
-
+    
 
 @media (max-width: 1024px) {
     .leaf {
@@ -2238,9 +2309,35 @@ input::-webkit-calendar-picker-indicator {
 
     .left-leaf-rami .leaf {
         width: 320px;
-    }
-}
+      }
+      .leaf-piatto-left {
+        top: -10vh;
+      }
+    
+      .leaf-piatto-right .leaf {
+        width: 320px;
+      }
+    
+      .leaf-ingredients .leaf {
+        width: 240px;
+      }
+    
+      .custom-leaves-allergen {
+        right: -120px;
+      }
+      .custom-leaves-allergen .leaf {
+        width: 380px;
+      }
+    
+      .custom-leaves-allergen-left {
+        left: 120px;
+      }
+      .custom-leaves-allergen-left .leaf {
+        width: 220px;
+      }
 
+  }
+  
 
 @media (max-width: 768px) {
     .leaves-wrapper {
