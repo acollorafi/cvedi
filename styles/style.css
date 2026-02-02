@@ -1616,6 +1616,11 @@ body:has(.sostenibility-container) {
     opacity: 0.7;
 }
 
+/* Testo orario */
+.search-input option {
+    color: var(--bs-black);
+}
+
 /* Divisori verticali */
 .search-divider {
     width: 1px;
