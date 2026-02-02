@@ -1973,10 +1973,34 @@ input::-webkit-calendar-picker-indicator {
     width: 1000px;
   }
 
+  /*da qui fai responsive*/
+  .right-leaves-risto {
+    top: -50vh;
+    right: -250px;
+  }
+
+  .right-leaves-risto .leaf {
+    width: 800px;
+  }
+
+.right-leaves-rami {
+    top: 10vh;
+    right: -120px;
+}
+
+.right-leaves-rami .leaf {
+    width: 500px;
+  }
+
+.left-leaves-rami {
+    top: 45vh; 
+}
+
   .leaf {
     will-change: transform;
     transform: translateZ(0);
   }
+
 /*riduzione foglie info*/
 @media (max-width: 1400px) {
 
@@ -2008,6 +2032,24 @@ input::-webkit-calendar-picker-indicator {
     }
     .custom-leaves-3 .leaf {
       width: 850px;
+    }
+
+    .leaf-right-prenota {
+        top: -45vh;
+        right: -200px;
+    }
+    
+      .leaf-right-prenota .leaf {
+        width: 550px;
+    }
+    
+      .custom-leaves-prenota {
+        top: -25vh;
+        right: -220px;
+    }
+    
+      .custom-leaves-prenota .leaf {
+        width: 750px;
     }
     
   }
@@ -2050,6 +2092,24 @@ input::-webkit-calendar-picker-indicator {
     .custom-leaves-3 .leaf {
       width: 600px;
     }
+
+    .leaf-right-prenota {
+        top: -35vh;
+        right: -150px;
+      }
+    
+      .leaf-right-prenota .leaf {
+        width: 420px;
+      }
+    
+      .custom-leaves-prenota {
+        top: -20vh;
+        right: -160px;
+      }
+    
+      .custom-leaves-prenota .leaf {
+        width: 550px;
+      }
   }
   
 
