@@ -1924,7 +1924,7 @@ input::-webkit-calendar-picker-indicator {
     }
 }
 
-.piatti-hero-section {
+.custom-hero-section {
     text-align: center;
     align-items: center;
     padding: 20dvh 5dvw 0 5dvw;
@@ -1944,7 +1944,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 @media (min-width: 768px) {
-    .piatti-hero-section {
+    .custom-hero-section {
         padding: 20dvh 5dvw 0 5dvw;
     }
 
