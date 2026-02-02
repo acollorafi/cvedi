@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Funzione globale per chiudere il pop-up (richiamata dal tasto "Ottimo!" della modale)
+//pop up prenota
 window.chiudiPopUp = function() {
     const overlay = document.getElementById('modalOverlay');
     if (overlay) {
@@ -78,61 +78,69 @@ function chiudiPopUp() {
     // window.location.reload(); 
 }
 
-// //prova foglie
+//prova foglie
 document.addEventListener("DOMContentLoaded", () => {
-    const leaves = document.querySelectorAll(".leaf");
-    if (!leaves.length) return;
-  
-    let wind = 0;
-    let lastScrollY = window.scrollY;
-  
-    window.addEventListener("scroll", () => {
-      const delta = window.scrollY - lastScrollY;
-      lastScrollY = window.scrollY;
-  
-      // accumula vento (questa è la chiave)
+  const leaves = document.querySelectorAll(".leaf");
+  if (!leaves.length) return;
+
+  let wind = 0;
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  let rafId = null;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const currentScrollY = window.scrollY;
+      const delta = currentScrollY - lastScrollY;
+      lastScrollY = currentScrollY;
+
       wind += delta * 0.3;
-  
-      // limite massimo
       wind = Math.max(Math.min(wind, 20), -20);
+
+      // avvia animazione solo se non è già attiva
+      if (!ticking) {
+        ticking = true;
+        rafId = requestAnimationFrame(animate);
+      }
+    },
+    { passive: true }
+  );
+
+  function animate() {
+    wind *= 0.92;
+
+    const time = performance.now();
+
+    leaves.forEach((leaf, i) => {
+      const direction = leaf.closest(".leaves-right") ? -1 : 1;
+
+      const swayX =
+        Math.sin(time * 0.002 + i) * wind * 0.4 * direction;
+
+      const swayRot =
+        Math.sin(time * 0.0015 + i) * wind * 0.3 * direction;
+
+      leaf.style.transform = `
+        translateX(${swayX}px)
+        rotate(${swayRot}deg)
+      `;
     });
-  
-    function animate() {
-      // inerzia / smorzamento
-      wind *= 0.95;
-  
-      leaves.forEach((leaf, i) => {
-        const direction = leaf.closest(".leaves-right") ? -1 : 1;
-  
-        const swayX =
-          Math.sin(Date.now() * 0.002 + i) *
-          wind *
-          0.4 *
-          direction;
-  
-        const swayRot =
-          Math.sin(Date.now() * 0.0015 + i) *
-          wind *
-          0.3 *
-          direction;
-  
-        leaf.style.transform = `
-          translateX(${swayX}px)
-          rotate(${swayRot}deg)
-        `;
-      });
-  
-      requestAnimationFrame(animate);
+
+    // se il vento è ancora percepibile → continua
+    if (Math.abs(wind) > 0.1) {
+      rafId = requestAnimationFrame(animate);
+    } else {
+      ticking = false;
+      cancelAnimationFrame(rafId);
     }
-  
-    animate();
-  });
-  
+  }
+});
+
   
     
 
 //prova foglie home
-
 
 
 

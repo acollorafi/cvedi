@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piatto2</title>
+    <title>Petali di Floricanto</title>
 
     <!-- Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -27,47 +27,55 @@
     </svg>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
+    <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="100" height="100">
+            <a class="navbar-brand glass-blur-only" href="index.html">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" title="Eden Leaf - Il primo ristorante Solarpunk" class="logo-img">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+           <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
+<div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
+    <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua" width="30" height="20" />
+    <button class="glass-effect btn btn-custom-primary" type="button" onclick="window.location.href='prenota.html'">PRENOTA</button>
+    <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
 
-            <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
+            <!-- Menu collapse -->
+            <div class="glass-effect collapse navbar-collapse h-100" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">HOME</a>
+                        <a class="nav-link" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">RISTORANTE</a>
+                        <a class="nav-link" href="ristorante.html">RISTORANTE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">MENU</a>
+                        <a class="nav-link" href="menu.html">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">INFO</a>
+                        <a class="nav-link" href="info.html">INFO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SOSTENIBILITA</a>
+                        <a class="nav-link active" aria-current="page" href="sostenibilita.html">SOSTENIBILITÀ</a>
                     </li>
                 </ul>
             </div>
-            <div class="d-flex align-items-center" style="gap: 45px;">
-                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
-                <img src="images/flags/world.webp" class="navbar-img-languages" />
+
+            <!-- Desktop: PRENOTA + Bandiera (visibili solo >= 1200px) -->
+            <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
+                <button class="glass-effect btn btn-custom-primary btn-prenota" type="button" onclick="window.location.href='prenota.html'">PRENOTA</button>
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua" width="30" height="20" />
             </div>
         </div>
     </nav>
 
     <!-- TODO: fix bottom gradient (don't use image gradient, use css)-->
-    <div class="piatti-hero-bg" id="piatto01-s1">
-        <div class="hero-section section align-self-center">
+    <section class="piatti-hero-bg">
+        <div class="piatti-hero-section section align-self-center">
             <h1>Petali di Floricanto</h1>
             <p class="hero-text">
                 Petali viola dalla naturale bioluminescenza, coltivati in ambienti aeroponici per preservarne la
@@ -76,16 +84,19 @@
                 biodegradabile unico che ridefinisce il concetto di alta cucina d'avanguardia.
             </p>
         </div>
-        <img src="images/piatto02/hero_piatto02.webp" class="img-fluid" />
-    </div>
+        <img src="images/piatto02/hero_piatto02.webp" class="img-fluid" alt="Piatto Petali di Floricanto"
+        title="Petali di Floricanto - Petali viola bioluminescenti Eden Leaf"/>
+    </section>
 
 
-    <div class="piatti-ingredienti-bg" id="piatto01-s2">
+    <section class="ingredienti-piatto-bg">
 
         <div class="text-center padding-section">
-            <h2 class="padding-text" style="padding-top: 90px;">Scopri gli ingredienti</h2>
+            <h2 class="padding-text discover-ingredients-heading">Scopri gli ingredienti</h2>
             <div class="container px-3 px-sm-0">
-                <img src="images/piatto02/ingredienti_piatto2.webp" class="img-fluid mx-auto d-block">
+                <img src="images/piatto02/ingredienti_piatto2.webp"
+                    class="img-fluid mx-auto d-block ingredienti-piatto-img" alt="Composizione degli ingredienti dei Petali di Floricanto"
+                    title="Gli ingredienti esclusivi del piatto Petali di Floricanto">
             </div>
         </div>
 
@@ -101,7 +112,8 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto02/ingrediente1.webp" alt="" />
+                                <img src="images/piatto02/ingrediente1.webp" alt="Ozono Edibile" 
+                                title="Ozono Edibile - Nebulizzazione di essenza di pino mugo e ozono alimentare" />
                                 <span class="menu-card-label label-custom">Ozono Edibile</span>
                             </div>
 
@@ -122,7 +134,8 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto02/ingrediente2.webp" alt="" />
+                                <img src="images/piatto02/ingrediente2.webp" alt="Muschio rigenerato" 
+                                title="Muschio rigenerato - Spugna di clorofilla estratta da spirulina e Matcha" />
                                 <span class="menu-card-label label-custom">Muschio rigenerato</span>
                             </div>
 
@@ -143,7 +156,8 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto02/ingrediente3.webp" alt="" />
+                                <img src="images/piatto02/ingrediente3.webp" alt="Gocce di Luce" 
+                                title="Gocce di Luce - Coulis di mango fermentato e zafferano bio-controllato" />
                                 <span class="menu-card-label label-custom">Gocce di Luce</span>
                             </div>
 
@@ -163,7 +177,8 @@
 
                             <!-- PIATTO -->
                             <div class="menu-card-img">
-                                <img src="images/piatto02/ingrediente4.webp" alt="" />
+                                <img src="images/piatto02/ingrediente4.webp" alt="Rugiada centrale" 
+                                title="Rugiada centrale - Sfera di kombucha ai frutti di bosco con sferificazione inversa" />
                                 <span class="menu-card-label label-custom">Rugiada centrale</span>
                             </div>
 
@@ -185,36 +200,42 @@
             <h2 class="padding-text">Allergeni</h2>
             <div class="row justify-content-center">
                 <div class="col-4 col-md-2">
-                    <img src="images/piatto01/allergeno1.webp" class="allergeni">
+                    <img src="images/piatto01/allergeno1.webp" class="allergeni" alt="Allergene: Amido Purpureo"
+                    title="Contiene: Amido Purpureo">
                     <p>Amido Purpureo</p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <img src="images/piatto01/allergeno2.webp" class="allergeni">
+                    <img src="images/piatto01/allergeno2.webp" class="allergeni"alt="Allergene: Semi di mango"
+                    title="Contiene: Semi di mango">
                     <p>Semi di mango </p>
                 </div>
                 <div class="col-4 col-md-2">
-                    <img src="images/piatto01/allergeno3.webp" class="allergeni">
+                    <img src="images/piatto01/allergeno3.webp" class="allergeni" alt="Allergene: Clorofilla Spirulina"
+                    title="Contiene: Clorofilla Spirulina">
                     <p>Clorofilla Spirulina</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="text-center footer">
-        <!-- Add more vertical space on mobile -->
-        <div class="d-md-none" style="height: 200px;"></div>
-        <img src="images/logo/logo-footer.webp" style="width: 190px; height: 190px;" />
-        <div style="margin-top: 20px;">
-            <p style="font-size: 32px; font-weight: bold;">Il primo ristorante Solarpunk.</p>
-            <p>Ogni giorno dalle 18:00 alle 24:00</p>
+    <footer>
+        <div class="container-xxl text-center">
+            <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" title="Eden Leaf - Il primo ristorante Solarpunk" />
+            <div>
+                <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
+                <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
+                <p>© 2025 Eden Leaf Ecosystems.</br>
+                Tutti i diritti riservati alla Natura.</br>
+                P.IVA 000123SOLAR</p>
+            </div>
         </div>
-        <div style="margin-top: 30px; line-height: 0.5;">
-            <p>© 2025 Eden Leaf Ecosystems.</p>
-            <p>Tutti i diritti riservati alla Natura.</p>
-            <p>P.IVA 000123SOLAR</p>
-        </div>
-    </div>
+    </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="sostenibilità.js"></script>
 </body>
 
 </html>
