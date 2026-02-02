@@ -174,7 +174,7 @@ p {
 
 @media (min-width: 768px) {
     .hero-section {
-        height: 70dvh;
+        height: 75dvh;
     }
 }
 
@@ -1017,6 +1017,8 @@ footer {
     object-fit: cover;
     width: 100%;
     height: auto;
+    max-width: fit-content;
+    padding: 30px;
 }
 
 
@@ -1180,6 +1182,11 @@ body:has(.sostenibility-container) {
     .hero-line {
         max-width: 90%;
     }
+}
+
+.hero-text{
+    padding-top: 1.5rem;
+    font-size: 2.5rem;
 }
 
 /* Background principale */
