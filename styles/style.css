@@ -1896,7 +1896,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .discover-ingredients-heading {
-    padding-top: 10vh;
+    padding-top: 20vh;
 }
 
 @media (min-width: 768px) {
@@ -1913,7 +1913,7 @@ input::-webkit-calendar-picker-indicator {
     }
 
     .discover-ingredients-heading {
-        padding-top: 40vh;
+        padding-top: 35vh;
     }
 }
 
