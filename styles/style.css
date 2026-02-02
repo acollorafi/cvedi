@@ -463,6 +463,12 @@ p {
 
 }
 
+.card-info p {
+    font-size: 18px;
+    text-shadow: 0 0 15px #000, 0 0 100px #000;
+}
+
+
 .card-accessibility {
     /*idem, segnerei solo le differenze*/
     color: var(--bs-white);
@@ -475,7 +481,7 @@ p {
     align-items: center;
     justify-content: center;
     max-width: 300px;
-    height: 350px;
+    height: 300px;
     flex: 0 0 auto;
     margin: 0 auto;
     text-align: center;
@@ -487,6 +493,10 @@ p {
 
 .card-accessibility p {
     margin-bottom: 0;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 0 0 15px #000, 0 0 100px #000;
+
 }
 
 
