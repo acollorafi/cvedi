@@ -94,6 +94,10 @@ h1 {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.h1-big {
+        font-size: 2rem;
+}
+
 h2 {
     font-size: 2rem;
     color: var(--bs-tan);
@@ -123,6 +127,10 @@ p {
     h1 {
         font-size: 4.5rem;
     }
+
+    .h1-big {
+        font-size: 4.5rem;
+}
 
     h2 {
         font-size: 3rem;
