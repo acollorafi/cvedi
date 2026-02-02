@@ -56,7 +56,7 @@
                         <a class="nav-link" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ristorante.html">RISTORANTE</a>
+                        <a class="nav-link active" href="ristorante.html" aria-current="page">RISTORANTE</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="menu.html">MENU</a>
@@ -65,7 +65,7 @@
                         <a class="nav-link" href="info.html">INFO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="sostenibilita.html">SOSTENIBILITÀ</a>
+                        <a class="nav-link" href="sostenibilita.html">SOSTENIBILITÀ</a>
                     </li>
                 </ul>
             </div>
@@ -80,10 +80,13 @@
         </div>
     </nav>
 
+<main>
     <section id="ristorante-s1" class="img-bg">
         <div class="text-center hero-section section align-self-center">
             <h1>RISTORANTE</h1>
         </div>
+        <img src="images/sostenibilita/techline.webp" class="techline">
+
         <div class="container-xxl d-flex flex-column padding-section">
             <div class="card glass-effect align-self-end" style="max-width: 660px;">
                 <h3>Chi siamo</h3>
@@ -101,7 +104,7 @@
                 <p>Nato nel secolo scorso come progetto sperimentale di bio-architettura, Eden Leaf è cresciuto
                     organicamente insieme alla sua struttura ospitante. Abbiamo progettato la nostra cupola per
                     adattarsi gentilmente all'espansione della Foglia Madre, trasformando quella che era una visione
-                    utopica di sostenibilità urbana nella realtà gastronomica più esclusiva ed etica del panorama
+                    utopica di sostenibilita urbana nella realtà gastronomica più esclusiva ed etica del panorama
                     mondiale.</p>
                 <button class="glass-effect btn btn-custom-primary" type="button"
                     onclick="window.location.href='sostenibilita.html'">Scopri di più</button>
@@ -123,7 +126,7 @@
             <h3 class="d-block d-md-none mb-4 mb-md-0 text-center">Lo chef stellato</h3>
             <div class="col-md-6">
                 <!-- TODO: ritagliare meglio img senza ombra, e aggiungere ombra con css -->
-                <img src="images/ristorante/img_chef_clipped.webp" class="img-fluid" alt="Chef Julio Vane"
+                <img src="images/ristorante/chef-ristorante.webp" class="img-fluid" alt="Chef Julio Vane"
                     title="Chef Julio Vane - Ingegnere del gusto ed esperto di cucina molecolare" />
             </div>
             <div class="col-md-6 mt-4 mt-md-0">
@@ -326,6 +329,8 @@
         </div>
     </section>
 
+</main>
+
     <footer>
         <div class="container-xxl text-center">
             <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" />
@@ -343,7 +348,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="sostenibilità.js"></script>
+    <script src="sostenibilita.js"></script>
 </body>
 
 </html>

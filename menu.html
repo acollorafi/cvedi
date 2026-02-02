@@ -80,11 +80,27 @@
 
   <!-- Sezione 1: Hero -->
   <section class="menu-hero-bg">
-    <div class="piatti-hero-section section align-self-center">
+    <div class="custom-hero-section section align-self-center">
       <h1>MENÙ</h1>
     </div>
-    <img src="images/menu/menu_hero_fg.webp" class="img-fluid" />
+    <img src="images/menu/menu_hero_fg.webp" class="img-fluid"  alt="Menu Eden Leaf"
+    title="Menu completo Eden Leaf - Cucina sostenibile e innovativa" />
   </section>
+
+  <!--foglie-->
+  <div class="leaves-wrapper">
+    <div class="leaves leaves-left leaf-menu-left">
+      <img src="images/foglie/foglia_menu_sinistra.png" class="leaf" />
+    </div>
+  </div>
+
+  <div class="leaves-wrapper">
+    <div class="leaves leaves-right leaf-menu-right">
+      <img src="images/foglie/foglia_menu_destra.png" class="leaf" />
+    </div>
+  </div>
+
+
 
   <!-- Sezione 2: menu intolleranze -->
   <section id="menu-s2" class="section img-bg padding-section">
@@ -106,76 +122,77 @@
     <div class="container padding-section position-relative">
       <div class="row g-4">
 
-        <!-- Menu SINTETICO - Mobile -->
-        <div class="d-block d-md-none" data-menu="sintetico">
-          <div id="menuSinteticoCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+       <!-- Menu SINTETICO - Mobile -->
+<div class="d-block d-md-none" data-menu="sintetico">
+  <div id="menuSinteticoCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
 
-              <div class="carousel-item active">
-                <div class="d-flex justify-content-center p-4">
-                  <div class="card menu-card glass-effect text-center">
-                    <!-- PIATTO -->
-                    <div class="menu-card-img">
-                      <img src="/images/menu/antipasto1.webp"
-                        alt="antipasto di mozzarella vegetale su un letto di foglia" 
-                        title="antipasto di mozzarella vegetale su un letto di foglia" />
-                      <span class="menu-card-label label-custom">Gocce di Rugiada</span>
-                    </div>
-                    <!-- TESTO -->
-                    <div class="menu-card-text">
-                      <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e
-                        ridurre
-                        gli sprechi.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center p-4">
+          <div class="card menu-card glass-effect text-center">
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/antipasto1.webp"
+                alt="antipasto di mozzarella vegetale su un letto di foglia"
+                title="Gocce di Rugiada - Mozzarella vegetale con gastronomia molecolare" />
+              <span class="menu-card-label label-custom">Gocce di Rugiada</span>
+            </div>
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e
+                ridurre gli sprechi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center p-4">
+          <div class="card menu-card glass-effect text-center">
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/primo3.webp" 
+                alt="petali luminescenti viola carnosi"
+                title="Petali di Floricanto - Petali bioluminescenti da colture aeroponiche" />
+              <span class="menu-card-label label-custom">Petali di Floricanto</span>
+            </div>
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da
+                contenitori biodegradabili con una fragranza erbacea e una texture croccante.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center p-4">
+          <div class="card menu-card glass-effect text-center">
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/secondo3.webp" 
+                alt="Spirale di verdure di stagione con proteine vegetali"
+                title="Spirale d'Orto - Verdure di stagione a km zero con proteine vegetali" />
+              <span class="menu-card-label label-custom">Spirale d'Orto</span>
+            </div>
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Una spirale di verdure di stagione e a km zero, proteine vegetali, brodo ottenuto da scarti
+                vegetali ridotti al minimo, valorizzazione degli ingredienti.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
               <div class="carousel-item">
                 <div class="d-flex justify-content-center p-4">
                   <div class="card menu-card glass-effect text-center">
                     <!-- PIATTO -->
                     <div class="menu-card-img">
-                      <img src="/images/menu/primo3.webp" 
-                      alt="petali luminescenti viola carnosi"
-                      title="petali luminescenti viola carnosi" />
-                      <span class="menu-card-label label-custom">Petali di Floricanto</span>
-                    </div>
-                    <!-- TESTO -->
-                    <div class="menu-card-text">
-                      <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da
-                        contenitori
-                        biodegradabili con una fragranza erbacea e una texture croccante.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="d-flex justify-content-center p-4">
-                  <div class="card menu-card glass-effect text-center">
-                    <!-- PIATTO -->
-                    <div class="menu-card-img">
-                      <img src="/images/menu/secondo3.webp" alt="" />
-                      <span class="menu-card-label label-custom">Spirale d'Orto</span>
-                    </div>
-                    <!-- TESTO -->
-                    <div class="menu-card-text">
-                      <p>Una spirale di verdure di stagione e a km zero, proteine vegetali, brodo ottenuto da scarti
-                        vegetali
-                        ridotti al minimo, valorizzazione degli ingredienti.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="d-flex justify-content-center p-4">
-                  <div class="card menu-card glass-effect text-center">
-                    <!-- PIATTO -->
-                    <div class="menu-card-img">
-                      <img src="/images/menu/dolce1.webp" alt="sfera di gelato su salsa ai frutti esotici" />
+                      <img src="/images/menu/dolce1.webp" 
+                           alt="sfera di gelato su salsa ai frutti esotici"
+                           title="Sfera di Luna - Gelato vegano alla vaniglia con cioccolato bianco" />
                       <span class="menu-card-label label-custom">Sfera di Luna</span>
                     </div>
                     <!-- TESTO -->
@@ -201,69 +218,73 @@
         </div>
 
         <!-- Menu SINTETICO - Desktop -->
-        <div class="d-none d-sm-block">
-          <div class="row g-4" data-menu="sintetico">
-            <!--CARD 1-->
-            <div class="col-12 col-sm-6 col-lg-3">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/antipasto1.webp"
-                    alt="antipasto di mozzarella vegetale su un letto di foglia" />
-                  <span class="menu-card-label label-custom">Gocce di Rugiada</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e
-                    ridurre
-                    gli sprechi.
-                  </p>
-                </div>
-              </div>
-            </div>
+<div class="d-none d-sm-block">
+  <div class="row g-4" data-menu="sintetico">
+    <!--CARD 1-->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/antipasto1.webp"
+            alt="antipasto di mozzarella vegetale su un letto di foglia"
+            title="Gocce di Rugiada - Mozzarella vegetale con gastronomia molecolare" />
+          <span class="menu-card-label label-custom">Gocce di Rugiada</span>
+        </div>
+        <!-- TESTO -->
+        <div class="menu-card-text">
+          <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e
+            ridurre gli sprechi.
+          </p>
+        </div>
+      </div>
+    </div>
 
-            <!--CARD 2 -->
-            <div class="col-12 col-sm-6 col-lg-3">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/primo3.webp" alt="petali luminescenti viola carnosi" />
-                  <span class="menu-card-label label-custom">Petali di Floricanto</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da
-                    contenitori
-                    biodegradabili con una fragranza erbacea e una texture croccante.</p>
-                </div>
-              </div>
-            </div>
+    <!--CARD 2 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/primo3.webp" 
+            alt="petali luminescenti viola carnosi"
+            title="Petali di Floricanto - Petali bioluminescenti da colture aeroponiche" />
+          <span class="menu-card-label label-custom">Petali di Floricanto</span>
+        </div>
+        <!-- TESTO -->
+        <div class="menu-card-text">
+          <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da
+            contenitori biodegradabili con una fragranza erbacea e una texture croccante.</p>
+        </div>
+      </div>
+    </div>
 
-            <!--CARD 3 -->
-            <div class="col-12 col-sm-6 col-lg-3">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/secondo3.webp" alt="" />
-                  <span class="menu-card-label label-custom">Spirale d'Orto</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Una spirale di verdure di stagione e a km zero, proteine vegetali, brodo ottenuto da scarti
-                    vegetali
-                    ridotti al minimo, valorizzazione degli ingredienti.</p>
-                </div>
-              </div>
-            </div>
+    <!--CARD 3 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/secondo3.webp" 
+            alt="Spirale di verdure di stagione con proteine vegetali"
+            title="Spirale d'Orto - Verdure di stagione a km zero con proteine vegetali" />
+          <span class="menu-card-label label-custom">Spirale d'Orto</span>
+        </div>
+        <!-- TESTO -->
+        <div class="menu-card-text">
+          <p>Una spirale di verdure di stagione e a km zero, proteine vegetali, brodo ottenuto da scarti
+            vegetali ridotti al minimo, valorizzazione degli ingredienti.</p>
+        </div>
+      </div>
+    </div>
 
-            <!--CARD 4 -->
-            <div class="col-12 col-sm-6 col-lg-3">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/dolce1.webp" alt="sfera di gelato su salsa ai frutti esotici" />
-                  <span class="menu-card-label label-custom">Sfera di Luna</span>
-                </div>
+    <!--CARD 4 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/dolce1.webp" 
+            alt="sfera di gelato su salsa ai frutti esotici"
+            title="Sfera di Luna - Gelato vegano alla vaniglia con cioccolato bianco" />
+          <span class="menu-card-label label-custom">Sfera di Luna</span>
+        </div>
                 <!-- TESTO -->
                 <div class="menu-card-text">
                   <p>Una sfera di gelato vegano alla vaniglia rivestita con uno strato di cioccolato bianco vegano.
@@ -285,43 +306,47 @@
                   <div class="card menu-card glass-effect text-center">
                     <!-- PIATTO -->
                     <div class="menu-card-img">
-                      <img src="/images/menu/antipasto3.webp" alt="ravioli su un letto di germogli freschi" />
+                      <img src="/images/menu/antipasto3.webp" 
+                        alt="ravioli su un letto di germogli freschi"
+                        title="Ravioli Micro-Orti - Ravioli trasparenti con legumi e tofu" />
                       <span class="menu-card-label label-custom">Ravioli Micro-Orti</span>
                     </div>
                     <!-- TESTO -->
                     <div class="menu-card-text">
                       <p>Ravioli trasparenti con utilizzo di legumi e tofu come fonte proteica a basso impatto, germogli
-                        freschi
-                        (Micro-Orti), zero sprechi con il brodo di radici.</p>
+                        freschi (Micro-Orti), zero sprechi con il brodo di radici.</p>
                     </div>
                   </div>
                 </div>
               </div>
-
+              
               <div class="carousel-item">
                 <div class="d-flex justify-content-center p-4">
                   <div class="card menu-card glass-effect text-center">
                     <!-- PIATTO -->
                     <div class="menu-card-img">
-                      <img src="/images/menu/primo2_HIGH.webp" alt="" />
+                      <img src="/images/menu/primo2_HIGH.webp" 
+                        alt="Gnocchi di patata dolce con coloranti naturali"
+                        title="Gnocchi di Terra - Ingredienti locali con patata dolce" />
                       <span class="menu-card-label label-custom">Gnocchi di Terra</span>
                     </div>
                     <!-- TESTO -->
                     <div class="menu-card-text">
                       <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di
-                        patata
-                        dolce.</p>
+                        patata dolce.</p>
                     </div>
                   </div>
                 </div>
               </div>
-
+              
               <div class="carousel-item">
                 <div class="d-flex justify-content-center p-4">
                   <div class="card menu-card glass-effect text-center">
                     <!-- PIATTO -->
                     <div class="menu-card-img">
-                      <img src="/images/menu/secondo1.webp" alt="" />
+                      <img src="/images/menu/secondo1.webp" 
+                        alt="Polpetta verde al tè Matcha su crumble"
+                        title="Polpetta di Giada - Polpetta artigianale al tè Matcha biologico" />
                       <span class="menu-card-label label-custom">Polpetta di Giada</span>
                     </div>
                     <!-- TESTO -->
@@ -339,7 +364,9 @@
                   <div class="card menu-card glass-effect text-center">
                     <!-- PIATTO -->
                     <div class="menu-card-img">
-                      <img src="/images/menu/dolce1.webp" alt="sfera di gelato su salsa ai frutti esotici" />
+                      <img src="/images/menu/dolce1.webp" 
+                           alt="sfera di gelato su salsa ai frutti esotici"
+                           title="Sfera di Luna - Gelato vegano alla vaniglia con cioccolato bianco" />
                       <span class="menu-card-label label-custom">Sfera di Luna</span>
                     </div>
                     <!-- TESTO -->
@@ -371,10 +398,12 @@
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="card menu-card glass-effect text-center">
                 <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/antipasto3.webp" alt="ravioli su un letto di germogli freschi" />
-                  <span class="menu-card-label label-custom">Ravioli Micro-Orti</span>
-                </div>
+<div class="menu-card-img">
+  <img src="/images/menu/antipasto3.webp" 
+       alt="ravioli su un letto di germogli freschi"
+       title="Ravioli Micro-Orti - Ravioli trasparenti con legumi e tofu" />
+  <span class="menu-card-label label-custom">Ravioli Micro-Orti</span>
+</div>
                 <!-- TESTO -->
                 <div class="menu-card-text">
                   <p>Ravioli trasparenti con utilizzo di legumi e tofu come fonte proteica a basso impatto, germogli
@@ -388,41 +417,39 @@
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="card menu-card glass-effect text-center">
                 <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/primo2_HIGH.webp" alt="" />
-                  <span class="menu-card-label label-custom">Gnocchi di Terra</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di patata
-                    dolce.</p>
-                </div>
-              </div>
-            </div>
+<div class="menu-card-img">
+  <img src="/images/menu/primo2_HIGH.webp" 
+       alt="Gnocchi di patata dolce con coloranti naturali"
+       title="Gnocchi di Terra - Ingredienti locali con patata dolce" />
+  <span class="menu-card-label label-custom">Gnocchi di Terra</span>
+</div>
+<!-- TESTO -->
+<div class="menu-card-text">
+  <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di patata
+    dolce.</p>
+</div>
+</div>
+</div>
 
-            <!--CARD 3 -->
-            <div class="col-12 col-sm-6 col-lg-3">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/secondo1.webp" alt="" />
-                  <span class="menu-card-label label-custom">Polpetta di Giada</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Una polpetta artigianale al tè Matcha biologico dalla consistenza vellutata e dal colore verde
-                    intenso,
-                    che ricorda una gemma di giada. Su letto di crumble  con cristalli edibili.</p>
-                </div>
-              </div>
-            </div>
+<!--CARD 3 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <div class="card menu-card glass-effect text-center">
+    <!-- PIATTO -->
+    <div class="menu-card-img">
+      <img src="/images/menu/secondo1.webp" 
+           alt="Polpetta verde al tè Matcha su crumble"
+           title="Polpetta di Giada - Polpetta artigianale al tè Matcha biologico" />
+      <span class="menu-card-label label-custom">Polpetta di Giada</span>
+    </div>
 
             <!--CARD 4 -->
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="card menu-card glass-effect text-center">
                 <!-- PIATTO -->
                 <div class="menu-card-img">
-                  <img src="/images/menu/dolce1.webp" alt="sfera di gelato su salsa ai frutti esotici" />
+                  <img src="/images/menu/dolce1.webp" 
+                       alt="sfera di gelato su salsa ai frutti esotici"
+                       title="Sfera di Luna - Gelato vegano alla vaniglia con cioccolato bianco" />
                   <span class="menu-card-label label-custom">Sfera di Luna</span>
                 </div>
                 <!-- TESTO -->
@@ -446,7 +473,9 @@
                   <div class="card menu-card glass-effect text-center">
                     <!-- PIATTO -->
                     <div class="menu-card-img">
-                      <img src="/images/menu/antipasto2.webp" alt="gemme di verdure su letto di crauti luminescenti" />
+                      <img src="/images/menu/antipasto2.webp" 
+                           alt="gemme di verdure su letto di crauti luminescenti"
+                           title="Gemme di Zenith - Verdure di stagione a km zero" />
                       <span class="menu-card-label label-custom">Gemme di Zenith</span>
                     </div>
                     <!-- TESTO -->
@@ -462,29 +491,32 @@
               <div class="carousel-item">
                 <div class="d-flex justify-content-center p-4">
                   <div class="card menu-card glass-effect text-center">
-                    <!-- PIATTO -->
-                    <div class="menu-card-img">
-                      <img src="/images/menu/primo1.webp" alt="risotto cremoso con pezzi di fichi viola" />
-                      <span class="menu-card-label label-custom">Risotto Cosmic</span>
-                    </div>
-                    <!-- TESTO -->
-                    <div class="menu-card-text">
-                      <p>Risotto cremoso con pistacchio e stracciatella artigianale. La base vellutata è sormontata
-                        dagli
-                        esotici fichi viola "Cosmic Fig" per un contrasto dolce-acidulo che esalta il sapore.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                   <!-- PIATTO -->
+<div class="menu-card-img">
+  <img src="/images/menu/primo1.webp" 
+       alt="risotto cremoso con pezzi di fichi viola"
+       title="Risotto Cosmic - Risotto con pistacchio, stracciatella e fichi viola" />
+  <span class="menu-card-label label-custom">Risotto Cosmic</span>
+</div>
+<!-- TESTO -->
+<div class="menu-card-text">
+  <p>Risotto cremoso con pistacchio e stracciatella artigianale. La base vellutata è sormontata
+    dagli esotici fichi viola "Cosmic Fig" per un contrasto dolce-acidulo che esalta il sapore.</p>
+</div>
+</div>
+</div>
+</div>
 
-              <div class="carousel-item">
-                <div class="d-flex justify-content-center p-4">
-                  <div class="card menu-card glass-effect text-center">
-                    <!-- PIATTO -->
-                    <div class="menu-card-img">
-                      <img src="/images/menu/secondo2.webp" alt="" />
-                      <span class="menu-card-label label-custom">Sfera di Corallo</span>
-                    </div>
+<div class="carousel-item">
+  <div class="d-flex justify-content-center p-4">
+    <div class="card menu-card glass-effect text-center">
+      <!-- PIATTO -->
+      <div class="menu-card-img">
+        <img src="/images/menu/secondo2.webp" 
+             alt="Sfera vegetale su corallo commestibile"
+             title="Sfera di Corallo - Sfera a base di alghe e proteine di legumi" />
+        <span class="menu-card-label label-custom">Sfera di Corallo</span>
+      </div>
                     <!-- TESTO -->
                     <div class="menu-card-text">
                       <p>Una sfera vegetale a base di alghe, proteine di legumi e spezie marine, su "corallo"
@@ -498,11 +530,13 @@
               <div class="carousel-item">
                 <div class="d-flex justify-content-center p-4">
                   <div class="card menu-card glass-effect text-center">
-                    <!-- PIATTO -->
-                    <div class="menu-card-img">
-                      <img src="/images/menu/dolce3.webp" alt="tartelletta con crema vegana e gelatina naturale" />
-                      <span class="menu-card-label label-custom">Giardino di Cristallo</span>
-                    </div>
+                   <!-- PIATTO -->
+<div class="menu-card-img">
+  <img src="/images/menu/dolce3.webp" 
+       alt="tartelletta con crema vegana e gelatina naturale"
+       title="Giardino di Cristallo - Tartelletta vegana con frutta di stagione" />
+  <span class="menu-card-label label-custom">Giardino di Cristallo</span>
+</div>
                     <!-- TESTO -->
                     <div class="menu-card-text">
                       <p>Tartelletta e crema vegane, uso di frutta fresca e di stagione per ridurre l'impronta
@@ -525,48 +559,54 @@
       </div>
 
       <!-- Menu BioAI - Desktop -->
-      <div class="d-none d-sm-block">
-        <div class="row g-4" data-menu="bio-ai">
-          <!--CARD 1-->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card menu-card glass-effect text-center">
-              <!-- PIATTO -->
-              <div class="menu-card-img">
-                <img src="/images/menu/antipasto2.webp" alt="gemme di verdure su letto di crauti luminescenti" />
-                <span class="menu-card-label label-custom">Gemme di Zenith</span>
-              </div>
-              <!-- TESTO -->
-              <div class="menu-card-text">
-                <p>Verdure di stagione e a km zero, riduzione degli sprechi grazie all'uso di parti meno nobili per la
-                  terra edibile, presentazione che minimizza l'impatto sul piatto.</p>
-              </div>
-            </div>
-          </div>
+<div class="d-none d-sm-block">
+  <div class="row g-4" data-menu="bio-ai">
+    <!--CARD 1-->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/antipasto2.webp" 
+               alt="gemme di verdure su letto di crauti luminescenti"
+               title="Gemme di Zenith - Verdure di stagione a km zero" />
+          <span class="menu-card-label label-custom">Gemme di Zenith</span>
+        </div>
+        <!-- TESTO -->
+        <div class="menu-card-text">
+          <p>Verdure di stagione e a km zero, riduzione degli sprechi grazie all'uso di parti meno nobili per la
+            terra edibile, presentazione che minimizza l'impatto sul piatto.</p>
+        </div>
+      </div>
+    </div>
 
-          <!--CARD 2 -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card menu-card glass-effect text-center">
-              <!-- PIATTO -->
-              <div class="menu-card-img">
-                <img src="/images/menu/primo1.webp" alt="risotto cremoso con pezzi di fichi viola" />
-                <span class="menu-card-label label-custom">Risotto Cosmic</span>
-              </div>
-              <!-- TESTO -->
-              <div class="menu-card-text">
-                <p>Risotto cremoso con pistacchio e stracciatella artigianale. La base vellutata è sormontata dagli
-                  esotici fichi viola "Cosmic Fig" per un contrasto dolce-acidulo che esalta il sapore.</p>
-              </div>
-            </div>
-          </div>
+    <!--CARD 2 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/primo1.webp" 
+               alt="risotto cremoso con pezzi di fichi viola"
+               title="Risotto Cosmic - Risotto con pistacchio, stracciatella e fichi viola" />
+          <span class="menu-card-label label-custom">Risotto Cosmic</span>
+        </div>
+        <!-- TESTO -->
+        <div class="menu-card-text">
+          <p>Risotto cremoso con pistacchio e stracciatella artigianale. La base vellutata è sormontata dagli
+            esotici fichi viola "Cosmic Fig" per un contrasto dolce-acidulo che esalta il sapore.</p>
+        </div>
+      </div>
+    </div>
 
-          <!--CARD 3 -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card menu-card glass-effect text-center">
-              <!-- PIATTO -->
-              <div class="menu-card-img">
-                <img src="/images/menu/secondo2.webp" alt="" />
-                <span class="menu-card-label label-custom">Sfera di Corallo</span>
-              </div>
+    <!--CARD 3 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/secondo2.webp" 
+               alt="Sfera vegetale su corallo commestibile"
+               title="Sfera di Corallo - Sfera a base di alghe e proteine di legumi" />
+          <span class="menu-card-label label-custom">Sfera di Corallo</span>
+        </div>
               <!-- TESTO -->
               <div class="menu-card-text">
                 <p>Una sfera vegetale a base di alghe, proteine di legumi e spezie marine, su "corallo" commestibile.
@@ -576,242 +616,195 @@
           </div>
 
           <!--CARD 4 -->
-          <div class="col-12 col-sm-6 col-lg-3">
+<div class="col-12 col-sm-6 col-lg-3">
+  <div class="card menu-card glass-effect text-center">
+    <!-- PIATTO -->
+    <div class="menu-card-img">
+      <img src="/images/menu/dolce3.webp" 
+           alt="tartelletta con crema vegana e gelatina naturale"
+           title="Giardino di Cristallo - Tartelletta vegana con frutta di stagione" />
+      <span class="menu-card-label label-custom">Giardino di Cristallo</span>
+    </div>
+    <!-- TESTO -->
+    <div class="menu-card-text">
+      <p>Tartelletta e crema vegane, uso di frutta fresca e di stagione per ridurre l'impronta carbonica,
+        gelatina naturale senza derivati animali, presentazione elegante e zero sprechi.</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!--foglie-->
+<div class="leaves-wrapper">
+  <div class="leaves leaves-right leaves-menu-food">
+    <img src="images/foglie/leaf-tuttipiatti.png" class="leaf" />
+  </div>
+</div>
+
+
+<!-- Sezione 3: Menu completo -->
+<section id="menu-s3" class="section padding-section img-bg">
+
+  <h2 class="section-title text-center mb-4">Tutti i piatti</h2>
+
+  <!-- ANTIPASTI -->
+  <h3 class="label-h3 glass-effect my-5">Antipasti</h3>
+
+  <!-- Antipasti - Mobile -->
+  <div class="d-block d-md-none">
+    <div id="antipastiCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center p-4">
             <div class="card menu-card glass-effect text-center">
               <!-- PIATTO -->
               <div class="menu-card-img">
-                <img src="/images/menu/dolce3.webp" alt="tartelletta con crema vegana e gelatina naturale" />
-                <span class="menu-card-label label-custom">Giardino di Cristallo</span>
+                <img src="/images/menu/antipasto1.webp"
+                  alt="antipasto di mozzarella vegetale su un letto di foglia"
+                  title="Gocce di Rugiada - Mozzarella vegetale con gastronomia molecolare" />
+                <span class="menu-card-label label-custom">Gocce di Rugiada</span>
               </div>
               <!-- TESTO -->
               <div class="menu-card-text">
-                <p>Tartelletta e crema vegane, uso di frutta fresca e di stagione per ridurre l'impronta carbonica,
-                  gelatina naturale senza derivati animali, presentazione elegante e zero sprechi.</p>
+                <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e
+                  ridurre gli sprechi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center p-4">
+            <div class="card menu-card glass-effect text-center">
+              <!-- PIATTO -->
+              <div class="menu-card-img">
+                <img src="/images/menu/antipasto2.webp" 
+                  alt="gemme di verdure su letto di crauti luminescenti"
+                  title="Gemme di Zenith - Verdure di stagione a km zero" />
+                <span class="menu-card-label label-custom">Gemme di Zenith</span>
+              </div>
+              <!-- TESTO -->
+              <div class="menu-card-text">
+                <p>Verdure di stagione e a km zero, riduzione degli sprechi grazie all'uso di parti meno nobili per la
+                  terra edibile, presentazione che minimizza l'impatto sul piatto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center p-4">
+            <div class="card menu-card glass-effect text-center">
+              <!-- PIATTO -->
+              <div class="menu-card-img">
+                <img src="/images/menu/antipasto3.webp" 
+                  alt="ravioli su un letto di germogli freschi"
+                  title="Ravioli Micro-Orti - Ravioli trasparenti con legumi e tofu" />
+                <span class="menu-card-label label-custom">Ravioli Micro-Orti</span>
+              </div>
+              <!-- TESTO -->
+              <div class="menu-card-text">
+                <p>Ravioli trasparenti con utilizzo di legumi e tofu come fonte proteica a basso impatto, germogli
+                  freschi (Micro-Orti), zero sprechi con il brodo di radici.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <button class="carousel-control-prev" type="button" data-bs-target="#antipastiCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#antipastiCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
     </div>
-  </section>
-
-
-
-  <!-- Sezione 3: Menu completo -->
-  <section id="menu-s3" class="section padding-section img-bg">
-
-    <h2 class="section-title text-center mb-4">Tutti i piatti</h2>
-
-    <!-- ANTIPASTI -->
-    <h3 class="label-h3 glass-effect my-5">Antipasti</h3>
-
-    <!-- Antipasti - Mobile -->
-    <div class="d-block d-md-none">
-      <div id="antipastiCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center p-4">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/antipasto1.webp"
-                    alt="antipasto di mozzarella vegetale su un letto di foglia" />
-                  <span class="menu-card-label label-custom">Gocce di Rugiada</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e
-                    ridurre
-                    gli sprechi.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center p-4">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/antipasto2.webp" alt="gemme di verdure su letto di crauti luminescenti" />
-                  <span class="menu-card-label label-custom">Gemme di Zenith</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Verdure di stagione e a km zero, riduzione degli sprechi grazie all'uso di parti meno nobili per la
-                    terra edibile, presentazione che minimizza l'impatto sul piatto.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center p-4">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/antipasto3.webp" alt="ravioli su un letto di germogli freschi" />
-                  <span class="menu-card-label label-custom">Ravioli Micro-Orti</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Ravioli trasparenti con utilizzo di legumi e tofu come fonte proteica a basso impatto, germogli
-                    freschi
-                    (Micro-Orti), zero sprechi con il brodo di radici.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <button class="carousel-control-prev" type="button" data-bs-target="#antipastiCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#antipastiCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
+  </div>
 
     <!-- Antipasti - Desktop -->
     <div class="d-none d-md-block container">
       <div class="row justify-content-center g-5 mb-4">
 
-        <!--CARD 1-->
-        <div class="col-12 col-sm-6 col-lg-3 ">
-          <div class="card menu-card glass-effect text-center">
-            <!-- PIATTO -->
-            <div class="menu-card-img">
-              <img src="/images/menu/antipasto1.webp" alt="antipasto di mozzarella vegetale su un letto di foglia" />
-              <span class="menu-card-label label-custom">Gocce di Rugiada</span>
-            </div>
-            <!-- TESTO -->
-            <div class="menu-card-text">
-              <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e ridurre
-                gli sprechi.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!--CARD 2 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card menu-card glass-effect text-center">
-            <!-- PIATTO -->
-            <div class="menu-card-img">
-              <img src="/images/menu/antipasto2.webp" alt="gemme di verdure su letto di crauti luminescenti" />
-              <span class="menu-card-label label-custom">Gemme di Zenith</span>
-            </div>
-            <!-- TESTO -->
-            <div class="menu-card-text">
-              <p>Verdure di stagione e a km zero, riduzione degli sprechi grazie all'uso di parti meno nobili per la
-                terra edibile, presentazione che minimizza l'impatto sul piatto.</p>
-            </div>
-          </div>
-        </div>
-
-        <!--CARD 3 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card menu-card glass-effect text-center">
-            <!-- PIATTO -->
-            <div class="menu-card-img">
-              <img src="/images/menu/antipasto3.webp" alt="ravioli su un letto di germogli freschi" />
-              <span class="menu-card-label label-custom">Ravioli Micro-Orti</span>
-            </div>
-            <!-- TESTO -->
-            <div class="menu-card-text">
-              <p>Ravioli trasparenti con utilizzo di legumi e tofu come fonte proteica a basso impatto, germogli freschi
-                (Micro-Orti), zero sprechi con il brodo di radici.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+       <!--CARD 1-->
+<div class="col-12 col-sm-6 col-lg-3 ">
+  <div class="card menu-card glass-effect text-center">
+    <!-- PIATTO -->
+    <div class="menu-card-img">
+      <img src="/images/menu/antipasto1.webp" 
+           alt="antipasto di mozzarella vegetale su un letto di foglia"
+           title="Gocce di Rugiada - Mozzarella vegetale con gastronomia molecolare" />
+      <span class="menu-card-label label-custom">Gocce di Rugiada</span>
     </div>
-
-
-    <!-- PRIMI -->
-    <h3 class="label-h3 glass-effect my-5">Primi</h3>
-
-    <!-- Primi - Mobile -->
-    <div class="d-block d-md-none">
-      <div id="primiCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center p-4">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/primo1.webp" alt="risotto cremoso con pezzi di fichi viola" />
-                  <span class="menu-card-label label-custom">Risotto Cosmic</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Risotto cremoso con pistacchio e stracciatella artigianale. La base vellutata è sormontata dagli
-                    esotici fichi viola "Cosmic Fig" per un contrasto dolce-acidulo che esalta il sapore.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center p-4">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/primo2_HIGH.webp" alt="" />
-                  <span class="menu-card-label label-custom">Gnocchi di Terra</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di patata
-                    dolce.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center p-4">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/primo3.webp" alt="petali luminescenti viola carnosi" />
-                  <span class="menu-card-label label-custom">Petali di Floricanto</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da
-                    contenitori
-                    biodegradabili con una fragranza erbacea e una texture croccante.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <button class="carousel-control-prev" type="button" data-bs-target="#primiCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#primiCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
+    <!-- TESTO -->
+    <div class="menu-card-text">
+      <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e ridurre
+        gli sprechi.
+      </p>
     </div>
+  </div>
+</div>
 
-    <!-- Primi - Desktop -->
-    <div class="d-none d-md-block container">
-      <div class="row justify-content-center g-5 mb-4">
+<!--CARD 2 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <div class="card menu-card glass-effect text-center">
+    <!-- PIATTO -->
+    <div class="menu-card-img">
+      <img src="/images/menu/antipasto2.webp" 
+           alt="gemme di verdure su letto di crauti luminescenti"
+           title="Gemme di Zenith - Verdure di stagione a km zero" />
+      <span class="menu-card-label label-custom">Gemme di Zenith</span>
+    </div>
+    <!-- TESTO -->
+    <div class="menu-card-text">
+      <p>Verdure di stagione e a km zero, riduzione degli sprechi grazie all'uso di parti meno nobili per la
+        terra edibile, presentazione che minimizza l'impatto sul piatto.</p>
+    </div>
+  </div>
+</div>
 
-        <!--CARD 1-->
-        <div class="col-12 col-sm-6 col-lg-3 ">
+<!--CARD 3 -->
+<div class="col-12 col-sm-6 col-lg-3">
+  <div class="card menu-card glass-effect text-center">
+    <!-- PIATTO -->
+    <div class="menu-card-img">
+      <img src="/images/menu/antipasto3.webp" 
+           alt="ravioli su un letto di germogli freschi"
+           title="Ravioli Micro-Orti - Ravioli trasparenti con legumi e tofu" />
+      <span class="menu-card-label label-custom">Ravioli Micro-Orti</span>
+    </div>
+    <!-- TESTO -->
+    <div class="menu-card-text">
+      <p>Ravioli trasparenti con utilizzo di legumi e tofu come fonte proteica a basso impatto, germogli freschi
+        (Micro-Orti), zero sprechi con il brodo di radici.</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- PRIMI -->
+<h3 class="label-h3 glass-effect my-5">Primi</h3>
+
+<!-- Primi - Mobile -->
+<div class="d-block d-md-none">
+  <div id="primiCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center p-4">
           <div class="card menu-card glass-effect text-center">
             <!-- PIATTO -->
             <div class="menu-card-img">
-              <img src="/images/menu/primo1.webp" alt="risotto cremoso con pezzi di fichi viola" />
+              <img src="/images/menu/primo1.webp" 
+                   alt="risotto cremoso con pezzi di fichi viola"
+                   title="Risotto Cosmic - Risotto con pistacchio, stracciatella e fichi viola" />
               <span class="menu-card-label label-custom">Risotto Cosmic</span>
             </div>
             <!-- TESTO -->
@@ -821,13 +814,16 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!--CARD 2 -->
-        <div class="col-12 col-sm-6 col-lg-3">
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center p-4">
           <div class="card menu-card glass-effect text-center">
             <!-- PIATTO -->
             <div class="menu-card-img">
-              <img src="/images/menu/primo2_HIGH.webp" alt="" />
+              <img src="/images/menu/primo2_HIGH.webp" 
+                   alt="Gnocchi di patata dolce con coloranti naturali"
+                   title="Gnocchi di Terra - Ingredienti locali con patata dolce" />
               <span class="menu-card-label label-custom">Gnocchi di Terra</span>
             </div>
             <!-- TESTO -->
@@ -837,60 +833,141 @@
             </div>
           </div>
         </div>
-
-        <!--CARD 3 -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="card menu-card glass-effect text-center">
-            <!-- PIATTO -->
-            <div class="menu-card-img">
-              <img src="/images/menu/primo3.webp" alt="petali luminescenti viola carnosi" />
-              <span class="menu-card-label label-custom">Petali di Floricanto</span>
-            </div>
-            <!-- TESTO -->
-            <div class="menu-card-text">
-              <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da contenitori
-                biodegradabili con una fragranza erbacea e una texture croccante.</p>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-
-
-    <!-- SECONDI -->
-    <h3 class="label-h3 glass-effect my-5">Secondi</h3>
-
-    <!-- Secondi - Mobile -->
-    <div class="d-block d-md-none">
-      <div id="secondiCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center p-4">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/secondo1.webp" alt="" />
-                  <span class="menu-card-label label-custom">Polpetta di Giada</span>
-                </div>
-                <!-- TESTO -->
-                <div class="menu-card-text">
-                  <p>Una polpetta artigianale al tè Matcha biologico dalla consistenza vellutata e dal colore verde
-                    intenso,
-                    che ricorda una gemma di giada. Su letto di crumble  con cristalli edibili.</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div class="carousel-item">
             <div class="d-flex justify-content-center p-4">
               <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/secondo2.webp" alt="" />
-                  <span class="menu-card-label label-custom">Sfera di Corallo</span>
-                </div>
+               <!-- PIATTO -->
+<div class="menu-card-img">
+  <img src="/images/menu/primo3.webp" 
+       alt="petali luminescenti viola carnosi"
+       title="Petali di Floricanto - Petali bioluminescenti da colture aeroponiche" />
+  <span class="menu-card-label label-custom">Petali di Floricanto</span>
+</div>
+<!-- TESTO -->
+<div class="menu-card-text">
+  <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da
+    contenitori biodegradabili con una fragranza erbacea e una texture croccante.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#primiCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#primiCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+</button>
+</div>
+</div>
+
+<!-- Primi - Desktop -->
+<div class="d-none d-md-block container">
+  <div class="row justify-content-center g-5 mb-4">
+
+    <!--CARD 1-->
+    <div class="col-12 col-sm-6 col-lg-3 ">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/primo1.webp" 
+               alt="risotto cremoso con pezzi di fichi viola"
+               title="Risotto Cosmic - Risotto con pistacchio, stracciatella e fichi viola" />
+          <span class="menu-card-label label-custom">Risotto Cosmic</span>
+        </div>
+        <!-- TESTO -->
+        <div class="menu-card-text">
+          <p>Risotto cremoso con pistacchio e stracciatella artigianale. La base vellutata è sormontata dagli
+            esotici fichi viola "Cosmic Fig" per un contrasto dolce-acidulo che esalta il sapore.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--CARD 2 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/primo2_HIGH.webp" 
+               alt="Gnocchi di patata dolce con coloranti naturali"
+               title="Gnocchi di Terra - Ingredienti locali con patata dolce" />
+          <span class="menu-card-label label-custom">Gnocchi di Terra</span>
+        </div>
+        <!-- TESTO -->
+        <div class="menu-card-text">
+          <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di patata
+            dolce.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--CARD 3 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card menu-card glass-effect text-center">
+        <!-- PIATTO -->
+        <div class="menu-card-img">
+          <img src="/images/menu/primo3.webp" 
+               alt="petali luminescenti viola carnosi"
+               title="Petali di Floricanto - Petali bioluminescenti da colture aeroponiche" />
+          <span class="menu-card-label label-custom">Petali di Floricanto</span>
+        </div>
+        <!-- TESTO -->
+        <div class="menu-card-text">
+          <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da contenitori
+            biodegradabili con una fragranza erbacea e una texture croccante.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--foglie-->
+<div class="leaves-wrapper">
+  <div class="leaves leaves-left leaves-menu-plates">
+    <img src="images/foglie/left-leaf.png" class="leaf" />
+  </div>
+</div>
+
+<!-- SECONDI -->
+<h3 class="label-h3 glass-effect my-5">Secondi</h3>
+
+<!-- Secondi - Mobile -->
+<div class="d-block d-md-none">
+  <div id="secondiCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center p-4">
+          <div class="card menu-card glass-effect text-center">
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/secondo1.webp" 
+                   alt="Polpetta verde al tè Matcha su crumble"
+                   title="Polpetta di Giada - Polpetta artigianale al tè Matcha biologico" />
+              <span class="menu-card-label label-custom">Polpetta di Giada</span>
+            </div>
+            <!-- TESTO -->
+            <div class="menu-card-text">
+              <p>Una polpetta artigianale al tè Matcha biologico dalla consistenza vellutata e dal colore verde
+                intenso, che ricorda una gemma di giada. Su letto di crumble  con cristalli edibili.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center p-4">
+          <div class="card menu-card glass-effect text-center">
+            <!-- PIATTO -->
+            <div class="menu-card-img">
+              <img src="/images/menu/secondo2.webp" 
+                   alt="Sfera vegetale su corallo commestibile"
+                   title="Sfera di Corallo - Sfera a base di alghe e proteine di legumi" />
+              <span class="menu-card-label label-custom">Sfera di Corallo</span>
+            </div>
                 <!-- TESTO -->
                 <div class="menu-card-text">
                   <p>Una sfera vegetale a base di alghe, proteine di legumi e spezie marine, su "corallo" commestibile.
@@ -905,7 +982,9 @@
               <div class="card menu-card glass-effect text-center">
                 <!-- PIATTO -->
                 <div class="menu-card-img">
-                  <img src="/images/menu/secondo3.webp" alt="" />
+                  <img src="/images/menu/secondo3.webp" 
+                       alt="Spirale di verdure di stagione con proteine vegetali"
+                       title="Spirale d'Orto - Verdure di stagione a km zero con proteine vegetali" />
                   <span class="menu-card-label label-custom">Spirale d'Orto</span>
                 </div>
                 <!-- TESTO -->
@@ -918,7 +997,7 @@
             </div>
           </div>
         </div>
-        
+
         <button class="carousel-control-prev" type="button" data-bs-target="#secondiCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
@@ -936,10 +1015,12 @@
         <div class="col-12 col-sm-6 col-lg-3 ">
           <div class="card menu-card glass-effect text-center">
             <!-- PIATTO -->
-            <div class="menu-card-img">
-              <img src="/images/menu/secondo1.webp" alt="" />
-              <span class="menu-card-label label-custom">Polpetta di Giada</span>
-            </div>
+<div class="menu-card-img">
+  <img src="/images/menu/secondo1.webp" 
+       alt="Polpetta verde al tè Matcha su crumble"
+       title="Polpetta di Giada - Polpetta artigianale al tè Matcha biologico" />
+  <span class="menu-card-label label-custom">Polpetta di Giada</span>
+</div>
             <!-- TESTO -->
             <div class="menu-card-text">
               <p>Una polpetta artigianale al tè Matcha biologico dalla consistenza vellutata e dal colore verde intenso,
@@ -951,12 +1032,14 @@
         <!--CARD 2 -->
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="card menu-card glass-effect text-center">
-            <!-- PIATTO -->
-            <div class="menu-card-img">
-              <img src="/images/menu/secondo2.webp" alt="" />
-              <span class="menu-card-label label-custom">Sfera di Corallo</span>
-            </div>
-            <!-- TESTO -->
+           <!-- PIATTO -->
+<div class="menu-card-img">
+  <img src="/images/menu/secondo2.webp" 
+       alt="Sfera vegetale su corallo commestibile"
+       title="Sfera di Corallo - Sfera a base di alghe e proteine di legumi" />
+  <span class="menu-card-label label-custom">Sfera di Corallo</span>
+</div>
+<!-- TESTO -->
             <div class="menu-card-text">
               <p>Una sfera vegetale a base di alghe, proteine di legumi e spezie marine, su "corallo" commestibile.
                 Accompagnato da perle di limone e una schiuma di acqua.</p>
@@ -967,39 +1050,43 @@
         <!--CARD 3 -->
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="card menu-card glass-effect text-center">
+           <!-- PIATTO -->
+<div class="menu-card-img">
+  <img src="/images/menu/secondo3.webp" 
+       alt="Spirale di verdure di stagione con proteine vegetali"
+       title="Spirale d'Orto - Verdure di stagione a km zero con proteine vegetali" />
+  <span class="menu-card-label label-custom">Spirale d'Orto</span>
+</div>
+<!-- TESTO -->
+<div class="menu-card-text">
+  <p>Una spirale di verdure di stagione e a km zero, proteine vegetali, brodo ottenuto da scarti vegetali
+    ridotti al minimo, valorizzazione degli ingredienti poveri.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- DOLCI -->
+<h3 class="label-h3 glass-effect my-5">Dolci</h3>
+
+<!-- Dolci - Mobile -->
+<div class="d-block d-md-none">
+  <div id="dolciCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center p-4">
+          <div class="card menu-card glass-effect text-center">
             <!-- PIATTO -->
             <div class="menu-card-img">
-              <img src="/images/menu/secondo3.webp" alt="" />
-              <span class="menu-card-label label-custom">Spirale d'Orto</span>
+              <img src="/images/menu/dolce1.webp" 
+                   alt="sfera di gelato su salsa ai frutti esotici"
+                   title="Sfera di Luna - Gelato vegano alla vaniglia con cioccolato bianco" />
+              <span class="menu-card-label label-custom">Sfera di Luna</span>
             </div>
             <!-- TESTO -->
-            <div class="menu-card-text">
-              <p>Una spirale di verdure di stagione e a km zero, proteine vegetali, brodo ottenuto da scarti vegetali
-                ridotti al minimo, valorizzazione degli ingredienti poveri.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- DOLCI -->
-    <h3 class="label-h3 glass-effect my-5">Dolci</h3>
-
-    <!-- Dolci - Mobile -->
-    <div class="d-block d-md-none">
-      <div id="dolciCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center p-4">
-              <div class="card menu-card glass-effect text-center">
-                <!-- PIATTO -->
-                <div class="menu-card-img">
-                  <img src="/images/menu/dolce1.webp" alt="sfera di gelato su salsa ai frutti esotici" />
-                  <span class="menu-card-label label-custom">Sfera di Luna</span>
-                </div>
-                <!-- TESTO -->
                 <div class="menu-card-text">
                   <p>Una sfera di gelato vegano alla vaniglia rivestita con uno strato di cioccolato bianco vegano.
                     Adagiata
@@ -1014,7 +1101,9 @@
               <div class="card menu-card glass-effect text-center">
                 <!-- PIATTO -->
                 <div class="menu-card-img">
-                  <img src="/images/menu/dolce2.webp" alt="sfera di gelato biologico blu intenso" />
+                  <img src="/images/menu/dolce2.webp" 
+                       alt="sfera di gelato biologico blu intenso"
+                       title="Filamenti di Aurora - Gelato vegano biologico senza lattosio" />
                   <span class="menu-card-label label-custom">Filamenti di Aurora</span>
                 </div>
                 <!-- TESTO -->
@@ -1025,13 +1114,15 @@
               </div>
             </div>
           </div>
-
+          
           <div class="carousel-item">
             <div class="d-flex justify-content-center p-4">
               <div class="card menu-card glass-effect text-center">
                 <!-- PIATTO -->
                 <div class="menu-card-img">
-                  <img src="/images/menu/dolce3.webp" alt="tartelletta con crema vegana e gelatina naturale" />
+                  <img src="/images/menu/dolce3.webp" 
+                       alt="tartelletta con crema vegana e gelatina naturale"
+                       title="Giardino di Cristallo - Tartelletta vegana con frutta di stagione" />
                   <span class="menu-card-label label-custom">Giardino di Cristallo</span>
                 </div>
                 <!-- TESTO -->
@@ -1042,29 +1133,31 @@
               </div>
             </div>
           </div>
-        </div>
-        
-        <button class="carousel-control-prev" type="button" data-bs-target="#dolciCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#dolciCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Dolci - Desktop -->
-    <div class="d-none d-md-block container">
-      <div class="row justify-content-center g-5 mb-4">
-
-        <!--CARD 1-->
-        <div class="col-12 col-sm-6 col-lg-3 ">
-          <div class="card menu-card glass-effect text-center">
-            <!-- PIATTO -->
-            <div class="menu-card-img">
-              <img src="/images/menu/dolce1.webp" alt="sfera di gelato su salsa ai frutti esotici" />
-              <span class="menu-card-label label-custom">Sfera di Luna</span>
-            </div>
+          </div>
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#dolciCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#dolciCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+          </div>
+          </div>
+          
+          <!-- Dolci - Desktop -->
+          <div class="d-none d-md-block container">
+            <div class="row justify-content-center g-5 mb-4">
+          
+              <!--CARD 1-->
+              <div class="col-12 col-sm-6 col-lg-3 ">
+                <div class="card menu-card glass-effect text-center">
+                  <!-- PIATTO -->
+                  <div class="menu-card-img">
+                    <img src="/images/menu/dolce1.webp" 
+                         alt="sfera di gelato su salsa ai frutti esotici"
+                         title="Sfera di Luna - Gelato vegano alla vaniglia con cioccolato bianco" />
+                    <span class="menu-card-label label-custom">Sfera di Luna</span>
+                  </div>
             <!-- TESTO -->
             <div class="menu-card-text">
               <p>Una sfera di gelato vegano alla vaniglia rivestita con uno strato di cioccolato bianco vegano. Adagiata
@@ -1078,7 +1171,9 @@
           <div class="card menu-card glass-effect text-center">
             <!-- PIATTO -->
             <div class="menu-card-img">
-              <img src="/images/menu/dolce2.webp" alt="sfera di gelato biologico blu intenso" />
+              <img src="/images/menu/dolce2.webp" 
+                   alt="sfera di gelato biologico blu intenso"
+                   title="Filamenti di Aurora - Gelato vegano biologico senza lattosio" />
               <span class="menu-card-label label-custom">Filamenti di Aurora</span>
             </div>
             <!-- TESTO -->
@@ -1088,13 +1183,15 @@
             </div>
           </div>
         </div>
-
+        
         <!--CARD 3 -->
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="card menu-card glass-effect text-center">
             <!-- PIATTO -->
             <div class="menu-card-img">
-              <img src="/images/menu/dolce3.webp" alt="tartelletta con crema vegana e gelatina naturale" />
+              <img src="/images/menu/dolce3.webp" 
+                   alt="tartelletta con crema vegana e gelatina naturale"
+                   title="Giardino di Cristallo - Tartelletta vegana con frutta di stagione" />
               <span class="menu-card-label label-custom">Giardino di Cristallo</span>
             </div>
             <!-- TESTO -->
@@ -1104,8 +1201,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        </div>
+        </div>
   </section>
 
   <footer>
