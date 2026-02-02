@@ -208,7 +208,7 @@ p {
 
 @media (min-width: 768px) {
     .techline-home {
-        margin-top: 45dvh;
+        margin-top: 50dvh;
     }
 }
 
@@ -867,7 +867,7 @@ footer {
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero_home_bg.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 15%;
+    background-position: center 35%;
 }
 
 #home-s3 {
