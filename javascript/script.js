@@ -144,7 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
 // PAGINA MENU.HTML
 // tab menu intolleranze
 
