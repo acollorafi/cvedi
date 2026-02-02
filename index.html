@@ -36,25 +36,25 @@
     <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
             <a class="navbar-brand glass-blur-only" href="index.html">
-                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" title="Eden Leaf - Il primo ristorante Solarpunk" class="logo-img">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img">
             </a>
 
-           <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
-<div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
-    <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua" width="30" height="20" />
-    <button class="glass-effect btn btn-custom-primary" type="button" onclick="window.location.href='prenota.html'">PRENOTA</button>
-    <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</div>
+            <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
+            <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+                <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <!-- Menu collapse -->
             <div class="glass-effect collapse navbar-collapse h-100" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">HOME</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ristorante.html">RISTORANTE</a>
@@ -66,19 +66,20 @@
                         <a class="nav-link" href="info.html">INFO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="sostenibilita.html">SOSTENIBILITÀ</a>
+                        <a class="nav-link" href="sostenibilita.html">SOSTENIBILITÀ</a>
                     </li>
                 </ul>
             </div>
 
             <!-- Desktop: PRENOTA + Bandiera (visibili solo >= 1200px) -->
             <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
-                <button class="glass-effect btn btn-custom-primary btn-prenota" type="button" onclick="window.location.href='prenota.html'">PRENOTA</button>
-                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua" width="30" height="20" />
+                <button class="glass-effect btn btn-custom-primary btn-prenota" type="button"
+                    onclick="window.location.href='prenota.html'">PRENOTA</button>
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
             </div>
         </div>
     </nav>
-    
+
     <!-- Sezione 1: Hero + Cards -->
     <section id="home-s1" class="img-bg">
 
@@ -100,59 +101,117 @@
                     <p>Sospesi tra cielo e radici, vi accogliamo nella nostra biosfera di cristallo sulla Foglia Madre.
                         Eden Leaf non è solo cucina gourmet, è un ecosistema pulsante dove l'alta tecnologia coltiva il
                         sapore e ogni piatto racconta la storia vivente dell'albero che ci ospita.</p>
-                        <button class="glass-effect btn btn-custom-primary" type="button" onclick="window.location.href='ristorante.html'">Scopri il ristorante</button>
-                    </div>
-            </div>
-
-
-            <!-- Cards Punti di forza -->
-            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
-
-                    <div class="col">
-                        <div class="card glass-effect">
-                            <img src="/images/icons/icon_puntiforza1.webp" alt="Icona ingredienti freschi"
-                            title="Ingredienti raccolti dai rami circostanti">
-                            <p>Raccogliamo germogli, frutti e linfa direttamente dai rami che circondano i vostri
-                                tavoli: una freschezza che non conosce trasporto.</p>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card glass-effect">
-                            <img src="/images/icons/icon_puntiforza2.webp" alt="Icona tecnologia bionica"
-                            title="Sensori bionici per monitoraggio in tempo reale">
-                            <p>Sensori bionici monitorano la salute delle piante in tempo reale, garantendo ingredienti
-                                puri senza mai forzare i ritmi della natura.</p>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card glass-effect">
-                            <img src="/images/icons/icon_puntiforza3.webp" alt="Icona energia solare"
-                            title="Cupola fotovoltaica per energia pulita">
-                            <p>La nostra cupola in vetro fotovoltaico cattura il sole per alimentare la cucina, rendendo
-                                ogni cottura un atto di energia pulita.</p>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card glass-effect">
-                            <img src="/images/icons/icon_puntiforza4.webp" alt="Icona economia circolare"
-                            title="Scarti organici trasformati in nutrienti">
-                            <p>Nulla si spreca: i nostri scarti organici vengono trasformati in nutrienti vitali per le
-                                radici del Grande Albero, in un ciclo armonioso.</p>
-                        </div>
-                    </div>
-
+                    <button class="glass-effect btn btn-custom-primary" type="button">Scopri il ristorante</button>
                 </div>
-
-                <button class="glass-effect btn btn-custom-primary" type="button" onclick="window.location.href='ristorante.html'">Scopri il ristorante</button>
-
             </div>
 
-        </div>
+            <!-- Cards punti di forza - Mobile -->
+            <div class="d-block d-md-none carousel-padding">
+                <div id="puntiDiForzaCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
 
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center p-4">
+                                <div class="card glass-effect">
+                                    <img src="/images/icons/icon_puntiforza1.webp">
+                                    <p>Raccogliamo germogli, frutti e linfa direttamente dai rami che circondano i
+                                        vostri
+                                        tavoli: una freschezza che non conosce trasporto.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center p-4">
+                                <div class="card glass-effect">
+                                    <img src="/images/icons/icon_puntiforza2.webp">
+                                    <p>Sensori bionici monitorano la salute delle piante in tempo reale, garantendo
+                                        ingredienti
+                                        puri senza mai forzare i ritmi della natura.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center p-4">
+                                <div class="card glass-effect">
+                                    <img src="/images/icons/icon_puntiforza3.webp">
+                                    <p>La nostra cupola in vetro fotovoltaico cattura il sole per alimentare la cucina,
+                                        rendendo
+                                        ogni cottura un atto di energia pulita.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center p-4">
+                                <div class="card glass-effect">
+                                    <img src="/images/icons/icon_puntiforza4.webp">
+                                    <p>Nulla si spreca: i nostri scarti organici vengono trasformati in nutrienti vitali
+                                        per le
+                                        radici del Grande Albero, in un ciclo armonioso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#puntiDiForzaCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#puntiDiForzaCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cards punti di forza - Desktop -->
+            <div class="d-none d-md-block">
+                <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                    <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
+
+                        <div class="col">
+                            <div class="card glass-effect">
+                                <img src="/images/icons/icon_puntiforza1.webp">
+                                <p>Raccogliamo germogli, frutti e linfa direttamente dai rami che circondano i vostri
+                                    tavoli: una freschezza che non conosce trasporto.</p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card glass-effect">
+                                <img src="/images/icons/icon_puntiforza2.webp">
+                                <p>Sensori bionici monitorano la salute delle piante in tempo reale, garantendo
+                                    ingredienti
+                                    puri senza mai forzare i ritmi della natura.</p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card glass-effect">
+                                <img src="/images/icons/icon_puntiforza3.webp">
+                                <p>La nostra cupola in vetro fotovoltaico cattura il sole per alimentare la cucina,
+                                    rendendo
+                                    ogni cottura un atto di energia pulita.</p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card glass-effect">
+                                <img src="/images/icons/icon_puntiforza4.webp">
+                                <p>Nulla si spreca: i nostri scarti organici vengono trasformati in nutrienti vitali per
+                                    le
+                                    radici del Grande Albero, in un ciclo armonioso.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="glass-effect btn btn-custom-primary" type="button">Scopri il ristorante</button>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -165,28 +224,75 @@
             Esplorate gli angoli della nostra cupola, dove il design abbraccia la bellezza della natura sospesa.
         </p>
 
-        <div class="row g-3">
+        <!-- Mobile -->
+        <div class="d-block d-md-none carousel-padding">
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
 
-            <div class="col-12 col-md-6">
-                <img src="images/home/gallery/img_gallery_01.webp" class="img-gallery"  alt="Il ristorante"
-                title="Interior design della cupola Eden Leaf">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center p-4">
+                            <img src="images/home/gallery/img_gallery_01.webp" class="img-gallery" alt="Il ristorante">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center p-4">
+                            <img src="images/home/gallery/img_gallery_02.webp" class="img-gallery" alt="Il giardino">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center p-4">
+                            <img src="images/home/gallery/img_gallery_03.webp" class="img-gallery" alt="Lo chef">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center p-4">
+                            <img src="images/home/gallery/img_gallery_04.webp" class="img-gallery" alt="La serra">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center p-4">
+                            <img src="images/home/gallery/img_gallery_05.webp" class="img-gallery" alt="L'ingegnera botanica">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
-            <div class="col-12 col-md-6">
-                <img src="images/home/gallery/img_gallery_02.webp" class="img-gallery" alt="Il giardino"
-                title="Giardino verticale e colture aeroponiche" >
-            </div>
+        </div>
+
+        <!-- Desktop -->
+        <div class="d-none d-md-block">
+
+            <div class="row g-3">
+
+                <div class="col-12 col-md-6">
+                    <img src="images/home/gallery/img_gallery_01.webp" class="img-gallery" alt="Il ristorante">
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="images/home/gallery/img_gallery_02.webp" class="img-gallery" alt="Il giardino">
+                </div>
 
 
-            <div class="col-12 col-md-4 col-lg-4 align-self-center">
-                <img src="images/home/gallery/img_gallery_03.webp" class="img-gallery" alt="Lo chef" title="Chef Julio Vane al lavoro nella cucina Eden Leaf">
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 align-self-center">
-                <img src="images/home/gallery/img_gallery_04.webp" class="img-gallery" alt="La serra" title="Serra idroponica integrata nell'Albero Maestro">
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 align-self-center">
-                <img src="images/home/gallery/img_gallery_05.webp" class="img-gallery" alt="L'ingegnera botanica" title="Il nostro team di esperti botanici">
-            </div>
+                <div class="col-12 col-md-4 col-lg-4 align-self-center">
+                    <img src="images/home/gallery/img_gallery_03.webp" class="img-gallery" alt="Lo chef">
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 align-self-center">
+                    <img src="images/home/gallery/img_gallery_04.webp" class="img-gallery" alt="La serra">
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 align-self-center">
+                    <img src="images/home/gallery/img_gallery_05.webp" class="img-gallery" alt="L'ingegnera botanica">
+                </div>
 
+            </div>
         </div>
 
     </section>
@@ -202,14 +308,12 @@
             class="d-flex d-md-none flex-column align-items-center content-align-center text-center mt-5 padding-section">
             <h2>Alcuni dei nostri piatti</h2>
 
-            <img src="images/ristorante/img_piatto_1.webp" class="img-piatto"  alt="Piatto gourmet Eden Leaf"
-            title="Creazione culinaria sostenibile dello Chef Julio Vane" />
-            <img src="images/ristorante/img_piatto_2.webp" class="img-piatto" alt="Piatto gourmet Eden Leaf"
-            title="Piatto di alta cucina molecolare sostenibile"/>
-            <img src="images/ristorante/img_piatto_3.webp" class="img-piatto" alt="Piatto gourmet Eden Leaf"
-            title="Specialità culinaria a base vegetale dell'Albero Maestro"/>
+            <img src="images/ristorante/img_piatto_1.webp" class="img-piatto" />
+            <img src="images/ristorante/img_piatto_2.webp" class="img-piatto" />
+            <img src="images/ristorante/img_piatto_3.webp" class="img-piatto" />
 
-            <button class="glass-effect btn btn-custom-primary" type="button" onclick="window.location.href='menu.html'">Scopri di più</button>
+            <button class="glass-effect btn btn-custom-primary mt-5" type="button">Scopri di più</button>
+
         </div>
 
         <!-- Sezione 3 - I  nostri piatti - Desktop Version -->
@@ -219,21 +323,19 @@
             <h2>Alcuni dei nostri piatti</h2>
             <div class="container-fluid p-0">
                 <img src="images/home/rami_piatti/Ramo_1.webp" width="1043px" height="412px"
-                    style="margin-top:45px; " alt="Piatti gourmet su ramo decorativo"
-                    title="Selezione di piatti Eden Leaf presentati su rami dell'Albero Maestro" />
+                    style="margin-top:45px; " />
 
                 <div class="d-flex flex-column" style="margin-top:-120px">
                     <img src="images/home/rami_piatti/Ramo_2.webp" width="1043px" height="412px"
-                        class="align-self-end" alt="Piatti gourmet su ramo decorativo"
-                        title="Creazioni culinarie sostenibili dello Chef Julio Vane" />
+                        class="align-self-end" />
                     <!-- aggiungendo col-12 col-md-8 e mettendo altezza auto rimane proporzionato a prescindere dalle dimensioni dello schermo-->
                 </div>
 
-                <img src="images/home/rami_piatti/Ramo_3.webp" width="1043px" height="412px" style="margin-top:-90px" alt="Piatti gourmet su ramo decorativo"
-                title="Alta cucina molecolare e bio-sostenibile Eden Leaf" />
+                <img src="images/home/rami_piatti/Ramo_3.webp" width="1043px" height="412px" style="margin-top:-90px" />
             </div>
 
-            <button class="glass-effect btn btn-custom-primary mt-5" type="button" onclick="window.location.href='menu.html'">Scopri di più</button>
+            <button class="glass-effect btn btn-custom-primary" type="button">Scopri di più</button>
+
         </div>
 
 
@@ -248,8 +350,7 @@
 
                     <div class="col">
                         <div class="card glass-effect">
-                            <img src="/images/home/recensioni/recensione1.webp" class="foto-recensione" alt="Recensore Eden Leaf"
-                            title="Testimonianza cliente soddisfatto">
+                            <img src="/images/home/recensioni/recensione1.webp" class="foto-recensione">
                             <p>“Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è
                                 commovente, un'esperienza che vale ogni centesimo.”</p>
                         </div>
@@ -257,8 +358,7 @@
 
                     <div class="col">
                         <div class="card glass-effect">
-                            <img src="/images/home/recensioni/recensione2.webp" class="foto-recensione" alt="Recensore Eden Leaf"
-                            title="Testimonianza cliente soddisfatto">
+                            <img src="/images/home/recensioni/recensione2.webp" class="foto-recensione">
                             <p>"Finalmente l'alta cucina incontra l'etica vera. Qui sopra il caos della città è solo un
                                 brutto ricordo, esiste solo armonia."</p>
                         </div>
@@ -266,8 +366,7 @@
 
                     <div class="col">
                         <div class="card glass-effect">
-                            <img src="/images/home/recensioni/recensione3.webp" class="foto-recensione" alt="Recensore Eden Leaf"
-                            title="Testimonianza cliente soddisfatto">
+                            <img src="/images/home/recensioni/recensione3.webp" class="foto-recensione">
                             <p>"Tecnologia invisibile e sapori antichi. Un lusso sostenibile che non credevo possibile.
                                 Il servizio è fluido ed elegante, proprio come la linfa."</p>
                         </div>
@@ -275,8 +374,7 @@
 
                     <div class="col">
                         <div class="card glass-effect">
-                            <img src="/images/home/recensioni/recensione4.webp" class="foto-recensione" alt="Recensore Eden Leaf"
-                            title="Testimonianza cliente soddisfatto">
+                            <img src="/images/home/recensioni/recensione4.webp" class="foto-recensione">
                             <p>"Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante
                                 il temporale era pura magia, indimenticabile."</p>
                         </div>
@@ -391,29 +489,25 @@
             <br>Assicuratevi ora il vostro angolo in paradiso.
         </p>
 
-        <button class="glass-effect btn btn-custom-primary" type="button" onclick="window.location.href='prenota.html'">Prenota</button>
+        <button class="glass-effect btn btn-custom-primary" type="button">Prenota</button>
     </section>
 
 
     <!-- Footer -->
     <footer>
         <div class="container-xxl text-center">
-            <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" title="Eden Leaf - Il primo ristorante Solarpunk" />
+            <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" />
             <div>
                 <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
                 <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
                 <p>© 2025 Eden Leaf Ecosystems.</br>
-                Tutti i diritti riservati alla Natura.</br>
-                P.IVA 000123SOLAR</p>
+                    Tutti i diritti riservati alla Natura.</br>
+                    P.IVA 000123SOLAR</p>
             </div>
         </div>
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <script src="sostenibilità.js"></script>
 </body>
 
 </html>
