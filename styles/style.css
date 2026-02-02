@@ -186,9 +186,31 @@ p {
     }
 }
 
+.techline {
+    position: absolute;
+    margin-left: 0;
+    margin-top: 30dvh;
+    max-width: 50%;
+}
 
+@media (min-width: 768px) {
+    .techline {
+        margin-top: 42dvh;
+    }
+}
 
+.techline-home {
+    position: absolute;
+    margin-left: 0;
+    margin-top: 40dvh;
+    max-width: 50%;
+}
 
+@media (min-width: 768px) {
+    .techline-home {
+        margin-top: 50dvh;
+    }
+}
 
 /********************************************
            LIQUID GLASS EFFECT
