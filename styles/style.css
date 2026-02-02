@@ -65,9 +65,10 @@ body {
     font-display: swap;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
-  }
+}
 
 
 h1,
@@ -126,9 +127,9 @@ p {
     }
 
     p {
-    font-size: 1.2rem;
-    line-height: 1.2;
-}
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
 }
 
 
@@ -148,7 +149,8 @@ p {
     padding-bottom: 60px;
 }
 
-.padding-intra-section { /*da mettere tipo tra testo ed elemento di una stessa sezione*/
+.padding-intra-section {
+    /*da mettere tipo tra testo ed elemento di una stessa sezione*/
     padding-bottom: 30px;
 }
 
@@ -159,8 +161,8 @@ p {
     }
 
     .padding-intra-section {
-    padding-bottom: 60px;
-}
+        padding-bottom: 60px;
+    }
 }
 
 .hero-section {
@@ -236,7 +238,7 @@ p {
 .btn-custom-primary {
 
     display: flex;
-    height: 64px;
+    height: 50px;
     padding: 12px 32px;
     justify-content: center;
     align-items: center;
@@ -250,7 +252,7 @@ p {
     color: var(--bs-white);
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.40);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 20px;
     /* 75% */
@@ -376,11 +378,9 @@ p {
     color: var(--bs-white);
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             rgba(68, 222, 224, 0.25),
-            rgba(68, 222, 224, 0.15)
-        ),
+            rgba(68, 222, 224, 0.15)),
         rgba(246, 241, 231, 0.22);
 
     border: 2px solid rgba(68, 222, 224, 0.5);
@@ -390,12 +390,13 @@ p {
         inset -3px 3px 6px rgba(255, 255, 255, 0.15),
         0 0 18px rgba(68, 222, 224, 0.35);
 
-    padding: 18px 64px; /* più largo */
+    padding: 18px 64px;
+    /* più largo */
 }
 
 .btn-menu:not(.active):hover {
     border: 1px solid rgba(246, 241, 231, 0.30);
-    box-shadow: 0 0 6px rgba(255,255,255,0.4);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
 
@@ -423,6 +424,7 @@ p {
 .card p {
     font-size: 18px;
     text-align: center;
+    text-shadow: 0 0 15px #000, 0 0 100px #000;
 }
 
 .card-team {
@@ -481,7 +483,7 @@ p {
 
 
 
-/* CARD PIATTI (menu e ingredienti) - da sistemare */
+/* CARD PIATTI (menu e ingredienti) /
 
 /* CARD BASE */
 .menu-card {
@@ -586,8 +588,8 @@ p {
 }
 
 .navbar-img-languages {
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     border: var(--bs-glass-border);
@@ -596,8 +598,8 @@ p {
 /********************************************
           NAVBAR
 ********************************************/
- /* ===== NAVBAR STYLES ===== */
- .navbar {
+/* ===== NAVBAR STYLES ===== */
+.navbar {
     padding: 0.5rem 0;
     width: 100%;
     left: 0;
@@ -615,9 +617,9 @@ p {
     margin: 0;
 }
 
-.logo-img { 
-    width: 60px;
-    height: 60px;
+.logo-img {
+    width: 50px;
+    height: 50px;
     transition: all 0.3s ease;
 }
 
@@ -684,16 +686,93 @@ p {
     border-radius: 10px;
 }
 
+/* TABLET - min 768px */
+@media (min-width: 768px) {
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .navbar-img-languages {
+        width: 64px;
+        height: 64px;
+    }
+
+    .btn-custom-primary {
+        height: 64px;
+        font-size: 24px;
+    }
+}
+
+/* DESKTOP XL - min 1200px */
+@media (min-width: 1200px) {
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+        margin-top: 0;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        gap: 1.5rem;
+        width: auto;
+        margin: 0 auto;
+        padding: 0.7rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+    }
+
+    .btn-custom-primary {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
+
+    .btn-language {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
 
 
 
 /********************************************
            FOOTER
 ********************************************/
-.footer {
+footer {
     padding-top: 80px;
     padding-bottom: 80px;
     background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, var(--bs-green) 100%);
+}
+
+.footer-logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 2rem;
+}
+
+.footer-tagline {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem; /* 62.5% */
+    margin-bottom: 1.5rem;
+}
+
+.footer-hours {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 2rem;
 }
 
 
@@ -821,24 +900,6 @@ p {
     background-size: cover;
 }
 
-/*Sfondi pagina piatto 01*/
-#piatto01-s1 {
-    position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/piatti_hero_bg.webp) no-repeat;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 70%;
-
-}
-
-#piatto01-s2 {
-    position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/ingredienti_bg.webp) no-repeat;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 /********************************************
            ACCORDION FAQ
 ********************************************/
@@ -942,7 +1003,7 @@ p {
 
 @media (min-width: 768px) {
     .hero-subtitle {
-    font-size: 3rem;
+        font-size: 3rem;
     }
 }
 
@@ -964,6 +1025,21 @@ p {
 /********************************************
            PAGINA RISTORANTE
 ********************************************/
+.hero-bg {
+    background-image: url('../images/ristorante/hero_bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    /* aspect-ratio: 393 / 1711; */
+}
+
+@media (min-width: 768px) {
+    .hero-bg {
+        aspect-ratio: 800 / 1170;
+    }
+}
 
 .team-bg {
     background-image: url('../images/ristorante/img_team_bg.webp');
@@ -1018,10 +1094,6 @@ p {
     transform: translateY(12px) scale(0.96);
     visibility: hidden;
     pointer-events: none;
-}
-
-.menu-cards-wrapper {
-    position: relative;
 }
 
 .menu-hidden {
@@ -1080,138 +1152,154 @@ body:has(.sostenibility-container) {
 /********************************************
            PAGINA SOSTENIBILITÀ
 ********************************************/
+.sostenibility-container {
+    overflow-x: hidden;
+}
 
-    /* Hero Section */
-    
-    .hero-sostenibilità {
-        min-height: 90vh;
-        background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
+/* Hero Section */
+
+.hero-sostenibilità {
+    min-height: 90vh;
+    background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-line {
+    margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+    .hero-sostenibilità .hero-title {
+        font-size: 1.75rem;
     }
-    
+
     .hero-line {
-        margin-top: 2rem;
+        max-width: 90%;
     }
-    
-    @media (max-width: 767px) {
-        .hero-sostenibilità .hero-title {
-            font-size: 2.5rem;
-        }
-        .hero-line {
-            max-width: 90%;
-        }
-    }
-    /* Background principale */
-    .fullpage-bg {
-        background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100%;
-        position: relative;
-    }
+}
+
+/* Background principale */
+.fullpage-bg {
+    background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    position: relative;
+}
 
 
-    /* Sezioni generiche */
-    .section-image {
-        width: 100%;
-        height: auto;
-        border-radius: 20px;
+/* Sezioni generiche */
+.section-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+
+/* Fasi Section */
+.fase-wrapper {
+    position: relative;
+}
+
+.fase-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fase-item.active {
+    display: flex;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
     }
 
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-    /* Fasi Section */
-    .fase-wrapper {
-        position: relative;
+.fase-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+    display: none;
+    /* Nascosti su mobile */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.fase-nav:hover {
+    transform: translateY(-50%) scale(1.1);
+    opacity: 0.8;
+}
+
+.fase-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev-fase {
+    left: -10px;
+    background-image: url("/images/sostenibilità/arrow-left.svg");
+}
+
+.next-fase {
+    right: -10px;
+    background-image: url("/images/sostenibilità/arrow-right.svg");
+}
+
+.section-content .label-custom {
+    width: fit-content;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: none;
+    font-size: 22px !important;
+    font-family: 'Syne', sans-serif;
+}
+
+@media (max-width: 991px) {
+    .fasi-section .section-image-wrapper {
+        display: none;
     }
 
     .fase-item {
-        display: none;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
+        padding: 2rem 1rem;
     }
 
-    .fase-item.active {
-        display: flex;
-        opacity: 1;
-        animation: fadeIn 0.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateX(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
+    .section-content {
+        padding: 1.5rem;
+        text-align: center;
     }
 
     .fase-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
-        background-color: transparent;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 100;
-        display: none; /* Nascosti su mobile */
-        transition: transform 0.2s ease, opacity 0.2s ease;
+        display: block;
+        width: 50px;
+        height: 50px;
     }
+}
 
-    .fase-nav:hover {
-        transform: translateY(-50%) scale(1.1);
-        opacity: 0.8;
-    }
-
-    .fase-nav:active {
-        transform: translateY(-50%) scale(0.95);
-    }
-
-    .prev-fase {
-        left: -10px;
-        background-image: url("/images/sostenibilità/arrow-left.svg");
-    }
-
-    .next-fase {
-        right: -10px;
-        background-image: url("/images/sostenibilità/arrow-right.svg");
-    }
-
-    @media (max-width: 991px) {
-        .section-image-wrapper {
-            display: none;
-        }
-        
-        .fase-item {
-            padding: 2rem 1rem;
-        }
-        
-        .section-content {
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        .fase-nav {
-            display: block; 
-            width: 50px;
-            height: 50px;
-        }
-    }
-
-   /* Experts Section */
+/* Experts Section */
 .experts-section h3 {
     margin-bottom: 2rem;
 }
@@ -1273,7 +1361,7 @@ body:has(.sostenibility-container) {
     .experts-carousel-wrapper {
         padding: 0 40px;
     }
-    
+
     .expert-nav {
         display: block;
         width: 35px;
@@ -1285,24 +1373,15 @@ body:has(.sostenibility-container) {
     .experts-section h3 {
         margin-bottom: 1.5rem;
     }
-    
+
     .expert-item {
         display: block;
         opacity: 1;
     }
 }
+
 /* Partnership Cards */
-.partner-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 3rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100px;
-}
+
 
 @media (max-width: 767px) {
     .partner-card {
@@ -1312,160 +1391,76 @@ body:has(.sostenibility-container) {
 }
 
 
-    /* TABLET - min 768px */
-    @media (min-width: 768px) {
-        .navbar {
-            padding: 0.75rem 0;
-        }
-
-        .logo-img {
-            width: 70px;
-            height: 70px;
-        }
-
-        .btn-custom-primary {
-            padding: 0.6rem 1.5rem;
-            font-size: 0.9rem;
-        }
-
-        .section-content {
-            padding: 3rem 2rem;
-        }
-
-        .section-image-wrapper {
-            padding: 1.25rem;
-        }
-
-        .section-image {
-            border-radius: 30px;
-        }
-
-        .expert-photo {
-            width: 100px;
-            height: 100px;
-        }
-
-        .expert-name {
-            font-size: 1.3rem;
-        }
-
-        .partner-logo {
-            max-height: 100px;
-        }
-
-        .footer-logo {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 2rem;
-        }
-
-        .footer-tagline {
-            font-size: 1.5rem;
-        }
-
-        .footer-section {
-            padding: 4rem 1rem 2.5rem;
-            margin-top: 6rem;
-        }
+/* TABLET - min 768px */
+@media (min-width: 768px) {
+    .section-content {
+        padding: 3rem 2rem;
     }
 
-
-        /* Mostra pulsanti navigazione fasi */
-        .fase-nav {
-            display: block;
-            width: 50px;
-            height: 50px;
-        }
-
-        .prev-fase {
-            left: -25px;
-        }
-
-        .next-fase {
-            right: -25px;
-        }
-
-        .vision-section,
-        .sustainability-section,
-        .fasi-section {
-            padding: 5rem 0;
-        }
-
-        .economia-circolare {
-            padding: 4rem 0;
-        }
-
-        .section-content {
-            padding: 3rem 2.5rem;
-        }
-
-        .expert-photo {
-            width: 120px;
-            height: 120px;
-        }
-
-        .expert-name {
-            font-size: 1.5rem;
-        }
-
-        .footer-logo {
-            width: 190px;
-            height: 190px;
-            margin-bottom: 2rem;
-        }
-
-        .footer-tagline {
-            font-size: 2rem;
-        }
-
-        .footer-hours {
-            font-size: 1.2rem;
-        }
-
-        .footer-section {
-            padding: 5rem 1rem 2.5rem;
-            margin-top: 12.5rem;
-        }
-
-
-    /* DESKTOP XL - min 1200px */
-    @media (min-width: 1200px) {
-        .logo-img {
-            width: 100px;
-            height: 100px;
-        }
-
-        .navbar-collapse {
-            display: flex !important;
-            margin-top: 0;
-            max-height: none;
-            overflow-y: visible;
-        }
-
-        .navbar-nav {
-            text-align: center;
-            gap: 1.5rem;
-            width: auto;
-            margin: 0 auto;
-            padding: 0;
-        }
-
-        .nav-link {
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-        }
-
-        .btn-custom-primary {
-            padding: 0.75rem 2rem;
-            font-size: 1rem;
-        }
-
-        .btn-language {
-            width: 50px;
-            height: 50px;
-        }
+    .section-image-wrapper {
+        padding: 1.25rem;
     }
 
+    .section-image {
+        border-radius: 30px;
+    }
+
+    .expert-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .expert-name {
+        font-size: 1.3rem;
+    }
+
+    .partner-logo {
+        max-height: 160px;
+    }
+    .partner-logo {
+        max-height: 160px;
+    }
+
+}
+
+
+/* Mostra pulsanti navigazione fasi */
+.fase-nav {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.prev-fase {
+    left: -25px;
+}
+
+.next-fase {
+    right: -25px;
+}
+
+.vision-section,
+.sustainability-section,
+.fasi-section {
+    padding: 5rem 0;
+}
+
+.economia-circolare {
+    padding: 4rem 0;
+}
+
+.section-content {
+    padding: 3rem 2.5rem;
+}
+
+.expert-photo {
+    width: 120px;
+    height: 120px;
+}
+
+.expert-name {
+    font-size: 1.5rem;
+}
 
 
 /********************************************
@@ -1579,7 +1574,8 @@ body:has(.sostenibility-container) {
 }
 
 .search-btn-circle:hover {
-    background-color: #44dde099;;
+    background-color: #44dde099;
+    ;
     transform: scale(1.05);
 }
 
@@ -1792,10 +1788,65 @@ input::-webkit-calendar-picker-indicator {
 /********************************************
            PAGINA PIATTO
 ********************************************/
-.ingredient-picture {
-    height: 92px;
-    border-radius: 50%;
-    object-fit: cover;
+/********************************************
+           PAGINA PIATTO
+********************************************/
+.piatti-hero-bg {
+    background-image:
+        linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        url(/images/piatto01/piatti_hero_bg.webp);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center 70%;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.piatti-hero-bg img {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 80%;
+}
+
+.piatti-hero-section {
+    text-align: center;
+    align-items: center;
+    padding: 20dvh 5dvw 0 5dvw;
+}
+
+.ingredienti-piatto-bg {
+    background-image: url('../images/piatto01/ingredienti_bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
+.discover-ingredients-heading {
+    padding-top: 20vh;
+}
+
+@media (min-width: 768px) {
+    .piatti-hero-section {
+        padding: 20dvh 5dvw 0 5dvw;
+    }
+
+    .piatti-hero-bg img {
+        bottom: -30vh;
+    }
+
+    .ingredienti-piatto-img {
+        width: 60%;
+    }
+
+    .discover-ingredients-heading {
+        padding-top: 40vh;
+    }
 }
 
 .allergeni {
