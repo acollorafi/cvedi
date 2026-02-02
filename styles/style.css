@@ -2181,6 +2181,30 @@ input::-webkit-calendar-picker-indicator {
     width: 500px;
 }
 
+.leaf-home-right {
+    top: -40vh;
+    right: -1020px;
+}
+
+.leaf-home-right .leaf {
+    width: 500px;}
+
+
+.leaf-home-left {
+    top: 0vh;
+    left: -900px;
+}
+
+.leaf-home-left-1 {
+    top: 40vh;
+    left: -750px;
+}
+
+.leaf-home-left-1 .leaf {
+    width: 700px;
+}
+
+
 .leaf {
     will-change: transform;
     transform: translateZ(0);
@@ -2343,6 +2367,27 @@ input::-webkit-calendar-picker-indicator {
     .leaves-menu-plates .leaf {
         width: 380px;
     }
+
+    .leaf-home-right {
+        top: -35vh;
+        right: -800px;
+      }
+      .leaf-home-right .leaf {
+        width: 380px;
+      }
+    
+      .leaf-home-left {
+        left: -600px;
+      }
+    
+      .leaf-home-left-1 {
+        top: 35vh;
+        left: -520px;
+      }
+      .leaf-home-left-1 .leaf {
+        width: 520px;
+      }
+    
 }
 
 
@@ -2497,6 +2542,27 @@ input::-webkit-calendar-picker-indicator {
     .leaves-menu-plates .leaf {
         width: 280px;
     }
+
+
+  .leaf-home-right {
+    top: -30vh;
+    right: -520px;
+  }
+  .leaf-home-right .leaf {
+    width: 300px;
+  }
+
+  .leaf-home-left {
+    left: -400px;
+  }
+
+  .leaf-home-left-1 {
+    top: 30vh;
+    left: -450px;
+  }
+  .leaf-home-left-1 .leaf {
+    width: 380px;
+  }
 
 }
 
