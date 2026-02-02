@@ -36,12 +36,13 @@
     <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
             <a class="navbar-brand glass-blur-only" href="index.html">
-                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img" title="Eden Leaf">
             </a>
 
             <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
             <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
-                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua"
+                    width="30" height="20" />
                 <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
                 <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -75,54 +76,113 @@
             <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
                 <button class="glass-effect btn btn-custom-primary btn-prenota" type="button"
                     onclick="window.location.href='prenota.html'">PRENOTA</button>
-                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua"
+                    width="30" height="20" />
             </div>
         </div>
     </nav>
 
-    <!-- Sezione 1: Hero + Cards -->
-    <section id="home-s1" class="img-bg">
+    <main>
+        <!-- Sezione 1: Hero + Cards -->
+        <section id="home-s1" class="img-bg">
 
-        <!-- Hero -->
-        <div class="hero-section container section">
-            <h1>EDEN LEAF</h1>
-            <p class="hero-subtitle">Il primo ristorante Solarpunk</p>
-        </div>
-
-        <img src="images/sostenibilità/techline.webp" class="techline-home">
-
-        <!-- Cards ristorante + punti di forza -->
-        <div class="container section padding-section">
-
-            <!-- Card Ristorante -->
-            <div class="row row-cols-1 row-cols-md-4 g-4 mb-4 justify-content-center align-items-center">
-                <div class="card glass-effect p-4 mb-5 col-12 col-md-6">
-                    <h3>Il ristorante</h3>
-                    <p>Sospesi tra cielo e radici, vi accogliamo nella nostra biosfera di cristallo sulla Foglia Madre.
-                        Eden Leaf non è solo cucina gourmet, è un ecosistema pulsante dove l'alta tecnologia coltiva il
-                        sapore e ogni piatto racconta la storia vivente dell'albero che ci ospita.</p>
-                    <button class="glass-effect btn btn-custom-primary" type="button">Scopri il ristorante</button>
-                </div>
+            <!-- Hero -->
+            <div class="hero-section container section">
+                <h1>EDEN LEAF</h1>
+                <p class="hero-subtitle">Il primo ristorante Solarpunk</p>
             </div>
 
-            <!-- Cards punti di forza - Mobile -->
-            <div class="d-block d-md-none carousel-padding">
-                <div id="puntiDiForzaCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+            <img src="images/sostenibilita/techline.webp" class="techline-home">
 
-                        <div class="carousel-item active">
-                            <div class="d-flex justify-content-center p-4">
-                                <div class="card glass-effect">
-                                    <img src="/images/icons/icon_puntiforza1.webp">
-                                    <p>Raccogliamo germogli, frutti e linfa direttamente dai rami che circondano i
-                                        vostri
-                                        tavoli: una freschezza che non conosce trasporto.</p>
+            <!-- Cards ristorante + punti di forza -->
+            <div class="container section padding-section">
+
+                <!-- Card Ristorante -->
+                <div class="row row-cols-1 row-cols-md-4 g-4 mb-4 justify-content-center align-items-center">
+                    <div class="card glass-effect p-4 mb-5 col-12 col-md-6">
+                        <h3>Il ristorante</h3>
+                        <p>Sospesi tra cielo e radici, vi accogliamo nella nostra biosfera di cristallo sulla Foglia Madre.
+                            Eden Leaf non è solo cucina gourmet, è un ecosistema pulsante dove l'alta tecnologia coltiva il
+                            sapore e ogni piatto racconta la storia vivente dell'albero che ci ospita.</p>
+                        <button class="glass-effect btn btn-custom-primary" type="button">Scopri il ristorante</button>
+                    </div>
+                </div>
+
+                <!-- Cards punti di forza - Mobile -->
+                <div class="d-block d-md-none carousel-padding">
+                    <div id="puntiDiForzaCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <div class="d-flex justify-content-center p-4">
+                                    <div class="card glass-effect">
+                                        <img src="/images/icons/icon_puntiforza1.webp">
+                                        <p>Raccogliamo germogli, frutti e linfa direttamente dai rami che circondano i
+                                            vostri
+                                            tavoli: una freschezza che non conosce trasporto.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center p-4">
+                                    <div class="card glass-effect">
+                                        <img src="/images/icons/icon_puntiforza2.webp">
+                                        <p>Sensori bionici monitorano la salute delle piante in tempo reale, garantendo
+                                            ingredienti
+                                            puri senza mai forzare i ritmi della natura.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center p-4">
+                                    <div class="card glass-effect">
+                                        <img src="/images/icons/icon_puntiforza3.webp">
+                                        <p>La nostra cupola in vetro fotovoltaico cattura il sole per alimentare la cucina,
+                                            rendendo
+                                            ogni cottura un atto di energia pulita.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center p-4">
+                                    <div class="card glass-effect">
+                                        <img src="/images/icons/icon_puntiforza4.webp">
+                                        <p>Nulla si spreca: i nostri scarti organici vengono trasformati in nutrienti vitali
+                                            per le
+                                            radici del Grande Albero, in un ciclo armonioso.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center p-4">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#puntiDiForzaCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#puntiDiForzaCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cards punti di forza - Desktop -->
+                <div class="d-none d-md-block">
+                    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                        <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
+
+                            <div class="col">
+                                <div class="card glass-effect">
+                                    <img src="/images/icons/icon_puntiforza1.webp">
+                                    <p>Raccogliamo germogli, frutti e linfa direttamente dai rami che circondano i vostri
+                                        tavoli: una freschezza che non conosce trasporto.</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
                                 <div class="card glass-effect">
                                     <img src="/images/icons/icon_puntiforza2.webp">
                                     <p>Sensori bionici monitorano la salute delle piante in tempo reale, garantendo
@@ -130,10 +190,8 @@
                                         puri senza mai forzare i ritmi della natura.</p>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center p-4">
+                            <div class="col">
                                 <div class="card glass-effect">
                                     <img src="/images/icons/icon_puntiforza3.webp">
                                     <p>La nostra cupola in vetro fotovoltaico cattura il sole per alimentare la cucina,
@@ -141,357 +199,303 @@
                                         ogni cottura un atto di energia pulita.</p>
                                 </div>
                             </div>
+
+                            <div class="col">
+                                <div class="card glass-effect">
+                                    <img src="/images/icons/icon_puntiforza4.webp">
+                                    <p>Nulla si spreca: i nostri scarti organici vengono trasformati in nutrienti vitali per
+                                        le
+                                        radici del Grande Albero, in un ciclo armonioso.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="glass-effect btn btn-custom-primary" type="button">Scopri il ristorante</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sezione 2 - Gallery -->
+        <section class="container section padding-section">
+
+            <h2 class="section-title text-center mb-4">Uno sguardo nel nostro ecosistema</h2>
+            <p class="text-center mb-5">
+                Un'architettura trasparente che abbatte i confini tra voi e il tramonto.
+                Esplorate gli angoli della nostra cupola, dove il design abbraccia la bellezza della natura sospesa.
+            </p>
+
+            <!-- Mobile -->
+            <div class="d-block d-md-none carousel-padding">
+                <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center p-4">
+                                <img src="images/home/gallery/immagine1-home.webp" class="img-gallery" alt="Il ristorante" title="Il ristorante">
+                            </div>
                         </div>
 
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center p-4">
-                                <div class="card glass-effect">
-                                    <img src="/images/icons/icon_puntiforza4.webp">
-                                    <p>Nulla si spreca: i nostri scarti organici vengono trasformati in nutrienti vitali
-                                        per le
-                                        radici del Grande Albero, in un ciclo armonioso.</p>
-                                </div>
+                                <img src="images/home/gallery/immagine2-home.png.webp" class="img-gallery" alt="Il giardino" title="Il giardino">
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center p-4">
+                                <img src="images/home/gallery/immagine3-home.png.webp" class="img-gallery" alt="Lo chef" title="Lo chef">
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center p-4">
+                                <img src="images/home/gallery/immagine4-home.png.webp" class="img-gallery" alt="La serra" title="La serra">
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center p-4">
+                                <img src="images/home/gallery/immagine5-home.png.webp" class="img-gallery" alt="L'ingegnera botanica" title="L'ingegnera botanica"> 
                             </div>
                         </div>
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#puntiDiForzaCarousel"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#puntiDiForzaCarousel"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </button>
                 </div>
             </div>
 
-            <!-- Cards punti di forza - Desktop -->
+            <!-- Desktop -->
             <div class="d-none d-md-block">
+
+                <div class="row g-3">
+
+                    <div class="col-12 col-md-6">
+                        <img src="images/home/gallery/img_gallery_01.webp" class="img-gallery" alt="Il ristorante">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="images/home/gallery/img_gallery_02.webp" class="img-gallery" alt="Il giardino">
+                    </div>
+
+
+                    <div class="col-12 col-md-4 col-lg-4 align-self-center">
+                        <img src="images/home/gallery/img_gallery_03.webp" class="img-gallery" alt="Lo chef">
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 align-self-center">
+                        <img src="images/home/gallery/img_gallery_04.webp" class="img-gallery" alt="La serra">
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 align-self-center">
+                        <img src="images/home/gallery/img_gallery_05.webp" class="img-gallery" alt="L'ingegnera botanica">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- Sezione 3+4 sfondo - I  nostri piatti + Dicono di noi + FAQ -->
+        <section id="home-s3" class="section img-bg">
+
+            <!-- Sezione 3 - I  nostri piatti - Mobile Version -->
+            <div
+                class="d-flex d-md-none flex-column align-items-center content-align-center text-center mt-5 padding-section">
+                <h2>Alcuni dei nostri piatti</h2>
+
+                <img src="images/ristorante/img_piatto_1.webp" class="img-piatto my-3" alt="Petali di Floricanto" title="Petali di Floricanto" />
+                <img src="images/ristorante/img_piatto_2.webp" class="img-piatto my-3" alt="Giardino di Cristallo" title="Giardino di Cristallo" />
+                <img src="images/ristorante/img_piatto_3.webp" class="img-piatto my-3" alt="Spirale D'Orto" title="Spirale D'Orto" />
+
+                <button class="glass-effect btn btn-custom-primary mt-5" type="button">Scopri di più</button>
+
+            </div>
+
+            <!-- Sezione 3 - I  nostri piatti - Desktop Version -->
+            <div class="container-fluid section justify-content-between px-0 d-none d-md-flex padding-section">
+                <!-- Per lasciarli centrati togli fluid e m-0-->
+
+                <h2>Alcuni dei nostri piatti</h2>
+                <div class="container-fluid p-0">
+                    <img src="images/home/rami_piatti/Ramo_1.webp" width="1043px" height="412px"
+                        style="margin-top:45px" alt="Petali di Floricanto" title="Petali di Floricanto"; />
+
+                    <div class="d-flex flex-column" style="margin-top:-120px">
+                        <img src="images/home/rami_piatti/Ramo_2.webp" width="1043px" height="412px"
+                            class="align-self-end" alt="Giardino di Cristallo" title="Giardino di Cristallo" />
+                        <!-- aggiungendo col-12 col-md-8 e mettendo altezza auto rimane proporzionato a prescindere dalle dimensioni dello schermo-->
+                    </div>
+
+                    <img src="images/home/rami_piatti/Ramo_3.webp" width="1043px" height="412px" style="margin-top:-90px" alt="Spirale D'Orto" title="Spirale D'Orto" />
+                </div>
+
+                <button class="glass-effect btn btn-custom-primary" type="button">Scopri di più</button>
+
+            </div>
+
+
+            <!-- Sezione 4 - Recensioni + FAQ -->
+            <div class="container section padding-section">
+
+                <!-- Cards Recensioni-->
+                <h2 class="section-title text-center mb-4">Dicono di noi</h2>
+
                 <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                     <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
 
                         <div class="col">
                             <div class="card glass-effect">
-                                <img src="/images/icons/icon_puntiforza1.webp">
-                                <p>Raccogliamo germogli, frutti e linfa direttamente dai rami che circondano i vostri
-                                    tavoli: una freschezza che non conosce trasporto.</p>
+                                <img src="/images/home/recensioni/recensione1.webp" class="foto-recensione mb-3" alt="Foto profilo utente" title="Foto profilo utente">
+                                <p>“Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è
+                                    commovente, un'esperienza che vale ogni centesimo.”</p>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="card glass-effect">
-                                <img src="/images/icons/icon_puntiforza2.webp">
-                                <p>Sensori bionici monitorano la salute delle piante in tempo reale, garantendo
-                                    ingredienti
-                                    puri senza mai forzare i ritmi della natura.</p>
+                                <img src="/images/home/recensioni/recensione2.webp" class="foto-recensione mb-3" alt="Foto profilo utente" title="Foto profilo utente">
+                                <p>"Finalmente l'alta cucina incontra l'etica vera. Qui sopra il caos della città è solo un
+                                    brutto ricordo, esiste solo armonia."</p>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="card glass-effect">
-                                <img src="/images/icons/icon_puntiforza3.webp">
-                                <p>La nostra cupola in vetro fotovoltaico cattura il sole per alimentare la cucina,
-                                    rendendo
-                                    ogni cottura un atto di energia pulita.</p>
+                                <img src="/images/home/recensioni/recensione3.webp" class="foto-recensione mb-3" alt="Foto profilo utente" title="Foto profilo utente">
+                                <p>"Tecnologia invisibile e sapori antichi. Un lusso sostenibile che non credevo possibile.
+                                    Il servizio è fluido ed elegante, proprio come la linfa."</p>
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="card glass-effect">
-                                <img src="/images/icons/icon_puntiforza4.webp">
-                                <p>Nulla si spreca: i nostri scarti organici vengono trasformati in nutrienti vitali per
-                                    le
-                                    radici del Grande Albero, in un ciclo armonioso.</p>
+                                <img src="/images/home/recensioni/recensione4.webp" class="foto-recensione mb-3" alt="Foto profilo utente" title="Foto profilo utente">
+                                <p>"Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante
+                                    il temporale era pura magia, indimenticabile."</p>
                             </div>
                         </div>
 
                     </div>
 
-                    <button class="glass-effect btn btn-custom-primary" type="button">Scopri il ristorante</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Sezione 2 - Gallery -->
-    <section class="container section padding-section">
-
-        <h2 class="section-title text-center mb-4">Uno sguardo nel nostro ecosistema</h2>
-        <p class="text-center mb-5">
-            Un'architettura trasparente che abbatte i confini tra voi e il tramonto.
-            Esplorate gli angoli della nostra cupola, dove il design abbraccia la bellezza della natura sospesa.
-        </p>
-
-        <!-- Mobile -->
-        <div class="d-block d-md-none carousel-padding">
-            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center p-4">
-                            <img src="images/home/gallery/immagine1-home.webp" class="img-gallery" alt="Il ristorante">
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center p-4">
-                            <img src="images/home/gallery/immagine2-home.png.webp" class="img-gallery" alt="Il giardino">
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center p-4">
-                            <img src="images/home/gallery/immagine3-home.png.webp" class="img-gallery" alt="Lo chef">
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center p-4">
-                            <img src="images/home/gallery/immagine4-home.png.webp" class="img-gallery" alt="La serra">
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center p-4">
-                            <img src="images/home/gallery/immagine5-home.png.webp" class="img-gallery" alt="L'ingegnera botanica">
-                        </div>
-                    </div>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-        </div>
+                <!-- FAQ-->
+                <h2 class="section-title text-center mb-4">FAQ</h2>
 
-        <!-- Desktop -->
-        <div class="d-none d-md-block">
+                <div class="accordion col-md-6">
 
-            <div class="row g-3">
-
-                <div class="col-12 col-md-6">
-                    <img src="images/home/gallery/img_gallery_01.webp" class="img-gallery" alt="Il ristorante">
-                </div>
-                <div class="col-12 col-md-6">
-                    <img src="images/home/gallery/img_gallery_02.webp" class="img-gallery" alt="Il giardino">
-                </div>
-
-
-                <div class="col-12 col-md-4 col-lg-4 align-self-center">
-                    <img src="images/home/gallery/img_gallery_03.webp" class="img-gallery" alt="Lo chef">
-                </div>
-                <div class="col-12 col-md-4 col-lg-4 align-self-center">
-                    <img src="images/home/gallery/img_gallery_04.webp" class="img-gallery" alt="La serra">
-                </div>
-                <div class="col-12 col-md-4 col-lg-4 align-self-center">
-                    <img src="images/home/gallery/img_gallery_05.webp" class="img-gallery" alt="L'ingegnera botanica">
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-
-
-
-    <!-- Sezione 3+4 sfondo - I  nostri piatti + Dicono di noi + FAQ -->
-    <section id="home-s3" class="section img-bg">
-
-        <!-- Sezione 3 - I  nostri piatti - Mobile Version -->
-        <div
-            class="d-flex d-md-none flex-column align-items-center content-align-center text-center mt-5 padding-section">
-            <h2>Alcuni dei nostri piatti</h2>
-
-            <img src="images/ristorante/img_piatto_1.webp" class="img-piatto" />
-            <img src="images/ristorante/img_piatto_2.webp" class="img-piatto" />
-            <img src="images/ristorante/img_piatto_3.webp" class="img-piatto" />
-
-            <button class="glass-effect btn btn-custom-primary mt-5" type="button">Scopri di più</button>
-
-        </div>
-
-        <!-- Sezione 3 - I  nostri piatti - Desktop Version -->
-        <div class="container-fluid section justify-content-between px-0 d-none d-md-flex padding-section">
-            <!-- Per lasciarli centrati togli fluid e m-0-->
-
-            <h2>Alcuni dei nostri piatti</h2>
-            <div class="container-fluid p-0">
-                <img src="images/home/rami_piatti/Ramo_1.webp" width="1043px" height="412px"
-                    style="margin-top:45px; " />
-
-                <div class="d-flex flex-column" style="margin-top:-120px">
-                    <img src="images/home/rami_piatti/Ramo_2.webp" width="1043px" height="412px"
-                        class="align-self-end" />
-                    <!-- aggiungendo col-12 col-md-8 e mettendo altezza auto rimane proporzionato a prescindere dalle dimensioni dello schermo-->
-                </div>
-
-                <img src="images/home/rami_piatti/Ramo_3.webp" width="1043px" height="412px" style="margin-top:-90px" />
-            </div>
-
-            <button class="glass-effect btn btn-custom-primary" type="button">Scopri di più</button>
-
-        </div>
-
-
-        <!-- Sezione 4 - Recensioni + FAQ -->
-        <div class="container section padding-section">
-
-            <!-- Cards Recensioni-->
-            <h2 class="section-title text-center mb-4">Dicono di noi</h2>
-
-            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
-
-                    <div class="col">
-                        <div class="card glass-effect">
-                            <img src="/images/home/recensioni/recensione1.webp" class="foto-recensione">
-                            <p>“Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è
-                                commovente, un'esperienza che vale ogni centesimo.”</p>
+                    <div class="glass-effect accordion-item">
+                        <p class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                La struttura danneggia la Foglia Madre?
+                            </button>
+                        </p>
+                        <div id="collapseOne" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
+                                parziale che
+                                azzerano il carico fisico sui rami, permettendo all'albero di crescere libero senza
+                                costrizioni.
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card glass-effect">
-                            <img src="/images/home/recensioni/recensione2.webp" class="foto-recensione">
-                            <p>"Finalmente l'alta cucina incontra l'etica vera. Qui sopra il caos della città è solo un
-                                brutto ricordo, esiste solo armonia."</p>
+                    <div class="glass-effect accordion-item">
+                        <p class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Cosa succede se c'è maltempo?
+                            </button>
+                        </p>
+                        <div id="collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
+                                parziale che
+                                azzerano il carico fisico sui rami, permettendo all'albero di crescere libero senza
+                                costrizioni.
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card glass-effect">
-                            <img src="/images/home/recensioni/recensione3.webp" class="foto-recensione">
-                            <p>"Tecnologia invisibile e sapori antichi. Un lusso sostenibile che non credevo possibile.
-                                Il servizio è fluido ed elegante, proprio come la linfa."</p>
+                    <div class="glass-effect accordion-item">
+                        <p class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                La cucina è adatta a tutti?
+                            </button>
+                        </p>
+                        <div id="collapseThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
+                                parziale che azzerano il carico fisico sui rami, permettendo all'albero di crescere libero
+                                senza costrizioni.
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card glass-effect">
-                            <img src="/images/home/recensioni/recensione4.webp" class="foto-recensione">
-                            <p>"Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante
-                                il temporale era pura magia, indimenticabile."</p>
+
+                    <div class="glass-effect accordion-item">
+                        <p class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                L'albero sente la nostra presenza?
+                            </button>
+                        </p>
+                        <div id="collapseFour" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
+                                parziale che azzerano il carico fisico sui rami, permettendo all'albero di crescere libero
+                                senza costrizioni.
+                            </div>
                         </div>
                     </div>
+
+                    <div class="glass-effect accordion-item">
+                        <p class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                È possibile visitare il laboratorio idroponico?
+                            </button>
+                        </p>
+                        <div id="collapseFive" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
+                                parziale che azzerano il carico fisico sui rami, permettendo all'albero di crescere libero
+                                senza costrizioni.
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </div>
 
             </div>
 
-            <!-- FAQ-->
-            <h2 class="section-title text-center mb-4">FAQ</h2>
-
-            <div class="accordion col-md-6">
-
-                <div class="glass-effect accordion-item">
-                    <p class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            La struttura danneggia la Foglia Madre?
-                        </button>
-                    </p>
-                    <div id="collapseOne" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
-                            parziale che
-                            azzerano il carico fisico sui rami, permettendo all'albero di crescere libero senza
-                            costrizioni.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-effect accordion-item">
-                    <p class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Cosa succede se c'è maltempo?
-                        </button>
-                    </p>
-                    <div id="collapseTwo" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
-                            parziale che
-                            azzerano il carico fisico sui rami, permettendo all'albero di crescere libero senza
-                            costrizioni.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-effect accordion-item">
-                    <p class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            La cucina è adatta a tutti?
-                        </button>
-                    </p>
-                    <div id="collapseThree" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
-                            parziale che azzerano il carico fisico sui rami, permettendo all'albero di crescere libero
-                            senza costrizioni.
-                        </div>
-                    </div>
-                </div>
 
 
-                <div class="glass-effect accordion-item">
-                    <p class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            L'albero sente la nostra presenza?
-                        </button>
-                    </p>
-                    <div id="collapseFour" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
-                            parziale che azzerano il carico fisico sui rami, permettendo all'albero di crescere libero
-                            senza costrizioni.
-                        </div>
-                    </div>
-                </div>
+        </section>
 
-                <div class="glass-effect accordion-item">
-                    <p class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            È possibile visitare il laboratorio idroponico?
-                        </button>
-                    </p>
-                    <div id="collapseFive" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            Assolutamente no. Utilizziamo tensostrutture a memoria di forma e levitazione magnetica
-                            parziale che azzerano il carico fisico sui rami, permettendo all'albero di crescere libero
-                            senza costrizioni.
-                        </div>
-                    </div>
-                </div>
+        <!-- Sezione 5 - Banner prenota -->
+        <section class="container section padding-section text-center">
+            <h2 class="section-title text-center">Prenota il tuo tavolo</h2>
+            <p class="padding-intra-section">I tavoli sulla Foglia Madre sono limitati per rispettare l'equilibrio della struttura.
+                <br>Assicuratevi ora il vostro angolo in paradiso.
+            </p>
 
+            <button class="glass-effect btn btn-custom-primary" type="button">Prenota</button>
+        </section>
 
-
-            </div>
-
-        </div>
-
-
-
-    </section>
-
-    <!-- Sezione 5 - Banner prenota -->
-    <section class="container section padding-section text-center">
-        <h2 class="section-title text-center mb-4">Prenota il tuo tavolo</h2>
-        <p>I tavoli sulla Foglia Madre sono limitati per rispettare l'equilibrio della struttura.
-            <br>Assicuratevi ora il vostro angolo in paradiso.
-        </p>
-
-        <button class="glass-effect btn btn-custom-primary" type="button">Prenota</button>
-    </section>
-
+    </main>
 
     <!-- Footer -->
     <footer>
