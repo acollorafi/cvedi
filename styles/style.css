@@ -802,6 +802,7 @@ p {
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/sfondo-prenota.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 /*Sfondi pagina sostenibilità*/
@@ -1496,6 +1497,9 @@ body:has(.sostenibility-container) {
     transition: all 0.3s ease;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 20;
+
 }
 
 /* Hover sulla barra intera */
@@ -1801,38 +1805,167 @@ input::-webkit-calendar-picker-indicator {
 
 
 
-/*prova foglia*/
+/*prova foglia pagina info*/
 .leaves-wrapper {
     position: relative;
     height: 0;
   }
   
+  /* gruppo */
   .leaves {
     position: absolute;
-    top: -20vh;        /* 👈 CHIAVE */
+    top: -20vh;
     pointer-events: none;
     z-index: 2;
   }
   
-  .leaves-left { 
-    left: 0;
-    transform: scale(4);
-}
-
+  /* ancoraggio ai margini */
+  .leaves-left  { left: 0; }
   .leaves-right { right: 0; }
   
+  /* foglia singola */
   .leaf {
     position: absolute;
-    width: 240px;
+    width: 240px;        /* dimensione base */
     opacity: 0.9;
     will-change: transform;
   }
+
+  .leaves-left .leaf {
+    width: 800px;
+    top: -300px;
+    left: -350px;
+  }
+    
+  .leaves-right .leaf:nth-child(1) {
+    top: 20%;
+    right: -50px;
+  }
+  
+  .leaves-right .leaf:nth-child(2) {
+    top: 65%;
+    right: -30px;
+  }
+  
+  .custom-leaves {
+    top: -60vh; /* posizione verticale diversa */
+    right: -500px;
+  }
+  
+  .custom-leaves .leaf {
+    width: 1000px;   /* dimensione diversa */
+  }
+
+  .custom-left-2 {
+    top: -30vh;   /* più giù rispetto alle altre */
+  }
+
+  .custom-left-2 .leaf {
+    width: 700px;     /* dimensione */
+    left: -500px;      /* quanto entra nella pagina */
+  }
+
+.custom-leaves-3 {
+    top: -80vh; 
+    right: -530px;      /* quanto entra nella pagina */
+  }
+  
+.custom-leaves-3 .leaf {
+    width: 1200px;  /* dimensione */
+  }
+
+  .leaf-right-prenota {
+    top: -50vh;
+    right: -250px;
+  }
+
+.leaf-right-prenota .leaf {
+    width: 700px;
+
+}
+
+.custom-leaves-prenota {
+    top: -50vh; /* posizione verticale diversa */
+    right: -270px;
+  }
+
+  .custom-leaves-prenota .leaf {
+    width: 1000px;   /* dimensione diversa */
+  }
+
+/*riduzione foglie info*/
+@media (max-width: 1400px) {
+
+    .leaf {
+      width: 200px;
+    }
+  
+    .leaves-left .leaf {
+      width: 650px;
+      left: -280px;
+      top: -260px;
+    }
+  
+    .custom-leaves {
+      right: -360px;
+    }
+    .custom-leaves .leaf {
+      width: 750px;
+    }
+  
+    .custom-left-2 .leaf {
+      width: 550px;
+      left: -360px;
+    }
+  
+    .custom-leaves-3 {
+      right: -380px;
+
+    }
+    .custom-leaves-3 .leaf {
+      width: 850px;
+    }
+  }
+  
+  
+  @media (max-width: 1024px) {
+
+    .leaf {
+      width: 160px;
+    }
+  
+    .leaves-left .leaf {
+      width: 480px;
+      left: -200px;
+      top: -200px;
+    }
+  
+    .custom-leaves {
+      right: -260px;
+    }
+    .custom-leaves .leaf {
+      width: 560px;
+    }
+  
+    .custom-left-2 .leaf {
+      width: 420px;
+      left: -260px;
+    }
+  
+    .custom-leaves-3 {
+      right: -280px;
+      top: -65vh; 
+
+    }
+    .custom-leaves-3 .leaf {
+      width: 600px;
+    }
+  }
   
 
-.leaves-left .leaf:nth-child(1) { top: -120px; left: -130px; }
-
-.leaves-right .leaf:nth-child(1) { top: 20%; right: -50px; }
-.leaves-right .leaf:nth-child(2) { top: 65%; right: -30px; } 
-
-
-/*prova foglie home*/
+@media (max-width: 768px) {
+    .leaves-wrapper {
+      display: none;
+    }
+  }
+  
