@@ -1351,12 +1351,12 @@ body:has(.sostenibility-container) {
 }
 
 .prev-fase {
-    left: -10px;
+    left: -5px;
     background-image: url("/images/sostenibilita/arrow-left.svg");
 }
 
 .next-fase {
-    right: -10px;
+    right: -5px;
     background-image: url("/images/sostenibilita/arrow-right.svg");
 }
 
@@ -1521,14 +1521,6 @@ body:has(.sostenibility-container) {
     display: block;
     width: 50px;
     height: 50px;
-}
-
-.prev-fase {
-    left: -25px;
-}
-
-.next-fase {
-    right: -25px;
 }
 
 .vision-section,
@@ -2138,51 +2130,52 @@ input::-webkit-calendar-picker-indicator {
 
 .custom-leaves-allergen-left .leaf {
     width: 400px;
-  }
+}
 
-  .leaf-menu-left {
+.leaf-menu-left {
     position: absolute;
     z-index: 11;
     top: 15vh;
     left: 120px;
-  }
+}
 
-  .leaf-menu-right {
+.leaf-menu-right {
     position: absolute;
     z-index: 11;
     top: -25vh;
     right: -150px;
-  }
+}
 
-  .leaf-menu-right .leaf {
+.leaf-menu-right .leaf {
     width: 800px;
-  }
+}
 
-  .leaves-menu-food {
+.leaves-menu-food {
     top: -10vh;
     right: -500px;
-  }
-    .leaves-menu-food .leaf {
-        width: 1000px;
-    }
+}
 
-    .leaves-menu-dessert {
-        top: -60vh;
-        right: -1050px;
-    }
+.leaves-menu-food .leaf {
+    width: 1000px;
+}
 
-    .leaves-menu-dessert .leaf {
-        width: 700px;
-    }
+.leaves-menu-dessert {
+    top: -60vh;
+    right: -1050px;
+}
 
-    .leaves-menu-plates {
-        top: -10vh;
-        left: -700px;
-    }
+.leaves-menu-dessert .leaf {
+    width: 700px;
+}
 
-      .leaves-menu-plates .leaf {
-          width: 500px;
-      }
+.leaves-menu-plates {
+    top: -10vh;
+    left: -700px;
+}
+
+.leaves-menu-plates .leaf {
+    width: 500px;
+}
 
 .leaf {
     will-change: transform;
@@ -2307,43 +2300,47 @@ input::-webkit-calendar-picker-indicator {
 
     .custom-leaves-allergen-left .leaf {
         width: 300px;
-      }
+    }
 
-      .leaf-menu-left {
+    .leaf-menu-left {
         left: 60px;
-      }
-    
-      .leaf-menu-right {
+    }
+
+    .leaf-menu-right {
         top: -20vh;
         right: -100px;
-      }
-      .leaf-menu-right .leaf {
+    }
+
+    .leaf-menu-right .leaf {
         width: 600px;
-      }
-    
-      .leaves-menu-food {
+    }
+
+    .leaves-menu-food {
         right: -320px;
-      }
-      .leaves-menu-food .leaf {
+    }
+
+    .leaves-menu-food .leaf {
         width: 750px;
-      }
-    
-      .leaves-menu-dessert {
+    }
+
+    .leaves-menu-dessert {
         top: -50vh;
         right: -700px;
-      }
-      .leaves-menu-dessert .leaf {
-        width: 520px;
-      }
-    
-      .leaves-menu-plates {
-        left: -450px;
-      }
-      .leaves-menu-plates .leaf {
-        width: 380px;
-      }
     }
-    
+
+    .leaves-menu-dessert .leaf {
+        width: 520px;
+    }
+
+    .leaves-menu-plates {
+        left: -450px;
+    }
+
+    .leaves-menu-plates .leaf {
+        width: 380px;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .leaf {
@@ -2463,39 +2460,42 @@ input::-webkit-calendar-picker-indicator {
         width: 220px;
     }
 
-      .leaf-menu-left {
+    .leaf-menu-left {
         top: 10vh;
         left: 30px;
-      }
-    
-      .leaf-menu-right .leaf {
+    }
+
+    .leaf-menu-right .leaf {
         width: 420px;
-      }
-    
-      .leaves-menu-food {
+    }
+
+    .leaves-menu-food {
         right: -200px;
-      }
-      .leaves-menu-food .leaf {
+    }
+
+    .leaves-menu-food .leaf {
         width: 500px;
-      }
-    
-      .leaves-menu-dessert {
+    }
+
+    .leaves-menu-dessert {
         top: -40vh;
         right: -450px;
-      }
-      .leaves-menu-dessert .leaf {
-        width: 380px;
-      }
-    
-      .leaves-menu-plates {
-        left: -300px;
-      }
-      .leaves-menu-plates .leaf {
-        width: 280px;
-      }
+    }
 
-  }
-  
+    .leaves-menu-dessert .leaf {
+        width: 380px;
+    }
+
+    .leaves-menu-plates {
+        left: -300px;
+    }
+
+    .leaves-menu-plates .leaf {
+        width: 280px;
+    }
+
+}
+
 
 @media (max-width: 768px) {
     .leaves-wrapper {
