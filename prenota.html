@@ -1,490 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prenota</title>
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prenota</title>
 
-    <link rel="stylesheet" href="styles/style.css"/>
-    <script src="javascript/script.js"></script>
-  </head>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
-  <body>
-    <!-- Per effetto liquido -->
-    <svg
-      style="position: absolute; width: 0; height: 0; pointer-events: none"
-      aria-hidden="true"
-    >
-      <filter id="liquidFilter">
-        <feTurbulence
-          type="turbulence"
-          baseFrequency="0.006"
-          numOctaves="2"
-          result="turbulence"
-        />
-        <feDisplacementMap
-          in="SourceGraphic"
-          in2="turbulence"
-          scale="50"
-          xChannelSelector="R"
-          yChannelSelector="G"
-        />
-      </filter>
-    </svg>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="javascript/script.js"></script>
+</head>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
-      <div class="container-xxl">
-        <!-- con container-fluid ha max-width 100%, con container e basta invece ha diversi breakpoint -->
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="images/logo/Logo_EL.svg"
-            alt="Eden Leaf"
-            width="100"
-            height="100"
-          />
-        </a>
+<body>
+  <!-- Per effetto liquido -->
+  <svg style="position: absolute; width: 0; height: 0; pointer-events: none" aria-hidden="true">
+    <filter id="liquidFilter">
+      <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
+    <div class="container-xxl">
+      <a class="navbar-brand glass-blur-only" href="index.html">
+        <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img">
+      </a>
+
+      <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
+      <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
+        <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+        <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+        <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div
-          class="glass-effect collapse navbar-collapse"
-          id="navbarSupportedContent"
-        >
-          <ul
-            class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0"
-          >
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ristorante.html">RISTORANTE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="menu.html">MENU</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="info.html">INFO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sostenibilita.html">SOSTENIBILITÀ</a>
-            </li>
-          </ul>
-        </div>
-        <div class="d-flex align-items-center" style="gap: 45px">
-          <a
-            href="prenota.html"
-            class="glass-effect btn btn-custom-primary"
-            aria-current="page"
-            >PRENOTA</a
-          >
-          <img
-            src="images/flags/Great Britain.webp"
-            class="navbar-img-languages"
-          />
-        </div>
-      </div>
-    </nav>
-
-    <!-- Hero -->
-    <section id="prenota-s1" class="img-bg">
-      <div class="hero-section container section">
-        <h1>PRENOTA</h1>
-      </div>
-    </section>
-
-    <section id="prenota-s2" class="img-bg">
-      <!--barra prenotazione-->
-      <div class="search-container">
-        <div class="search-bar-custom glass-effect">
-          <div class="search-section">
-            <span class="search-label">Persone</span>
-            <div class="d-flex align-items-center justify-content-center mt-1">
-                <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepDown()">-</button>
-                <input type="number" class="search-input text-center p-0 m-0" value="2" min="1" max="10" readonly>
-                <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
-            </div>
-          </div>
-
-          <div class="search-divider"></div>
-
-          <div
-            class="search-section"
-            onclick="document.getElementById('dateInput').showPicker()"
-          >
-            <span class="search-label">Data</span>
-            <span id="date-text" class="search-placeholder"
-              >Scegli la data</span
-            >
-            <input
-              type="date"
-              id="dateInput"
-              class="search-input-hidden"
-              onchange="updateLabel(this, 'date-text')"
-            />
-          </div>
-
-          <div class="search-divider"></div>
-
-          <div
-            class="search-section"
-            onclick="document.getElementById('timeInput').showPicker()"
-          >
-            <span class="search-label">Orario</span>
-            <select class="search-input glass-effect-select" style="background: transparent; color: var(--bs-white); border: none;">
-              <option value="18:00">18:30</option>
-              <option value="18:30">19:00</option>
-              <option value="19:00">19:30</option>
-              <option value="19:00">20:00</option>
-              <option value="19:00">20:30</option>
-              <option value="19:00">21:00</option>
-            </select>
-          </div>
-
-          <button
-            class="glass-effect search-btn-circle btn-search"
-            onclick="mostraTavoli()"
-          >
-            <svg
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              role="presentation"
-              focusable="false"
-            >
-              <path
-                d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              ></path>
-            </svg>
-          </button>
-        </div>
       </div>
 
-      <div
-        id="mappa-tavoli"
-        class="container-xxl padding-section text-center d-none"
-      >
-        <h2>Tavoli disponibili</h2>
-        <p class="padding-intra-section">Scegli il tuo tavolo sulla mappa!</p>
-        <!--mappa-->
-        <div class="mmap-container">
-          <div class="ratio ratio-16x9 rounded-4 overflow-hidden iframe-crop">
-            <iframe
-              title="Akihabara Map"
-              src="https://view.genially.com/6973a50f9e4f170457936cb5"
-              allowfullscreen
-              scrolling="yes"
-            >
-            </iframe>
+      <!-- Menu collapse -->
+      <div class="glass-effect collapse navbar-collapse h-100" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ristorante.html">RISTORANTE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">MENU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">INFO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sostenibilita.html">SOSTENIBILITÀ</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Desktop: PRENOTA + Bandiera (visibili solo >= 1200px) -->
+      <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
+        <button class="glass-effect btn btn-custom-primary btn-prenota active" type="button"
+          onclick="window.location.href='prenota.html'">PRENOTA</button>
+        <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sezione 1 - Hero -->
+  <section id="prenota-s1" class="img-bg">
+    <div class="hero-section container section">
+      <h1>PRENOTA</h1>
+    </div>
+  </section>
+
+  <!--prova foglie-->
+  <div class="leaves-wrapper">
+    <div class="leaves leaves-left">
+      <img src="images/foglie/left-leaf.png" class="leaf" />
+    </div>
+
+    <div class="leaves leaves-right leaf-right-prenota">
+      <img src="images/foglie/leaf-right-prenota.png" class="leaf" />
+    </div>
+  </div>
+
+  <!--Sezione 2 - prenotazione, recensioni e faq-->
+  <section id="prenota-s2" class="img-bg">
+    <!--barra prenotazione-->
+    <div class="search-container">
+      <div class="search-bar-custom glass-effect">
+        <div class="search-section">
+          <span class="search-label">Persone</span>
+          <div class="d-flex align-items-center justify-content-center mt-1">
+            <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepDown()">-</button>
+            <input type="number" class="search-input text-center p-0 m-0" value="2" min="1" max="10" readonly>
+            <button type="button" class="btn-qty" onclick="this.parentNode.querySelector('input').stepUp()">+</button>
           </div>
         </div>
-        <button id="btnConfermaPrenotazione" class="glass-effect btn btn-custom-primary mx-auto mt-5" type="button">
-          Prenota tavolo
+
+        <div class="search-divider"></div>
+
+        <div class="search-section" onclick="document.getElementById('dateInput').showPicker()">
+          <span class="search-label">Data</span>
+          <span id="date-text" class="search-placeholder">Scegli la data</span>
+          <input type="date" id="dateInput" class="search-input-hidden" onchange="updateLabel(this, 'date-text')" />
+        </div>
+
+        <div class="search-divider"></div>
+
+        <div class="search-section" onclick="document.getElementById('timeInput').showPicker()">
+          <span class="search-label">Orario</span>
+          <select class="search-input glass-effect-select"
+            style="background: transparent; color: var(--bs-white); border: none;">
+            <option value="18:00">18:30</option>
+            <option value="18:30">19:00</option>
+            <option value="19:00">19:30</option>
+            <option value="19:00">20:00</option>
+            <option value="19:00">20:30</option>
+            <option value="19:00">21:00</option>
+          </select>
+        </div>
+
+        <button class="glass-effect search-btn-circle btn-custom-primary" onclick="mostraTavoli()">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+            focusable="false">
+            <path d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9" fill="none" stroke="currentColor"
+              stroke-width="4"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mappa-tavoli" class="container-xxl padding-section text-center d-none">
+      <h2>Tavoli disponibili</h2>
+      <p class="padding-intra-section">Scegli il tuo tavolo sulla mappa!</p>
+      <!--mappa-->
+      <div class="mmap-container">
+        <div class="ratio ratio-16x9 rounded-4 overflow-hidden iframe-crop">
+          <iframe title="Akihabara Map" src="https://view.genially.com/6973a50f9e4f170457936cb5" allowfullscreen
+            scrolling="yes">
+          </iframe>
+        </div>
+      </div>
+      <button id="btnConfermaPrenotazione" class="glass-effect btn btn-custom-primary mx-auto mt-5" type="button">
+        Prenota tavolo
       </button>
     </div>
 
-      <!--recensioni-->
-      <div class="container-xxl padding-section text-center">
-        <h2>Recensioni</h2>
-        <div
-          id="infiniteCarousel"
-          class="carousel slide container-xxl"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#infiniteCarousel"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#infiniteCarousel"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row g-4">
-                <div class="col-md-3">
-                  <div class="card glass-effect">
-                    <img class="mb-3" src="/images/icons/tipo-1.webp" />
-                    <p>
-                      "Non è solo una cena, è il mondo che vogliamo. L'atmosfera
-                      nella cupola di vetro durante il temporale era pura magia,
-                      indimenticabile."
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card glass-effect">
-                    <img class="mb-3" src="/images/icons/tipo-2.webp" />
-                    <p>
-                      "Cenare a 50 metri d'altezza cambia la prospettiva. Il
-                      risotto brezza d’aria è commovente, un'esperienza che vale
-                      ogni centesimo."
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card glass-effect">
-                    <img class="mb-3" src="/images/icons/tipo-3.webp" />
-                    <p>
-                      "Finalmente l'alta cucina incontra l'etica vera. Qui sopra
-                      il caos della città è solo un brutto ricordo, esiste solo
-                      armonia."
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card glass-effect">
-                    <img class="mb-3" src="/images/icons/tipo-2.webp" />
-                    <p>
-                      "Cenare a 50 metri d'altezza cambia la prospettiva. Il
-                      risotto brezza d’aria è commovente, un'esperienza che vale
-                      ogni centesimo."
-                    </p>
-                  </div>
+    <!--recensioni-->
+    <div class="container-xxl padding-section text-center">
+      <h2>Recensioni</h2>
+      <div id="infiniteCarousel" class="carousel slide container-xxl" data-bs-ride="carousel">
+        <div class="carousel-indicators"> <button type="button" data-bs-target="#infiniteCarousel" data-bs-slide-to="0"
+            class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button"
+            data-bs-target="#infiniteCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button> </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-1.webp" />
+                  <p> "Non è solo una cena, è il mondo che vogliamo. L'atmosfera nella cupola di vetro durante il
+                    temporale
+                    era pura magia, indimenticabile." </p>
                 </div>
               </div>
-            </div>
-
-            <div class="carousel-item">
-              <div class="row g-4">
-                <div class="col-md-3">
-                  <div class="card glass-effect">
-                    <img class="mb-3" src="/images/icons/tipo-2.webp" />
-                    <p>
-                      "Cenare a 50 metri d'altezza cambia la prospettiva. Il
-                      risotto brezza d’aria è commovente, un'esperienza che vale
-                      ogni centesimo."
-                    </p>
-                  </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
                 </div>
-                <div class="col-md-3">
-                  <div class="card glass-effect">
-                    <img class="mb-3" src="/images/icons/tipo-2.webp" />
-                    <p>
-                      "Cenare a 50 metri d'altezza cambia la prospettiva. Il
-                      risotto brezza d’aria è commovente, un'esperienza che vale
-                      ogni centesimo."
-                    </p>
-                  </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-3.webp" />
+                  <p> "Finalmente l'alta cucina incontra l'etica vera. Qui sopra il caos della città è solo un brutto
+                    ricordo, esiste solo armonia." </p>
                 </div>
-                <div class="col-md-3">
-                  <div class="card glass-effect">
-                    <img class="mb-3" src="/images/icons/tipo-2.webp" />
-                    <p>
-                      "Cenare a 50 metri d'altezza cambia la prospettiva. Il
-                      risotto brezza d’aria è commovente, un'esperienza che vale
-                      ogni centesimo."
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card glass-effect">
-                    <img class="mb-3" src="/images/icons/tipo-2.webp" />
-                    <p>
-                      "Cenare a 50 metri d'altezza cambia la prospettiva. Il
-                      risotto brezza d’aria è commovente, un'esperienza che vale
-                      ogni centesimo."
-                    </p>
-                  </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
                 </div>
               </div>
             </div>
           </div>
-
-          <button
-            class="carousel-control-prev custom-ctrl"
-            type="button"
-            data-bs-target="#infiniteCarousel"
-            data-bs-slide="prev"
-          >
-            <span
-              class="glass-effect carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-          </button>
-          <button
-            class="carousel-control-next custom-ctrl"
-            type="button"
-            data-bs-target="#infiniteCarousel"
-            data-bs-slide="next"
-          >
-            <span
-              class="glass-effect carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-          </button>
-        </div>
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card glass-effect"> <img class="mb-3" src="/images/icons/tipo-2.webp" />
+                  <p> "Cenare a 50 metri d'altezza cambia la prospettiva. Il risotto brezza d’aria è commovente,
+                    un'esperienza che vale ogni centesimo." </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <button class="carousel-control-prev custom-ctrl" type="button" data-bs-target="#infiniteCarousel"
+          data-bs-slide="prev"> <span class="glass-effect carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next custom-ctrl" type="button" data-bs-target="#infiniteCarousel"
+          data-bs-slide="next"> <span class="glass-effect carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
+    </div>
 
-      
-      <!-- FAQ-->
-      <div class="container section padding-section">
-        <h2 class="section-title text-center">FAQ</h2>
+    <!--foglie-->
+    <div class="leaves-wrapper">
+      <div class="leaves leaves-right custom-leaves-prenota">
+        <img src="images/foglie/right-leaf-1.png" class="leaf" />
+      </div>
+    </div>
 
-        <div class="accordion col-md-6">
-          <div class="glass-effect accordion-item">
-            <p class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="false"
-                aria-controls="collapseOne"
-              >
+    <!-- FAQ-->
+    <div class="container section padding-section">
+      <h2 class="section-title text-center">FAQ</h2>
+
+      <div class="accordion col-md-6">
+        <div class="glass-effect accordion-item">
+          <p class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               Come posso raggiungere il ristorante una volta arrivato all'Hub?
-              </button>
-            </p>
-            <div id="collapseOne" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Il viaggio verso la Foglia Madre è parte dell'esperienza. Una volta arrivato al Livello 12 del "Tronco Maestro", potrai scegliere se utilizzare l'ascensore bio-climatico (6 minuti di ascesa panoramica) o percorrere la Greenway aerea, una passeggiata sospesa tra la vegetazione di circa 15 minuti.
-              </div>
+            </button>
+          </p>
+          <div id="collapseOne" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Il viaggio verso la Foglia Madre è parte dell'esperienza. Una volta arrivato al Livello 12 del "Tronco
+              Maestro", potrai scegliere se utilizzare l'ascensore bio-climatico (6 minuti di ascesa panoramica) o
+              percorrere la Greenway aerea, una passeggiata sospesa tra la vegetazione di circa 15 minuti.
             </div>
           </div>
+        </div>
 
-          <div class="glass-effect accordion-item">
-            <p class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
+        <div class="glass-effect accordion-item">
+          <p class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               È possibile scegliere un tavolo specifico sulla mappa?
-              </button>
-            </p>
-            <div id="collapseTwo" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Assolutamente sì. Durante la fase di prenotazione digitale, potrai visualizzare la disponibilità in tempo reale sulla mappa della cupola. Ogni tavolo offre un'esperienza unica.
-              </div>
+            </button>
+          </p>
+          <div id="collapseTwo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Assolutamente sì. Durante la fase di prenotazione digitale, potrai visualizzare la disponibilità in tempo
+              reale sulla mappa della cupola. Ogni tavolo offre un'esperienza unica.
             </div>
           </div>
+        </div>
 
-          <div class="glass-effect accordion-item">
-            <p class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
+        <div class="glass-effect accordion-item">
+          <p class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Cosa succede se sono in ritardo?
-              </button>
-            </p>
-            <div id="collapseThree" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                La natura insegna la pazienza, ma l'equilibrio della Foglia Madre è delicato. Garantiamo la disponibilità del tavolo per 20 minuti oltre l'orario prenotato. Se prevedi un ritardo maggiore, ti preghiamo di avvisare il nostro Concierge Digitale tramite l'interfaccia dell'app o la rete standard.
-              </div>
+            </button>
+          </p>
+          <div id="collapseThree" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              La natura insegna la pazienza, ma l'equilibrio della Foglia Madre è delicato. Garantiamo la disponibilità
+              del tavolo per 20 minuti oltre l'orario prenotato. Se prevedi un ritardo maggiore, ti preghiamo di
+              avvisare il nostro Concierge Digitale tramite l'interfaccia dell'app o la rete standard.
             </div>
           </div>
+        </div>
 
-          <div class="glass-effect accordion-item">
-            <p class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
+        <div class="glass-effect accordion-item">
+          <p class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               Esiste un codice di abbigliamento per cenare a Eden Leaf??
-              </button>
-            </p>
-            <div id="collapseFour" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Non imponiamo rigidi protocolli, ma suggeriamo un abbigliamento "Ecosostenibile-Elegante". Considera che la temperatura all'interno della cupola è regolata sui 22°C costanti, simulando un'eterna primavera boreale.
-              </div>
+            </button>
+          </p>
+          <div id="collapseFour" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Non imponiamo rigidi protocolli, ma suggeriamo un abbigliamento "Ecosostenibile-Elegante". Considera che
+              la temperatura all'interno della cupola è regolata sui 22°C costanti, simulando un'eterna primavera
+              boreale.
             </div>
           </div>
+        </div>
 
-          <div class="glass-effect accordion-item">
-            <p class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive"
-              >
+        <div class="glass-effect accordion-item">
+          <p class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
               Come garantite la freschezza degli ingredienti se il ristorante è sospeso?
-              </button>
-            </p>
-            <div id="collapseFive" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Il concetto di "trasporto" per noi è obsoleto. Molti dei germogli e dei fiori eduli che troverai nel piatto vengono raccolti dai rami della Foglia Madre pochi minuti prima del servizio. Per tutto il resto, utilizziamo un sistema di micro-logistica a levitazione magnetica che collega i laboratori di coltivazione direttamente alla cucina dello Chef Julio Vane.
-              </div>
+            </button>
+          </p>
+          <div id="collapseFive" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Il concetto di "trasporto" per noi è obsoleto. Molti dei germogli e dei fiori eduli che troverai nel
+              piatto vengono raccolti dai rami della Foglia Madre pochi minuti prima del servizio. Per tutto il resto,
+              utilizziamo un sistema di micro-logistica a levitazione magnetica che collega i laboratori di coltivazione
+              direttamente alla cucina dello Chef Julio Vane.
             </div>
           </div>
         </div>
       </div>
     </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="text-center footer">
-      <div class="d-md-none" style="height: 200px"></div>
-      <img
-        src="images/logo/logo-footer.webp"
-        style="width: 190px; height: 190px"
-      />
-      <div style="margin-top: 20px">
-        <p style="font-size: 32px; font-weight: bold">
-          Il primo ristorante Solarpunk.
-        </p>
-        <p>Ogni giorno dalle 18:00 alle 24:00</p>
-      </div>
-      <div style="margin-top: 30px; line-height: 0.5">
-        <p>© 2025 Eden Leaf Ecosystems.</p>
-        <p>Tutti i diritti riservati alla Natura.</p>
-        <p>P.IVA 000123SOLAR</p>
+  <footer>
+    <div class="container-xxl text-center">
+      <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" />
+      <div>
+        <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
+        <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
+        <p>© 2025 Eden Leaf Ecosystems.</br>
+          Tutti i diritti riservati alla Natura.</br>
+          P.IVA 000123SOLAR</p>
       </div>
     </div>
+  </footer>
 
-    <div id="modalOverlay" class="modal-custom-overlay">
-      <div class="glass-effect modal-custom-content">
-          <h3 class="label-h3 mb-4" style="line-height: 1.6;">Prenotazione effettuata</h3>
-          <p>Il tuo tavolo presso <strong>Eden Leaf</strong> è stato riservato con successo. Riceverai a breve una conferma via email.</p>
-          <button class="glass-effect btn btn-custom-primary mx-auto mt-5" onclick="chiudiPopUp()">Ottimo!</button>
-      </div>
+  <div id="modalOverlay" class="modal-custom-overlay">
+    <div class="glass-effect modal-custom-content">
+      <h3 class="label-h3 mb-4" style="line-height: 1.6;">Prenotazione effettuata</h3>
+      <p>Il tuo tavolo presso <strong>Eden Leaf</strong> è stato riservato con successo. Riceverai a breve una conferma
+        via email.</p>
+      <button class="glass-effect btn btn-custom-primary mx-auto mt-5" onclick="chiudiPopUp()">Ottimo!</button>
+    </div>
   </div>
-  </body>
+</body>
+
 </html>

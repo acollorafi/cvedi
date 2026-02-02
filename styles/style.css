@@ -65,6 +65,14 @@ body {
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Neutraface";
+    src: url("../font/neutraface-text/Neutraface\ Text\ Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -424,6 +432,7 @@ p {
 .card p {
     font-size: 18px;
     text-align: center;
+    text-shadow: 0 0 15px #000, 0 0 100px #000;
 }
 
 .card-team {
@@ -454,6 +463,12 @@ p {
 
 }
 
+.card-info p {
+    font-size: 18px;
+    text-shadow: 0 0 15px #000, 0 0 100px #000;
+}
+
+
 .card-accessibility {
     /*idem, segnerei solo le differenze*/
     color: var(--bs-white);
@@ -466,7 +481,7 @@ p {
     align-items: center;
     justify-content: center;
     max-width: 300px;
-    height: 350px;
+    height: 300px;
     flex: 0 0 auto;
     margin: 0 auto;
     text-align: center;
@@ -478,11 +493,15 @@ p {
 
 .card-accessibility p {
     margin-bottom: 0;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 0 0 15px #000, 0 0 100px #000;
+
 }
 
 
 
-/* CARD PIATTI (menu e ingredienti) - da sistemare */
+/* CARD PIATTI (menu e ingredienti) /
 
 /* CARD BASE */
 .menu-card {
@@ -685,20 +704,43 @@ p {
     border-radius: 10px;
 }
 
+/* button prenota hover */
+.btn-custom-primary:hover,
+.btn-custom-primary.active {
+    background-color: rgba(68, 222, 224, 0.2) !important;
+    /* Sfondo leggermente colorato */
+    border-color: #44DEE0;
+    color: #ffffff;
+
+    box-shadow:
+        0 0 10px rgba(68, 222, 224, 0.5),
+        0 0 20px rgba(68, 222, 224, 0.3),
+        inset 0 0 8px rgba(68, 222, 224, 0.4);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-2px);
+    /* Si alza leggermente */
+}
+
+.btn-custom-primary {
+    transition: all 0.3s ease-in-out;
+}
+
 /* TABLET - min 768px */
 @media (min-width: 768px) {
     .logo-img {
         width: 60px;
         height: 60px;
     }
+
     .navbar-img-languages {
         width: 64px;
         height: 64px;
     }
+
     .btn-custom-primary {
         height: 64px;
         font-size: 24px;
-    }    
+    }
 }
 
 /* DESKTOP XL - min 1200px */
@@ -725,7 +767,7 @@ p {
 
     .nav-link {
         padding: 0.5rem 1rem;
-        font-size: 1.1rem;   
+        font-size: 1.1rem;
     }
 
     .btn-custom-primary {
@@ -746,10 +788,31 @@ p {
 /********************************************
            FOOTER
 ********************************************/
-.footer {
+footer {
     padding-top: 80px;
     padding-bottom: 80px;
     background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, var(--bs-green) 100%);
+}
+
+.footer-logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 2rem;
+}
+
+.footer-tagline {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    /* 62.5% */
+    margin-bottom: 1.5rem;
+}
+
+.footer-hours {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 2rem;
 }
 
 
@@ -805,14 +868,6 @@ p {
 
 
 /*Sfondi pagina menù*/
-#menu-s1 {
-    position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/menu/hero_menu_mask.webp) no-repeat;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 80%;
-}
-
 #menu-s2 {
     position: relative;
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 70%, #1D2824 100%), url(/images/menu/menu_bg2.webp) no-repeat;
@@ -858,6 +913,7 @@ p {
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/sfondo-prenota.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 /*Sfondi pagina sostenibilità*/
@@ -879,7 +935,7 @@ p {
 /*Sfondi pagina piatto 01*/
 #piatto01-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/piatti_hero_bg.webp) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/piatti_hero_bg.png) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 70%;
@@ -1090,10 +1146,6 @@ p {
     pointer-events: none;
 }
 
-.menu-cards-wrapper {
-    position: relative;
-}
-
 .menu-hidden {
     opacity: 0;
     transform: translateY(12px) scale(0.96);
@@ -1101,6 +1153,42 @@ p {
 
     position: absolute;
     inset: 0;
+}
+
+.menu-hero-bg {
+    background:
+        linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        url(/images/menu/menu_hero_bg.webp);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center 80%;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+.menu-hero-bg img {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-60%);
+    z-index: 10;
+    width: 250%;
+    height: auto;
+    max-width: none;
+}
+
+@media (min-width: 768px) {
+    .menu-hero-bg img {
+        position: absolute;
+        bottom: -200px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        width: 100%;
+    }
 }
 
 
@@ -1154,40 +1242,42 @@ body:has(.sostenibility-container) {
     overflow-x: hidden;
 }
 
-    /* Hero Section */
-    
-    .hero-sostenibilità {
-        min-height: 90vh;
-        background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
+/* Hero Section */
+
+.hero-sostenibilità {
+    min-height: 90vh;
+    background-image: url("../images/sostenibilità/sfondo-sostenibilità.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-line {
+    margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+    .hero-sostenibilità .hero-title {
+        font-size: 1.75rem;
     }
-    
+
     .hero-line {
-        margin-top: 2rem;
+        max-width: 90%;
     }
-    
-    @media (max-width: 767px) {
-        .hero-sostenibilità .hero-title {
-            font-size: 1.75rem;
-        }
-        .hero-line {
-            max-width: 90%;
-        }
-    }
-    /* Background principale */
-    .fullpage-bg {
-        background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100%;
-        position: relative;
-    }
+}
+
+/* Background principale */
+.fullpage-bg {
+    background-image: url("../images/sostenibilità/sfondo-albero-sostenibilità.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    position: relative;
+}
 
 
 /* Sezioni generiche */
@@ -1260,40 +1350,40 @@ body:has(.sostenibility-container) {
     background-image: url("/images/sostenibilità/arrow-left.svg");
 }
 
-    .next-fase {
-        right: -10px;
-        background-image: url("/images/sostenibilità/arrow-right.svg");
+.next-fase {
+    right: -10px;
+    background-image: url("/images/sostenibilità/arrow-right.svg");
+}
+
+.section-content .label-custom {
+    width: fit-content;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: none;
+    font-size: 22px !important;
+    font-family: 'Syne', sans-serif;
+}
+
+@media (max-width: 991px) {
+    .fasi-section .section-image-wrapper {
+        display: none;
     }
 
-    .section-content .label-custom {
-        width: fit-content;
-        margin-bottom: 1rem;
-        font-weight: 600;
-        text-shadow: none;
-        font-size: 22px!important;
-        font-family: 'Syne', sans-serif;
+    .fase-item {
+        padding: 2rem 1rem;
     }
 
-    @media (max-width: 991px) {
-        .fasi-section .section-image-wrapper {
-            display: none;
-        }
-        
-        .fase-item {
-            padding: 2rem 1rem;
-        }
-        
-        .section-content {
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        .fase-nav {
-            display: block; 
-            width: 50px;
-            height: 50px;
-        }
+    .section-content {
+        padding: 1.5rem;
+        text-align: center;
     }
+
+    .fase-nav {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+}
 
 /* Experts Section */
 .experts-section h3 {
@@ -1387,11 +1477,11 @@ body:has(.sostenibility-container) {
 }
 
 
-    /* TABLET - min 768px */
-    @media (min-width: 768px) {
-        .section-content {
-            padding: 3rem 2rem;
-        }
+/* TABLET - min 768px */
+@media (min-width: 768px) {
+    .section-content {
+        padding: 3rem 2rem;
+    }
 
     .section-image-wrapper {
         padding: 1.25rem;
@@ -1410,24 +1500,14 @@ body:has(.sostenibility-container) {
         font-size: 1.3rem;
     }
 
-        .partner-logo {
-            max-height: 160px;
-        }
-
-    .footer-logo {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 2rem;
+    .partner-logo {
+        max-height: 160px;
     }
 
-    .footer-tagline {
-        font-size: 1.5rem;
+    .partner-logo {
+        max-height: 160px;
     }
 
-    .footer-section {
-        padding: 4rem 1rem 2.5rem;
-        margin-top: 6rem;
-    }
 }
 
 
@@ -1469,28 +1549,6 @@ body:has(.sostenibility-container) {
     font-size: 1.5rem;
 }
 
-.footer-logo {
-    width: 190px;
-    height: 190px;
-    margin-bottom: 2rem;
-}
-
-.footer-tagline {
-    font-size: 2rem;
-}
-
-.footer-hours {
-    font-size: 1.2rem;
-}
-
-.footer-section {
-    padding: 5rem 1rem 2.5rem;
-    margin-top: 12.5rem;
-}
-
-
-    
-
 
 /********************************************
            PAGINA PRENOTA
@@ -1521,6 +1579,9 @@ body:has(.sostenibility-container) {
     transition: all 0.3s ease;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 20;
+
 }
 
 /* Hover sulla barra intera */
@@ -1534,6 +1595,7 @@ body:has(.sostenibility-container) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 10px 35px;
     border-radius: 80px;
     transition: background 0.2s ease;
@@ -1654,6 +1716,7 @@ input::-webkit-calendar-picker-indicator {
     }
 }
 
+/*carosello*/
 .custom-ctrl {
     width: 5%;
     opacity: 0.8;
@@ -1689,8 +1752,17 @@ input::-webkit-calendar-picker-indicator {
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
-    background-color: #44dde099;
-    box-shadow: 0 0 15px var(--bs-cyan);
+    background-color: rgba(68, 222, 224, 0.2) !important;
+    /* Sfondo leggermente colorato */
+    border-color: #44DEE0;
+    color: #ffffff;
+
+    box-shadow:
+        0 0 10px rgba(68, 222, 224, 0.5),
+        0 0 20px rgba(68, 222, 224, 0.3),
+        inset 0 0 8px rgba(68, 222, 224, 0.4);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 1200px) {
@@ -1815,57 +1887,61 @@ input::-webkit-calendar-picker-indicator {
            PAGINA PIATTO
 ********************************************/
 .piatti-hero-bg {
-    background-image: url('../images/piatto01/piatti_hero_bg_mobile.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image:
+        linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        url(/images/piatto01/piatti_hero_bg.webp);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center 70%;
     width: 100%;
     height: 100vh;
-    /* Important: creates a coordinate system for the child image */
     position: relative;
-    /* Optional: hides the overlap if you don't want it bleeding into the next section, 
-       but you mentioned you want it "falling below", so keep this visible. */
 }
 
 .piatti-hero-bg img {
     position: absolute;
     bottom: -50px;
-    /* This "pushes" the image 50px past the bottom of the container */
     left: 50%;
     transform: translateX(-50%);
-    /* This perfectly centers the absolute image */
     z-index: 10;
-    /* Ensures it stays in front of the background */
-    max-width: 90%;
-    /* Adjust based on how large you want the foreground element */
+    width: 80%;
 }
 
-/* Adjust the overlap for larger screens */
-@media (min-width: 768px) {
-    .piatti-hero-bg {
-        background-image: url('../images/piatto01/piatti_hero_bg.png');
-    }
-
-    .piatti-hero-bg img {
-        bottom: -100px;
-        /* Larger overlap for desktop */
-    }
+.piatti-hero-section {
+    text-align: center;
+    align-items: center;
+    padding: 20dvh 5dvw 0 5dvw;
 }
 
-.piatti-ingredienti-bg {
+.ingredienti-piatto-bg {
     background-image: url('../images/piatto01/ingredienti_bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: auto;
-    /* aspect-ratio: 393 / 1711; */
 }
 
-.ingredient-picture {
-    height: 92px;
-    border-radius: 50%;
-    object-fit: cover;
+.discover-ingredients-heading {
+    padding-top: 20vh;
+}
+
+@media (min-width: 768px) {
+    .piatti-hero-section {
+        padding: 20dvh 5dvw 0 5dvw;
+    }
+
+    .piatti-hero-bg img {
+        bottom: -30vh;
+    }
+
+    .ingredienti-piatto-img {
+        width: 60%;
+    }
+
+    .discover-ingredients-heading {
+        padding-top: 35vh;
+    }
 }
 
 .allergeni {
@@ -1875,29 +1951,30 @@ input::-webkit-calendar-picker-indicator {
 
 
 
-/*prova foglia*/
+/*prova foglia pagina info*/
 .leaves-wrapper {
     position: relative;
     height: 0;
 }
 
+/* gruppo */
 .leaves {
     position: absolute;
     top: -20vh;
-    /* 👈 CHIAVE */
     pointer-events: none;
     z-index: 2;
 }
 
+/* ancoraggio ai margini */
 .leaves-left {
     left: 0;
-    transform: scale(4);
 }
 
 .leaves-right {
     right: 0;
 }
 
+/* foglia singola */
 .leaf {
     position: absolute;
     width: 240px;
@@ -1905,10 +1982,10 @@ input::-webkit-calendar-picker-indicator {
     will-change: transform;
 }
 
-
-.leaves-left .leaf:nth-child(1) {
-    top: -120px;
-    left: -130px;
+.leaves-left .leaf {
+    width: 800px;
+    top: -300px;
+    left: -350px;
 }
 
 .leaves-right .leaf:nth-child(1) {
@@ -1921,5 +1998,270 @@ input::-webkit-calendar-picker-indicator {
     right: -30px;
 }
 
+.custom-leaves {
+    top: -60vh;
+    right: -500px;
+}
 
-/*prova foglie home*/
+.custom-leaves .leaf {
+    width: 1000px;
+}
+
+.custom-left-2 {
+    top: -30vh;
+}
+
+.custom-left-2 .leaf {
+    width: 700px;
+    left: -500px;
+}
+
+.custom-leaves-3 {
+    top: -80vh;
+    right: -530px;
+}
+
+.custom-leaves-3 .leaf {
+    width: 1200px;
+}
+
+.leaf-right-prenota {
+    top: -50vh;
+    right: -250px;
+}
+
+.leaf-right-prenota .leaf {
+    width: 700px;
+
+}
+
+.custom-leaves-prenota {
+    top: -30vh;
+    right: -270px;
+}
+
+.custom-leaves-prenota .leaf {
+    width: 1000px;
+}
+
+/*da qui fai responsive*/
+.right-leaves-risto {
+    top: -50vh;
+    right: -250px;
+}
+
+.right-leaves-risto .leaf {
+    width: 800px;
+}
+
+.right-leaves-rami {
+    top: 10vh;
+    right: -120px;
+}
+
+.right-leaves-rami .leaf {
+    width: 500px;
+}
+
+.left-leaves-rami {
+    top: 45vh;
+}
+
+.left-leaf-rami {
+    top: 130vh;
+    left: 130px;
+}
+
+.left-leaf-rami .leaf {
+    width: 500px;
+}
+
+
+.leaf {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/*riduzione foglie info*/
+@media (max-width: 1400px) {
+
+    .leaf {
+        width: 200px;
+    }
+
+    .leaves-left .leaf {
+        width: 650px;
+        left: -280px;
+        top: -260px;
+    }
+
+    .custom-leaves {
+        right: -360px;
+    }
+
+    .custom-leaves .leaf {
+        width: 750px;
+    }
+
+    .custom-left-2 .leaf {
+        width: 550px;
+        left: -360px;
+    }
+
+    .custom-leaves-3 {
+        right: -380px;
+
+    }
+
+    .custom-leaves-3 .leaf {
+        width: 850px;
+    }
+
+    .leaf-right-prenota {
+        top: -45vh;
+        right: -200px;
+    }
+
+    .leaf-right-prenota .leaf {
+        width: 550px;
+    }
+
+    .custom-leaves-prenota {
+        top: -25vh;
+        right: -220px;
+    }
+
+    .custom-leaves-prenota .leaf {
+        width: 750px;
+    }
+
+    .right-leaves-risto {
+        top: -40vh;
+        right: -180px;
+    }
+
+    .right-leaves-risto .leaf {
+        width: 650px;
+    }
+
+    .right-leaves-rami {
+        top: 5vh;
+        right: -90px;
+    }
+
+    .right-leaves-rami .leaf {
+        width: 420px;
+    }
+
+    .left-leaves-rami {
+        top: 40vh;
+    }
+
+    .left-leaf-rami {
+        top: 130vh;
+        left: 100px;
+    }
+
+    .left-leaf-rami .leaf {
+        width: 420px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .leaf {
+        transform: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .leaf {
+        width: 160px;
+    }
+
+    .leaves-left .leaf {
+        width: 480px;
+        left: -200px;
+        top: -200px;
+    }
+
+    .custom-leaves {
+        right: -260px;
+    }
+
+    .custom-leaves .leaf {
+        width: 560px;
+    }
+
+    .custom-left-2 .leaf {
+        width: 420px;
+        left: -260px;
+    }
+
+    .custom-leaves-3 {
+        right: -280px;
+        top: -65vh;
+
+    }
+
+    .custom-leaves-3 .leaf {
+        width: 600px;
+    }
+
+    .leaf-right-prenota {
+        top: -35vh;
+        right: -150px;
+    }
+
+    .leaf-right-prenota .leaf {
+        width: 420px;
+    }
+
+    .custom-leaves-prenota {
+        top: -20vh;
+        right: -160px;
+    }
+
+    .custom-leaves-prenota .leaf {
+        width: 550px;
+    }
+
+    .right-leaves-risto {
+        top: -30vh;
+        right: -120px;
+    }
+
+    .right-leaves-risto .leaf {
+        width: 480px;
+    }
+
+    .right-leaves-rami {
+        top: 0;
+        right: -60px;
+    }
+
+    .right-leaves-rami .leaf {
+        width: 320px;
+    }
+
+    .left-leaves-rami {
+        top: 30vh;
+    }
+
+    .left-leaf-rami {
+        top: 95vh;
+        left: 60px;
+    }
+
+    .left-leaf-rami .leaf {
+        width: 320px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .leaves-wrapper {
+        display: none;
+    }
+}

@@ -14,6 +14,8 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles/style.css">
+    <script src="/javascript/script.js"></script>
+
 </head>
 
 <body>
@@ -27,45 +29,52 @@
     </svg>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary">
+    <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" width="100" height="100">
+            <a class="navbar-brand glass-blur-only" href="index.html">
+                <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" class="logo-img">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
+            <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
+                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
+                <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
-            <div class="glass-effect collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav d-flex justify-content-center mx-auto mb-2 mb-lg-0">
+            <!-- Menu collapse -->
+            <div class="glass-effect collapse navbar-collapse h-100" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">HOME</a>
+                        <a class="nav-link" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">RISTORANTE</a>
+                        <a class="nav-link active" aria-current="page" href="ristorante.html">RISTORANTE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">MENU</a>
+                        <a class="nav-link" href="menu.html">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">INFO</a>
+                        <a class="nav-link" href="info.html">INFO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SOSTENIBILITA</a>
+                        <a class="nav-link" href="sostenibilita.html">SOSTENIBILITÀ</a>
                     </li>
                 </ul>
             </div>
-            <div class="d-flex align-items-center" style="gap: 45px;">
-                <button class="glass-effect btn btn-custom-primary" type="button">PRENOTA</button>
-                <img src="images/flags/Great Britain.png" class="navbar-img-languages" />
+
+            <!-- Desktop: PRENOTA + Bandiera (visibili solo >= 1200px) -->
+            <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
+                <button class="glass-effect btn btn-custom-primary btn-prenota" type="button" onclick="window.location.href='prenota.html'">PRENOTA</button>
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" width="30" height="20" />
             </div>
         </div>
     </nav>
 
-    <!-- TODO: fix bottom gradient (don't use image gradient, use css)-->
     <section id="ristorante-s1" class="img-bg">
         <div class="text-center hero-section section align-self-center">
             <h2>RISTORANTE</h2>
@@ -92,7 +101,16 @@
         </div>
     </section>
 
-    <div class="container-xxl padding-section">
+ <!-- foglie-->
+ <div class="leaves-wrapper">
+    <div class="leaves leaves-right right-leaves-risto">
+      <img src="images/foglie/fogliaa-Photoroom 8.png" class="leaf" />
+      <img src="images/foglie/fogliaa-Photoroom 9.png" class="leaf" />
+    </div>
+  </div>
+
+
+    <section class="container-xxl padding-section">
         <div class="row align-items-center">
             <h3 class="d-block d-md-none mb-4 mb-md-0 text-center">Lo chef stellato</h3>
             <div class="col-md-6">
@@ -107,9 +125,16 @@
                     ultrasuoni per estrarre sapori puri senza alterare l'anima dell'ingrediente.</p>
             </div>
         </div>
+    </section>
+
+    <div class="leaves-wrapper">
+        <div class="leaves leaves-left">
+            <img src="images/foglie/left-leaf.png" class="leaf" />
+        </div>
     </div>
 
-    <div class="img-bg" id="ristorante-s2">
+
+    <section class="img-bg" id="ristorante-s2">
         <div class="container-xxl padding-section text-center">
             <h2>Il nostro team</h2>
             <!-- Mobile -->
@@ -220,10 +245,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Mobile -->
-    <div class="d-block d-md-none">
+    <section class="d-block d-md-none">
         <div class="text-center">
             <h2>Alcuni dei<span class="d-block">nostri piatti</span></h2>
         </div>
@@ -233,10 +258,33 @@
             <img src="images/ristorante/img_piatto_3.webp" class="img-piatto" />
             <button class="glass-effect btn btn-custom-primary mt-5" type="button">Scopri di più</button>
         </div>
+    </section>
+
+    <!--foglie-->
+    <div class="leaves-wrapper">
+        <div class="leaves leaves-left left-leaves-rami">
+            <img src="images/foglie/ramo-sinistra.png" class="leaf" />
+        </div>
     </div>
 
+<!--foglie-->
+<div class="leaves-wrapper">
+    <div class="leaves leaves-left left-leaf-rami">
+        <img src="images/foglie/ramo-sinistra.png" class="leaf" />
+    </div>
+</div>
+
+<!--foglie-->
+<div class="leaves-wrapper">
+    <div class="leaves leaves-right right-leaves-rami">
+      <img src="images/foglie/foglie-rami destra.png" class="leaf" />
+    </div>
+</div>
+
+
+
     <!-- Desktop -->
-    <div class="d-none d-md-block img-bg" id="ristorante-s3">
+    <section class="d-none d-md-block img-bg" id="ristorante-s3">
         <div class="padding-section">
             <div class="text-center">
                 <h2>Alcuni dei nostri piatti</h2>
@@ -250,22 +298,20 @@
                 <button class="glass-effect btn btn-custom-primary" type="button">Scopri di più</button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="text-center footer">
-        <!-- Add more vertical space on mobile -->
-        <div class="d-md-none" style="height: 200px;"></div>
-        <img src="images/logo/logo-footer.webp" style="width: 190px; height: 190px;" />
-        <div style="margin-top: 20px;">
-            <p style="font-size: 32px; font-weight: bold;">Il primo ristorante Solarpunk.</p>
-            <p>Ogni giorno dalle 18:00 alle 24:00</p>
-        </div>
-        <div style="margin-top: 30px; line-height: 0.5;">
-            <p>© 2025 Eden Leaf Ecosystems.</p>
-            <p>Tutti i diritti riservati alla Natura.</p>
-            <p>P.IVA 000123SOLAR</p>
-        </div>
-    </div>
+  <footer>
+      <div class="container-xxl text-center">
+          <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" />
+          <div>
+              <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
+              <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
+              <p>© 2025 Eden Leaf Ecosystems.</br>
+              Tutti i diritti riservati alla Natura.</br>
+              P.IVA 000123SOLAR</p>
+          </div>
+      </div>
+  </footer>
 
 </body>
 
