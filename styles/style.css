@@ -94,6 +94,10 @@ h1 {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.h1-big {
+        font-size: 2rem;
+}
+
 h2 {
     font-size: 2rem;
     color: var(--bs-tan);
@@ -121,8 +125,12 @@ p {
 
 @media (min-width: 768px) {
     h1 {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
+
+    .h1-big {
+        font-size: 4.5rem;
+}
 
     h2 {
         font-size: 3rem;
@@ -309,7 +317,7 @@ p {
 
     /* Background: Grigio scuro trasparente con riflesso centrale */
     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%),
-        rgba(60, 60, 60, 0.40);
+        rgba(94, 94, 94, 0.4);
 
     /* Effetto Glass (Luci e Ombre interne) */
     box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.15) inset,
@@ -330,24 +338,15 @@ p {
     transition: all 0.3s ease;
 }
 
-/* Effetto al passaggio del mouse -> fa hover su una classe che non esiste... se non serve a nessuno lo cancello 
-.btn-glass-grey:hover {
-    background-color: rgba(80, 80, 80, 0.60);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.10);
-    color: white;
-}*/
+.label-piatti {
+    border: 1px solid #44DEE0;
+    background: linear-gradient(0deg, rgba(68, 222, 224, 0.20) 0%, rgba(68, 222, 224, 0.20) 100%), rgba(246, 241, 231, 0.19);
+    box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
+}
 
-/*Anche questo mi sembra inutile
-.btn-layout {
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease, background 0.2s;
-
-    appearance: none;
-    background-color: var(--colore-button);
-}*/
-
+.label-piatti:hover {
+    box-shadow: 0 0 10px rgba(68, 222, 224, 0.6);
+}
 
 /*Label h3 per sezioni menù e fasi sostenibilita*/
 .label-h3 {
