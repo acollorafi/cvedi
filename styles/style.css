@@ -873,6 +873,7 @@ footer {
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 70%, #1D2824 100%), url(/images/menu/menu_bg2.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
 }
 
 #menu-s3 {
@@ -1869,7 +1870,7 @@ input::-webkit-calendar-picker-indicator {
            PAGINA PIATTO
 ********************************************/
 .piatti-hero-bg {
-    background-image:
+    background:
         linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
         url(/images/piatto01/piatti_hero_bg.webp);
     background-repeat: no-repeat, no-repeat;
@@ -1878,15 +1879,30 @@ input::-webkit-calendar-picker-indicator {
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
 .piatti-hero-bg img {
     position: absolute;
-    bottom: -50px;
+    bottom: -3.5vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    width: 80%;
+    width: 180%;
+    height: auto;
+    max-width: none;
+}
+
+@media (min-width: 768px) {
+    .piatti-hero-bg img {
+        position: absolute;
+        bottom: -30vh;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        width: 80%;
+    }
 }
 
 .piatti-hero-section {
@@ -1911,10 +1927,6 @@ input::-webkit-calendar-picker-indicator {
 @media (min-width: 768px) {
     .piatti-hero-section {
         padding: 20dvh 5dvw 0 5dvw;
-    }
-
-    .piatti-hero-bg img {
-        bottom: -30vh;
     }
 
     .ingredienti-piatto-img {
@@ -1959,10 +1971,10 @@ input::-webkit-calendar-picker-indicator {
 /* foglia singola */
 .leaf {
     position: absolute;
-    width: 240px;
+    width: 240px;       
     opacity: 0.9;
     will-change: transform;
-}
+  }
 
 .leaves-left .leaf {
     width: 800px;
@@ -1973,9 +1985,9 @@ input::-webkit-calendar-picker-indicator {
 .leaves-right .leaf:nth-child(1) {
     top: 20%;
     right: -50px;
-}
-
-.leaves-right .leaf:nth-child(2) {
+  }
+  
+  .leaves-right .leaf:nth-child(2) {
     top: 65%;
     right: -30px;
 }
