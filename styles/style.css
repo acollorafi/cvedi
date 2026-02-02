@@ -1250,14 +1250,15 @@ body:has(.sostenibility-container) {
 /* Hero Section */
 
 .hero-sostenibilita {
+    background:
+        linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        url(/images/sostenibilita/sfondo-sostenibilita.webp);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
+    width: 100%;
+    position: relative;
     min-height: 90vh;
-    background-image: url("../images/sostenibilita/sfondo-sostenibilita.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
 }
 
 .hero-line {
@@ -1276,10 +1277,12 @@ body:has(.sostenibility-container) {
 
 /* Background principale */
 .fullpage-bg {
-    background-image: url("../images/sostenibilita/sfondo-albero-sostenibilita.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background:
+        linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        url(/images/sostenibilita/sfondo-albero-sostenibilita.webp);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
     width: 100%;
     position: relative;
 }
@@ -1931,10 +1934,12 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .ingredienti-piatto-bg {
-    background-image: url('../images/piatto01/ingredienti_bg.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background:
+        linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        url(/images/piatto01/ingredienti_bg.webp);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
     width: 100%;
     height: auto;
 }
