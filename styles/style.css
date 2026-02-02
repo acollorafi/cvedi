@@ -932,24 +932,6 @@ footer {
     background-size: cover;
 }
 
-/*Sfondi pagina piatto 01*/
-#piatto01-s1 {
-    position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/piatti_hero_bg.png) no-repeat;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 70%;
-
-}
-
-#piatto01-s2 {
-    position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/piatto01/ingredienti_bg.webp) no-repeat;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 /********************************************
            ACCORDION FAQ
 ********************************************/
