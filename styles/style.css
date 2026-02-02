@@ -686,6 +686,25 @@ p {
     border-radius: 10px;
 }
 
+/* button prenota hover */
+.btn-custom-primary:hover, 
+.btn-custom-primary.active {
+    background-color: rgba(68, 222, 224, 0.2); /* Sfondo leggermente colorato */
+    border-color: #44DEE0;
+    color: #ffffff;
+    
+    box-shadow: 
+        0 0 10px rgba(68, 222, 224, 0.5), 
+        0 0 20px rgba(68, 222, 224, 0.3),
+        inset 0 0 8px rgba(68, 222, 224, 0.4);
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-2px); /* Si alza leggermente */
+}
+
+.btn-custom-primary {
+    transition: all 0.3s ease-in-out;
+}
+
 /* TABLET - min 768px */
 @media (min-width: 768px) {
     .logo-img {
@@ -1508,6 +1527,7 @@ body:has(.sostenibility-container) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 10px 35px;
     border-radius: 80px;
     transition: background 0.2s ease;
@@ -1877,7 +1897,7 @@ input::-webkit-calendar-picker-indicator {
   /* foglia singola */
   .leaf {
     position: absolute;
-    width: 240px;        /* dimensione base */
+    width: 240px;       
     opacity: 0.9;
     will-change: transform;
   }
@@ -1899,30 +1919,30 @@ input::-webkit-calendar-picker-indicator {
   }
   
   .custom-leaves {
-    top: -60vh; /* posizione verticale diversa */
+    top: -60vh; 
     right: -500px;
   }
   
   .custom-leaves .leaf {
-    width: 1000px;   /* dimensione diversa */
+    width: 1000px;  
   }
 
   .custom-left-2 {
-    top: -30vh;   /* più giù rispetto alle altre */
+    top: -30vh; 
   }
 
   .custom-left-2 .leaf {
-    width: 700px;     /* dimensione */
-    left: -500px;      /* quanto entra nella pagina */
+    width: 700px;     
+    left: -500px;    
   }
 
 .custom-leaves-3 {
     top: -80vh; 
-    right: -530px;      /* quanto entra nella pagina */
+    right: -530px;    
   }
   
 .custom-leaves-3 .leaf {
-    width: 1200px;  /* dimensione */
+    width: 1200px;  
   }
 
   .leaf-right-prenota {
@@ -1936,14 +1956,18 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .custom-leaves-prenota {
-    top: -50vh; /* posizione verticale diversa */
+    top: -30vh;
     right: -270px;
   }
 
   .custom-leaves-prenota .leaf {
-    width: 1000px;   /* dimensione diversa */
+    width: 1000px;
   }
 
+  .leaf {
+    will-change: transform;
+    transform: translateZ(0);
+  }
 /*riduzione foglie info*/
 @media (max-width: 1400px) {
 
@@ -1976,8 +2000,14 @@ input::-webkit-calendar-picker-indicator {
     .custom-leaves-3 .leaf {
       width: 850px;
     }
+    
   }
-  
+
+  @media (max-width: 1024px) {
+    .leaf {
+      transform: none !important;
+    }
+  }
   
   @media (max-width: 1024px) {
 
