@@ -367,17 +367,17 @@ p {
     font-style: normal;
     font-weight: 700;
     line-height: 26px;
-    /* 72.222% */
 }
 
 
 .tab-menu-bg {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 9px;
     gap: 12px;
 
-    border-radius: 64px;
+    border-radius: 40px;
     background: rgba(246, 241, 231, 0.20);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(12px);
@@ -386,18 +386,17 @@ p {
     box-shadow: 0 2px 13.4px 0 rgba(0, 0, 0, 0.33);
 }
 
-
 .btn-menu {
     border: none;
     background: transparent;
     color: var(--bs-white);
 
     font-family: "Neutraface Text";
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1;
 
-    padding: 18px 48px;
+    padding: 10px 20px;
     border-radius: 40px;
 
     cursor: pointer;
@@ -405,8 +404,6 @@ p {
 }
 
 .btn-menu.active {
-    color: var(--bs-white);
-
     background:
         linear-gradient(180deg,
             rgba(68, 222, 224, 0.25),
@@ -419,10 +416,25 @@ p {
         inset 3px -3px 12px rgba(68, 222, 224, 0.15),
         inset -3px 3px 6px rgba(255, 255, 255, 0.15),
         0 0 18px rgba(68, 222, 224, 0.35);
-
-    padding: 18px 64px;
-    /* più largo */
 }
+
+@media (min-width: 768px) {
+    .tab-menu-bg {
+        padding: 9px;
+        gap: 12px;
+        border-radius: 64px;
+    }
+
+    .btn-menu {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+
+        padding: 18px 48px;
+        border-radius: 40px;
+    }
+}
+
 
 .btn-menu:not(.active):hover {
     border: 1px solid rgba(246, 241, 231, 0.30);
