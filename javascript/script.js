@@ -1,43 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Funzione per mostrare la mappa dei tavoli
+    // mappa dei tavoli
     window.mostraTavoli = function() {
-        // Recupero numero persone (l'unico input number nella barra)
         const persone = document.querySelector('.search-bar-custom input[type="number"]').value;
-        
-        // Recupero data tramite ID
         const data = document.getElementById('dateInput').value;
-        
-        // Recupero orario tramite la classe della SELECT
         const orario = document.querySelector('.glass-effect-select').value;
-        
         const sezioneMappa = document.getElementById('mappa-tavoli');
-
-        // Debug per controllare i valori in console
         console.log("Tentativo di ricerca:", { persone, data, orario });
-
-        // Controllo validità: persone è sempre valorizzato (default 2), controlliamo data
         if (!data) {
             alert("Per favore, seleziona una data per la tua prenotazione.");
             return;
         }
-
-        // Se la data c'è, mostriamo la sezione mappa
         if (sezioneMappa) {
             sezioneMappa.classList.remove('d-none');
-            
-            // Scroll fluido verso la sezione mappa
-            setTimeout(() => {
+                setTimeout(() => {
                 sezioneMappa.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100);
         }
     };
 
-    // 2. Funzione per aggiornare il testo della data (perché l'input è nascosto)
+    // data
     window.updateLabel = function(input, textId) {
         const displaySpan = document.getElementById(textId);
         if (input.value && displaySpan) {
-            // Formattiamo la data in formato italiano GG/MM/AAAA
             const dateObj = new Date(input.value);
             const formattedDate = dateObj.toLocaleDateString('it-IT');
             
@@ -47,14 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // 3. Gestione del Pop-up di conferma finale
+    // pop-up di conferma finale
     const btnConferma = document.getElementById('btnConfermaPrenotazione');
     if (btnConferma) {
         btnConferma.addEventListener('click', () => {
             const overlay = document.getElementById('modalOverlay');
             if (overlay) {
                 overlay.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Blocca lo scroll
+                document.body.style.overflow = 'hidden';
             }
         });
     }
@@ -65,20 +50,17 @@ window.chiudiPopUp = function() {
     const overlay = document.getElementById('modalOverlay');
     if (overlay) {
         overlay.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Riabilita lo scroll
+        document.body.style.overflow = 'auto'; 
     }
 };
 
 function chiudiPopUp() {
     const overlay = document.getElementById('modalOverlay');
     overlay.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Riabilita lo scroll
-    
-    // Opzionale: ricarica la pagina o torna in cima
-    // window.location.reload(); 
-}
+    document.body.style.overflow = 'auto'; 
+    }
 
-//prova foglie
+//movimento foglie
 document.addEventListener("DOMContentLoaded", () => {
   const leaves = document.querySelectorAll(".leaf");
   if (!leaves.length) return;
@@ -98,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
       wind += delta * 0.3;
       wind = Math.max(Math.min(wind, 20), -20);
 
-      // avvia animazione solo se non è già attiva
       if (!ticking) {
         ticking = true;
         rafId = requestAnimationFrame(animate);
@@ -127,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     });
 
-    // se il vento è ancora percepibile → continua
     if (Math.abs(wind) > 0.1) {
       rafId = requestAnimationFrame(animate);
     } else {
@@ -137,12 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-  
-    
-
-//prova foglie home
-
-
 
 // PAGINA MENU.HTML
 // tab menu intolleranze
@@ -151,8 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const buttons = document.querySelectorAll(".btn-menu");
     const cards = document.querySelectorAll("[data-menu]");
-
-    // stato iniziale (menu attivo)
     const activeMenu = document.querySelector(".btn-menu.active").dataset.menuBtn;
 
     cards.forEach(card => {
@@ -187,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
 /********************************************
            PAGINA sostenibilità
 ********************************************/
-// Gestione slider fasi con loop e transizioni
 document.addEventListener('DOMContentLoaded', () => {
   const fasi = document.querySelectorAll('.fase-item');
   const prevButton = document.querySelector('.prev-fase');
@@ -200,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
       fasi.forEach((fase, i) => {
           if (i === index) {
               fase.classList.add('active');
-              // Forza reflow per attivare animazione
               fase.offsetHeight;
           } else {
               fase.classList.remove('active');
@@ -209,20 +179,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % fasi.length; // Loop infinito
+      currentIndex = (currentIndex + 1) % fasi.length;
       showFase(currentIndex);
   });
 
   prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + fasi.length) % fasi.length; // Loop infinito all'indietro
+      currentIndex = (currentIndex - 1 + fasi.length) % fasi.length;
       showFase(currentIndex);
   });
 
-  // Inizializza
   showFase(currentIndex);
 });
 
-// Animazione foglia
 document.addEventListener('DOMContentLoaded', () => {
   const foglia = document.querySelector('.image-right');
   if (!foglia) return;
@@ -245,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
   requestAnimationFrame(ventoLeggero);
 });
 
-// Carosello Esperti (solo mobile)
+// carosello esperti (solo mobile)
 document.addEventListener('DOMContentLoaded', function() {
   const expertItems = document.querySelectorAll('.expert-item');
   const prevBtn = document.querySelector('.prev-expert');
@@ -284,10 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
           showExpert(currentExpertIndex);
       });
   }
-
-  // Inizializza al caricamento
   initExpertsCarousel();
-
-  // Reinizializza al resize
   window.addEventListener('resize', initExpertsCarousel);
 });
