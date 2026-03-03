@@ -338,13 +338,13 @@ p {
     transition: all 0.3s ease;
 }
 
-.label-piatti {
+.label-dish {
     border: 1px solid #44DEE0;
     background: linear-gradient(0deg, rgba(68, 222, 224, 0.20) 0%, rgba(68, 222, 224, 0.20) 100%), rgba(246, 241, 231, 0.19);
     box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
 }
 
-.label-piatti:hover {
+.label-dish:hover {
     box-shadow: 0 0 10px rgba(68, 222, 224, 0.6);
 }
 
@@ -877,21 +877,21 @@ footer {
 }
 
 /*Sfondi pagina ristorante*/
-#ristorante-s1 {
+#restaurant-s1 {
     position: relative;
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/ristorante/hero_bg.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#ristorante-s2 {
+#restaurant-s2 {
     position: relative;
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/ristorante/img_team_bg.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#ristorante-s3 {
+#restaurant-s3 {
     position: relative;
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 70%, #1D2824 100%), url(/images/ristorante/img_piatti_bg.webp) no-repeat;
     background-repeat: no-repeat;
@@ -933,7 +933,7 @@ footer {
 }
 
 /*Sfondi sezioni hero info*/
-#prenota-s1 {
+#book-s1 {
     position: relative;
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero-prenota.webp) no-repeat;
     background-repeat: no-repeat;
@@ -941,7 +941,7 @@ footer {
     background-position: center 70%;
 }
 
-#prenota-s2 {
+#book-s2 {
     position: relative;
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/sfondo-prenota.webp) no-repeat;
     background-repeat: no-repeat;
@@ -950,7 +950,7 @@ footer {
 }
 
 /*Sfondi pagina sostenibilita*/
-#sostenibilita-s1 {
+#sustainability-s1 {
     position: relative;
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilita/sfondo-sostenibilita.webp) no-repeat;
     background-repeat: no-repeat;
@@ -958,11 +958,11 @@ footer {
     background-position: center 70%;
 }
 
-#sostenibilita-s2 {
+#sustainability-s2 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilita/sfondo-sostenibilita.webp) no-repeat;
-    background-repeat: no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilita/sfondo-albero-sostenibilita.webp) no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /********************************************
@@ -1073,7 +1073,7 @@ footer {
 }
 
 
-.foto-recensione {
+.img-review {
     width: 150px;
     height: 150px;
     border: none;
@@ -1133,8 +1133,7 @@ footer {
     border: var(--bs-glass-border);
 }
 
-.img-piatto {
-    /* border: 2px solid var(--bs-cyan);  */
+.img-dish {
     border-radius: 20px;
     overflow: hidden;
     max-width: 100%;
@@ -1223,13 +1222,6 @@ footer {
 }
 
 
-/*
-.container-info {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-}
-*/
 
 
 /********************************************
@@ -1258,45 +1250,6 @@ body:has(.sostenibility-container) {
     overflow-x: hidden;
 }
 
-/* Hero Section */
-
-.hero-sostenibilita {
-    background:
-        linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
-        url(/images/sostenibilita/sfondo-sostenibilita.webp);
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
-    background-position: center, center;
-    width: 100%;
-    position: relative;
-    min-height: 90vh;
-}
-
-.hero-line {
-    margin-top: 2rem;
-}
-
-@media (max-width: 767px) {
-    .hero-sostenibilita .hero-title {
-        font-size: 1.75rem;
-    }
-
-    .hero-line {
-        max-width: 90%;
-    }
-}
-
-/* Background principale */
-.fullpage-bg {
-    background:
-        linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
-        url(/images/sostenibilita/sfondo-albero-sostenibilita.webp);
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
-    background-position: center, center;
-    width: 100%;
-    position: relative;
-}
 
 
 /* Sezioni generiche */
@@ -1308,17 +1261,17 @@ body:has(.sostenibility-container) {
 
 
 /* Fasi Section */
-.fase-wrapper {
+.step-wrapper {
     position: relative;
 }
 
-.fase-item {
+.step-item {
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
-.fase-item.active {
+.step-item.active {
     display: flex;
     opacity: 1;
     animation: fadeIn 0.5s ease-in-out;
@@ -1336,7 +1289,7 @@ body:has(.sostenibility-container) {
     }
 }
 
-.fase-nav {
+.step-nav {
     position: absolute;
     top: 50%;
     /* transform: translateY(-50%); */
@@ -1355,21 +1308,21 @@ body:has(.sostenibility-container) {
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.fase-nav:hover {
+.step-nav:hover {
     transform: scale(1.1);
     opacity: 0.8;
 }
 
-.fase-nav:active {
+.step-nav:active {
     transform: scale(0.95);
 }
 
-.prev-fase {
+.prev-step {
     left: -5px;
     background-image: url("/images/sostenibilita/arrow-left.svg");
 }
 
-.next-fase {
+.next-step {
     right: -5px;
     background-image: url("/images/sostenibilita/arrow-right.svg");
 }
@@ -1384,11 +1337,11 @@ body:has(.sostenibility-container) {
 }
 
 @media (max-width: 991px) {
-    .fasi-section .section-image-wrapper {
+    .step-section .section-image-wrapper {
         display: none;
     }
 
-    .fase-item {
+    .step-item {
         padding: 2rem 1rem;
     }
 
@@ -1397,7 +1350,7 @@ body:has(.sostenibility-container) {
         text-align: center;
     }
 
-    .fase-nav {
+    .step-nav {
         display: block;
         width: 50px;
         height: 50px;
@@ -1531,7 +1484,7 @@ body:has(.sostenibility-container) {
 
 
 /* Mostra pulsanti navigazione fasi */
-.fase-nav {
+.step-nav {
     display: block;
     width: 50px;
     height: 50px;
@@ -1539,11 +1492,11 @@ body:has(.sostenibility-container) {
 
 .vision-section,
 .sustainability-section,
-.fasi-section {
+.step-section {
     padding: 5rem 0;
 }
 
-.economia-circolare {
+.circolar-economy {
     padding-top: 4rem;
 }
 
@@ -1902,7 +1855,7 @@ input::-webkit-calendar-picker-indicator {
 /********************************************
            PAGINA PIATTO
 ********************************************/
-.piatti-hero-bg {
+.dish-hero-bg {
     background:
         linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
         url(/images/piatto01/piatti_hero_bg.webp);
@@ -1916,7 +1869,7 @@ input::-webkit-calendar-picker-indicator {
     overflow-y: visible;
 }
 
-.piatti-hero-bg img {
+.dish-hero-bg img {
     position: absolute;
     bottom: -3.5vh;
     left: 50%;
@@ -1928,7 +1881,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 @media (min-width: 768px) {
-    .piatti-hero-bg img {
+    .dish-hero-bg img {
         position: absolute;
         bottom: -30vh;
         left: 50%;
@@ -1944,7 +1897,7 @@ input::-webkit-calendar-picker-indicator {
     padding: 20dvh 5dvw 0 5dvw;
 }
 
-.ingredienti-piatto-bg {
+.ingredients-dish-bg {
     background:
         linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
         url(/images/piatto01/ingredienti_bg.webp);
@@ -1964,7 +1917,7 @@ input::-webkit-calendar-picker-indicator {
         padding: 20dvh 5dvw 0 5dvw;
     }
 
-    .ingredienti-piatto-img {
+    .ingredients-dish-img {
         width: 60%;
     }
 
@@ -1973,7 +1926,7 @@ input::-webkit-calendar-picker-indicator {
     }
 }
 
-.allergeni {
+.allergens {
     width: 100%;
     height: auto;
 }
@@ -2054,22 +2007,22 @@ input::-webkit-calendar-picker-indicator {
     width: 1200px;
 }
 
-.leaf-right-prenota {
+.leaf-right-book {
     top: -50vh;
     right: -250px;
 }
 
-.leaf-right-prenota .leaf {
+.leaf-right-book .leaf {
     width: 700px;
 
 }
 
-.custom-leaves-prenota {
+.custom-leaves-book {
     top: -30vh;
     right: -270px;
 }
 
-.custom-leaves-prenota .leaf {
+.custom-leaves-book .leaf {
     width: 1000px;
 }
 
