@@ -62,60 +62,104 @@ function chiudiPopUp() {
 
 //movimento foglie
 document.addEventListener("DOMContentLoaded", () => {
-  const leaves = document.querySelectorAll(".leaf");
-  if (!leaves.length) return;
-
-  let wind = 0;
-  let lastScrollY = window.scrollY;
-  let ticking = false;
-  let rafId = null;
-
-  window.addEventListener(
-    "scroll",
-    () => {
-      const currentScrollY = window.scrollY;
-      const delta = currentScrollY - lastScrollY;
-      lastScrollY = currentScrollY;
-
-      wind += delta * 0.3;
-      wind = Math.max(Math.min(wind, 20), -20);
-
-      if (!ticking) {
-        ticking = true;
-        rafId = requestAnimationFrame(animate);
-      }
-    },
-    { passive: true }
-  );
-
-  function animate() {
-    wind *= 0.92;
-
-    const time = performance.now();
-
-    leaves.forEach((leaf, i) => {
-      const direction = leaf.closest(".leaves-right") ? -1 : 1;
-
-      const swayX =
-        Math.sin(time * 0.002 + i) * wind * 0.4 * direction;
-
-      const swayRot =
-        Math.sin(time * 0.0015 + i) * wind * 0.3 * direction;
-
-      leaf.style.transform = `
-        translateX(${swayX}px)
-        rotate(${swayRot}deg)
-      `;
-    });
-
-    if (Math.abs(wind) > 0.1) {
-      rafId = requestAnimationFrame(animate);
-    } else {
-      ticking = false;
-      cancelAnimationFrame(rafId);
+    const leaves = Array.from(document.querySelectorAll(".leaf"));
+    if (!leaves.length) return;
+  
+    // Disattiva l'effetto su schermi piccoli
+    if (window.innerWidth <= 1024) return;
+  
+    let wind = 0;
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    let rafId = null;
+    let visibleLeaves = leaves;
+  
+    // aggiorna solo le foglie realmente vicine al viewport
+    function updateVisibleLeaves() {
+      const viewportTop = window.scrollY;
+      const viewportBottom = viewportTop + window.innerHeight;
+  
+      visibleLeaves = leaves.filter((leaf) => {
+        const wrapper = leaf.closest(".leaves-wrapper");
+        if (!wrapper) return false;
+  
+        const rect = wrapper.getBoundingClientRect();
+        const top = rect.top + window.scrollY;
+        const bottom = top + Math.max(rect.height, 400);
+  
+        // buffer sopra/sotto per evitare pop-in
+        return bottom > viewportTop - 300 && top < viewportBottom + 300;
+      });
     }
-  }
-});
+  
+    updateVisibleLeaves();
+  
+    let resizeTimeout = null;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (window.innerWidth <= 1024) {
+          if (rafId) cancelAnimationFrame(rafId);
+          leaves.forEach((leaf) => {
+            leaf.style.transform = "";
+            leaf.style.willChange = "auto";
+          });
+          return;
+        }
+        updateVisibleLeaves();
+      }, 150);
+    });
+  
+    function animate() {
+      wind *= 0.9;
+  
+      const time = performance.now();
+  
+      visibleLeaves.forEach((leaf, i) => {
+        const direction = leaf.closest(".leaves-right") ? -1 : 1;
+  
+        const swayX = Math.sin(time * 0.002 + i) * wind * 0.35 * direction;
+        const swayRot = Math.sin(time * 0.0015 + i) * wind * 0.25 * direction;
+  
+        leaf.style.transform = `translate3d(${swayX}px, 0, 0) rotate(${swayRot}deg)`;
+      });
+  
+      if (Math.abs(wind) > 0.12) {
+        rafId = requestAnimationFrame(animate);
+      } else {
+        visibleLeaves.forEach((leaf) => {
+          leaf.style.transform = "";
+          leaf.style.willChange = "auto";
+        });
+        ticking = false;
+        rafId = null;
+      }
+    }
+  
+    window.addEventListener(
+      "scroll",
+      () => {
+        const currentScrollY = window.scrollY;
+        const delta = currentScrollY - lastScrollY;
+        lastScrollY = currentScrollY;
+  
+        wind += delta * 0.22;
+        wind = Math.max(Math.min(wind, 14), -14);
+  
+        updateVisibleLeaves();
+  
+        visibleLeaves.forEach((leaf) => {
+          leaf.style.willChange = "transform";
+        });
+  
+        if (!ticking && visibleLeaves.length) {
+          ticking = true;
+          rafId = requestAnimationFrame(animate);
+        }
+      },
+      { passive: true }
+    );
+  });
 
 
 // PAGINA MENU.HTML
