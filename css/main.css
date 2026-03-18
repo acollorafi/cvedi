@@ -299,6 +299,14 @@ p {
     --bs-btn-hover-bg: var(--bs-tan);
 }
 
+.btn-custom-primary.active {
+    background-color: rgba(68, 222, 224, 0.2) !important;
+    border-color: #44DEE0;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(68, 222, 224, 0.6);
+    transform: translateY(-2px);
+}
+
 
 /*Label per card piatti e team*/
 .label-custom {
