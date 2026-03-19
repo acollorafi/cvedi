@@ -1988,10 +1988,11 @@ input::-webkit-calendar-picker-indicator {
     top: var(--img-top, 0);
     left: var(--img-left, auto);
     right: var(--img-right, auto);
-    opacity: 0.9;
-    will-change: auto;
+    opacity: 1;
+    will-change: transform;
     transform: translateZ(0);
-  }
+    backface-visibility: hidden;
+    pointer-events: none;  }
 
   /* preset foglie destra sinistra */
   
