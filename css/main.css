@@ -95,7 +95,7 @@ h1 {
 }
 
 .h1-big {
-        font-size: 2rem;
+        font-size: 1.8rem;
 }
 
 h2 {
@@ -1254,10 +1254,10 @@ body:has(.sostenibility-container) {
 /********************************************
            PAGINA SOSTENIBILITÀ
 ********************************************/
-.sostenibility-container {
+/*.sostenibility-container {
     overflow-x: hidden;
 }
-
+*/
 
 
 /* Sezioni generiche */
