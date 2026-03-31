@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="sostenibility-container">
+<body>
     <!-- Per effetto liquido -->
     <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
         <filter id="liquidFilter">
@@ -80,7 +80,7 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <section id="restaurant-s1" class="img-bg">
             <div class="text-center hero-section section align-self-center">
                 <h1 class="h1-big">RISTORANTE</h1>
@@ -143,8 +143,24 @@
                 <h3 class="d-block d-md-none mb-4 mb-md-0 text-center">Lo chef stellato</h3>
                 <div class="col-md-6">
                     <!-- TODO: ritagliare meglio img senza ombra, e aggiungere ombra con css -->
-                    <img src="images/ristorante/chef-ristorante.webp" class="img-fluid" alt="Chef Julio Vane"
-                        title="Chef Julio Vane - Ingegnere del gusto ed esperto di cucina molecolare" />
+                    <img 
+                        title="Chef Julio Vane - Ingegnere del gusto ed esperto di cucina molecolare"
+                        alt="Chef Julio Vane mentre compone uno dei suoi piatti"
+                        class="img-fluid"
+                        loading="lazy"
+                        sizes="
+                            (min-width: 1200px) 1200px,
+                            (min-width: 768px) 800px,
+                            100vw
+                        "
+                        src="/images/ristorante/chef-ristorante-medium.webp"
+                        srcset="
+                        /images/ristorante/chef-ristorante-small.webp 480w,
+                        /images/ristorante/chef-ristorante-medium.webp 800w,
+                        /images/ristorante/chef-ristorante-large.webp 1200w
+                        "  
+                    />
+                  
                 </div>
                 <div class="col-md-6 mt-4 mt-md-0">
                     <h3 class="d-none d-md-block">Lo chef stellato</h3>

@@ -16,15 +16,19 @@
 
 </head>
 
-<body class="sostenibility-container">
-    <!-- Per effetto liquido -->
-    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
-        <filter id="liquidFilter">
-            <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
-            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R"
-                yChannelSelector="G" />
-        </filter>
-    </svg>
+<body>
+  <a href="#main-content" class="visually-hidden-focusable p-3 bg-primary text-white">
+    Salta al contenuto principale
+  </a>
+
+
+  <!-- Per effetto liquido -->
+  <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+    <filter id="liquidFilter">
+      <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
 
     <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
@@ -80,14 +84,27 @@
         </div>
     </nav>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- Sezione 1: Hero -->
     <section class="menu-hero-bg">
       <div class="custom-hero-section section align-self-center">
         <h1>MENÙ</h1>
       </div>
-      <img src="images/menu/menu_hero_fg.webp" class="img-fluid" alt="Menu Eden Leaf"
-        title="Menu completo Eden Leaf - Cucina sostenibile e innovativa" />
+      <img
+        title="Menu completo Eden Leaf - Cucina sostenibile e innovativa"
+        alt="Menu Eden Leaf"
+        class="img-fluid"
+        loading="lazy"
+        sizes="
+            (min-width: 1200px) 1200px,
+            100vw
+        "
+        src="images/menu/menu_hero_fg-large.webp"
+        srcset="
+        /images/menu/menu_hero_fg-medium.webp 800w,
+        /images/menu/menu_hero_fg-large.webp 1200w
+        "
+      />
     </section>
 
     <!--foglie-->
@@ -164,9 +181,7 @@
                       </div>
                       <!-- TESTO -->
                       <div class="menu-card-text">
-                        <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori
-                          e
-                          ridurre gli sprechi.
+                        <p>Mozzarella vegetale, ottenuta attraverso avanzate tecniche di gastronomia molecolare per concentrare le essenze pure e ridurre drasticamente gli sprechi.
                         </p>
                       </div>
                     </div>
@@ -181,7 +196,7 @@
               <img src="/images/menu/primo3.webp" 
                 alt="petali luminescenti viola carnosi"
                 title="Petali di Floricanto - Petali bioluminescenti da colture aeroponiche" />
-              <a href="petali_floricanto.html" class="menu-card-label label-custom label-dish">Petali di Floricanto</a>
+              <a href="menu/petali_floricanto.html" class="menu-card-label label-custom label-dish">Petali di Floricanto</a>
             </div>
             <!-- TESTO -->
             <div class="menu-card-text">
@@ -256,8 +271,7 @@
                   </div>
                   <!-- TESTO -->
                   <div class="menu-card-text">
-                    <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e
-                      ridurre gli sprechi.
+                    <p>Mozzarella vegetale, ottenuta attraverso avanzate tecniche di gastronomia molecolare per concentrare le essenze pure e ridurre drasticamente gli sprechi.
                     </p>
                   </div>
                 </div>
@@ -271,7 +285,7 @@
           <img src="/images/menu/primo3.webp" 
             alt="petali luminescenti viola carnosi"
             title="Petali di Floricanto - Petali bioluminescenti da colture aeroponiche" />
-              <a href="petali_floricanto.html" class="menu-card-label label-custom label-dish">Petali di Floricanto</a>
+              <a href="menu/petali_floricanto.html" class="menu-card-label label-custom label-dish">Petali di Floricanto</a>
         </div>
         <!-- TESTO -->
         <div class="menu-card-text">
@@ -353,8 +367,7 @@
                       </div>
                       <!-- TESTO -->
                       <div class="menu-card-text">
-                        <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di
-                          patata dolce.</p>
+                        <p>Gnocchi di patata dolce con coloranti naturali. Ottenuti tramite una selezione di ingredienti locali e biomasse vegetali rigenerate, con una riduzione delle proteine animali.</p>
                       </div>
                     </div>
                   </div>
@@ -444,10 +457,7 @@
                   </div>
                   <!-- TESTO -->
                   <div class="menu-card-text">
-                    <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di
-                      patata
-                      dolce.
-                    </p>
+                    <p>Gnocchi di patata dolce con coloranti naturali. Ottenuti tramite una selezione di ingredienti locali e biomasse vegetali rigenerate, con una riduzione delle proteine animali.</p>
                   </div>
                 </div>
               </div>
@@ -506,7 +516,7 @@
                       <img src="/images/menu/antipasto2.webp" 
                            alt="gemme di verdure su letto di crauti luminescenti"
                            title="Gemme di Zenith - Verdure di stagione a km zero" />
-                      <a href="gemme_zenith.html" class="menu-card-label label-custom label-dish">Gemme di Zenith</a>
+                      <a href="menu/gemme_zenith.html" class="menu-card-label label-custom label-dish">Gemme di Zenith</a>
                     </div>
                     <!-- TESTO -->
                     <div class="menu-card-text">
@@ -531,7 +541,7 @@
                           <div class="menu-card-text">
                             <p>Risotto cremoso con pistacchio e stracciatella artigianale. La base vellutata è
                               sormontata
-                              dagli esotici fichi viola "Cosmic Fig" per un contrasto dolce-acidulo che esalta il
+                              dai "Cosmic Fig" per un contrasto dolce-acidulo che esalta il
                               sapore.</p>
                           </div>
                         </div>
@@ -546,7 +556,7 @@
         <img src="/images/menu/secondo2.webp" 
              alt="Sfera vegetale su corallo commestibile"
              title="Sfera di Corallo - Sfera a base di alghe e proteine di legumi" />
-        <a href="sfera_corallo.html" class="menu-card-label label-custom label-dish">Sfera di Corallo</a>
+        <a href="menu/sfera_corallo.html" class="menu-card-label label-custom label-dish">Sfera di Corallo</a>
       </div>
                     <!-- TESTO -->
                     <div class="menu-card-text">
@@ -601,7 +611,7 @@
           <img src="/images/menu/antipasto2.webp" 
                alt="gemme di verdure su letto di crauti luminescenti"
                title="Gemme di Zenith - Verdure di stagione a km zero" />
-                      <a href="gemme_zenith.html" class="menu-card-label label-custom label-dish">Gemme di Zenith</a>
+                      <a href="menu/gemme_zenith.html" class="menu-card-label label-custom label-dish">Gemme di Zenith</a>
         </div>
         <!-- TESTO -->
         <div class="menu-card-text">
@@ -623,8 +633,7 @@
                     <!-- TESTO -->
                     <div class="menu-card-text">
                       <p>Risotto cremoso con pistacchio e stracciatella artigianale. La base vellutata è sormontata
-                        dagli
-                        esotici fichi viola "Cosmic Fig" per un contrasto dolce-acidulo che esalta il sapore.</p>
+                        dai "Cosmic Fig" per un contrasto dolce-acidulo che esalta il sapore.</p>
                     </div>
                   </div>
                 </div>
@@ -637,7 +646,7 @@
           <img src="/images/menu/secondo2.webp" 
                alt="Sfera vegetale su corallo commestibile"
                title="Sfera di Corallo - Sfera a base di alghe e proteine di legumi" />
-              <a href="sfera_corallo.html" class="menu-card-label label-custom label-dish">Sfera di Corallo</a>
+              <a href="menu/sfera_corallo.html" class="menu-card-label label-custom label-dish">Sfera di Corallo</a>
         </div>
               <!-- TESTO -->
               <div class="menu-card-text">
@@ -714,8 +723,7 @@
                   </div>
                   <!-- TESTO -->
                   <div class="menu-card-text">
-                    <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e
-                      ridurre gli sprechi.
+                    <p>Mozzarella vegetale, ottenuta attraverso avanzate tecniche di gastronomia molecolare per concentrare le essenze pure e ridurre drasticamente gli sprechi.
                     </p>
                   </div>
                 </div>
@@ -730,7 +738,7 @@
                 <img src="/images/menu/antipasto2.webp" 
                   alt="gemme di verdure su letto di crauti luminescenti"
                   title="Gemme di Zenith - Verdure di stagione a km zero" />
-                      <a href="gemme_zenith.html" class="menu-card-label label-custom label-dish">Gemme di Zenith</a>
+                      <a href="menu/gemme_zenith.html" class="menu-card-label label-custom label-dish">Gemme di Zenith</a>
               </div>
               <!-- TESTO -->
               <div class="menu-card-text">
@@ -784,9 +792,7 @@
               </div>
               <!-- TESTO -->
               <div class="menu-card-text">
-                <p>Mozzarella vegetale, utilizzo di tecniche di gastronomia molecolare per concentrare i sapori e
-                  ridurre
-                  gli sprechi.
+                <p>Mozzarella vegetale, ottenuta attraverso avanzate tecniche di gastronomia molecolare per concentrare le essenze pure e ridurre drasticamente gli sprechi.
                 </p>
               </div>
             </div>
@@ -800,7 +806,7 @@
       <img src="/images/menu/antipasto2.webp" 
            alt="gemme di verdure su letto di crauti luminescenti"
            title="Gemme di Zenith - Verdure di stagione a km zero" />
-                      <a href="gemme_zenith.html" class="menu-card-label label-custom label-dish">Gemme di Zenith</a>
+                      <a href="menu/gemme_zenith.html" class="menu-card-label label-custom label-dish">Gemme di Zenith</a>
     </div>
     <!-- TESTO -->
     <div class="menu-card-text">
@@ -868,9 +874,8 @@
                   </div>
                   <!-- TESTO -->
                   <div class="menu-card-text">
-                    <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di
-                      patata
-                      dolce.</p>
+                    <p>Gnocchi di patata dolce con coloranti naturali. Ottenuti tramite una selezione di ingredienti locali e biomasse vegetali rigenerate, con una drastica riduzione delle proteine animali.</p>
+
                   </div>
                 </div>
               </div>
@@ -884,11 +889,11 @@
   <img src="/images/menu/primo3.webp" 
        alt="petali luminescenti viola carnosi"
        title="Petali di Floricanto - Petali bioluminescenti da colture aeroponiche" />
-              <a href="petali_floricanto.html" class="menu-card-label label-custom label-dish">Petali di Floricanto</a>
+              <a href="menu/petali_floricanto.html" class="menu-card-label label-custom label-dish">Petali di Floricanto</a>
 </div>
 <!-- TESTO -->
 <div class="menu-card-text">
-  <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da
+  <p>Petali di Floricanto, carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da
     contenitori biodegradabili con una fragranza erbacea e una texture croccante.</p>
 </div>
 </div>
@@ -937,8 +942,8 @@
               </div>
               <!-- TESTO -->
               <div class="menu-card-text">
-                <p>Ingredienti locali e di recupero, riduzione della carne, coloranti naturali, esaltazione di patata
-                  dolce.</p>
+                <p>Gnocchi di patata dolce con coloranti naturali. Ottenuti tramite una selezione di ingredienti locali e biomasse vegetali rigenerate, con una drastica riduzione delle proteine animali.</p>
+
               </div>
             </div>
           </div>
@@ -951,11 +956,11 @@
           <img src="/images/menu/primo3.webp" 
                alt="petali luminescenti viola carnosi"
                title="Petali di Floricanto - Petali bioluminescenti da colture aeroponiche" />
-              <a href="petali_floricanto.html" class="menu-card-label label-custom label-dish">Petali di Floricanto</a>
+              <a href="menu/petali_floricanto.html" class="menu-card-label label-custom label-dish">Petali di Floricanto</a>
         </div>
         <!-- TESTO -->
         <div class="menu-card-text">
-          <p>Petali carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da contenitori
+          <p>Petali di Floricanto, carnosi e bioluminescenti, raccolti da colture aeroponiche verticali. Agiscono da contenitori
             biodegradabili con una fragranza erbacea e una texture croccante.</p>
         </div>
       </div>
@@ -1014,7 +1019,7 @@
               <img src="/images/menu/secondo2.webp" 
                    alt="Sfera vegetale su corallo commestibile"
                    title="Sfera di Corallo - Sfera a base di alghe e proteine di legumi" />
-              <a href="sfera_corallo.html" class="menu-card-label label-custom label-dish">Sfera di Corallo</a>
+              <a href="menu/sfera_corallo.html" class="menu-card-label label-custom label-dish">Sfera di Corallo</a>
             </div>
                 <!-- TESTO -->
                 <div class="menu-card-text">
@@ -1084,7 +1089,7 @@
   <img src="/images/menu/secondo2.webp" 
        alt="Sfera vegetale su corallo commestibile"
        title="Sfera di Corallo - Sfera a base di alghe e proteine di legumi" />
-              <a href="sfera_corallo.html" class="menu-card-label label-custom label-dish">Sfera di Corallo</a>
+              <a href="menu/sfera_corallo.html" class="menu-card-label label-custom label-dish">Sfera di Corallo</a>
 </div>
 <!-- TESTO -->
             <div class="menu-card-text">

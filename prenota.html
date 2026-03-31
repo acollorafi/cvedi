@@ -16,15 +16,18 @@
 
 </head>
 
-<body class="sostenibility-container">
-    <!-- Per effetto liquido -->
-    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
-        <filter id="liquidFilter">
-            <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
-            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R"
-                yChannelSelector="G" />
-        </filter>
-    </svg>
+<body>
+  <a href="#main-content" class="visually-hidden-focusable p-3 bg-primary text-white">
+    Salta al contenuto principale
+  </a>
+
+  <!-- Per effetto liquido -->
+  <svg style="position: absolute; width: 0; height: 0; pointer-events: none" aria-hidden="true">
+    <filter id="liquidFilter">
+      <feTurbulence type="turbulence" baseFrequency="0.006" numOctaves="2" result="turbulence" />
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
 
     <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
@@ -43,6 +46,18 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
+      <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
+      <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
+        <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua" width="30"
+          height="20" />
+        <button class="glass-effect btn btn-custom-primary active" type="button"
+          onclick="window.location.href='prenota.html'">PRENOTA</button>
+        <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
             <!-- Menu collapse -->
             <div class="glass-effect collapse navbar-collapse h-100" id="navbarSupportedContent">
@@ -70,17 +85,17 @@
                 </ul>
             </div>
 
-            <!-- Desktop: PRENOTA + Bandiera (visibili solo >= 1200px) -->
-            <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
-                <button class="glass-effect btn btn-custom-primary btn-prenota" type="button"
-                    onclick="window.location.href='prenota.html'">PRENOTA</button>
-                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua"
-                    width="30" height="20" />
-            </div>
-        </div>
-    </nav>
+      <!-- Desktop: PRENOTA + Bandiera (visibili solo >= 1200px) -->
+      <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
+        <button class="glass-effect btn btn-custom-primary active" type="button"
+          onclick="window.location.href='prenota.html'">PRENOTA</button>
+        <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua" width="30"
+          height="20" />
+      </div>
+    </div>
+  </nav>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- Sezione 1 - Hero -->
     <section id="book-s1" class="img-bg">
       <div class="hero-section container section">

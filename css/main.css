@@ -299,6 +299,14 @@ p {
     --bs-btn-hover-bg: var(--bs-tan);
 }
 
+.btn-custom-primary.active {
+    background-color: rgba(68, 222, 224, 0.2) !important;
+    border-color: #44DEE0;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(68, 222, 224, 0.6);
+    transform: translateY(-2px);
+}
+
 
 /*Label per card piatti e team*/
 .label-custom {
@@ -1881,7 +1889,6 @@ input::-webkit-calendar-picker-indicator {
 }
 
 
-
 /********************************************
            PAGINA PIATTO
 ********************************************/
@@ -1910,6 +1917,14 @@ input::-webkit-calendar-picker-indicator {
     max-width: none;
 }
 
+.hero-text {
+    margin-top: 25px;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+
 @media (min-width: 768px) {
     .dish-hero-bg img {
         position: absolute;
@@ -1921,11 +1936,19 @@ input::-webkit-calendar-picker-indicator {
     }
 }
 
+@media (min-width: 768px) {
+    .hero-text {
+        max-width: 1064px;
+        margin-top: 35px;
+    }
+}
+
 .custom-hero-section {
     text-align: center;
     align-items: center;
     padding: 20dvh 5dvw 0 5dvw;
 }
+
 
 .ingredients-dish-bg {
     background:
@@ -1962,6 +1985,17 @@ input::-webkit-calendar-picker-indicator {
 }
 
 
+#page-sfera-corallo .dish-hero-bg img {
+    width: 220%;
+    bottom: 0;
+}
+
+@media (min-width: 768px) {
+    #page-sfera-corallo .dish-hero-bg img {
+        width: 90%;
+        bottom: -15vh;
+    }
+}
 
 /*foglie*/
 .leaves-wrapper {
@@ -1984,10 +2018,11 @@ input::-webkit-calendar-picker-indicator {
     top: var(--img-top, 0);
     left: var(--img-left, auto);
     right: var(--img-right, auto);
-    opacity: 0.9;
-    will-change: auto;
+    opacity: 1;
+    will-change: transform;
     transform: translateZ(0);
-  }
+    backface-visibility: hidden;
+    pointer-events: none;  }
 
   /* preset foglie destra sinistra */
   
