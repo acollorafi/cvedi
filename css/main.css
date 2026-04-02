@@ -656,8 +656,8 @@ p {
 }
 
 .navbar-img-languages {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 70%;
     object-fit: cover;
     border: var(--bs-glass-border);
@@ -779,8 +779,8 @@ a.nav-link:hover {
     }
 
     .navbar-img-languages {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
 
     .btn-custom-primary {
