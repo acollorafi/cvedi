@@ -82,7 +82,7 @@
         </div>
     </nav>
 
-    <main id="main-content" tabindex="-1"></main>
+    <main id="main-content" tabindex="-1">
         
         <!-- Sezione 1: Hero -->
         <section id="sustainability-s1" class="img-bg">
@@ -126,9 +126,23 @@
                     <div class="row align-items-center">
                         <h3 class="d-block d-md-none mb-4 mb-md-0 text-center">La nostra vision</h3>
                         <div class="col-md-6 px-4 py-md-4">
-                            <img src="images/sostenibilita/sostenibilita-info.webp" class="section-image"
-                                            alt="Immagine rappresentativa della nostra vision sostenibile"
-                                            title="L'esperienza culinaria sostenibile di Eden Leaf" />
+                            <img 
+                                title="L'esperienza culinaria sostenibile di Eden Leaf"
+                                alt="Immagine rappresentativa della nostra vision sostenibile"
+                                class="section-image"
+                                loading="lazy"
+                                sizes="
+                                    (min-width: 1200px) 1200px,
+                                    (min-width: 768px) 800px,
+                                    100vw
+                                "
+                                src="images/sostenibilita/sostenibilita-info-medium.webp"
+                                srcset="
+                                /images/sostenibilita/sostenibilita-info-small.webp 480w,
+                                /images/sostenibilita/sostenibilita-info-medium.webp 800w,
+                                /images/sostenibilita/sostenibilita-info-large.webp 1200w
+                                " 
+                            />
                         </div>
                         
                         <div class="col-md-6 mt-4 mt-md-0 px-4 py-md-4">
@@ -147,8 +161,23 @@
                     <div class="row align-items-center">
                         <h3 class="d-block d-md-none mb-4 mb-md-0 text-center">Sostenibilità</h3>
                         <div class="col-md-6 px-4 py-md-4 order-1 order-lg-2">
-                            <img src="images/sostenibilita/tavolo-sostenibilita.webp" class="section-image"
-                                alt="Tavolo del ristorante sostenibile" />
+                            <img 
+                                title="L'esperienza culinaria sostenibile di Eden Leaf"
+                                alt="Tavolo del ristorante sostenibile"
+                                class="section-image"
+                                loading="lazy"
+                                sizes="
+                                    (min-width: 1200px) 1200px,
+                                    (min-width: 768px) 800px,
+                                    100vw
+                                "
+                                src="images/sostenibilita/tavolo-sostenibilita-medium.webp"
+                                srcset="
+                                /images/sostenibilita/tavolo-sostenibilita-small.webp 480w,
+                                /images/sostenibilita/tavolo-sostenibilita-medium.webp 800w,
+                                /images/sostenibilita/tavolo-sostenibilita-large.webp 1200w
+                                "
+                            />
                         </div>
                         
                         <div class="col-md-6 mt-4 mt-md-0 px-4 py-md-4 order-2 order-lg-1">
@@ -378,7 +407,6 @@
             </div>
 
             <section class="padding-section container-xxl text-center">
-
                 <h2>Partnership</h2>
 
                 <div class="row row-cols-1 row-cols-md-4 g-5 mb-4">

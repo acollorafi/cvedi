@@ -336,10 +336,10 @@ p {
     color: #ffffff;
     text-align: center;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.50);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     /* Leggermente meno bold per somigliare alla foto */
-    line-height: 20px;
+    line-height: 24px;
 
     /* Reset stili bottone */
     text-decoration: none;
@@ -1346,7 +1346,7 @@ Box-sizing uniforme
     .step-nav {
         width: 40px;
         height: 40px;
-        display: none; 
+
     }
 }
 
