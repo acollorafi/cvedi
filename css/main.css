@@ -53,10 +53,10 @@ body {
 
 
 /********************************************
-           FONT E TIPOGRAFIA
+           FONT AND TYPOGRAPHY
 ********************************************/
 
-/*font testo*/
+/*text font*/
 @font-face {
     font-family: "Neutraface";
     src: url("../font/neutraface-text/Neutraface-Text-Book.woff") format("woff");
@@ -84,7 +84,6 @@ h2,
 h3,
 h4 {
     font-family: 'Syne', sans-serif;
-    /*ho tolto gli important perché non riuscivo a sovrascrivere nelle label però mi sembra che funzionino comunque... al massimo li rimettiamo*/
     font-weight: 800;
 }
 
@@ -151,7 +150,7 @@ p {
 
 
 /********************************************
-           SEZIONI E PADDING
+           SECTIONS AND PADDING
 ********************************************/
 .section {
     display: flex;
@@ -225,42 +224,35 @@ p {
 ********************************************/
 
 
-/* --- 1. BASE SICURA BLUR (Safari, Firefox, Mobile) --- */
+/* --- 1. BASE BLUR (Safari, Firefox, Mobile) --- */
 .glass-effect {
     position: relative;
 
-    /* Stile visivo base */
     background: rgba(255, 255, 255, 0.091);
-    /* Colore di sfondo bianco semitrasparente */
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow:
         0 4px 30px rgba(0, 0, 0, 0.1),
         inset 1px 1px 0px rgba(255, 255, 255, 0.3),
         inset -1px -1px 0px rgba(0, 0, 0, 0.1);
 
-    /* Effetto blur per Safari*/
     -webkit-backdrop-filter: blur(12px) saturate(180%);
     backdrop-filter: blur(12px) saturate(180%);
 
-    /* Fix indispensabili per Safari iOS */
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     isolation: isolate;
 
-    /* Altri stili */
     overflow: hidden;
     z-index: 1;
     will-change: transform;
 }
 
-/* --- 2. UPGRADE LIQUID PER CHROME (Solo Desktop) --- */
+/* --- 2. UPGRADE LIQUID CHROME --- */
 @supports (field-sizing: content) {
 
-    /* Usiamo @supports per rilevare una funzione specifica del motore di Chrome. Safari NON supporta 'field-sizing', quindi ignorerà completamente questo blocco. */
     .glass-effect {
-        /* Sovrascriviamo il blur con il filtro liquido */
         -webkit-backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
         backdrop-filter: brightness(1) blur(3px) url(#liquidFilter);
     }
@@ -269,10 +261,10 @@ p {
 
 
 /********************************************
-           BUTTON E LABEL
+           BUTTON AND LABEL
 ********************************************/
 
-/*personalizzazione button primary (prenota)*/
+/*button primary (prenota)*/
 .btn-custom-primary {
 
     display: flex;
@@ -308,40 +300,33 @@ p {
 }
 
 
-/*Label per card piatti e team*/
+/*Label card "piatti" and "team"*/
 .label-custom {
     display: flex;
     height: fit-content;
-    /* ho modificato da 48px a fit-content perché quando il testo wrappa usciva dalla label */
+
     padding: 12px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
 
-    /* Forma e Bordo */
     border-radius: 100px;
     border: 1px solid rgba(255, 255, 255, 0.40);
-    /* Leggermente più visibile per l'effetto vetro */
 
-    /* Background: Grigio scuro trasparente con riflesso centrale */
     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%),
         rgba(94, 94, 94, 0.4);
 
-    /* Effetto Glass (Luci e Ombre interne) */
     box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.15) inset,
         5px -5px 8.8px 0 rgba(0, 0, 0, 0.30) inset,
         0 0 15px 0 rgba(0, 0, 0, 0.20);
 
-    /* Testo */
     color: #ffffff;
     text-align: center;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.50);
     font-size: 20px;
     font-weight: 500;
-    /* Leggermente meno bold per somigliare alla foto */
     line-height: 24px;
 
-    /* Reset stili bottone */
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -356,7 +341,7 @@ p {
     box-shadow: 0 0 10px rgba(68, 222, 224, 0.6);
 }
 
-/*Label h3 per sezioni menù e fasi sostenibilita*/
+/*Label h3 "sezioni menù" and "fasi sostenibilita"*/
 .label-h3 {
     display: flex;
     padding: 20px 60px;
