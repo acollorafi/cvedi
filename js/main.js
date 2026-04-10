@@ -204,35 +204,35 @@ document.addEventListener("DOMContentLoaded", function () {
            PAGINA sostenibilità
 ********************************************/
 document.addEventListener('DOMContentLoaded', () => {
-  const fasi = document.querySelectorAll('.fase-item');
-  const prevButton = document.querySelector('.prev-fase');
-  const nextButton = document.querySelector('.next-fase');
+  const step = document.querySelectorAll('.step-item');
+  const prevButton = document.querySelector('.prev-step');
+  const nextButton = document.querySelector('.next-step');
   let currentIndex = 0;
 
-  if (!fasi.length || !prevButton || !nextButton) return;
+  if (!step.length || !prevButton || !nextButton) return;
 
-  function showFase(index) {
-      fasi.forEach((fase, i) => {
+  function showStep(index) {
+      step.forEach((step, i) => {
           if (i === index) {
-              fase.classList.add('active');
-              fase.offsetHeight;
+              step.classList.add('active');
+              step.offsetHeight;
           } else {
-              fase.classList.remove('active');
+              step.classList.remove('active');
           }
       });
   }
 
   nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % fasi.length;
-      showFase(currentIndex);
+      currentIndex = (currentIndex + 1) % step.length;
+      showStep(currentIndex);
   });
 
   prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + fasi.length) % fasi.length;
-      showFase(currentIndex);
+      currentIndex = (currentIndex - 1 + step.length) % step.length;
+      showStep(currentIndex);
   });
 
-  showFase(currentIndex);
+  showStep(currentIndex);
 });
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -95,7 +95,7 @@ h1 {
 }
 
 .h1-big {
-        font-size: 2rem;
+        font-size: 1.8rem;
 }
 
 h2 {
@@ -336,10 +336,10 @@ p {
     color: #ffffff;
     text-align: center;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.50);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     /* Leggermente meno bold per somigliare alla foto */
-    line-height: 20px;
+    line-height: 24px;
 
     /* Reset stili bottone */
     text-decoration: none;
@@ -482,6 +482,8 @@ p {
     border-radius: 24px;
     border: var(--bs-glass-border);
     padding: 30px;
+    background: rgba(0, 0, 0, 0.30);
+    box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
 
     display: flex;
     flex-direction: column;
@@ -1266,7 +1268,7 @@ footer {
      REGOLE ANTI-OVERFLOW - PAGINA SOSTENIBILITÀ
 ********************************************/
 
-/* Prevenzione overflow orizzontale - SOLO per pagina sostenibilita (Valutare se aggiungerla come regola globale) */
+/* Prevenzione overflow orizzontale - SOLO per pagina sostenibilita (Valutare se aggiungerla come regola globale) 
 html:has(.sostenibility-container),
 body:has(.sostenibility-container) {
     overflow-x: hidden;
@@ -1274,38 +1276,29 @@ body:has(.sostenibility-container) {
     max-width: 100vw;
 }
 
-/* Box-sizing uniforme */
+Box-sizing uniforme 
 .sostenibility-container *,
 .sostenibility-container *::before,
 .sostenibility-container *::after {
     box-sizing: border-box;
 }
+    */
 
 /********************************************
            PAGINA SOSTENIBILITÀ
 ********************************************/
-.sostenibility-container {
-    overflow-x: hidden;
-}
-
-
-
-/* Sezioni generiche */
 .section-image {
     width: 100%;
     height: auto;
-    border-radius: 20px;
 }
 
 
-/* Fasi Section */
-.step-wrapper {
-    position: relative;
-}
-
+/* Carosello fasi di produzione */
 .step-item {
     display: none;
     opacity: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -1315,24 +1308,24 @@ body:has(.sostenibility-container) {
     animation: fadeIn 0.5s ease-in-out;
 }
 
+/* Animazione */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateX(20px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
+/* Bottoni */
 .step-nav {
     position: absolute;
     top: 50%;
-    /* transform: translateY(-50%); */
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -1341,10 +1334,10 @@ body:has(.sostenibility-container) {
     cursor: pointer;
     padding: 0;
     z-index: 100;
-    display: none;
-    /* Nascosti su mobile */
+    display: block;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
 
 .step-nav:hover {
     transform: scale(1.1);
@@ -1355,6 +1348,7 @@ body:has(.sostenibility-container) {
     transform: scale(0.95);
 }
 
+/* Frecce */
 .prev-step {
     left: -5px;
     background-image: url("/images/sostenibilita/arrow-left.svg");
@@ -1365,41 +1359,28 @@ body:has(.sostenibility-container) {
     background-image: url("/images/sostenibilita/arrow-right.svg");
 }
 
-.section-content .label-custom {
-    width: fit-content;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    text-shadow: none;
-    font-size: 22px !important;
-    font-family: 'Syne', sans-serif;
+/* Contenuto */
+.section-content {
+    max-width: 100%;
+    padding: 1.5rem;
+    text-align: center;
 }
 
-@media (max-width: 991px) {
-    .step-section .section-image-wrapper {
-        display: none;
-    }
-
-    .step-item {
-        padding: 2rem 1rem;
-    }
+@media (min-width: 992px) {
 
     .section-content {
-        padding: 1.5rem;
-        text-align: center;
+        padding: 0;
+        text-align: left;
     }
 
     .step-nav {
-        display: block;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
+
     }
 }
 
 /* Experts Section */
-.experts-section h3 {
-    margin-bottom: 2rem;
-}
-
 .experts-section .team {
     margin-top: 0;
 }
@@ -1466,90 +1447,18 @@ body:has(.sostenibility-container) {
 }
 
 @media (min-width: 768px) {
-    .experts-section h3 {
-        margin-bottom: 1.5rem;
-    }
-
     .expert-item {
         display: block;
         opacity: 1;
     }
-}
 
-/* Partnership Cards */
-
-
-@media (max-width: 767px) {
-    .partner-card {
-        padding: 3rem 2rem;
-        min-height: 100px;
-    }
-}
-
-
-/* TABLET - min 768px */
-@media (min-width: 768px) {
     .section-content {
         padding: 3rem 2rem;
     }
-
-    .section-image-wrapper {
-        padding: 1.25rem;
-    }
-
-    .section-image {
-        border-radius: 30px;
-    }
-
-    .expert-photo {
-        width: 100px;
-        height: 100px;
-    }
-
-    .expert-name {
-        font-size: 1.3rem;
-    }
-
-    .partner-logo {
-        max-height: 160px;
-    }
-
-    .partner-logo {
-        max-height: 160px;
-    }
-
 }
 
 
-/* Mostra pulsanti navigazione fasi */
-.step-nav {
-    display: block;
-    width: 50px;
-    height: 50px;
-}
 
-.vision-section,
-.sustainability-section,
-.step-section {
-    padding: 5rem 0;
-}
-
-.circolar-economy {
-    padding-top: 4rem;
-}
-
-.section-content {
-    padding: 3rem 2.5rem;
-}
-
-.expert-photo {
-    width: 120px;
-    height: 120px;
-}
-
-.expert-name {
-    font-size: 1.5rem;
-}
 
 
 /********************************************
