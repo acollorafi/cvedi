@@ -632,6 +632,12 @@ p {
     font-weight: 700;
 }
 
+@media (max-width: 1199px) {
+    #navbarSupportedContent {
+        background: rgba(0, 0, 0, 0.446); /* sfondo quasi nero */
+    }
+}
+
 /*evita che il div sopra occupi tutto lo spazio orizzontale*/
 .navbar-collapse {
     flex-grow: 0;
@@ -640,7 +646,7 @@ p {
 .navbar-img-languages {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 70%;
     object-fit: cover;
     border: var(--bs-glass-border);
 }
@@ -658,8 +664,8 @@ p {
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     transition: all 0.3s ease;
 }
 
@@ -714,7 +720,7 @@ p {
 
 .nav-link {
     padding: 0.75rem 1rem;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -761,21 +767,44 @@ a.nav-link:hover {
     }
 
     .navbar-img-languages {
-        width: 64px;
-        height: 64px;
+        width: 50px;
+        height: 50px;
     }
 
     .btn-custom-primary {
-        height: 64px;
-        font-size: 24px;
+        height: 44px;
+        font-size: 14px;
+        padding: 0.4rem 0.8rem;
+        white-space: nowrap;
     }
 }
+.navbar-mobile-actions {
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+}
+
+.navbar-mobile-actions > * {
+    flex-shrink: 0;
+}
+
+@media (max-width: 420px) {
+    .navbar-img-languages {
+        width: 28px;
+        height: 28px;
+    }
+
+    .btn-custom-primary {
+        font-size: 12px;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
 
 /* DESKTOP XL - min 1200px */
 @media (min-width: 1200px) {
     .logo-img {
-        width: 100px;
-        height: 100px;
+        width: 75px;
+        height: 75px;
     }
 
     .navbar-collapse {
@@ -795,7 +824,8 @@ a.nav-link:hover {
 
     .nav-link {
         padding: 0.5rem 1rem;
-        font-size: 1.1rem;
+        font-weight: 550;
+        font-size: 1.2rem;
     }
 
     .btn-custom-primary {
