@@ -551,6 +551,7 @@ p {
     position: relative;
     overflow: visible;
     margin-top: 60px;
+    z-index: 1;
 }
 
 /* WRAPPER PIATTO */
@@ -940,6 +941,25 @@ footer {
     background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/info/sfondo_sezioni.webp) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#info-s2 > .container-xxl > .row,
+#info-s2 > .container-xxl > .btn,
+#info-s2 .container-xxl.padding-section.text.text-center,
+#info-s2 .card-info,
+#info-s2 .card-accessibility {
+    position: relative;
+    z-index: 1;
+}
+
+#info-s2 .info-copy {
+    position: relative;
+    z-index: 2;
+}
+
+#info-s2 .info-media {
+    position: relative;
+    z-index: 0;
 }
 
 /*Sfondi sezioni hero info*/
@@ -1881,6 +1901,29 @@ input::-webkit-calendar-picker-indicator {
     position: relative;
     height: 0;
   }
+
+  #home-s1 .hero-section,
+  #home-s1>.container.section.padding-section {
+    position: relative;
+    z-index: 1;
+  }
+
+  main > section.container.section.padding-section.text-center:last-of-type {
+    position: relative;
+    z-index: 1;
+  }
+
+  #home-s1 + section.container.section.padding-section h2,
+  #home-s1 + section.container.section.padding-section > p {
+    position: relative;
+    z-index: 2;
+  }
+
+  #home-s1 + section.container.section.padding-section .carousel-padding,
+  #home-s1 + section.container.section.padding-section > .d-none.d-md-block {
+    position: relative;
+    z-index: 0;
+  }
   
   .leaves {
     position: absolute;
@@ -1928,13 +1971,25 @@ input::-webkit-calendar-picker-indicator {
   .leaf-front {
     --leaf-z: 11;
   }
+
+  .leaf-behind-content {
+    --leaf-z: 0;
+  }
+
+  .leaf-between-copy-gallery {
+    --leaf-z: 1;
+  }
+
+  .leaf-between-copy-images {
+    --leaf-z: 1;
+  }
   
   .leaf-left-small {
     --leaf-width: 500px;
   }
   
   .leaf-left-medium {
-    --leaf-width: 700px;
+    --leaf-width: 900px;
   }
   
   .leaf-right-medium {

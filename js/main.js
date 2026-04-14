@@ -62,76 +62,143 @@ function chiudiPopUp() {
 
 //movimento foglie
 document.addEventListener("DOMContentLoaded", () => {
+    const desktopLeavesQuery = window.matchMedia("(min-width: 1200px)");
+
+    function syncLeafSources() {
+        const leaves = document.querySelectorAll(".leaf[data-leaf-src]");
+
+        leaves.forEach((leaf) => {
+            const desktopSrc = leaf.dataset.leafSrc;
+
+            if (desktopLeavesQuery.matches) {
+                if (leaf.getAttribute("src") !== desktopSrc) {
+                    leaf.setAttribute("src", desktopSrc);
+                }
+            } else if (leaf.hasAttribute("src")) {
+                leaf.removeAttribute("src");
+            }
+        });
+    }
+
+    syncLeafSources();
+    desktopLeavesQuery.addEventListener("change", syncLeafSources);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const desktopLeavesQuery = window.matchMedia("(min-width: 1200px)");
     const leaves = Array.from(document.querySelectorAll(".leaf"));
     if (!leaves.length) return;
   
-    // Disattiva l'effetto su schermi piccoli
-    if (window.innerWidth <= 1024) return;
-  
-    let wind = 0;
+    let targetWind = 0;
+    let currentWind = 0;
     let lastScrollY = window.scrollY;
-    let ticking = false;
     let rafId = null;
-    let visibleLeaves = leaves;
-  
-    // aggiorna solo le foglie realmente vicine al viewport
-    function updateVisibleLeaves() {
-      const viewportTop = window.scrollY;
-      const viewportBottom = viewportTop + window.innerHeight;
-  
-      visibleLeaves = leaves.filter((leaf) => {
-        const wrapper = leaf.closest(".leaves-wrapper");
-        if (!wrapper) return false;
-  
-        const rect = wrapper.getBoundingClientRect();
-        const top = rect.top + window.scrollY;
-        const bottom = top + Math.max(rect.height, 400);
-  
-        // buffer sopra/sotto per evitare pop-in
-        return bottom > viewportTop - 300 && top < viewportBottom + 300;
+    let visibleLeaves = new Set();
+    let observer = null;
+
+    function resetLeaves() {
+      leaves.forEach((leaf) => {
+        leaf.style.transform = "";
+        leaf.style.willChange = "auto";
       });
     }
   
-    updateVisibleLeaves();
+    function buildObserver() {
+      if (observer) observer.disconnect();
+      visibleLeaves.clear();
+
+      if (!desktopLeavesQuery.matches) {
+        observer = null;
+        return;
+      }
+
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const wrapperLeaves = entry.target.querySelectorAll(".leaf");
+          if (!wrapperLeaves.length) return;
+
+          if (entry.isIntersecting) {
+            wrapperLeaves.forEach((leaf) => visibleLeaves.add(leaf));
+          } else {
+            wrapperLeaves.forEach((leaf) => {
+              visibleLeaves.delete(leaf);
+              leaf.style.transform = "";
+              leaf.style.willChange = "auto";
+            });
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: "300px 0px",
+        threshold: 0
+      });
+
+      leaves.forEach((leaf) => {
+        const wrapper = leaf.closest(".leaves-wrapper");
+        if (wrapper) observer.observe(wrapper);
+      });
+    }
+
+    buildObserver();
   
     let resizeTimeout = null;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        if (window.innerWidth <= 1024) {
+        if (!desktopLeavesQuery.matches) {
           if (rafId) cancelAnimationFrame(rafId);
-          leaves.forEach((leaf) => {
-            leaf.style.transform = "";
-            leaf.style.willChange = "auto";
-          });
+          rafId = null;
+          targetWind = 0;
+          currentWind = 0;
+          buildObserver();
+          resetLeaves();
           return;
         }
-        updateVisibleLeaves();
+        buildObserver();
       }, 150);
+    });
+
+    desktopLeavesQuery.addEventListener("change", () => {
+      if (!desktopLeavesQuery.matches && rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+      targetWind = 0;
+      currentWind = 0;
+      buildObserver();
+      resetLeaves();
     });
   
     function animate() {
-      wind *= 0.9;
-  
+      if (!desktopLeavesQuery.matches) {
+        resetLeaves();
+        rafId = null;
+        return;
+      }
+
       const time = performance.now();
-  
-      visibleLeaves.forEach((leaf, i) => {
+      currentWind += (targetWind - currentWind) * 0.1;
+      targetWind *= 0.94;
+
+      const visible = Array.from(visibleLeaves);
+
+      visible.forEach((leaf, i) => {
         const direction = leaf.closest(".leaves-right") ? -1 : 1;
-  
-        const swayX = Math.sin(time * 0.002 + i) * wind * 0.35 * direction;
-        const swayRot = Math.sin(time * 0.0015 + i) * wind * 0.25 * direction;
-  
+
+        const swayX = Math.sin(time * 0.0015 + i * 0.7) * currentWind * 0.3 * direction;
+        const swayRot = Math.sin(time * 0.0011 + i * 0.5) * currentWind * 0.2 * direction;
+
         leaf.style.transform = `translate3d(${swayX}px, 0, 0) rotate(${swayRot}deg)`;
+        leaf.style.willChange = "transform";
       });
-  
-      if (Math.abs(wind) > 0.12) {
+
+      if (Math.abs(currentWind) > 0.05 || Math.abs(targetWind) > 0.05) {
         rafId = requestAnimationFrame(animate);
       } else {
-        visibleLeaves.forEach((leaf) => {
+        visible.forEach((leaf) => {
           leaf.style.transform = "";
           leaf.style.willChange = "auto";
         });
-        ticking = false;
         rafId = null;
       }
     }
@@ -139,21 +206,16 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener(
       "scroll",
       () => {
+        if (!desktopLeavesQuery.matches) return;
+
         const currentScrollY = window.scrollY;
         const delta = currentScrollY - lastScrollY;
         lastScrollY = currentScrollY;
-  
-        wind += delta * 0.22;
-        wind = Math.max(Math.min(wind, 14), -14);
-  
-        updateVisibleLeaves();
-  
-        visibleLeaves.forEach((leaf) => {
-          leaf.style.willChange = "transform";
-        });
-  
-        if (!ticking && visibleLeaves.length) {
-          ticking = true;
+
+        targetWind += delta * 0.18;
+        targetWind = Math.max(Math.min(targetWind, 10), -10);
+
+        if (!rafId && visibleLeaves.size) {
           rafId = requestAnimationFrame(animate);
         }
       },
