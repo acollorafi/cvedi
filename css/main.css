@@ -1760,6 +1760,16 @@ input::-webkit-calendar-picker-indicator {
     animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.btn-modal-close {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 140px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
 @keyframes popIn {
     from {
         opacity: 0;
