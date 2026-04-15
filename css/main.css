@@ -859,7 +859,7 @@ footer {
 /*Sfondi pagina home*/
 #home-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero_home_bg.webp) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), -webkit-image-set( url("/images/backgrounds/hero_home_bg_small.webp") 1x, url("/images/backgrounds/hero_home_bg_large.webp") 2x ) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 35%;
@@ -915,7 +915,8 @@ footer {
 /*Sfondi sezioni hero info*/
 #info-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero_info_bg.webp) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), 
+    -webkit-image-set( url("/images/backgrounds/hero_info_bg_small.webp") 1x, url("/images/backgrounds/hero_info_bg_large.webp") 2x )  no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 90%;
@@ -947,10 +948,11 @@ footer {
     z-index: 0;
 }
 
-/*Sfondi sezioni hero info*/
+/*Sfondi sezioni prenota*/
 #book-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/backgrounds/hero-prenota.webp) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), 
+    -webkit-image-set( url("/images/backgrounds/hero-prenota_small.webp") 1x, url("/images/backgrounds/hero-prenota_large.webp") 2x ) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 70%;
@@ -967,7 +969,8 @@ footer {
 /*Sfondi pagina sostenibilita*/
 #sustainability-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), url(/images/sostenibilita/sfondo-sostenibilita.webp) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), 
+    -webkit-image-set( url("/images/sostenibilita/hero-sostenibilita_small.webp") 1x, url("/images/sostenibilita/hero-sostenibilita_large.webp") 2x ) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 70%;
