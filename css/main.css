@@ -94,7 +94,7 @@ h1 {
 }
 
 .h1-big {
-        font-size: 1.8rem;
+    font-size: 1.8rem;
 }
 
 h2 {
@@ -129,7 +129,7 @@ p {
 
     .h1-big {
         font-size: 4.5rem;
-}
+    }
 
     h2 {
         font-size: 3rem;
@@ -147,6 +147,11 @@ p {
     }
 }
 
+.breadcrumb {
+    color: var(--bs-white);
+    text-align: center;
+
+}
 
 
 /********************************************
@@ -634,7 +639,8 @@ p {
 
 @media (max-width: 1199px) {
     #navbarSupportedContent {
-        background: rgba(0, 0, 0, 0.446); /* sfondo quasi nero */
+        background: rgba(0, 0, 0, 0.446);
+        /* sfondo quasi nero */
     }
 }
 
@@ -778,12 +784,13 @@ a.nav-link:hover {
         white-space: nowrap;
     }
 }
+
 .navbar-mobile-actions {
     gap: 0.5rem;
     flex-wrap: nowrap;
 }
 
-.navbar-mobile-actions > * {
+.navbar-mobile-actions>* {
     flex-shrink: 0;
 }
 
@@ -889,7 +896,7 @@ footer {
 /*Sfondi pagina home*/
 #home-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), -webkit-image-set( url("/images/backgrounds/hero_home_bg_small.webp") 1x, url("/images/backgrounds/hero_home_bg_large.webp") 2x ) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 20%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), -webkit-image-set(url("/images/backgrounds/hero_home_bg_small.webp") 1x, url("/images/backgrounds/hero_home_bg_large.webp") 2x) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 35%;
@@ -945,8 +952,8 @@ footer {
 /*Sfondi sezioni hero info*/
 #info-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), 
-    -webkit-image-set( url("/images/backgrounds/hero_info_bg_small.webp") 1x, url("/images/backgrounds/hero_info_bg_large.webp") 2x )  no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        -webkit-image-set(url("/images/backgrounds/hero_info_bg_small.webp") 1x, url("/images/backgrounds/hero_info_bg_large.webp") 2x) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 90%;
@@ -959,8 +966,8 @@ footer {
     background-size: cover;
 }
 
-#info-s2 > .container-xxl > .row,
-#info-s2 > .container-xxl > .btn,
+#info-s2>.container-xxl>.row,
+#info-s2>.container-xxl>.btn,
 #info-s2 .container-xxl.padding-section.text.text-center,
 #info-s2 .card-info,
 #info-s2 .card-accessibility {
@@ -981,8 +988,8 @@ footer {
 /*Sfondi sezioni prenota*/
 #book-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), 
-    -webkit-image-set( url("/images/backgrounds/hero-prenota_small.webp") 1x, url("/images/backgrounds/hero-prenota_large.webp") 2x ) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        -webkit-image-set(url("/images/backgrounds/hero-prenota_small.webp") 1x, url("/images/backgrounds/hero-prenota_large.webp") 2x) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 70%;
@@ -999,8 +1006,8 @@ footer {
 /*Sfondi pagina sostenibilita*/
 #sustainability-s1 {
     position: relative;
-    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%), 
-    -webkit-image-set( url("/images/sostenibilita/hero-sostenibilita_small.webp") 1x, url("/images/sostenibilita/hero-sostenibilita_large.webp") 2x ) no-repeat;
+    background: linear-gradient(var(--Deep-Greenish-Charcoal, #1D2824) 0%, rgba(29, 40, 36, 0.00) 30%, rgba(29, 40, 36, 0.00) 80%, #1D2824 100%),
+        -webkit-image-set(url("/images/sostenibilita/hero-sostenibilita_small.webp") 1x, url("/images/sostenibilita/hero-sostenibilita_large.webp") 2x) no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 70%;
@@ -1131,7 +1138,7 @@ footer {
     object-fit: cover;
     width: 100%;
     height: auto;
-    
+
 }
 
 
@@ -1322,6 +1329,7 @@ Box-sizing uniforme
         opacity: 0;
         transform: translateX(20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1928,41 +1936,41 @@ input::-webkit-calendar-picker-indicator {
 .leaves-wrapper {
     position: relative;
     height: 0;
-  }
+}
 
-  #home-s1 .hero-section,
-  #home-s1>.container.section.padding-section {
+#home-s1 .hero-section,
+#home-s1>.container.section.padding-section {
     position: relative;
     z-index: 1;
-  }
+}
 
-  main > section.container.section.padding-section.text-center:last-of-type {
+main>section.container.section.padding-section.text-center:last-of-type {
     position: relative;
     z-index: 1;
-  }
+}
 
-  #home-s1 + section.container.section.padding-section h2,
-  #home-s1 + section.container.section.padding-section > p {
+#home-s1+section.container.section.padding-section h2,
+#home-s1+section.container.section.padding-section>p {
     position: relative;
     z-index: 2;
-  }
+}
 
-  #home-s1 + section.container.section.padding-section .carousel-padding,
-  #home-s1 + section.container.section.padding-section > .d-none.d-md-block {
+#home-s1+section.container.section.padding-section .carousel-padding,
+#home-s1+section.container.section.padding-section>.d-none.d-md-block {
     position: relative;
     z-index: 0;
-  }
-  
-  .leaves {
+}
+
+.leaves {
     position: absolute;
     top: var(--leaf-top, -20vh);
     left: var(--leaf-left, auto);
     right: var(--leaf-right, auto);
     z-index: var(--leaf-z, 2);
     pointer-events: none;
-  }
-  
-  .leaf {
+}
+
+.leaf {
     position: absolute;
     width: var(--leaf-width, 240px);
     top: var(--img-top, 0);
@@ -1972,91 +1980,93 @@ input::-webkit-calendar-picker-indicator {
     will-change: transform;
     transform: translateZ(0);
     backface-visibility: hidden;
-    pointer-events: none;  }
+    pointer-events: none;
+}
 
-  /* preset foglie destra sinistra */
-  
-  .leaves-left {
+/* preset foglie destra sinistra */
+
+.leaves-left {
     --leaf-left: 0;
     --img-top: -300px;
     --img-left: -350px;
     --leaf-width: 800px;
-  }
-  
-  .leaves-right {
+}
+
+.leaves-right {
     --leaf-right: 0;
     --img-top: 20%;
     --img-right: -50px;
-  }
-  
-  .leaves-right .leaf:nth-child(2) {
+}
+
+.leaves-right .leaf:nth-child(2) {
     top: 65%;
     right: -30px;
-  }
-  
-  /* utilities */
-  
-  .leaf-front {
+}
+
+/* utilities */
+
+.leaf-front {
     --leaf-z: 11;
-  }
+}
 
-  .leaf-behind-content {
+.leaf-behind-content {
     --leaf-z: 0;
-  }
+}
 
-  .leaf-between-copy-gallery {
+.leaf-between-copy-gallery {
     --leaf-z: 1;
-  }
+}
 
-  .leaf-between-copy-images {
+.leaf-between-copy-images {
     --leaf-z: 1;
-  }
-  
-  .leaf-left-small {
+}
+
+.leaf-left-small {
     --leaf-width: 500px;
-  }
-  
-  .leaf-left-medium {
+}
+
+.leaf-left-medium {
     --leaf-width: 900px;
-  }
-  
-  .leaf-right-medium {
+}
+
+.leaf-right-medium {
     --leaf-width: 600px;
-  }
-  
-  .leaf-right-large {
+}
+
+.leaf-right-large {
     --leaf-width: 800px;
-  }
-  
-  .leaf-right-xl {
+}
+
+.leaf-right-xl {
     --leaf-width: 1000px;
-  }
-  
-  /* responisve 1400 */
-  
-  @media (max-width: 1400px) {
+}
+
+/* responisve 1400 */
+
+@media (max-width: 1400px) {
     .leaves {
-      top: var(--leaf-top-1400, var(--leaf-top, -20vh));
-      left: var(--leaf-left-1400, var(--leaf-left, auto));
-      right: var(--leaf-right-1400, var(--leaf-right, auto));
+        top: var(--leaf-top-1400, var(--leaf-top, -20vh));
+        left: var(--leaf-left-1400, var(--leaf-left, auto));
+        right: var(--leaf-right-1400, var(--leaf-right, auto));
     }
-  
+
     .leaf {
-      width: var(--leaf-width-1400, var(--leaf-width, 240px));
-      top: var(--img-top-1400, var(--img-top, 0));
-      left: var(--img-left-1400, var(--img-left, auto));
-      right: var(--img-right-1400, var(--img-right, auto));
+        width: var(--leaf-width-1400, var(--leaf-width, 240px));
+        top: var(--img-top-1400, var(--img-top, 0));
+        left: var(--img-left-1400, var(--img-left, auto));
+        right: var(--img-right-1400, var(--img-right, auto));
     }
-  
+
     .leaves-left {
-      --leaf-width: 650px;
-      --img-top: -260px;
-      --img-left: -280px;
+        --leaf-width: 650px;
+        --img-top: -260px;
+        --img-left: -280px;
     }
-  }
-  /* no foglie su mobile e tablet */
+}
+
+/* no foglie su mobile e tablet */
 @media (max-width: 1199.98px) {
-  .leaves-wrapper {
-    display: none;
-  }
+    .leaves-wrapper {
+        display: none;
+    }
 }
