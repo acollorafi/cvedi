@@ -150,6 +150,7 @@ p {
 .breadcrumb {
     color: var(--bs-white);
     text-align: center;
+    margin-top: 200px;
 
 }
 
