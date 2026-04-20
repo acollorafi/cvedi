@@ -152,7 +152,15 @@ p {
     text-align: center;
     margin-top: 150px;
     font-size: 1.4rem;
+    text-decoration: none;
+    /* Rimuove la sottolineatura standard dei link se non la vuoi */
+    transition: color 0.3s ease;
+    /* Opzionale: rende il cambio colore fluido */
+}
 
+.breadcrumb:hover {
+    color: var(--bs-cyan);
+    /* Questo è l'azzurro standard di Bootstrap, puoi cambiarlo con 'cyan' o un codice HEX */
 }
 
 
