@@ -820,8 +820,8 @@ a.nav-link:hover {
 /* DESKTOP XL - min 1200px */
 @media (min-width: 1200px) {
     .logo-img {
-        width: 70px;
-        height: px;
+        width: 67px;
+        height: 67px;
     }
 
     .navbar-collapse {
