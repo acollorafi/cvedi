@@ -680,8 +680,8 @@ p {
 }
 
 .logo-img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     transition: all 0.3s ease;
 }
 
@@ -820,8 +820,8 @@ a.nav-link:hover {
 /* DESKTOP XL - min 1200px */
 @media (min-width: 1200px) {
     .logo-img {
-        width: 75px;
-        height: 75px;
+        width: 70px;
+        height: px;
     }
 
     .navbar-collapse {
@@ -846,8 +846,8 @@ a.nav-link:hover {
     }
 
     .btn-custom-primary {
-        padding: 0.75rem 2rem;
-        font-size: 1rem;
+        padding: 2rem 1rem; 
+        font-size: 1.2rem;     
     }
 
     .btn-language {
