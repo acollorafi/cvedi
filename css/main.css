@@ -113,7 +113,7 @@ h3 {
 
 
 p {
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 1.2;
     color: var(--bs-white);
 }
@@ -477,7 +477,7 @@ p {
 }
 
 .card p {
-    font-size: 18px;
+    font-size: 16px; /*prima era 18px*/
     text-align: center;
     text-shadow: 0 0 15px #000, 0 0 100px #000;
 }
@@ -513,7 +513,7 @@ p {
 }
 
 .card-info p {
-    font-size: 18px;
+    font-size: 16px; /*prima era 18px*/
     text-shadow: 0 0 15px #000, 0 0 100px #000;
 }
 
@@ -816,6 +816,7 @@ a.nav-link:hover {
     flex-shrink: 0;
 }
 
+/*
 @media (max-width: 420px) {
     .navbar-img-languages {
         width: 28px;
@@ -826,7 +827,7 @@ a.nav-link:hover {
         font-size: 12px;
         padding: 0.3rem 0.6rem;
     }
-}
+}*/
 
 
 /* DESKTOP XL - min 1200px */
@@ -1676,6 +1677,7 @@ input::-webkit-calendar-picker-indicator {
     opacity: 0.8;
 }
 
+
 .carousel-control-prev.custom-ctrl {
     left: -60px;
 }
@@ -1683,6 +1685,18 @@ input::-webkit-calendar-picker-indicator {
 .carousel-control-next.custom-ctrl {
     right: -60px;
 }
+
+/*
+.btn-carousel {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}*/
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -1692,11 +1706,14 @@ input::-webkit-calendar-picker-indicator {
     box-shadow: -5px 5px 8.5px 0 rgba(255, 255, 255, 0.25) inset, 5px -5px 8.8px 0 rgba(0, 0, 0, 0.25) inset, 0 0 10px 0 rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.30);
     border-radius: 50%;
-    padding: 25px;
+    padding: 24px;
+    overflow: hidden;
     background-size: 30%, 100%;
     background-repeat: no-repeat;
     background-position: center;
+
 }
+
 
 .carousel-control-next-icon {
     background-image:
