@@ -302,6 +302,8 @@ p {
     line-height: 20px;
     /* 75% */
 
+    transition: all 0.3s ease-in-out;
+
     --bs-btn-hover-color: var(--bs-white);
     --bs-btn-hover-bg: var(--bs-tan);
 }
@@ -783,10 +785,6 @@ a.nav-link:hover {
 }
 
 
-.btn-custom-primary {
-    transition: all 0.3s ease-in-out;
-}
-
 /* TABLET - min 768px */
 @media (min-width: 768px) {
     .logo-img {
@@ -802,7 +800,7 @@ a.nav-link:hover {
     .btn-custom-primary {
         height: 44px;
         font-size: 14px;
-        padding: 0.4rem 0.8rem;
+
         white-space: nowrap;
     }
 }
@@ -859,8 +857,8 @@ a.nav-link:hover {
     }
 
     .btn-custom-primary {
-        padding: 2rem 1rem; 
-        font-size: 1.2rem;     
+        padding: 2rem 2rem; 
+        font-size: 1.2rem;    
     }
 
     .btn-language {
