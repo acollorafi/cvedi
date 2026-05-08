@@ -499,13 +499,14 @@ p {
     text-shadow: 0 0 15px #000, 0 0 100px #000;
 }
 
+/* forse non sono necessarie, in caso toglile da hero home e ristorante
 .card-title-home {
     padding-bottom: 24px;
 }
 
 .card-title-home + p {
     margin-bottom: 24px;
-}
+}*/
 
 .card-team {
     /*questa è uguale alla card base, quindi metterei quella, al limite creiamo una classe per il font diverso tipo p-02*/
