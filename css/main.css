@@ -104,6 +104,13 @@ h2 {
     padding-bottom: 30px;
 }
 
+.card h2 {
+    font-size: 1.5rem;
+    color: var(--bs-tan);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px;
+}
+
 h3 {
     font-size: 1.5rem;
     color: var(--bs-tan);
@@ -134,6 +141,11 @@ p {
     h2 {
         font-size: 3rem;
         padding-bottom: 60px;
+    }
+
+    .card h2 {
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
     }
 
     h3 {
@@ -887,17 +899,17 @@ footer {
 }
 
 .footer-tagline {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 1.5rem;
     /* 62.5% */
     margin-bottom: 1.5rem;
 }
 
 .footer-hours {
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 1.2rem;
     margin-bottom: 2rem;
 }
 
