@@ -10,13 +10,15 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="font/neutraface-text/Neutraface-Text-Book.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="font/neutraface-text/Neutraface%20Text%20Bold.woff" as="font" type="font/woff" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 
-<body>
+<body class="page-home-intro-prova">
 
     <!-- Per effetto liquido -->
     <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
@@ -84,14 +86,22 @@
         <!-- Sezione 1: Hero + Cards -->
         <section id="home-s1" class="img-bg">
 
-            <!-- Hero -->
-            <div class="hero-section container section">
-                <h1>EDEN LEAF</h1>
-                <p class="hero-subtitle">Il primo ristorante Solarpunk</p>
-            </div>
+            <div class="home-intro-demo">
+                <div class="home-intro-sticky" role="group" aria-label="Intro immersiva Eden Leaf">
+                    <div class="home-intro-vignette"></div>
 
-            <img src="images/sostenibilita/techline.webp" class="techline-home" alt="">
-            <img src="images/sostenibilita/techline.webp" class="techline-home" alt="">
+                    <div class="hero-section container section home-intro-copy">
+                        <h1>EDEN LEAF</h1>
+                        <p class="hero-subtitle">Il primo ristorante Solarpunk</p>
+                        <img src="images/sostenibilita/techline.webp" class="home-intro-techline" alt="">
+                        <p class="home-intro-scroll">
+                            <span>Scorri per entrare</span>
+                        </p>
+                    </div>
+
+                    <img src="/images/home/leaves-circle.webp" class="home-intro-canopy" alt="">
+                </div>
+            </div>
 
             <!-- Cards ristorante + punti di forza -->
             <div class="container section padding-section">
@@ -197,12 +207,14 @@
                             </div>
                         </div>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#puntiDiForzaCarousel"
-                            data-bs-slide="prev">
+                        <button class="carousel-control-prev carousel-arrow-btn" type="button"
+                            data-bs-target="#puntiDiForzaCarousel" data-bs-slide="prev"
+                            aria-label="Punto di forza precedente">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#puntiDiForzaCarousel"
-                            data-bs-slide="next">
+                        <button class="carousel-control-next carousel-arrow-btn" type="button"
+                            data-bs-target="#puntiDiForzaCarousel" data-bs-slide="next"
+                            aria-label="Punto di forza successivo">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         </button>
                     </div>
@@ -475,7 +487,7 @@
                 --leaf-top-1400:43vh;
                 --leaf-top-1024:30vh;
               ">
-              <img data-leaf-src="images/foglie/ramo-sinistra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
+              <img data-leaf-src="images/foglie/leaf-ramo-left.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
             </div>
         </div>
 
@@ -484,18 +496,18 @@
             <div
               class="leaves leaves-left leaf-left-small leaf-layer-back"
               style="
-                --leaf-top:130vh;
+                --leaf-top:136vh;
                 --leaf-left:130px;
           
-                --leaf-top-1400:125vh;
+                --leaf-top-1400:131vh;
                 --leaf-left-1400:115px;
                 --leaf-width-1400:420px;
           
-                --leaf-top-1024:95vh;
+                --leaf-top-1024:101vh;
                 --leaf-left-1024:60px;
                 --leaf-width-1024:320px;
               ">
-              <img data-leaf-src="images/foglie/ramo-sinistra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
+              <img data-leaf-src="images/foglie/leaf-ramo-left1.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
             </div>
         </div>
 
@@ -766,7 +778,10 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/home-intro-prova.js"></script>
 </body>
 
 </html>

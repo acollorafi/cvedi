@@ -6,10 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = document.getElementById('dateInput').value;
         const orario = document.querySelector('.glass-effect-select').value;
         const sezioneMappa = document.getElementById('mappa-tavoli');
+        const iframeMappa = sezioneMappa ? sezioneMappa.querySelector('iframe[data-src]') : null;
         console.log("Tentativo di ricerca:", { persone, data, orario });
         if (!data) {
             alert("Per favore, seleziona una data per la tua prenotazione.");
             return;
+        }
+        if (iframeMappa && !iframeMappa.getAttribute('src')) {
+            iframeMappa.setAttribute('src', iframeMappa.dataset.src);
         }
         if (sezioneMappa) {
             sezioneMappa.classList.remove('d-none');

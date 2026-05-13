@@ -10,6 +10,8 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="font/neutraface-text/Neutraface-Text-Book.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="font/neutraface-text/Neutraface%20Text%20Bold.woff" as="font" type="font/woff" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
@@ -117,10 +119,10 @@
                     class="leaves leaves-left leaf-layer-back"
                     style="
                         --leaf-top:-15vh;
-                        --leaf-left:60px;
+                        --leaf-left:0px;
                 
                         --leaf-top-1400:-13vh;
-                        --leaf-left-1400:45px;
+                        --leaf-left-1400:-10px;
                         --leaf-width-1400:700px;
                         --leaf-top-1024:-10vh;
                     ">
@@ -221,7 +223,7 @@
 
                 <div class="container-xxl">
                     <div class="position-relative">
-                        <button class="glass-effect carousel-control-prev-icon step-nav prev-step"
+                        <button class="glass-effect carousel-arrow-btn step-nav prev-step"
                             aria-label="Fase precedente"></button>
 
                         <!-- FASE 1 -->
@@ -293,7 +295,7 @@
                             </div>
                         </article>
 
-                        <button class="glass-effect carousel-control-next-icon step-nav next-step"
+                        <button class="glass-effect carousel-arrow-btn step-nav next-step"
                             aria-label="Fase successiva"></button>
                     </div>
                 </div>
@@ -350,7 +352,7 @@
                     <!-- Mobile Carousel -->
                     <div class="d-md-none">
                         <div class="experts-carousel-wrapper">
-                            <button class="glass-effect carousel-control-prev-icon expert-nav prev-expert"
+                            <button class="glass-effect carousel-arrow-btn expert-nav prev-expert"
                                 aria-label="Esperto precedente"></button>
 
                             <div class="experts-row">
@@ -388,7 +390,7 @@
                                 </div>
                             </div>
 
-                            <button class="glass-effect carousel-control-next-icon expert-nav next-expert"
+                            <button class="glass-effect carousel-arrow-btn expert-nav next-expert"
                                 aria-label="Esperto successivo"></button>
                         </div>
                     </div>
@@ -398,9 +400,23 @@
 
         <!--foglie-->
         <div class="leaves-wrapper">
-            <div class="leaves leaves-right leaf-layer-back">
-              <img data-leaf-src="images/foglie/foglia-destra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
-              <img data-leaf-src="images/foglie/foglia-destra1.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
+            <div
+              class="leaves leaves-right leaf-layer-back"
+              style="
+                --leaf-top:-76vh;
+                --leaf-right:-225px;
+                --leaf-width:760px;
+
+                --leaf-top-1400:-66vh;
+                --leaf-right-1400:-180px;
+                --leaf-width-1400:640px;
+
+                --leaf-top-1024:-42vh;
+                --leaf-right-1024:-70px;
+                --leaf-width-1024:340px;
+                --leaf-z: 0;
+              ">
+              <img data-leaf-src="images/foglie/foglie-rami destra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
             </div>
         </div>
 
