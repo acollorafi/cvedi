@@ -1794,6 +1794,12 @@ Box-sizing uniforme
 }
 
 @media (max-width: 767px) {
+    .step-item > .col-12:first-child {
+        display: none;
+    }
+
+
+    }
     #teamCarousel .carousel-control-prev {
         left: 0.25rem;
     }
