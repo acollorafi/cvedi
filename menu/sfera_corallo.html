@@ -9,6 +9,8 @@
     <!-- Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preload" href="/font/neutraface-text/Neutraface-Text-Book.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/font/neutraface-text/Neutraface%20Text%20Bold.woff" as="font" type="font/woff" crossorigin>
 
     <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -30,15 +32,13 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
-            <a class="navbar-brand glass-blur-only" href="index.html">
+            <a class="navbar-brand glass-effect" href="index.html">
                 <img src="/images/logo/Logo_EL.svg" alt="Eden Leaf" title="Eden Leaf - Il primo ristorante Solarpunk"
                     class="logo-img">
             </a>
 
             <!-- Mobile/Tablet: PRENOTA + Hamburger (visibili solo < 1200px) -->
             <div class="d-flex d-xl-none align-items-center navbar-mobile-actions">
-                <img src="/images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua"
-                    width="30" height="20" />
                 <button class="glass-effect btn btn-custom-primary" type="button"
                     onclick="window.location.href='/prenota.html'">PRENOTA</button>
                 <button class="navbar-toggler glass-effect" type="button" data-bs-toggle="collapse"
@@ -65,7 +65,10 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/sostenibilita.html">SOSTENIBILITÀ</a>
-                    </li>
+                        <li class="nav-item mt-3 d-xl-none">
+                    <img src="/images/flags/world.webp" class="navbar-img-languages" alt="Cambia lingua" title="Cambia lingua"
+                    width="30" height="20">
+                </li>
                 </ul>
             </div>
 
@@ -73,8 +76,8 @@
             <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
                 <button class="glass-effect btn btn-custom-primary btn-prenota" type="button"
                     onclick="window.location.href='prenota.html'">PRENOTA</button>
-                <img src="/images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua"
-                    width="30" height="20" />
+                <img src="/images/flags/world.webp" class="navbar-img-languages" alt="Cambia lingua" title="Cambia lingua"
+                    width="30" height="20">
             </div>
         </div>
     </nav>
@@ -97,45 +100,88 @@
                     d'alga e la freschezza dell'aria distillata.
                 </p>
             </div>
-            <img src="/images/piatto03/hero_piatto3.webp" class="img-fluid"
+            <img src="/images/piatto03/hero_piatto3_3.webp" class="img-fluid"
                 alt="Sfera di Corallo - Piatto signature Eden Leaf"
-                title="Sfera di Corallo - Piatto signature Eden Leaf" />
+                title="Sfera di Corallo - Piatto signature Eden Leaf">
         </section>
 
         <!--foglie-->
         <div class="leaves-wrapper">
-            <div class="leaves leaves-left leaf-front" style="
+            <div class="leaves leaves-left leaf-layer-back"
+              style="
                 --leaf-top:-10vh;
                 --leaf-left:70px;
           
-                --leaf-top-1400:15vh;
-                --leaf-left-1400:60px;
+                --leaf-top-1400:-6vh;
+                --leaf-left-1400:65px;
           
                 --leaf-top-1024:10vh;
                 --leaf-left-1024:30px;
               ">
-                <img data-leaf-src="/images/foglie/foglia_menu_sinistra.webp" class="leaf">
+              <img data-leaf-src="/images/foglie/foglia_menu_sinistra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
             </div>
-        </div>
-
-        <div class="leaves-wrapper">
-            <div class="leaves leaves-right leaf-front" style="
+          </div>
+          
+          <div class="leaves-wrapper">
+            <div class="leaves leaves-right leaf-layer-back"
+              style="
                 --leaf-top:-40vh;
                 --leaf-right:-220px;
                 --leaf-width:800px;
           
-                --leaf-top-1400:-20vh;
-                --leaf-right-1400:-100px;
-                --leaf-width-1400:600px;
+                --leaf-top-1400:-34vh;
+                --leaf-right-1400:-190px;
+                --leaf-width-1400:700px;
           
                 --leaf-width-1024:420px;
               ">
-                <img data-leaf-src="/images/foglie/foglia_menu_destra.webp" class="leaf">
+              <img data-leaf-src="/images/foglie/foglia_menu_destra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
+            </div>
+          </div>
+
+        <div class="leaves-wrapper">
+            <div class="leaves leaves-left leaf-layer-hero-front"
+              style="
+                --leaf-top:-25vh;
+                --leaf-left:-70px;
+
+                --leaf-top-1400:-18vh;
+                --leaf-left-1400:-40px;
+                transform: rotate(-8deg);
+              ">
+              <img data-leaf-src="/images/foglie/foglia_menu_sinistra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
+            </div>
+          </div>
+          
+          <div class="leaves-wrapper">
+            <div class="leaves leaves-right leaf-layer-hero-front"
+              style="
+                --leaf-top:-50vh;
+                --leaf-right:-350px;
+                --leaf-width:800px;
+          
+                --leaf-top-1400:-44vh;
+                --leaf-right-1400:-300px;
+                --leaf-width-1400:700px;
+                transform: rotate(8deg);
+              ">
+              <img data-leaf-src="/images/foglie/foglia_menu_destra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
             </div>
         </div>
 
         <section class="ingredients-dish-bg">
 
+<<<<<<< HEAD
+=======
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="/menu.html" class="breadcrumb padding-section">
+                    <img src="/images/icons/Arrow_left.png" alt="Icona Menù"
+                        style="width: 20px; margin-right: 8px;">
+                    Torna al menù
+                </a>
+            </div>
+
+>>>>>>> main
             <div class="text-center padding-section">
                 <h2 class="padding-text discover-ingredients-heading">Scopri gli ingredienti</h2>
                 <div class="container px-3 px-sm-0">
@@ -149,21 +195,23 @@
                         /images/piatto03/ingredienti3-small.webp 480w,
                         /images/piatto03/ingredienti3-medium.webp 800w,
                         /images/piatto03/ingredienti3-large.webp 1200w
-                        " />
+                        " >
                 </div>
             </div>
 
 
             <div class="leaves-wrapper">
-                <div class="leaves leaves-left leaf-behind-content" style="
+                <div class="leaves leaves-left leaf-layer-back"
+                  style="
                     --leaf-top:45vh;
                     --leaf-left:-50px;
                     --leaf-width:1200px;
 
-                    --leaf-left-1400:-140px;
-                    --leaf-width-1400:700px;
+                    --leaf-top-1400:43vh;
+                    --leaf-left-1400:-90px;
+                    --leaf-width-1400:900px;
                   ">
-                    <img data-leaf-src="/images/foglie/foglia-allergeni-left.webp" class="leaf">
+                  <img data-leaf-src="/images/foglie/foglia-allergeni-left.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
                 </div>
             </div>
 
@@ -181,7 +229,7 @@
                                 <!-- PIATTO -->
                                 <div class="menu-card-img">
                                     <img src="/images/piatto03/gocce-luce.webp" alt="Nettare Cristallizzato"
-                                        title="Nettare Cristallizzato - Sfera di frutti antichi recuperati" />
+                                        title="Nettare Cristallizzato - Sfera di frutti antichi recuperati" >
                                     <span class="menu-card-label label-custom">Gocce di Luce</span>
                                 </div>
 
@@ -203,7 +251,7 @@
                                 <!-- PIATTO -->
                                 <div class="menu-card-img">
                                     <img src="/images/piatto03/cialda-corallo1.webp" alt="Cialda di Corallo"
-                                        title="Cialda di Corallo - Struttura croccante con farina di alghe e zafferano" />
+                                        title="Cialda di Corallo - Struttura croccante con farina di alghe e zafferano" >
                                     <span class="menu-card-label label-custom">Cialda di Corallo</span>
                                 </div>
 
@@ -227,7 +275,7 @@
                                 <!-- PIATTO -->
                                 <div class="menu-card-img">
                                     <img src="/images/piatto03/clorofilla1.webp" alt="Clorofilla Viva"
-                                        title="Clorofilla Viva - Germogli di brassica e petali bioluminescenti" />
+                                        title="Clorofilla Viva - Germogli di brassica e petali bioluminescenti" >
                                     <span class="menu-card-label label-custom">Clorofilla Viva</span>
                                 </div>
 
@@ -252,7 +300,7 @@
                                 <!-- PIATTO -->
                                 <div class="menu-card-img">
                                     <img src="/images/piatto03/ingrediente4_piatto3.webp" alt="Spuma di aria"
-                                        title="Spuma di aria - Spuma eterea con menta selvatica" />
+                                        title="Spuma di aria - Spuma eterea con menta selvatica" >
                                     <span class="menu-card-label label-custom">Spuma di aria</span>
                                 </div>
 
@@ -273,15 +321,17 @@
 
             <!--foglie-->
             <div class="leaves-wrapper">
-                <div class="leaves leaves-right" style="
+                <div class="leaves leaves-right leaf-layer-back"
+                  style="
                     --leaf-top:40vh;
                     --leaf-right:-8vw;
                     --leaf-width:700px;
 
-                    --leaf-right-1400:-6vw;
-                    --leaf-width-1400:520px;
+                    --leaf-top-1400:38vh;
+                    --leaf-right-1400:-7vw;
+                    --leaf-width-1400:620px;
                   ">
-                    <img data-leaf-src="/images/foglie/right-leaf-1.webp" class="leaf">
+                  <img data-leaf-src="/images/foglie/right-leaf-1.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true">
                 </div>
             </div>
 
@@ -312,9 +362,9 @@
     <footer>
         <div class="container-xxl text-center">
             <img src="/images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf"
-                title="Eden Leaf - Il primo ristorante Solarpunk" />
+                title="Eden Leaf - Il primo ristorante Solarpunk" >
             <div>
-                <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
+                <p class="footer-tagline">Il primo ristorante Solarpunk</p>
                 <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
                 <p>© 2025 Eden Leaf Ecosystems.<br>
                     Tutti i diritti riservati alla Natura.<br>

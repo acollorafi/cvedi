@@ -10,9 +10,53 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="font/neutraface-text/Neutraface-Text-Book.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="font/neutraface-text/Neutraface%20Text%20Bold.woff" as="font" type="font/woff" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        @media (max-width: 767px) {
+            .restaurant-team-carousel #restaurantTeamCarousel {
+                padding-inline: 2.9rem;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-item .card {
+                width: min(100%, 15.5rem) !important;
+                margin-inline: auto;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev,
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next {
+                position: absolute;
+                top: 50%;
+                bottom: auto;
+                width: 44px;
+                height: 44px;
+                transform: translateY(-50%);
+                opacity: 1;
+                z-index: 10;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev {
+                left: 0;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next {
+                right: 0;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev:hover,
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next:hover {
+                transform: translateY(calc(-50% - 2px));
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev:active,
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next:active {
+                transform: translateY(-50%);
+            }
+        }
+    </style>
 
 </head>
 
@@ -28,7 +72,7 @@
 
     <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
-            <a class="navbar-brand glass-blur-only" href="index.html">
+            <a class="navbar-brand glass-effect" href="index.html">
                 <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" title="Eden Leaf - Il primo ristorante Solarpunk"
                     class="logo-img">
             </a>
@@ -64,7 +108,7 @@
                     </li>
                     <li class="nav-item mt-3 d-xl-none">
                         <a class="nav-link d-flex justify-content-center align-items-center gap-2" href="#">
-                            <img src="images/flags/world.webp" class="navbar-img-languages" alt="Lingua" width="30"
+                            <img src="images/flags/world.webp" class="navbar-img-languages" alt="Cambia lingua" title="Cambia lingua" width="30"
                                 height="20">
                         </a>
                     </li>
@@ -75,7 +119,7 @@
             <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
                 <button class="glass-effect btn btn-custom-primary btn-prenota" type="button"
                     onclick="window.location.href='prenota.html'">PRENOTA</button>
-                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua"
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="Cambia lingua" title="Cambia lingua"
                     width="30" height="20" />
             </div>
         </div>
@@ -90,7 +134,7 @@
 
             <div class="container-xxl d-flex flex-column padding-section">
                 <div class="card glass-effect align-self-end" style="max-width: 660px;">
-                    <h3>Chi siamo</h3>
+                    <h2 class="card-title-home">Chi siamo</h2>
                     <p>Eden Leaf non è semplicemente un luogo dove mangiare, ma un laboratorio vivente di coesistenza.
                         Siamo
                         l'avanguardia della gastronomia rigenerativa: un rifugio di vetro e acciaio integrato nella
@@ -104,7 +148,7 @@
                 </div>
 
                 <div class="card glass-effect mt-3 mt-md-5" style="max-width: 660px;">
-                    <h3>La nostra storia</h3>
+                    <h2 class="card-title-home">La nostra storia</h2>
                     <p>Nato nel secolo scorso come progetto sperimentale di bio-architettura, Eden Leaf è cresciuto
                         organicamente insieme alla sua struttura ospitante. Abbiamo progettato la nostra cupola per
                         adattarsi gentilmente all'espansione della Foglia Madre, trasformando quella che era una visione
@@ -118,34 +162,38 @@
 
         <!-- foglie-->
         <div class="leaves-wrapper">
-            <div class="leaves leaves-right" style="
+            <div
+              class="leaves leaves-right leaf-layer-back"
+              style="
                 --leaf-top: -60vh;
                 --leaf-right: -100px;
                 --leaf-width: 800px;
           
-                --leaf-top-1400: -40vh;
-                --leaf-right-1400: -180px;
-                --leaf-width-1400: 650px;
+                --leaf-top-1400: -52vh;
+                --leaf-right-1400: -120px;
+                --leaf-width-1400: 720px;
               ">
-                <img data-leaf-src="images/foglie/fogliaa-Photoroom 8.webp" class="leaf" />
+              <img data-leaf-src="images/foglie/fogliaa-Photoroom 8.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
             </div>
-
-            <div class="leaves leaves-right" style="
+        
+            <div
+              class="leaves leaves-right leaf-layer-back"
+              style="
                 /* Qui modifichi la posizione per separarla dalla prima */
                 --leaf-top: -50vh;    /* Esempio: più in basso */
                 --leaf-right: -250px;  /* Esempio: più a sinistra */
                 --leaf-width: 800px;   /* Stessa grandezza della prima */
           
-                --leaf-top-1400: -15vh;
-                --leaf-right-1400: -50px;
-                --leaf-width-1400: 650px;
+                --leaf-top-1400: -42vh;
+                --leaf-right-1400: -210px;
+                --leaf-width-1400: 720px;
               ">
-                <img data-leaf-src="images/foglie/fogliaa-Photoroom 9.webp" class="leaf" />
+              <img data-leaf-src="images/foglie/fogliaa-Photoroom 9.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
             </div>
         </div>
 
 
-        <section class="container-xxl padding-section">
+        <section class="container-xxl padding-section intro-above-leaves">
             <div class="row align-items-center px-4 py-md-4">
                 <h3 class="d-block d-md-none mb-4 mb-md-0 text-center">Lo chef stellato</h3>
                 <div class="col-md-6">
@@ -175,8 +223,8 @@
 
         <!-- foglie-->
         <div class="leaves-wrapper">
-            <div class="leaves leaves-left">
-                <img data-leaf-src="images/foglie/left-leaf.webp" class="leaf" />
+            <div class="leaves leaves-left leaf-layer-back">
+              <img data-leaf-src="images/foglie/leaf-ramo-left.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
             </div>
         </div>
 
@@ -185,8 +233,8 @@
             <div class="container-xxl padding-section text-center">
                 <h2>Il nostro team</h2>
                 <!-- Mobile -->
-                <div class="d-block d-md-none carousel-padding">
-                    <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="d-block d-md-none carousel-padding restaurant-team-carousel">
+                    <div id="restaurantTeamCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
 
                             <div class="carousel-item active">
@@ -248,19 +296,20 @@
                                         <img src="images/ristorante/img_team_05.webp" class="team-avatar"
                                             alt="Liam Costa"
                                             title="Liam Costa - Responsabile Protein Lab e proteine vegetali" />
-                                        <p class="p-02">Liam Costa</p>
-                                        <div class="label-custom">Protein-Lab</div>
+                                        <p class="mb-0">Liam Costa</p>
+                                        <div class="label-custom mx-auto">Protein-Lab</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel"
-                            data-bs-slide="prev">
+                        <button class="glass-effect carousel-control-prev carousel-arrow-btn" type="button"
+                            data-bs-target="#restaurantTeamCarousel" data-bs-slide="prev" aria-label="Membro precedente">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel"
-                            data-bs-slide="next">
+
+                        <button class="glass-effect carousel-control-next carousel-arrow-btn" type="button"
+                            data-bs-target="#restaurantTeamCarousel" data-bs-slide="next" aria-label="Membro successivo">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         </button>
                     </div>
@@ -337,48 +386,56 @@
 
         <!--foglie-->
         <div class="leaves-wrapper">
-            <div class="leaves leaves-left leaf-front" style="
+            <div
+              class="leaves leaves-left leaf-layer-back"
+              style="
                 --leaf-top:45vh;
           
-                --leaf-top-1400:40vh;
+                --leaf-top-1400:43vh;
                 --leaf-top-1024:30vh;
               ">
-                <img data-leaf-src="images/foglie/ramo-sinistra.webp" class="leaf" />
+              <img data-leaf-src="images/foglie/leaf-ramo-left.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
             </div>
         </div>
 
         <!--foglie-->
         <div class="leaves-wrapper">
-            <div class="leaves leaves-left leaf-left-small leaf-front" style="
-                --leaf-top:130vh;
+            <div
+              class="leaves leaves-left leaf-left-small leaf-layer-back"
+              style="
+                --leaf-top:136vh;
                 --leaf-left:130px;
           
-                --leaf-left-1400:100px;
+                --leaf-top-1400:131vh;
+                --leaf-left-1400:115px;
+                --leaf-width-1400:420px;
           
-                --leaf-top-1024:95vh;
+                --leaf-top-1024:101vh;
                 --leaf-left-1024:60px;
                 --leaf-width-1024:320px;
               ">
-                <img data-leaf-src="images/foglie/ramo-sinistra.webp" class="leaf" />
+              <img data-leaf-src="images/foglie/leaf-ramo-left1.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
             </div>
         </div>
 
         <!--foglie-->
         <div class="leaves-wrapper">
-            <div class="leaves leaves-right" style="
+            <div
+              class="leaves leaves-right leaf-layer-back"
+              style="
                 --leaf-top:10vh;
                 --leaf-right:-120px;
                 --leaf-width:500px;
           
-                --leaf-top-1400:5vh;
-                --leaf-right-1400:-90px;
-                --leaf-width-1400:420px;
+                --leaf-top-1400:8vh;
+                --leaf-right-1400:-105px;
+                --leaf-width-1400:450px;
           
                 --leaf-top-1024:0;
                 --leaf-right-1024:-60px;
                 --leaf-width-1024:320px;
               ">
-                <img data-leaf-src="images/foglie/foglie-rami destra.webp" class="leaf" />
+              <img data-leaf-src="images/foglie/foglie-rami destra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
             </div>
         </div>
 
@@ -410,7 +467,7 @@
         <div class="container-xxl text-center">
             <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf" />
             <div>
-                <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
+                <p class="footer-tagline">Il primo ristorante Solarpunk</p>
                 <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
                 <p>© 2025 Eden Leaf Ecosystems.<br>
                     Tutti i diritti riservati alla Natura.<br>

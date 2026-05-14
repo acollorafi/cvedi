@@ -6,10 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = document.getElementById('dateInput').value;
         const orario = document.querySelector('.glass-effect-select').value;
         const sezioneMappa = document.getElementById('mappa-tavoli');
+        const iframeMappa = sezioneMappa ? sezioneMappa.querySelector('iframe[data-src]') : null;
         console.log("Tentativo di ricerca:", { persone, data, orario });
         if (!data) {
             alert("Per favore, seleziona una data per la tua prenotazione.");
             return;
+        }
+        if (iframeMappa && !iframeMappa.getAttribute('src')) {
+            iframeMappa.setAttribute('src', iframeMappa.dataset.src);
         }
         if (sezioneMappa) {
             sezioneMappa.classList.remove('d-none');
@@ -63,6 +67,7 @@ function chiudiPopUp() {
 //movimento foglie
 document.addEventListener("DOMContentLoaded", () => {
     const desktopLeavesQuery = window.matchMedia("(min-width: 1200px)");
+    const leafPlaceholderSrc = "data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=";
 
     function syncLeafSources() {
         const leaves = document.querySelectorAll(".leaf[data-leaf-src]");
@@ -74,8 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (leaf.getAttribute("src") !== desktopSrc) {
                     leaf.setAttribute("src", desktopSrc);
                 }
-            } else if (leaf.hasAttribute("src")) {
-                leaf.removeAttribute("src");
+            } else if (leaf.getAttribute("src") !== leafPlaceholderSrc) {
+                leaf.setAttribute("src", leafPlaceholderSrc);
             }
         });
     }

@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sostenibilità - Eden Leaf</title>
+    <title>Info - Eden Leaf</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="font/neutraface-text/Neutraface-Text-Book.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="font/neutraface-text/Neutraface%20Text%20Bold.woff" as="font" type="font/woff" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
@@ -32,7 +34,7 @@
 
     <nav class="navbar navbar-expand-xl sticky-top bg-body-tertiary px-3 px-md-4 px-xl-5">
         <div class="container-xxl">
-            <a class="navbar-brand glass-blur-only" href="index.html">
+            <a class="navbar-brand glass-effect" href="index.html">
                 <img src="images/logo/Logo_EL.svg" alt="Eden Leaf" title="Eden Leaf - Il primo ristorante Solarpunk"
                     class="logo-img">
             </a>
@@ -68,7 +70,7 @@
                     </li>
                     <li class="nav-item mt-3 d-xl-none">
                         <a class="nav-link d-flex justify-content-center align-items-center gap-2" href="#">
-                            <img src="images/flags/world.webp" class="navbar-img-languages" alt="Lingua" width="30"
+                            <img src="images/flags/world.webp" class="navbar-img-languages" alt="Cambia lingua" title="Cambia lingua" width="30"
                                 height="20">
                         </a>
                     </li>
@@ -79,7 +81,7 @@
             <div class="d-none d-xl-flex align-items-center gap-3 gap-xl-5">
                 <button class="glass-effect btn btn-custom-primary btn-prenota" type="button"
                     onclick="window.location.href='prenota.html'">PRENOTA</button>
-                <img src="images/flags/world.webp" class="navbar-img-languages" alt="English" title="Cambia lingua"
+                <img src="images/flags/world.webp" class="navbar-img-languages" alt="Cambia lingua" title="Cambia lingua"
                     width="30" height="20" />
             </div>
         </div>
@@ -91,23 +93,23 @@
             <div class="hero-section container section">
                 <h1>INFO</h1>
             </div>
-            <img src="images/sostenibilita/techline.webp" class="techline">
+            <img src="images/sostenibilita/techline.webp" class="techline" alt="" aria-hidden="true">
         </section>
 
         <!-- foglie -->
         <div class="leaves-wrapper">
-            <div class="leaves leaves-left">
-                <img data-leaf-src="images/foglie/left-leaf.webp" class="leaf" />
+            <div class="leaves leaves-left leaf-layer-back">
+              <img data-leaf-src="images/foglie/left-leaf.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
             </div>
-
-            <div class="leaves leaves-right">
-                <img data-leaf-src="images/foglie/foglia-destra.webp" class="leaf" />
-                <img data-leaf-src="images/foglie/foglia-destra1.webp" class="leaf" />
+          
+            <div class="leaves leaves-right leaf-layer-back">
+              <img data-leaf-src="images/foglie/foglia-destra.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
+              <img data-leaf-src="images/foglie/foglia-destra1.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
             </div>
         </div>
 
         <!-- Sezione 2 - Dove trovarci -->
-        <section class="container-xxl padding-section text text-center">
+        <section class="container-xxl padding-section text text-center intro-above-leaves">
             <h2>Dove trovarci</h2>
             <p class="padding-intra-section">Ci trovate sospesi al Livello 5 dell’Albero Maestro, settore ovest della
                 Foglia
@@ -128,12 +130,11 @@
         <section id="info-s2" class="img-bg">
             <div class="container-xxl">
                 <div class="row g-5 justify-content-center align-items-stretch">
-                    <section class="container-xxl py-3 text text-center">
-                        <p>Venite a trovarci e lasciatevi conquistare dai sapori, dall'innovazione e dalla passione che
-                            mettiamo in ogni piatto.<br>
+                    <div class="container-xxl py-3 text text-center">
+                        <p>Venite a trovarci e lasciatevi conquistare dai sapori, dall'innovazione e dalla passione che mettiamo in ogni piatto.<br>
                             Siamo aperti tutti i giorni, dalle 18:00 alle 24:00.
                         </p>
-                    </section>
+                    </div>
 
                     <!--card come raggiungerci-->
                     <div class="col-12 col-md-8">
@@ -178,19 +179,19 @@
                             <h3 class="text-center">Contatti</h3>
                             <p>Hai dubbi o domande particolari? Non esitare a contattarci!</p>
                             <div class="d-flex mb-3 align-items-center">
-                                <div class="icon-info me-3"><img src="/images/icons/icon_contatti1.svg"></div>
+                                <div class="icon-info me-3"><img src="/images/icons/icon_contatti1.svg" alt="" aria-hidden="true"></div>
                                 <div>
                                     <p class="mb-0" style="font-weight: 700;">339 567 826 556</p>
                                 </div>
                             </div>
                             <div class="d-flex mb-3 align-items-center">
-                                <div class="icon-info me-3"><img src="/images/icons/icon_contatti2.svg"></div>
+                                <div class="icon-info me-3"><img src="/images/icons/icon_contatti2.svg" alt="" aria-hidden="true"></div>
                                 <div>
                                     <p class="mb-0" style="font-weight: 700;">info@edenleaf.com</p>
                                 </div>
                             </div>
                             <div class="d-flex mb-3 align-items-center">
-                                <div class="icon-info me-3"><img src="/images/icons/icon_contatti3.svg"></div>
+                                <div class="icon-info me-3"><img src="/images/icons/icon_contatti3.svg" alt="" aria-hidden="true"></div>
                                 <div>
                                     <p class="mb-0" style="font-weight: 700;">@edenleaf</p>
                                 </div>
@@ -204,19 +205,22 @@
 
                 <!-- foglie -->
                 <div class="leaves-wrapper">
-                    <div class="leaves leaves-right leaf-behind-content" style="
+                    <div
+                      class="leaves leaves-right leaf-layer-back"
+                      style="
                         --leaf-top:-60vh;
                         --leaf-right:-500px;
                         --leaf-width:1000px;
                   
-                        --leaf-right-1400:-360px;
-                        --leaf-width-1400:750px;
+                        --leaf-top-1400:-55vh;
+                        --leaf-right-1400:-430px;
+                        --leaf-width-1400:850px;
                   
                         --leaf-top-1024:-38vh;
                         --leaf-right-1024:-250px;
                         --leaf-width-1024:420px;
                       ">
-                        <img data-leaf-src="images/foglie/right-leaf-1.webp" class="leaf" />
+                      <img data-leaf-src="images/foglie/right-leaf-1.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
                     </div>
                 </div>
 
@@ -287,7 +291,7 @@
                                     Il nostro Bio-Lab è in grado di ricalibrare ogni ricetta eliminando
                                     gli allergeni specifici a livello molecolare, senza comprometterne il gusto.
                                 </p>
-                                <button class="glass-effect btn btn-custom-primary d-block mx-auto mx-md-0"
+                                <button class="glass-effect btn btn-custom-primary mx-auto mt-5 mb-5"
                                     type="button" onclick="window.location.href='menu.html'">
                                     Scopri il menù
                                 </button>
@@ -299,17 +303,20 @@
 
                     <!-- foglie -->
                     <div class="leaves-wrapper">
-                        <div class="leaves leaves-left leaf-left-medium leaf-between-copy-images" style="
+                        <div
+                          class="leaves leaves-left leaf-left-medium leaf-layer-back"
+                          style="
                             --leaf-top:-10vh;
                             --leaf-left:-200px;
                       
-                            --leaf-left-1400:-450px;
-                            --leaf-width-1400:380px;
+                            --leaf-top-1400:-8vh;
+                            --leaf-left-1400:-240px;
+                            --leaf-width-1400:760px;
                       
                             --leaf-left-1024:-300px;
                             --leaf-width-1024:280px;
                           ">
-                            <img data-leaf-src="images/foglie/left-leaf.webp" class="leaf" />
+                          <img data-leaf-src="images/foglie/left-leaf.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
                         </div>
                     </div>
 
@@ -339,7 +346,7 @@
                                     con
                                     il pianeta: approfondite la nostra filosofia circolare.
                                 </p>
-                                <button class="glass-effect btn btn-custom-primary d-block mx-auto mb-5 mx-md-0"
+                                <button class="glass-effect btn btn-custom-primary mx-auto mt-5 mb-5"
                                     type="button" onclick="window.location.href='sostenibilita.html'">
                                     Impegno sostenibile
                                 </button>
@@ -377,7 +384,7 @@
                                     una risposta immediata dal team.
                                 </p>
 
-                                <button class="glass-effect btn btn-custom-primary d-block mx-auto mb-5 mx-md-0"
+                                <button class="glass-effect btn btn-custom-primary mx-auto mt-5 mb-5"
                                     type="button" onclick="window.location.href='prenota.html'">
                                     Contattaci
                                 </button>
@@ -386,6 +393,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
     </main>
 
@@ -394,8 +402,10 @@
             <img src="images/logo/logo-footer.webp" class="footer-logo" alt="Eden Leaf"
                 title="Eden Leaf - Il primo ristorante Solarpunk" />
             <div>
-                <p class="footer-tagline">Il primo ristorante Solarpunk.</p>
+                <p class="footer-tagline">Il primo ristorante Solarpunk</p>
                 <p class="footer-hours">Ogni giorno dalle 18:00 alle 24:00</p>
+                <p>© 2025 Eden Leaf Ecosystems.<br>
+                    Tutti i diritti riservati alla Natura.<br>
                 <p>© 2025 Eden Leaf Ecosystems.<br>
                     Tutti i diritti riservati alla Natura.<br>
                     P.IVA 000123SOLAR</p>
