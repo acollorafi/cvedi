@@ -820,6 +820,29 @@ p {
     transition: all 0.3s ease-in-out;
 }
 
+.expert-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+
+.expert-nav.carousel-arrow-btn {
+    position: absolute;
+}
+
+.expert-nav > .carousel-control-prev-icon,
+.expert-nav > .carousel-control-next-icon {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: block;
+    pointer-events: none;
+}
+
 .carousel-arrow-btn:hover {
     background-color: rgba(68, 222, 224, 0.2) !important;
     border-color: #44DEE0;
@@ -1695,16 +1718,6 @@ Box-sizing uniforme
     overflow: hidden;
 }
 
-.expert-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    cursor: pointer;
-    z-index: 100;
-    display: none;
-}
-
 .prev-expert {
     left: 0;
     right: auto;
@@ -1713,6 +1726,11 @@ Box-sizing uniforme
 .next-expert {
     right: 0;
     left: auto;
+}
+
+.prev-expert::after,
+.next-expert::after {
+    content: none;
 }
 
 .expert-item {
@@ -1736,13 +1754,22 @@ Box-sizing uniforme
     }
 
     .experts-carousel-wrapper {
-        padding: 0 3.75rem;
+        padding: 0 3.25rem;
+    }
+
+    .experts-carousel-wrapper .expert-item .card-team {
+        width: min(100%, 15rem);
+        margin-inline: auto;
     }
 
     .expert-nav {
         display: block;
-        width: 48px;
-        height: 48px;
+        top: 50%;
+        bottom: auto;
+        width: 52px;
+        height: 52px;
+        transform: translateY(-50%);
+        opacity: 1;
     }
 }
 
