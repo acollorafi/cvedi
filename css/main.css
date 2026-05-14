@@ -159,20 +159,27 @@ p {
     }
 }
 
+.breadcrumb-wrapper {
+    position: absolute; 
+    padding: 20px;
+
+}
+
 .breadcrumb {
+    display: inline-flex;   
+    align-items: center;   
+    gap: 6px;     
     color: var(--bs-white);
     text-align: center;
-    margin-top: 150px;
+    margin-top: 100px;
     font-size: 1.4rem;
     text-decoration: none;
-    /* Rimuove la sottolineatura standard dei link se non la vuoi */
-    transition: color 0.3s ease;
-    /* Opzionale: rende il cambio colore fluido */
+    transition: color 0.3s ease;   
+        z-index: 100;  
 }
 
 .breadcrumb:hover {
     color: var(--bs-cyan);
-    /* Questo è l'azzurro standard di Bootstrap, puoi cambiarlo con 'cyan' o un codice HEX */
 }
 
 
