@@ -23,6 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const title = copy.querySelector("h1");
   const subtitle = copy.querySelector(".hero-subtitle");
 
+  gsap.set([canopy, copy, title, subtitle, techline, scrollHint], {
+    force3D: true,
+    willChange: "transform, opacity"
+  });
+
+  gsap.set([title, subtitle, techline], {
+    transformOrigin: "50% 50%"
+  });
+
   const timeline = gsap.timeline({
     defaults: {
       ease: "none"
@@ -30,8 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: intro,
       start: "top top",
-      end: "bottom top",
-      scrub: 0.8
+      end: "+=95%",
+      scrub: 0.35,
+      fastScrollEnd: true,
+      invalidateOnRefresh: true
     }
   });
 
@@ -47,62 +58,62 @@ document.addEventListener("DOMContentLoaded", () => {
     .to(
       title,
       {
-        scale: 1.66,
-        yPercent: 20,
-        duration: 0.82
+        scale: 1.48,
+        yPercent: 16,
+        duration: 0.58
       },
       0
     )
     .to(
       subtitle,
       {
-        scale: 1.28,
-        yPercent: 14,
-        duration: 0.78
+        scale: 1.16,
+        yPercent: 10,
+        duration: 0.54
       },
       0
     )
     .to(
       techline,
       {
-        scale: 1.24,
-        yPercent: 16,
-        duration: 0.78
+        scale: 1.12,
+        yPercent: 10,
+        duration: 0.5
       },
       0
     )
     .to(
       canopy,
       {
-        scale: 4.6,
-        yPercent: -2,
-        duration: 0.24
+        scale: 3.65,
+        yPercent: -1,
+        duration: 0.2
       },
       0
     )
     .to(
       vignette,
       {
-        opacity: 0.12,
-        duration: 0.55
+        opacity: 0.1,
+        duration: 0.38
       },
-      0.08
+      0.04
     )
     .to(
       canopy,
       {
         opacity: 0,
-        duration: 0.08
+        duration: 0.1
       },
-      0.2
+      0.16
     )
     .to(
       scrollHint,
       {
         opacity: 0,
-        yPercent: -18,
-        duration: 0.12
+        yPercent: -12,
+        duration: 0.1
       },
-      0.08
+      0.04
     );
 });

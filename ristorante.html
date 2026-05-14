@@ -15,6 +15,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        @media (max-width: 767px) {
+            .restaurant-team-carousel #restaurantTeamCarousel {
+                padding-inline: 2.9rem;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-item .card {
+                width: min(100%, 15.5rem) !important;
+                margin-inline: auto;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev,
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next {
+                position: absolute;
+                top: 50%;
+                bottom: auto;
+                width: 44px;
+                height: 44px;
+                transform: translateY(-50%);
+                opacity: 1;
+                z-index: 10;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev {
+                left: 0;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next {
+                right: 0;
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev:hover,
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next:hover {
+                transform: translateY(calc(-50% - 2px));
+            }
+
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev:active,
+            .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next:active {
+                transform: translateY(-50%);
+            }
+        }
+    </style>
 
 </head>
 
@@ -191,8 +233,8 @@
             <div class="container-xxl padding-section text-center">
                 <h2>Il nostro team</h2>
                 <!-- Mobile -->
-                <div class="d-block d-md-none carousel-padding">
-                    <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="d-block d-md-none carousel-padding restaurant-team-carousel">
+                    <div id="restaurantTeamCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
 
                             <div class="carousel-item active">
@@ -261,13 +303,13 @@
                             </div>
                         </div>
 
-                        <button class="carousel-control-prev carousel-arrow-btn" type="button"
-                            data-bs-target="#teamCarousel" data-bs-slide="prev" aria-label="Membro precedente">
+                        <button class="glass-effect carousel-control-prev carousel-arrow-btn" type="button"
+                            data-bs-target="#restaurantTeamCarousel" data-bs-slide="prev" aria-label="Membro precedente">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         </button>
 
-                        <button class="carousel-control-next carousel-arrow-btn" type="button"
-                            data-bs-target="#teamCarousel" data-bs-slide="next" aria-label="Membro successivo">
+                        <button class="glass-effect carousel-control-next carousel-arrow-btn" type="button"
+                            data-bs-target="#restaurantTeamCarousel" data-bs-slide="next" aria-label="Membro successivo">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         </button>
                     </div>
