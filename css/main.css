@@ -160,22 +160,22 @@ p {
 }
 
 .breadcrumb-wrapper {
-    position: absolute; 
+    position: absolute;
     padding: 20px;
 
 }
 
 .breadcrumb {
-    display: inline-flex;   
-    align-items: center;   
-    gap: 6px;     
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     color: var(--bs-white);
     text-align: center;
     margin-top: 100px;
     font-size: 1.4rem;
     text-decoration: none;
-    transition: color 0.3s ease;   
-        z-index: 100;  
+    transition: color 0.3s ease;
+    z-index: 100;
 }
 
 .breadcrumb:hover {
@@ -417,7 +417,7 @@ p {
 }
 
 .btn-menu {
-  
+
     background: transparent;
     color: var(--bs-white);
 
@@ -501,7 +501,8 @@ p {
 }
 
 .card p {
-    font-size: 16px; /*prima era 18px*/
+    font-size: 16px;
+    /*prima era 18px*/
     text-align: center;
     text-shadow: 0 0 15px #000, 0 0 100px #000;
 }
@@ -551,7 +552,8 @@ p {
 }
 
 .card-info p {
-    font-size: 16px; /*prima era 18px*/
+    font-size: 16px;
+    /*prima era 18px*/
     text-shadow: 0 0 15px #000, 0 0 100px #000;
 }
 
@@ -724,8 +726,8 @@ p {
 }
 
 .navbar-brand.glass-effect {
-  border-radius: 50%;
-  overflow: hidden; 
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 
@@ -846,8 +848,8 @@ p {
     position: absolute;
 }
 
-.expert-nav > .carousel-control-prev-icon,
-.expert-nav > .carousel-control-next-icon {
+.expert-nav>.carousel-control-prev-icon,
+.expert-nav>.carousel-control-next-icon {
     position: absolute;
     inset: 0;
     margin: auto;
@@ -984,8 +986,8 @@ a.nav-link:hover {
     }
 
     .btn-custom-primary {
-        padding: 2rem 2rem; 
-        font-size: 1.2rem;    
+        padding: 2rem 2rem;
+        font-size: 1.2rem;
     }
 
     .btn-language {
@@ -1119,8 +1121,8 @@ footer {
     z-index: 20;
 }
 
-#info-s2 > .container-xxl > .row,
-#info-s2 > .container-xxl > .btn,
+#info-s2>.container-xxl>.row,
+#info-s2>.container-xxl>.btn,
 #info-s2 .container-xxl.padding-section.text.text-center,
 #info-s2 .card-info,
 #info-s2 .card-accessibility {
@@ -1392,7 +1394,7 @@ footer {
     user-select: none;
 }
 
-.page-home-intro-prova #home-s1 > .container.section.padding-section {
+.page-home-intro-prova #home-s1>.container.section.padding-section {
     position: relative;
     z-index: 4;
     margin-top: -28vh;
@@ -1441,7 +1443,7 @@ footer {
         max-width: 50%;
     }
 
-    .page-home-intro-prova #home-s1 > .container.section.padding-section {
+    .page-home-intro-prova #home-s1>.container.section.padding-section {
         margin-top: 0;
         padding-top: 110px;
     }
@@ -1468,7 +1470,7 @@ footer {
         max-width: 58%;
     }
 
-    .page-home-intro-prova #home-s1 > .container.section.padding-section {
+    .page-home-intro-prova #home-s1>.container.section.padding-section {
         padding-top: 60px;
     }
 }
@@ -1498,6 +1500,7 @@ footer {
 }
 
 @keyframes homeIntroScrollText {
+
     0%,
     100% {
         opacity: 0.5;
@@ -1610,11 +1613,11 @@ footer {
 
 .menu-hero-bg img {
     position: absolute;
-    bottom: -50px;
+    bottom: -0px;
     left: 50%;
     transform: translateX(-60%);
     z-index: 10;
-    width: 250%;
+    width: 200%;
     height: auto;
     max-width: none;
 }
@@ -2559,67 +2562,67 @@ input::-webkit-calendar-picker-indicator {
 #home-s1>.container.section.padding-section {
     position: relative;
     z-index: 3;
-  }
+}
 
-  .faq-above-leaves {
+.faq-above-leaves {
     position: relative;
     z-index: 3;
-  }
+}
 
-  #restaurant-s1 .container-xxl {
+#restaurant-s1 .container-xxl {
     position: relative;
     z-index: 20;
-  }
+}
 
 
-  #restaurant-s1 .card,
-  #restaurant-s1 .btn,
-  #restaurant-s1 h1,
-  #restaurant-s1 h2,
-  #restaurant-s1 h3,
-  #restaurant-s1 p,
-  #book-s1 h1,
-  #book-s1 h2,
-  #book-s1 h3,
-  #book-s1 p,
-  #info-s1 h1,
-  #info-s1 h2,
-  #info-s1 h3,
-  #info-s1 p,
-  #sustainability-s1 h1,
-  #sustainability-s1 h2,
-  #sustainability-s1 h3,
-  #sustainability-s1 p,
-  .menu-hero-bg h1,
-  .menu-hero-bg h2,
-  .menu-hero-bg h3,
-  .menu-hero-bg p,
-  .dish-hero-bg h1,
-  .dish-hero-bg h2,
-  .dish-hero-bg h3,
-  .dish-hero-bg p {
+#restaurant-s1 .card,
+#restaurant-s1 .btn,
+#restaurant-s1 h1,
+#restaurant-s1 h2,
+#restaurant-s1 h3,
+#restaurant-s1 p,
+#book-s1 h1,
+#book-s1 h2,
+#book-s1 h3,
+#book-s1 p,
+#info-s1 h1,
+#info-s1 h2,
+#info-s1 h3,
+#info-s1 p,
+#sustainability-s1 h1,
+#sustainability-s1 h2,
+#sustainability-s1 h3,
+#sustainability-s1 p,
+.menu-hero-bg h1,
+.menu-hero-bg h2,
+.menu-hero-bg h3,
+.menu-hero-bg p,
+.dish-hero-bg h1,
+.dish-hero-bg h2,
+.dish-hero-bg h3,
+.dish-hero-bg p {
     position: relative;
     z-index: 20;
-  }
+}
 
-  main > section.container.section.padding-section.text-center:last-of-type {
+main>section.container.section.padding-section.text-center:last-of-type {
     position: relative;
     z-index: 3;
-  }
+}
 
-  #home-s1 + section.container.section.padding-section h2,
-  #home-s1 + section.container.section.padding-section > p {
+#home-s1+section.container.section.padding-section h2,
+#home-s1+section.container.section.padding-section>p {
     position: relative;
     z-index: 4;
-  }
+}
 
-  #home-s1 + section.container.section.padding-section .carousel-padding,
-  #home-s1 + section.container.section.padding-section > .d-none.d-md-block {
+#home-s1+section.container.section.padding-section .carousel-padding,
+#home-s1+section.container.section.padding-section>.d-none.d-md-block {
     position: relative;
     z-index: 1;
-  }
-  
-  .leaves {
+}
+
+.leaves {
     position: absolute;
     top: var(--leaf-top, -20vh);
     left: var(--leaf-left, auto);
@@ -2659,27 +2662,27 @@ input::-webkit-calendar-picker-indicator {
 .leaves-right .leaf:nth-child(2) {
     top: 65%;
     right: -30px;
-  }
-  
-  /* utilities */
-  
-  .leaf-layer-front {
+}
+
+/* utilities */
+
+.leaf-layer-front {
     --leaf-z: 3;
-  }
+}
 
-  .leaf-layer-back {
+.leaf-layer-back {
     --leaf-z: 1;
-  }
+}
 
-  .leaf-layer-image-front {
+.leaf-layer-image-front {
     --leaf-z: 2;
-  }
+}
 
-  .leaf-layer-hero-front {
+.leaf-layer-hero-front {
     --leaf-z: 12;
-  }
-  
-  .leaf-left-small {
+}
+
+.leaf-left-small {
     --leaf-width: 500px;
 }
 
