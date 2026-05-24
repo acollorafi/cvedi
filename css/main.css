@@ -531,6 +531,11 @@ p {
     font-size: 24px;
 }
 
+.card-team .p-02 {
+    width: 100%;
+    text-align: center;
+}
+
 .card-info {
     /*anche questa mi sembra uguale alla card base, quindi metterei quella, al limite mettiamo solo le differenze*/
     color: var(--bs-white);
@@ -831,7 +836,7 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.30);
     cursor: pointer;
     z-index: 100;
     display: none;
@@ -1343,15 +1348,18 @@ footer {
     text-align: center;
     gap: 1.1rem;
     padding-top: 34vh;
+    width: 100%;
+    max-width: none;
+    padding-inline: clamp(1.5rem, 4vw, 4rem);
 }
 
 .page-home-intro-prova .home-intro-techline {
     position: relative;
     z-index: 8;
     align-self: flex-start;
-    width: min(760px, 62vw);
-    max-width: 100%;
-    margin-left: -11vw;
+    width: clamp(760px, 52vw, 1400px);
+    max-width: none;
+    margin-left: calc(50% - 50vw);
     opacity: 0.8;
     margin-top: 0.55rem;
     margin-bottom: 1.15rem;
@@ -1376,7 +1384,7 @@ footer {
 .page-home-intro-prova .home-intro-canopy {
     z-index: 7;
     inset: 50% auto auto 50%;
-    width: min(2050px, 156vw);
+    width: clamp(2200px, 156vw, 4200px);
     max-width: none;
     transform: translate(-50%, -50%) scale(0.86);
     transform-origin: center center;
@@ -1469,6 +1477,23 @@ footer {
     .page-home-intro-prova .home-intro-techline {
         margin-top: 0.8rem;
         margin-bottom: 1.35rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .page-home-intro-prova .home-intro-copy {
+        padding-top: 32vh;
+        padding-inline: clamp(2rem, 4.5vw, 5rem);
+    }
+
+    .page-home-intro-prova .home-intro-techline {
+        width: clamp(980px, 56vw, 1600px);
+        margin-left: calc(50% - 50vw);
+    }
+
+    .page-home-intro-prova .home-intro-canopy {
+        width: clamp(2800px, 170vw, 5200px);
+        transform: translate(-50%, -50%) scale(0.88);
     }
 }
 
@@ -1770,6 +1795,14 @@ Box-sizing uniforme
     position: relative;
 }
 
+.step-carousel-shell {
+    position: relative;
+}
+
+.experts-mobile-card {
+    padding: 1.5rem 0.9rem;
+}
+
 .experts-row {
     overflow: hidden;
 }
@@ -1784,11 +1817,6 @@ Box-sizing uniforme
     left: auto;
 }
 
-.prev-expert::after,
-.next-expert::after {
-    content: none;
-}
-
 .expert-item {
     display: none;
     opacity: 0;
@@ -1801,8 +1829,75 @@ Box-sizing uniforme
 }
 
 @media (max-width: 767px) {
+    .menu-mobile-carousel .menu-card {
+        width: min(100%, 18.5rem);
+        padding: 24px 20px;
+    }
+
+    .menu-mobile-carousel .menu-card-img {
+        width: 80%;
+        max-width: 260px;
+    }
+
+    .menu-mobile-carousel .menu-card-text {
+        padding-top: 26%;
+    }
+
     .step-item > .col-12:first-child {
         display: none;
+    }
+
+    .menu-mobile-carousel {
+        padding: 0 3.25rem;
+        position: relative;
+    }
+
+    .menu-mobile-carousel .carousel-control-prev.custom-ctrl,
+    .menu-mobile-carousel .carousel-control-next.custom-ctrl {
+        position: absolute;
+        top: 56%;
+        bottom: auto;
+        z-index: 5;
+        width: 48px;
+        height: 48px;
+        transform: translateY(-50%);
+    }
+
+    .menu-mobile-carousel .carousel-control-prev.custom-ctrl {
+        left: 0.85rem;
+    }
+
+    .menu-mobile-carousel .carousel-control-next.custom-ctrl {
+        right: 0.85rem;
+    }
+
+    .step-carousel-shell {
+        width: min(24.75rem, calc(100vw - 7rem));
+        margin-inline: auto;
+        padding: 1.35rem 1rem;
+        border-radius: 24px;
+        border: var(--bs-glass-border);
+        background: rgba(0, 0, 0, 0.30);
+        box-shadow: 3px -3px 12px 0 rgba(68, 222, 224, 0.22) inset, -3px 3px 6px 0 rgba(255, 255, 255, 0.25) inset;
+        overflow: visible;
+    }
+
+    .step-item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .step-nav {
+        width: 48px;
+        height: 48px;
+    }
+
+    .prev-step {
+        left: -3.4rem;
+    }
+
+    .next-step {
+        right: -3.4rem;
     }
 
     #teamCarousel .carousel-control-prev {
@@ -1814,7 +1909,7 @@ Box-sizing uniforme
     }
 
     .experts-carousel-wrapper {
-        padding: 0 3.25rem;
+        padding: 0 2.7rem;
     }
 
     .experts-carousel-wrapper .expert-item .card-team {
@@ -1826,11 +1921,25 @@ Box-sizing uniforme
         display: block;
         top: 50%;
         bottom: auto;
-        width: 52px;
-        height: 52px;
+        width: 48px;
+        height: 48px;
         transform: translateY(-50%);
         opacity: 1;
     }
+
+    .prev-expert {
+        left: 0.1rem;
+    }
+
+    .next-expert {
+        right: 0.1rem;
+    }
+
+    .prev-expert::after,
+    .next-expert::after {
+        content: none;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -2119,6 +2228,28 @@ input::-webkit-calendar-picker-indicator {
 .custom-ctrl {
     width: 5%;
     opacity: 0.8;
+}
+
+.menu-mobile-carousel .carousel-control-prev.custom-ctrl,
+.menu-mobile-carousel .carousel-control-next.custom-ctrl {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    z-index: 5;
+    width: 48px;
+    height: 48px;
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.menu-mobile-carousel .carousel-control-prev.custom-ctrl:hover,
+.menu-mobile-carousel .carousel-control-next.custom-ctrl:hover {
+    transform: translateY(calc(-50% - 2px));
+}
+
+.menu-mobile-carousel .carousel-control-prev.custom-ctrl:active,
+.menu-mobile-carousel .carousel-control-next.custom-ctrl:active {
+    transform: translateY(-50%);
 }
 
 
@@ -2588,6 +2719,21 @@ input::-webkit-calendar-picker-indicator {
         --leaf-width: 650px;
         --img-top: -260px;
         --img-left: -280px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .leaves {
+        top: var(--leaf-top-1600, var(--leaf-top, -20vh));
+        left: var(--leaf-left-1600, var(--leaf-left, auto));
+        right: var(--leaf-right-1600, var(--leaf-right, auto));
+    }
+
+    .leaf {
+        width: var(--leaf-width-1600, var(--leaf-width, 240px));
+        top: var(--img-top-1600, var(--img-top, 0));
+        left: var(--img-left-1600, var(--img-left, auto));
+        right: var(--img-right-1600, var(--img-right, auto));
     }
 }
 
