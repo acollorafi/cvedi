@@ -2517,14 +2517,14 @@ input::-webkit-calendar-picker-indicator {
 }
 
 #padding-sfera {
-    padding-top: 20vh;
+    padding-top: 0vh;
 }
 #padding-petali {
     padding-top: 10vh;
 }
 
 #padding-gemme {
-    padding-top: 10vh;
+    padding-top: 12vh;
 }
 
 @media (min-width: 768px) {
@@ -2537,7 +2537,7 @@ input::-webkit-calendar-picker-indicator {
     }
 
     #padding-sfera {
-        padding-top: 35vh;
+        padding-top: 20vh;
     }
 
     #padding-petali {
