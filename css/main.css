@@ -2516,8 +2516,15 @@ input::-webkit-calendar-picker-indicator {
     height: auto;
 }
 
-.discover-ingredients-heading {
+#padding-sfera {
     padding-top: 20vh;
+}
+#padding-petali {
+    padding-top: 10vh;
+}
+
+#padding-gemme {
+    padding-top: 10vh;
 }
 
 @media (min-width: 768px) {
@@ -2529,8 +2536,16 @@ input::-webkit-calendar-picker-indicator {
         width: 60%;
     }
 
-    .discover-ingredients-heading {
+    #padding-sfera {
         padding-top: 35vh;
+    }
+
+    #padding-petali {
+    padding-top: 35vh;
+    }
+
+    #padding-gemme {
+        padding-top: 45vh;
     }
 }
 
