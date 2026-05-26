@@ -367,9 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', initExpertsCarousel);
 });
 
-/********************************************
-           HERO HOME
-********************************************/
+//           HERO HOME
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body;
   const intro = document.querySelector(".home-intro-demo");
