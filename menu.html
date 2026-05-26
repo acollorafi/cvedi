@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu - Eden Leaf</title>
+  <meta name="description" content="Esplora il menu di Eden Leaf con piatti solarpunk, proposte sostenibili e percorsi dedicati come Sintetico, Neon-free e BioAI.">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -193,7 +194,7 @@
 
           <!-- Menu SINTETICO - Mobile -->
           <div class="d-block d-md-none" data-menu="sintetico">
-            <div id="menuSinteticoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="menuSinteticoCarousel" class="carousel slide menu-mobile-carousel" data-bs-ride="carousel">
               <div class="carousel-inner">
 
                 <div class="carousel-item active">
@@ -274,11 +275,11 @@
                 </div>
               </div>
 
-              <button class="carousel-control-prev" type="button" data-bs-target="#menuSinteticoCarousel"
+              <button class="carousel-control-prev custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#menuSinteticoCarousel"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#menuSinteticoCarousel"
+              <button class="carousel-control-next custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#menuSinteticoCarousel"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
               </button>
@@ -363,7 +364,7 @@
 
           <!-- Menu NEON-FREE - Mobile -->
           <div class="d-block d-md-none" data-menu="neon-free">
-            <div id="menuNeonFreeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="menuNeonFreeCarousel" class="carousel slide menu-mobile-carousel" data-bs-ride="carousel">
               <div class="carousel-inner">
 
                 <div class="carousel-item active">
@@ -444,11 +445,11 @@
                 </div>
               </div>
 
-              <button class="carousel-control-prev" type="button" data-bs-target="#menuNeonFreeCarousel"
+              <button class="carousel-control-prev custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#menuNeonFreeCarousel"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#menuNeonFreeCarousel"
+              <button class="carousel-control-next custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#menuNeonFreeCarousel"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
               </button>
@@ -536,7 +537,7 @@
 
           <!-- Menu BioAI - Mobile -->
           <div class="d-block d-md-none" data-menu="bio-ai">
-            <div id="menuBioAiCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="menuBioAiCarousel" class="carousel slide menu-mobile-carousel" data-bs-ride="carousel">
               <div class="carousel-inner">
 
                 <div class="carousel-item active">
@@ -617,17 +618,15 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              <button class="carousel-control-prev custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#menuBioAiCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#menuBioAiCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#menuBioAiCarousel"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#menuBioAiCarousel"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
           </div>
         </div>
 
@@ -714,15 +713,19 @@
         class="leaves leaves-right leaf-layer-back"
         style="
           --leaf-top:-10vh;
-          --leaf-right:-500px;
+          --leaf-right:-450px;
           --leaf-width:1000px;
     
           --leaf-top-1400:-8vh;
-          --leaf-right-1400:-420px;
+          --leaf-right-1400:-460px;
           --leaf-width-1400:850px;
     
-          --leaf-right-1024:-200px;
+          --leaf-right-1024:-280px;
           --leaf-width-1024:500px;
+
+          --leaf-top-1600:-12vh;
+          --leaf-right-1600:-560px;
+          --leaf-width-1600:1180px;
         ">
         <img data-leaf-src="images/foglie/leaf-tuttipiatti.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
       </div>
@@ -739,7 +742,7 @@
 
       <!-- Antipasti - Mobile -->
       <div class="d-block d-md-none">
-        <div id="antipastiCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="antipastiCarousel" class="carousel slide menu-mobile-carousel" data-bs-ride="carousel">
           <div class="carousel-inner">
 
             <div class="carousel-item active">
@@ -799,10 +802,10 @@
             </div>
           </div>
 
-          <button class="carousel-control-prev" type="button" data-bs-target="#antipastiCarousel" data-bs-slide="prev">
+          <button class="carousel-control-prev custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#antipastiCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#antipastiCarousel" data-bs-slide="next">
+          <button class="carousel-control-next custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#antipastiCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>
         </div>
@@ -873,7 +876,7 @@
 
       <!-- Primi - Mobile -->
       <div class="d-block d-md-none">
-        <div id="primiCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="primiCarousel" class="carousel slide menu-mobile-carousel" data-bs-ride="carousel">
           <div class="carousel-inner">
 
             <div class="carousel-item active">
@@ -934,10 +937,10 @@
             </div>
           </div>
 
-          <button class="carousel-control-prev" type="button" data-bs-target="#primiCarousel" data-bs-slide="prev">
+          <button class="carousel-control-prev custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#primiCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#primiCarousel" data-bs-slide="next">
+          <button class="carousel-control-next custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#primiCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>
         </div>
@@ -1008,12 +1011,15 @@
     class="leaves leaves-left leaf-layer-back"
     style="
       --leaf-top:-60vh;
-      --leaf-left:-900px;
+      --leaf-left:-1020px;
       --leaf-width: 1200px;
 
       --leaf-top-1400:-56vh;
-      --leaf-left-1400:-760px;
+      --leaf-left-1400:-800px;
       --leaf-width-1400:900px;
+
+      --leaf-left-1600:-1080px;
+      --leaf-width-1600:980px;
     ">
     <img data-leaf-src="images/foglie/left-leaf.webp" class="leaf" src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" aria-hidden="true" />
   </div>
@@ -1024,7 +1030,7 @@
 
       <!-- Secondi - Mobile -->
       <div class="d-block d-md-none">
-        <div id="secondiCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="secondiCarousel" class="carousel slide menu-mobile-carousel" data-bs-ride="carousel">
           <div class="carousel-inner">
 
             <div class="carousel-item active">
@@ -1085,10 +1091,10 @@
             </div>
           </div>
 
-          <button class="carousel-control-prev" type="button" data-bs-target="#secondiCarousel" data-bs-slide="prev">
+          <button class="carousel-control-prev custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#secondiCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#secondiCarousel" data-bs-slide="next">
+          <button class="carousel-control-next custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#secondiCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>
         </div>
@@ -1158,7 +1164,7 @@
 
       <!-- Dolci - Mobile -->
       <div class="d-block d-md-none">
-        <div id="dolciCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="dolciCarousel" class="carousel slide menu-mobile-carousel" data-bs-ride="carousel">
           <div class="carousel-inner">
 
             <div class="carousel-item active">
@@ -1217,10 +1223,10 @@
             </div>
           </div>
 
-          <button class="carousel-control-prev" type="button" data-bs-target="#dolciCarousel" data-bs-slide="prev">
+          <button class="carousel-control-prev custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#dolciCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#dolciCarousel" data-bs-slide="next">
+          <button class="carousel-control-next custom-ctrl glass-effect carousel-arrow-btn" type="button" data-bs-target="#dolciCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>
         </div>
