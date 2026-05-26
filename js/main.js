@@ -374,7 +374,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const page = document.body;
   const intro = document.querySelector(".home-intro-demo");
 
-  if (!page.classList.contains("page-home-intro-prova") || !intro) {
+  if (!page.classList.contains("page-home-intro") || !intro) {
     return;
   }
 

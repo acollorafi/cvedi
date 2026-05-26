@@ -1308,18 +1308,18 @@ footer {
 
 }
 
-.page-home-intro-prova #home-s1 {
+.page-home-intro #home-s1 {
     background-position: center 16%;
 }
 
-.page-home-intro-prova .home-intro-demo {
+.page-home-intro .home-intro-demo {
     position: relative;
     height: 136vh;
     overflow: visible;
     z-index: 6;
 }
 
-.page-home-intro-prova .home-intro-sticky {
+.page-home-intro .home-intro-sticky {
     position: sticky;
     top: 0;
     height: 100vh;
@@ -1327,21 +1327,21 @@ footer {
     z-index: 6;
 }
 
-.page-home-intro-prova .home-intro-vignette,
-.page-home-intro-prova .home-intro-copy,
-.page-home-intro-prova .home-intro-canopy {
+.page-home-intro .home-intro-vignette,
+.page-home-intro .home-intro-copy,
+.page-home-intro .home-intro-canopy {
     position: absolute;
     inset: 0;
 }
 
-.page-home-intro-prova .home-intro-vignette {
+.page-home-intro .home-intro-vignette {
     background:
         radial-gradient(circle at center, rgba(0, 0, 0, 0) 20%, rgba(14, 18, 15, 0.08) 48%, rgba(14, 18, 15, 0.34) 100%);
     z-index: 1;
     pointer-events: none;
 }
 
-.page-home-intro-prova .home-intro-copy {
+.page-home-intro .home-intro-copy {
     z-index: 8;
     display: flex;
     flex-direction: column;
@@ -1355,7 +1355,7 @@ footer {
     padding-inline: clamp(1.5rem, 4vw, 4rem);
 }
 
-.page-home-intro-prova .home-intro-techline {
+.page-home-intro .home-intro-techline {
     position: relative;
     z-index: 8;
     align-self: flex-start;
@@ -1367,7 +1367,7 @@ footer {
     margin-bottom: 1.15rem;
 }
 
-.page-home-intro-prova .home-intro-scroll {
+.page-home-intro .home-intro-scroll {
     margin: 0.75rem 0 0;
     font-size: 0.95rem;
     letter-spacing: 0.16em;
@@ -1379,11 +1379,11 @@ footer {
     gap: 0;
 }
 
-.page-home-intro-prova .home-intro-scroll span {
+.page-home-intro .home-intro-scroll span {
     animation: homeIntroScrollText 1.8s ease-in-out infinite;
 }
 
-.page-home-intro-prova .home-intro-canopy {
+.page-home-intro .home-intro-canopy {
     z-index: 7;
     inset: 50% auto auto 50%;
     width: clamp(2200px, 156vw, 4200px);
@@ -1394,7 +1394,7 @@ footer {
     user-select: none;
 }
 
-.page-home-intro-prova #home-s1>.container.section.padding-section {
+.page-home-intro #home-s1>.container.section.padding-section {
     position: relative;
     z-index: 4;
     margin-top: -28vh;
@@ -1402,19 +1402,19 @@ footer {
 }
 
 @media (max-width: 1199.98px) {
-    .page-home-intro-prova .home-intro-demo {
+    .page-home-intro .home-intro-demo {
         height: auto;
         overflow: visible;
     }
 
-    .page-home-intro-prova .home-intro-sticky {
+    .page-home-intro .home-intro-sticky {
         position: relative;
         height: auto;
         overflow: visible;
         min-height: 0;
     }
 
-    .page-home-intro-prova .home-intro-copy {
+    .page-home-intro .home-intro-copy {
         position: relative;
         inset: auto;
         padding-inline: 2rem;
@@ -1422,19 +1422,19 @@ footer {
         min-height: 50dvh;
     }
 
-    .page-home-intro-prova .home-intro-canopy {
+    .page-home-intro .home-intro-canopy {
         display: none;
     }
 
-    .page-home-intro-prova .home-intro-vignette {
+    .page-home-intro .home-intro-vignette {
         display: none;
     }
 
-    .page-home-intro-prova .home-intro-scroll {
+    .page-home-intro .home-intro-scroll {
         display: none;
     }
 
-    .page-home-intro-prova .home-intro-techline {
+    .page-home-intro .home-intro-techline {
         align-self: stretch;
         margin-left: 0;
         margin-top: 38dvh;
@@ -1443,14 +1443,14 @@ footer {
         max-width: 50%;
     }
 
-    .page-home-intro-prova #home-s1>.container.section.padding-section {
+    .page-home-intro #home-s1>.container.section.padding-section {
         margin-top: 0;
         padding-top: 110px;
     }
 }
 
 @media (max-width: 767px) {
-    .page-home-intro-prova .home-intro-copy {
+    .page-home-intro .home-intro-copy {
         justify-content: center;
         min-height: 50dvh;
         height: 50dvh;
@@ -1458,7 +1458,7 @@ footer {
         gap: 0.75rem;
     }
 
-    .page-home-intro-prova .home-intro-techline {
+    .page-home-intro .home-intro-techline {
         position: absolute;
         left: 0;
         transform: none;
@@ -1470,30 +1470,30 @@ footer {
         max-width: 58%;
     }
 
-    .page-home-intro-prova #home-s1>.container.section.padding-section {
+    .page-home-intro #home-s1>.container.section.padding-section {
         padding-top: 60px;
     }
 }
 
 @media (min-width: 768px) {
-    .page-home-intro-prova .home-intro-techline {
+    .page-home-intro .home-intro-techline {
         margin-top: 0.8rem;
         margin-bottom: 1.35rem;
     }
 }
 
 @media (min-width: 1600px) {
-    .page-home-intro-prova .home-intro-copy {
+    .page-home-intro .home-intro-copy {
         padding-top: 32vh;
         padding-inline: clamp(2rem, 4.5vw, 5rem);
     }
 
-    .page-home-intro-prova .home-intro-techline {
+    .page-home-intro .home-intro-techline {
         width: clamp(980px, 56vw, 1600px);
         margin-left: calc(50% - 50vw);
     }
 
-    .page-home-intro-prova .home-intro-canopy {
+    .page-home-intro .home-intro-canopy {
         width: clamp(2800px, 170vw, 5200px);
         transform: translate(-50%, -50%) scale(0.88);
     }
