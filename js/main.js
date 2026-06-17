@@ -267,9 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/********************************************
-           PAGINA sostenibilità
-********************************************/
+// sostenibilità
 document.addEventListener('DOMContentLoaded', () => {
   const step = document.querySelectorAll('.step-item');
   const prevButton = document.querySelector('.prev-step');
@@ -367,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', initExpertsCarousel);
 });
 
-//           HERO HOME
+//HERO HOME
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body;
   const intro = document.querySelector(".home-intro-demo");
