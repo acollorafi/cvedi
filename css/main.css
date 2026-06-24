@@ -671,7 +671,7 @@ p {
 
     border-radius: 54px;
     border: var(--bs-glass-border);
-    background: radial-gradient(86.59% 86.59% at 50% 50%, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);
+    background: rgba(0, 0, 0, 0.446);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), -3px 3px 11.9px 0 rgba(255, 255, 255, 0.30) inset, 3px -3px 16.2px 0 rgba(68, 222, 224, 0.30) inset;
 
     color: #F5F5F5;
@@ -680,11 +680,6 @@ p {
     font-weight: 700;
 }
 
-@media (max-width: 1199px) {
-    #navbarSupportedContent {
-        background: rgba(0, 0, 0, 0.446);
-    }
-}
 
 /*evita che il div sopra occupi tutto lo spazio orizzontale*/
 .navbar-collapse {
@@ -1297,14 +1292,14 @@ footer {
     z-index: 6;
 }
 
-.page-home-intro .home-intro-vignette,
+.page-home-intro .home-intro-slide,
 .page-home-intro .home-intro-copy,
 .page-home-intro .home-intro-canopy {
     position: absolute;
     inset: 0;
 }
 
-.page-home-intro .home-intro-vignette {
+.page-home-intro .home-intro-slide {
     background:
         radial-gradient(circle at center, rgba(0, 0, 0, 0) 20%, rgba(14, 18, 15, 0.08) 48%, rgba(14, 18, 15, 0.34) 100%);
     z-index: 1;
@@ -1396,7 +1391,7 @@ footer {
         display: none;
     }
 
-    .page-home-intro .home-intro-vignette {
+    .page-home-intro .home-intro-slide {
         display: none;
     }
 
@@ -1538,44 +1533,44 @@ footer {
 }
 
 
-    .restaurant-team-carousel #restaurantTeamCarousel {
-        padding-inline: 2.9rem;
-    }
+.restaurant-team-carousel #restaurantTeamCarousel {
+    padding-inline: 2.9rem;
+}
 
-    .restaurant-team-carousel #restaurantTeamCarousel .carousel-item .card {
-        width: min(100%, 15.5rem) !important;
-        margin-inline: auto;
-    }
+.restaurant-team-carousel #restaurantTeamCarousel .carousel-item .card {
+    width: min(100%, 15.5rem) !important;
+    margin-inline: auto;
+}
 
-    .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev,
-    .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next {
-        position: absolute;
-        top: 50%;
-        bottom: auto;
-        width: 44px;
-        height: 44px;
-        transform: translateY(-50%);
-        opacity: 1;
-        z-index: 10;
-    }
+.restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev,
+.restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    width: 44px;
+    height: 44px;
+    transform: translateY(-50%);
+    opacity: 1;
+    z-index: 10;
+}
 
-    .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev {
-        left: 0;
-    }
+.restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev {
+    left: 0;
+}
 
-    .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next {
-        right: 0;
-    }
+.restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next {
+    right: 0;
+}
 
-    .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev:hover,
-    .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next:hover {
-        transform: translateY(calc(-50% - 2px));
-    }
+.restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev:hover,
+.restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next:hover {
+    transform: translateY(calc(-50% - 2px));
+}
 
-    .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev:active,
-    .restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next:active {
-        transform: translateY(-50%);
-    }
+.restaurant-team-carousel #restaurantTeamCarousel .carousel-control-prev:active,
+.restaurant-team-carousel #restaurantTeamCarousel .carousel-control-next:active {
+    transform: translateY(-50%);
+}
 
 
 
@@ -2095,12 +2090,12 @@ input::-webkit-calendar-picker-indicator {
 
 /* Responsive per mobile */
 @media (max-width: 768px) {
-    #puntiDiForzaCarousel {
+    #strenghts-carousel {
         padding-inline: 2.9rem;
     }
 
-    #puntiDiForzaCarousel .carousel-control-prev,
-    #puntiDiForzaCarousel .carousel-control-next {
+    #strenghts-carousel .carousel-control-prev,
+    #strenghts-carousel .carousel-control-next {
         top: 50%;
         bottom: auto;
         width: 44px;
@@ -2109,21 +2104,21 @@ input::-webkit-calendar-picker-indicator {
         opacity: 1;
     }
 
-    #puntiDiForzaCarousel .carousel-control-prev {
+    #strenghts-carousel .carousel-control-prev {
         left: 0;
     }
 
-    #puntiDiForzaCarousel .carousel-control-next {
+    #strenghts-carousel .carousel-control-next {
         right: 0;
     }
 
-    #puntiDiForzaCarousel .carousel-control-prev:hover,
-    #puntiDiForzaCarousel .carousel-control-next:hover {
+    #strenghts-carousel .carousel-control-prev:hover,
+    #strenghts-carousel .carousel-control-next:hover {
         transform: translateY(calc(-50% - 2px));
     }
 
-    #puntiDiForzaCarousel .carousel-control-prev:active,
-    #puntiDiForzaCarousel .carousel-control-next:active {
+    #strenghts-carousel .carousel-control-prev:active,
+    #strenghts-carousel .carousel-control-next:active {
         transform: translateY(-50%);
     }
 
@@ -2493,14 +2488,18 @@ input::-webkit-calendar-picker-indicator {
     height: auto;
 }
 
-#padding-sfera {
-    padding-top: 0vh;
+/*Sfera corallo*/
+#padding-plate1 {
+    padding-top: 0vh; 
 }
-#padding-petali {
+
+/*Petali Floricanto*/
+#padding-plate2 { 
     padding-top: 10vh;
 }
 
-#padding-gemme {
+/*Gemme Zenith*/
+#padding-plate3 {
     padding-top: 12vh;
 }
 
@@ -2513,15 +2512,15 @@ input::-webkit-calendar-picker-indicator {
         width: 60%;
     }
 
-    #padding-sfera {
+    #padding-plate1 {
         padding-top: 20vh;
     }
 
-    #padding-petali {
+    #padding-plate2 {
     padding-top: 35vh;
     }
 
-    #padding-gemme {
+    #padding-plate3 {
         padding-top: 45vh;
     }
 }
@@ -2532,13 +2531,13 @@ input::-webkit-calendar-picker-indicator {
 }
 
 
-#page-sfera-corallo .dish-hero-bg img {
+#page-plate1 .dish-hero-bg img {
     width: 220%;
     bottom: 0;
 }
 
 @media (min-width: 768px) {
-    #page-sfera-corallo .dish-hero-bg img {
+    #page-plate1 .dish-hero-bg img {
         width: 100%;
         bottom: -25vh;
     }
